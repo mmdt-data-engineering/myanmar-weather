@@ -166,5 +166,7 @@ hourly_data["soil_moisture_3_to_9cm"] = hourly_soil_moisture_3_to_9cm
 hourly_data["soil_moisture_9_to_27cm"] = hourly_soil_moisture_9_to_27cm
 hourly_data["soil_moisture_27_to_81cm"] = hourly_soil_moisture_27_to_81cm
 
-hourly_dataframe = pd.DataFrame(data=hourly_data)
-print(hourly_dataframe)
+hourly_df = pd.DataFrame(data=hourly_data)
+print(hourly_df)
+
+hourly_df.to_json("sample_response.json", orient="records", indent=4)
