@@ -13,40 +13,34 @@ def get_ambient_devices():
     """
     Fetches the list of devices from the Ambient Weather API and returns it as a DataFrame.
     """
-    # Load environment variables
-    load_dotenv()
 
-    # Get API key and application key from environment variables
-    api_key = os.getenv("AMBIENT_API_KEY")
-    application_key = os.getenv("AMBIENT_APPLICATION_KEY")
+    # https://rt.ambientweather.net/v1/devices/?apiKey=%7B%7Bapi_key%7D%7D&applicationKey=%7B%7Bapplication_key%7D%7D
 
     # Create an instance of the AmbientAPI class
-    # ambient_api = AmbientAPI(api_key, application_key)
-    ambient_api = AmbientAPI()
+    print(f"AMBIENT_ENDPOINT: {AMBIENT_ENDPOINT}")
+    print(f"AMBIENT_API_KEY: {AMBIENT_API_KEY}")
+    print(f"AMBIENT_APPLICATION_KEY: {AMBIENT_APPLICATION_KEY}")
 
-    # Fetch the list of devices
-    devices = ambient_api.get_devices()
-    print(f"Devices - {devices}")
+    url = f"{AMBIENT_ENDPOINT}/devices?apiKey={AMBIENT_API_KEY}&applicationKey={AMBIENT_APPLICATION_KEY}"
+    response = requests.get(url)
 
-    # Convert the list of devices to a DataFrame
-    df = pd.json_normalize(devices)
-
-    return df
+    # Check if the request was successful
+    if response.status_code == 200:
+        data = response.json()
+        df = pd.json_normalize(data)
+        return df
+    else:
+        raise ConnectionError(f"Failed to fetch data: {response.status_code}")
 
 
 def extract_sample_data():
     """
     Extracts sample data from the Ambient Weather API and returns it as a DataFrame.
     """
-    # Load environment variables
-    load_dotenv()
-
-    # Get API key and application key from environment variables
-    api_key = os.getenv("AMBIENT_API_KEY")
-    application_key = os.getenv("AMBIENT_APPLICATION_KEY")
 
     # Define the URL for the Ambient Weather API
-    url = f"https://api.ambientweather.net/v1/devices?apiKey={api_key}&applicationKey={application_key}"
+    # url = f"https://api.ambientweather.net/v1/devices?apiKey={AMBIENT_API_KEY}&applicationKey={AMBIENT_APPLICATION_KEY}"
+    url = f"https://rt.ambientweather.net/v1/devices?apiKey={AMBIENT_API_KEY}&applicationKey={AMBIENT_APPLICATION_KEY}"
 
     # Make a GET request to the API
     response = requests.get(url)
@@ -61,6 +55,16 @@ def extract_sample_data():
 
 
 if __name__ == "__main__":
-    # df = extract_sample_data()
+
+    # Load environment variables
+    load_dotenv()
+
+    AMBIENT_ENDPOINT = os.getenv("AMBIENT_ENDPOINT")
+    AMBIENT_API_KEY = os.getenv("AMBIENT_API_KEY")
+    AMBIENT_APPLICATION_KEY = os.getenv("AMBIENT_APPLICATION_KEY")
+
     df = get_ambient_devices()
+    print(df.shape)  # (0, 0)
+
+    df = extract_sample_data()
     print(df.shape)  # (0, 0)
