@@ -1,7 +1,7 @@
 date,latitude,longitude,township,timezone,summary,precipProbability,precipIntensity,precipAccumulation,windSpeed,icon,windBearing,windGust,temperatureMin,temperatureMax
 2025-05-09,20.15,94.95,Magway,Asia/Rangoon,Increasing clouds; very hot,0.04,0.0,0.0,4.6,sun,120,10.4,83,107
 2025-05-10,20.15,94.95,Magway,Asia/Rangoon,Partly sunny and very hot,0.06,0.0,0.0,8.1,sun,216,20.7,81,106
-2025-05-11,20.15,94.95,Magway,Asia/Rangoon,A t-storm around in the p.m.,0.4,0.04,0.04,6.9,partly-cloudy-day,146,16.1,79,104
+2025-05-11,20.15,94.95,Magway,Asia/Rangoon,A t-storm around in the p.m.,0.4,0.04,0.04,6.9,partly-cloudy-day,146,16.1,79,104 
 2025-05-12,20.15,94.95,Magway,Asia/Rangoon,An afternoon t-storm; warm,0.6,0.2,0.2,9.2,part-sun,186,24.2,78,100
 2025-05-13,20.15,94.95,Magway,Asia/Rangoon,A t-storm around in the p.m.,0.4,0.04,0.04,5.8,part-sun,159,18.4,79,101
 2025-05-14,20.15,94.95,Magway,Asia/Rangoon,Humid; a stray p.m. t-storm,0.44,0.11,0.11,6.9,partly-cloudy-day,159,18.4,80,97
