@@ -63,9 +63,10 @@ if __name__ == "__main__":
     township_df = get_townships()
     # township_df.to_csv("MIMU_townships.csv", index=False)
 
-    # township_df = township_df.head(3)
+    township_df = township_df.head(50)
+
     weather_df = get_current_weather(township_df)
-    print(weather_df)
+    # print(weather_df)
 
     # load_to_postgres(township_df, "townships")
     weather_df.to_csv("weatherapidotcom_data.csv", index=False, header=True)
