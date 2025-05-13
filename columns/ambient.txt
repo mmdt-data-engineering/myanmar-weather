@@ -1,0 +1,15 @@
+date	
+latitude	
+longitude	
+township	
+timezone	
+summary	
+precipProbability	
+precipIntensity	
+precipAccumulation	
+windSpeed	
+icon	
+windBearing	
+windGust	
+temperatureMin	
+temperatureMax
