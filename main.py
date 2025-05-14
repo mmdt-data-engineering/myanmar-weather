@@ -1,4 +1,4 @@
-from data_util import MIMU_Data
+from data_utils import MIMU_Data
 from weather_api import WeatherAPI
 
 if __name__ == "__main__":
@@ -15,4 +15,4 @@ if __name__ == "__main__":
     print(weather_df)
 
     # load_to_postgres(township_df, "townships")
-    # weather_df.to_csv("weatherapidotcom_data.csv", index=False, header=True)
+    weather_df.to_csv("./output/weatherapidotcom_data.csv", index=False, header=True)

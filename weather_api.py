@@ -3,7 +3,7 @@ import pandas as pd
 from dotenv import load_dotenv
 import os
 import requests
-from data_util import MIMU_Data
+from data_utils import MIMU_Data
 
 
 class WeatherAPI:
