@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 import os
 import requests
 from data_utils import MIMU_Data
+import random
 
 
 class WeatherAPI:
@@ -19,8 +20,11 @@ class WeatherAPI:
 
         # Load environment variables
         load_dotenv()
-        API_KEY = os.getenv("WEATHER_API_KEY")
-        # print(f"API_KEY: {API_KEY}")
+        WEATHER_API_KEY = os.getenv("WEATHER_API_KEY")
+        if WEATHER_API_KEY is None:
+            raise ValueError(
+                "API key not found. Please set the WEATHER_API_KEY environment variable."
+            )
 
         result_df = pd.DataFrame()
 
@@ -33,11 +37,63 @@ class WeatherAPI:
             )
 
             # Construct the API request URL
-            url = f"{BASE_URL}?key={API_KEY}&q={latitude},{longitude}"
+            url = f"{BASE_URL}?key={WEATHER_API_KEY}&q={latitude},{longitude}"
             # print(url)
 
-            # Wait for 5 seconds to avoid hitting the API rate limit
-            time.sleep(10)
+            sleep_time = random.uniform(
+                1, 5
+            )  # Random sleep time between 1 and 5 seconds
+            print(f"Sleeping for {sleep_time:.2f} seconds...")
+            time.sleep(sleep_time)
+
+            response = requests.get(url)
+
+            # Check if the request was successful
+            if response.status_code == 200:
+                data = response.json()
+                df = pd.json_normalize(data)
+
+                result_df = pd.concat([result_df, df], ignore_index=True)
+            else:
+                raise ConnectionError(f"Failed to fetch data: {response.status_code}")
+
+        return result_df
+
+    def get_daily(self, township_df: pd.DataFrame, no_of_days: int) -> pd.DataFrame:
+        """
+        Fetches current weather data for the specified townships by using latitude and longitude.
+        """
+        # Define the base URL for the weather API
+        BASE_URL = "https://api.weatherapi.com/v1/forecast.json"
+
+        # Load environment variables
+        load_dotenv()
+        WEATHER_API_KEY = os.getenv("WEATHER_API_KEY")
+        if WEATHER_API_KEY is None:
+            raise ValueError(
+                "API key not found. Please set the WEATHER_API_KEY environment variable."
+            )
+
+        result_df = pd.DataFrame()
+
+        for index, row in township_df.iterrows():
+            township_name = row["Township_Name_Eng"]
+            latitude = row["Latitude"]
+            longitude = row["Longitude"]
+            print(
+                f"Township: {township_name}, Latitude: {latitude}, Longitude: {longitude}"
+            )
+
+            # Construct the API request URL
+            url = f"{BASE_URL}?key={WEATHER_API_KEY}&q={latitude},{longitude}&days={no_of_days}&aqi=no&alerts=no"
+            # print(url)
+
+            sleep_time = random.uniform(
+                1, 5
+            )  # Random sleep time between 1 and 5 seconds
+            print(f"Sleeping for {sleep_time:.2f} seconds...")
+            time.sleep(sleep_time)
+
             response = requests.get(url)
 
             # Check if the request was successful
