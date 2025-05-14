@@ -1,11 +1,12 @@
 import pandas as pd
 
 
-class Township:
+class MIMU_Data:
     def __init__(self):
         pass
 
     def get_townships(
+        self,
         filepath="./data/Myanmar_PCodes_Release_9.6_Feb2025_Countrywide.xlsm",
         sheet_name="04_Town",
     ):
