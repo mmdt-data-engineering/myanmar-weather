@@ -3,25 +3,26 @@ import pandas as pd
 from dotenv import load_dotenv
 import os
 import requests
-from Township import Township
+from data_util import MIMU_Data
 
 
 class WeatherAPI:
     def __init__(self):
         pass
 
-    def get_current_weather(df: pd.DataFrame) -> None:
+    def get_current(self, township_df: pd.DataFrame) -> pd.DataFrame:
         """
         Fetches current weather data for the specified townships by using latitude and longitude.
         """
         # Define the base URL for the weather API
         BASE_URL = "https://api.weatherapi.com/v1/current.json"
 
-        result_df = pd.DataFrame()
+        # Load environment variables
+        load_dotenv()
+        API_KEY = os.getenv("WEATHER_API_KEY")
+        # print(f"API_KEY: {API_KEY}")
 
-        # Iterate over each township in the DataFrame
-        township = Township()
-        township_df = township.get_townships()
+        result_df = pd.DataFrame()
 
         for index, row in township_df.iterrows():
             township_name = row["Township_Name_Eng"]
@@ -30,11 +31,6 @@ class WeatherAPI:
             print(
                 f"Township: {township_name}, Latitude: {latitude}, Longitude: {longitude}"
             )
-
-            # Load environment variables
-            load_dotenv()
-            API_KEY = os.getenv("API_KEY")
-            # print(f"API_KEY: {API_KEY}")
 
             # Construct the API request URL
             url = f"{BASE_URL}?key={API_KEY}&q={latitude},{longitude}"
