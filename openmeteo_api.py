@@ -122,9 +122,11 @@ class OpenMeteoAPI:
         print(f"Elevation {response.Elevation()} m asl")
         print(f"Timezone {response.Timezone()}{response.TimezoneAbbreviation()}")
         print(f"Timezone difference to GMT+0 {response.UtcOffsetSeconds()} s")
+        print(f"response: {response}")
 
         # Process daily data. The order of variables needs to be the same as requested.
         daily = response.Daily()
+        print(f"Daily: {daily}")
 
         daily_data = {
             "date": pd.date_range(
