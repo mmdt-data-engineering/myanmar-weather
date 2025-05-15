@@ -10,7 +10,7 @@ if __name__ == "__main__":
     township_df = mimu_data.get_townships()
     # township_df.to_csv("MIMU_townships.csv", index=False)
 
-    township_df = township_df.head(100)
+    township_df = township_df.head(1)
 
     # weather_api = WeatherAPI()
     # weatherapi_current_df = weather_api.get_current(township_df)
