@@ -20,7 +20,7 @@ class WeatherAPI:
 
         # Load environment variables
         load_dotenv()
-        WEATHER_API_KEY = os.getenv("WEATHER_API_KEY")
+        WEATHER_API_KEY = os.getenv("WEATHER_API_COM_KEY")
         if WEATHER_API_KEY is None:
             raise ValueError(
                 "API key not found. Please set the WEATHER_API_KEY environment variable."
@@ -38,7 +38,7 @@ class WeatherAPI:
 
             # Construct the API request URL
             url = f"{BASE_URL}?key={WEATHER_API_KEY}&q={latitude},{longitude}"
-            # print(url)
+            print(url)
 
             sleep_time = random.uniform(
                 1, 5
@@ -68,7 +68,7 @@ class WeatherAPI:
 
         # Load environment variables
         load_dotenv()
-        WEATHER_API_KEY = os.getenv("WEATHER_API_KEY")
+        WEATHER_API_KEY = os.getenv("WEATHER_API_COM_KEY")
         if WEATHER_API_KEY is None:
             raise ValueError(
                 "API key not found. Please set the WEATHER_API_KEY environment variable."
@@ -95,13 +95,30 @@ class WeatherAPI:
             time.sleep(sleep_time)
 
             response = requests.get(url)
+            print(response.json())
 
             # Check if the request was successful
             if response.status_code == 200:
                 data = response.json()
-                df = pd.json_normalize(data)
 
-                result_df = pd.concat([result_df, df], ignore_index=True)
+                # Location
+                location = data["location"]
+                location_df = pd.json_normalize(location)   
+
+                # Forecast
+                forecast_data = data["forecast"]["forecastday"]
+                df = pd.json_normalize(forecast_data)
+
+                # Select only required columns
+                forecast_df = df[['date', 'date_epoch'] + [col for col in df.columns if col.startswith('day.')]]
+
+                # Repeat location for each forecast row
+                location_repeated = pd.concat([location_df] * len(forecast_df), ignore_index=True)
+
+                # Combine location and forecast
+                final_df = pd.concat([forecast_df, location_repeated], axis=1)
+
+                result_df = pd.concat([result_df, final_df], ignore_index=True)
             else:
                 raise ConnectionError(f"Failed to fetch data: {response.status_code}")
 
