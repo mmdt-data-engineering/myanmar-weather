@@ -23,10 +23,10 @@ for file in csv_files:
     print(f"DataFrame Name: {df.Name}")
     print(f"DataFrame Shape: {df.shape}")
 
-    # db = PostgresDB()
+    db = PostgresDB()
 
     # Load the DataFrame to PostgreSQL
-    # db.load_to_postgres(df, table_name=df.Name)
+    db.load_to_postgres(df, table_name=df.Name)
 
     # Load the DataFrame to Neon PostgreSQL
     # db.load_to_neon_postgres(df, table_name=df.Name)
