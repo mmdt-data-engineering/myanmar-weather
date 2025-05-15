@@ -40,6 +40,6 @@ if __name__ == "__main__":
 
     # Fetch AmbientWeather data
     ambient_api = AmbientWeatherAPI()  # New instance for AmbientWeatherAPI
-    ambient_df = ambient_api.get_forecast_df(township_df)  # Get forecast data
-    ambient_df.to_csv("./output/ambientweather_data.csv", index=False, header=True)
-    ambient_df.to_json("./output/ambient_forecast_data.json", orient="records", lines=True)
+    #ambient_df = ambient_api.get_forecast_df(township_df)  # Get forecast data
+    #ambient_df.to_csv("./output/ambientweather_data.csv", index=False, header=True)
+    #ambient_df.to_json("./output/ambient_forecast_data.json", orient="records", lines=True)
