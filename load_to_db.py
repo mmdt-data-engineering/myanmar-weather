@@ -29,4 +29,4 @@ for file in csv_files:
     db.load_to_postgres(df, table_name=df.Name)
 
     # Load the DataFrame to Neon PostgreSQL
-    # db.load_to_neon_postgres(df, table_name=df.Name)
+    db.load_to_neon_postgres(df, table_name=df.Name)
