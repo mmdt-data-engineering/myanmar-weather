@@ -1,0 +1,1001 @@
+date,latitude,longitude,township,timezone,summary,precipProbability,precipIntensity,precipAccumulation,windSpeed,icon,windBearing,windGust,temperatureMin,temperatureMax
+2025-05-15,16.2929,95.3948,Bogale,Asia/Rangoon,Rain and a thunderstorm,1.0,1.73,1.73,9.2,rain,153,17.3,75,84
+2025-05-16,16.2929,95.3948,Bogale,Asia/Rangoon,Rain at times,0.93,0.47,0.47,10.4,rain,184,20.7,76,85
+2025-05-17,16.2929,95.3948,Bogale,Asia/Rangoon,Occasional rain,0.95,0.66,0.66,8.1,rain,189,23.0,78,88
+2025-05-18,16.2929,95.3948,Bogale,Asia/Rangoon,Cloudy with a little rain,0.81,0.12,0.12,6.9,rain,137,19.6,78,86
+2025-05-19,16.2929,95.3948,Bogale,Asia/Rangoon,Periods of rain,0.91,0.55,0.55,6.9,rain,178,19.6,78,90
+2025-05-20,16.2929,95.3948,Bogale,Asia/Rangoon,Periods of rain,0.65,0.61,0.61,6.9,rain,213,13.8,79,91
+2025-05-21,16.2929,95.3948,Bogale,Asia/Rangoon,Periods of rain,0.6,0.19,0.19,3.5,rain,166,12.7,79,89
+2025-05-22,16.2929,95.3948,Bogale,Asia/Rangoon,Rain and a thunderstorm,0.66,0.71,0.71,3.5,rain,166,13.8,78,90
+2025-05-23,16.2929,95.3948,Bogale,Asia/Rangoon,Rain and a thunderstorm,0.65,0.26,0.26,4.6,rain,197,13.8,79,90
+2025-05-24,16.2929,95.3948,Bogale,Asia/Rangoon,Rain,0.75,0.56,0.56,4.6,rain,178,12.7,78,86
+2025-05-15,17.2537,95.5944,Danubyu,Asia/Rangoon,"Morning t-storms, then rain",1.0,0.2,0.2,10.4,thunderstorm,108,17.3,74,84
+2025-05-16,17.2537,95.5944,Danubyu,Asia/Rangoon,Occasional rain,0.98,0.84,0.84,10.4,rain,148,27.6,75,85
+2025-05-17,17.2537,95.5944,Danubyu,Asia/Rangoon,Occasional rain,0.91,0.34,0.34,6.9,rain,130,19.6,77,87
+2025-05-18,17.2537,95.5944,Danubyu,Asia/Rangoon,A bit of afternoon rain,0.64,0.1,0.1,8.1,rain,147,19.6,77,87
+2025-05-19,17.2537,95.5944,Danubyu,Asia/Rangoon,Periods of rain,0.96,1.12,1.12,6.9,rain,188,21.9,77,90
+2025-05-20,17.2537,95.5944,Danubyu,Asia/Rangoon,Periods of rain,0.74,0.61,0.61,6.9,rain,222,20.7,78,94
+2025-05-21,17.2537,95.5944,Danubyu,Asia/Rangoon,Periods of rain,0.61,0.31,0.31,4.6,rain,158,15.0,80,91
+2025-05-22,17.2537,95.5944,Danubyu,Asia/Rangoon,Rain in the afternoon,0.75,0.6,0.6,4.6,rain,172,13.8,79,92
+2025-05-23,17.2537,95.5944,Danubyu,Asia/Rangoon,Periods of rain,0.71,1.07,1.07,4.6,rain,177,12.7,80,91
+2025-05-24,17.2537,95.5944,Danubyu,Asia/Rangoon,Rain,0.75,0.3,0.3,4.6,rain,162,16.1,77,90
+2025-05-15,16.4102,95.8871,Dedaye,Asia/Rangoon,Rain and a thunderstorm,1.0,1.36,1.36,8.1,rain,157,19.6,76,83
+2025-05-16,16.4102,95.8871,Dedaye,Asia/Rangoon,Occasional rain,0.93,0.48,0.48,10.4,rain,176,21.9,76,84
+2025-05-17,16.4102,95.8871,Dedaye,Asia/Rangoon,Cloudy with a little rain,0.86,0.38,0.38,8.1,rain,188,24.2,78,87
+2025-05-18,16.4102,95.8871,Dedaye,Asia/Rangoon,Periods of rain,0.91,0.36,0.36,5.8,rain,150,18.4,78,88
+2025-05-19,16.4102,95.8871,Dedaye,Asia/Rangoon,Rain in the afternoon,0.82,0.56,0.56,6.9,rain,176,19.6,78,88
+2025-05-20,16.4102,95.8871,Dedaye,Asia/Rangoon,Periods of rain,0.62,0.4,0.4,6.9,rain,203,16.1,79,91
+2025-05-21,16.4102,95.8871,Dedaye,Asia/Rangoon,Periods of rain,0.6,0.18,0.18,3.5,rain,170,17.3,80,90
+2025-05-22,16.4102,95.8871,Dedaye,Asia/Rangoon,Rain in the afternoon,0.71,0.25,0.25,4.6,rain,169,16.1,79,91
+2025-05-23,16.4102,95.8871,Dedaye,Asia/Rangoon,Rain and a thunderstorm,0.65,0.55,0.55,4.6,rain,169,17.3,81,90
+2025-05-24,16.4102,95.8871,Dedaye,Asia/Rangoon,Periods of rain and a t-storm,0.65,0.41,0.41,5.8,rain,185,17.3,79,89
+2025-05-15,16.8974,95.1782,Einme,Asia/Rangoon,"Morning t-storms, then rain",1.0,0.2,0.2,10.4,thunderstorm,108,17.3,74,84
+2025-05-16,16.8974,95.1782,Einme,Asia/Rangoon,Occasional rain,0.98,0.84,0.84,10.4,rain,148,27.6,75,85
+2025-05-17,16.8974,95.1782,Einme,Asia/Rangoon,Occasional rain,0.91,0.34,0.34,6.9,rain,130,19.6,77,87
+2025-05-18,16.8974,95.1782,Einme,Asia/Rangoon,A bit of afternoon rain,0.64,0.1,0.1,8.1,rain,147,19.6,77,87
+2025-05-19,16.8974,95.1782,Einme,Asia/Rangoon,Periods of rain,0.96,1.12,1.12,6.9,rain,188,21.9,77,90
+2025-05-20,16.8974,95.1782,Einme,Asia/Rangoon,Periods of rain,0.74,0.61,0.61,6.9,rain,222,20.7,78,94
+2025-05-21,16.8974,95.1782,Einme,Asia/Rangoon,Periods of rain,0.61,0.31,0.31,4.6,rain,158,15.0,80,91
+2025-05-22,16.8974,95.1782,Einme,Asia/Rangoon,Rain in the afternoon,0.75,0.6,0.6,4.6,rain,172,13.8,79,92
+2025-05-23,16.8974,95.1782,Einme,Asia/Rangoon,Periods of rain,0.71,1.07,1.07,4.6,rain,177,12.7,80,91
+2025-05-24,16.8974,95.1782,Einme,Asia/Rangoon,Rain,0.75,0.3,0.3,4.6,rain,162,16.1,77,90
+2025-05-15,17.5604,95.4821,Hinthada,Asia/Rangoon,Breezy with rain,0.94,0.19,0.19,10.4,rain,116,19.6,74,84
+2025-05-16,17.5604,95.4821,Hinthada,Asia/Rangoon,Occasional rain,0.97,0.62,0.62,11.5,rain,123,24.2,75,84
+2025-05-17,17.5604,95.4821,Hinthada,Asia/Rangoon,Occasional rain,0.97,0.78,0.78,6.9,rain,138,19.6,76,87
+2025-05-18,17.5604,95.4821,Hinthada,Asia/Rangoon,Cloudy with a little rain,0.83,0.11,0.11,8.1,rain,164,19.6,76,87
+2025-05-19,17.5604,95.4821,Hinthada,Asia/Rangoon,"Afternoon rain, some heavy",0.98,0.86,0.86,6.9,rain,192,16.1,78,90
+2025-05-20,17.5604,95.4821,Hinthada,Asia/Rangoon,Occasional afternoon rain,0.73,0.33,0.33,9.2,sprinkles,216,17.3,79,96
+2025-05-21,17.5604,95.4821,Hinthada,Asia/Rangoon,Periods of rain,0.62,0.27,0.27,4.6,rain,176,12.7,80,93
+2025-05-22,17.5604,95.4821,Hinthada,Asia/Rangoon,A little afternoon rain,0.59,0.11,0.11,5.8,rain,174,17.3,79,94
+2025-05-23,17.5604,95.4821,Hinthada,Asia/Rangoon,Rain and a thunderstorm,0.65,0.41,0.41,4.6,rain,192,13.8,80,92
+2025-05-24,17.5604,95.4821,Hinthada,Asia/Rangoon,Periods of rain,0.7,0.57,0.57,4.6,rain,176,13.8,80,92
+2025-05-15,17.6506,95.4566,Hinthada,Asia/Rangoon,Breezy with rain,0.94,0.19,0.19,10.4,rain,116,19.6,74,84
+2025-05-16,17.6506,95.4566,Hinthada,Asia/Rangoon,Occasional rain,0.97,0.62,0.62,11.5,rain,123,24.2,75,84
+2025-05-17,17.6506,95.4566,Hinthada,Asia/Rangoon,Occasional rain,0.97,0.78,0.78,6.9,rain,138,19.6,76,87
+2025-05-18,17.6506,95.4566,Hinthada,Asia/Rangoon,Cloudy with a little rain,0.83,0.11,0.11,8.1,rain,164,19.6,76,87
+2025-05-19,17.6506,95.4566,Hinthada,Asia/Rangoon,"Afternoon rain, some heavy",0.98,0.86,0.86,6.9,rain,192,16.1,78,90
+2025-05-20,17.6506,95.4566,Hinthada,Asia/Rangoon,Occasional afternoon rain,0.73,0.33,0.33,9.2,sprinkles,216,17.3,79,96
+2025-05-21,17.6506,95.4566,Hinthada,Asia/Rangoon,Periods of rain,0.62,0.27,0.27,4.6,rain,176,12.7,80,93
+2025-05-22,17.6506,95.4566,Hinthada,Asia/Rangoon,A little afternoon rain,0.59,0.11,0.11,5.8,rain,174,17.3,79,94
+2025-05-23,17.6506,95.4566,Hinthada,Asia/Rangoon,Rain and a thunderstorm,0.65,0.41,0.41,4.6,rain,192,13.8,80,92
+2025-05-24,17.6506,95.4566,Hinthada,Asia/Rangoon,Periods of rain,0.7,0.57,0.57,4.6,rain,176,13.8,80,92
+2025-05-15,17.6415,95.3057,Hinthada,Asia/Rangoon,Breezy with rain,0.94,0.19,0.19,10.4,rain,116,19.6,74,84
+2025-05-16,17.6415,95.3057,Hinthada,Asia/Rangoon,Occasional rain,0.97,0.62,0.62,11.5,rain,123,24.2,75,84
+2025-05-17,17.6415,95.3057,Hinthada,Asia/Rangoon,Occasional rain,0.97,0.78,0.78,6.9,rain,138,19.6,76,87
+2025-05-18,17.6415,95.3057,Hinthada,Asia/Rangoon,Cloudy with a little rain,0.83,0.11,0.11,8.1,rain,164,19.6,76,87
+2025-05-19,17.6415,95.3057,Hinthada,Asia/Rangoon,"Afternoon rain, some heavy",0.98,0.86,0.86,6.9,rain,192,16.1,78,90
+2025-05-20,17.6415,95.3057,Hinthada,Asia/Rangoon,Occasional afternoon rain,0.73,0.33,0.33,9.2,sprinkles,216,17.3,79,96
+2025-05-21,17.6415,95.3057,Hinthada,Asia/Rangoon,Periods of rain,0.62,0.27,0.27,4.6,rain,176,12.7,80,93
+2025-05-22,17.6415,95.3057,Hinthada,Asia/Rangoon,A little afternoon rain,0.59,0.11,0.11,5.8,rain,174,17.3,79,94
+2025-05-23,17.6415,95.3057,Hinthada,Asia/Rangoon,Rain and a thunderstorm,0.65,0.41,0.41,4.6,rain,192,13.8,80,92
+2025-05-24,17.6415,95.3057,Hinthada,Asia/Rangoon,Periods of rain,0.7,0.57,0.57,4.6,rain,176,13.8,80,92
+2025-05-15,17.9707,95.2602,Ingapu,Asia/Rangoon,Rain,1.0,0.26,0.26,9.2,rain,128,20.7,73,84
+2025-05-16,17.9707,95.2602,Ingapu,Asia/Rangoon,Occasional rain,0.96,0.56,0.56,9.2,rain,124,24.2,75,82
+2025-05-17,17.9707,95.2602,Ingapu,Asia/Rangoon,Occasional rain,0.91,0.43,0.43,6.9,rain,156,18.4,75,83
+2025-05-18,17.9707,95.2602,Ingapu,Asia/Rangoon,Cloudy and becoming rainy,0.92,0.39,0.39,8.1,rain,177,19.6,76,87
+2025-05-19,17.9707,95.2602,Ingapu,Asia/Rangoon,Periods of rain,0.91,0.35,0.35,6.9,rain,201,15.0,77,89
+2025-05-20,17.9707,95.2602,Ingapu,Asia/Rangoon,A little afternoon rain,0.6,0.14,0.14,8.1,rain,207,19.6,78,96
+2025-05-21,17.9707,95.2602,Ingapu,Asia/Rangoon,Some rain and a thunderstorm,0.58,0.44,0.44,5.8,rain,178,15.0,80,94
+2025-05-22,17.9707,95.2602,Ingapu,Asia/Rangoon,Occasional afternoon rain,0.56,0.06,0.06,6.9,rain,177,19.6,79,93
+2025-05-23,17.9707,95.2602,Ingapu,Asia/Rangoon,Periods of rain,0.6,0.22,0.22,6.9,rain,185,17.3,79,92
+2025-05-24,17.9707,95.2602,Ingapu,Asia/Rangoon,Periods of rain,0.61,0.28,0.28,4.6,rain,176,12.7,78,92
+2025-05-15,17.8084,95.27,Ingapu,Asia/Rangoon,Rain,1.0,0.26,0.26,9.2,rain,128,20.7,73,84
+2025-05-16,17.8084,95.27,Ingapu,Asia/Rangoon,Occasional rain,0.96,0.56,0.56,9.2,rain,124,24.2,75,82
+2025-05-17,17.8084,95.27,Ingapu,Asia/Rangoon,Occasional rain,0.91,0.43,0.43,6.9,rain,156,18.4,75,83
+2025-05-18,17.8084,95.27,Ingapu,Asia/Rangoon,Cloudy and becoming rainy,0.92,0.39,0.39,8.1,rain,177,19.6,76,87
+2025-05-19,17.8084,95.27,Ingapu,Asia/Rangoon,Periods of rain,0.91,0.35,0.35,6.9,rain,201,15.0,77,89
+2025-05-20,17.8084,95.27,Ingapu,Asia/Rangoon,A little afternoon rain,0.6,0.14,0.14,8.1,rain,207,19.6,78,96
+2025-05-21,17.8084,95.27,Ingapu,Asia/Rangoon,Some rain and a thunderstorm,0.58,0.44,0.44,5.8,rain,178,15.0,80,94
+2025-05-22,17.8084,95.27,Ingapu,Asia/Rangoon,Occasional afternoon rain,0.56,0.06,0.06,6.9,rain,177,19.6,79,93
+2025-05-23,17.8084,95.27,Ingapu,Asia/Rangoon,Periods of rain,0.6,0.22,0.22,6.9,rain,185,17.3,79,92
+2025-05-24,17.8084,95.27,Ingapu,Asia/Rangoon,Periods of rain,0.61,0.28,0.28,4.6,rain,176,12.7,78,92
+2025-05-15,17.9031,95.2277,Ingapu,Asia/Rangoon,Rain,1.0,0.26,0.26,9.2,rain,128,20.7,73,84
+2025-05-16,17.9031,95.2277,Ingapu,Asia/Rangoon,Occasional rain,0.96,0.56,0.56,9.2,rain,124,24.2,75,82
+2025-05-17,17.9031,95.2277,Ingapu,Asia/Rangoon,Occasional rain,0.91,0.43,0.43,6.9,rain,156,18.4,75,83
+2025-05-18,17.9031,95.2277,Ingapu,Asia/Rangoon,Cloudy and becoming rainy,0.92,0.39,0.39,8.1,rain,177,19.6,76,87
+2025-05-19,17.9031,95.2277,Ingapu,Asia/Rangoon,Periods of rain,0.91,0.35,0.35,6.9,rain,201,15.0,77,89
+2025-05-20,17.9031,95.2277,Ingapu,Asia/Rangoon,A little afternoon rain,0.6,0.14,0.14,8.1,rain,207,19.6,78,96
+2025-05-21,17.9031,95.2277,Ingapu,Asia/Rangoon,Some rain and a thunderstorm,0.58,0.44,0.44,5.8,rain,178,15.0,80,94
+2025-05-22,17.9031,95.2277,Ingapu,Asia/Rangoon,Occasional afternoon rain,0.56,0.06,0.06,6.9,rain,177,19.6,79,93
+2025-05-23,17.9031,95.2277,Ingapu,Asia/Rangoon,Periods of rain,0.6,0.22,0.22,6.9,rain,185,17.3,79,92
+2025-05-24,17.9031,95.2277,Ingapu,Asia/Rangoon,Periods of rain,0.61,0.28,0.28,4.6,rain,176,12.7,78,92
+2025-05-15,16.9335,94.8941,Kangyidaunt,Asia/Rangoon,Afternoon rain,1.0,0.28,0.28,6.9,thunderstorm,109,18.4,74,84
+2025-05-16,16.9335,94.8941,Kangyidaunt,Asia/Rangoon,Occasional rain,0.97,0.64,0.64,8.1,rain,169,24.2,75,84
+2025-05-17,16.9335,94.8941,Kangyidaunt,Asia/Rangoon,Periods of rain,0.91,0.44,0.44,5.8,rain,156,17.3,77,87
+2025-05-18,16.9335,94.8941,Kangyidaunt,Asia/Rangoon,Rain in the afternoon,0.77,0.17,0.17,5.8,rain,131,17.3,76,88
+2025-05-19,16.9335,94.8941,Kangyidaunt,Asia/Rangoon,Periods of rain,0.95,1.06,1.06,5.8,rain,193,18.4,77,88
+2025-05-20,16.9335,94.8941,Kangyidaunt,Asia/Rangoon,Heavy rain developing,0.85,0.65,0.65,6.9,rain,231,15.0,79,92
+2025-05-21,16.9335,94.8941,Kangyidaunt,Asia/Rangoon,Rain and a thunderstorm,0.65,0.24,0.24,3.5,rain,155,11.5,80,91
+2025-05-22,16.9335,94.8941,Kangyidaunt,Asia/Rangoon,Periods of rain,0.65,0.61,0.61,5.8,rain,179,16.1,79,90
+2025-05-23,16.9335,94.8941,Kangyidaunt,Asia/Rangoon,Rain in the afternoon,0.75,0.54,0.54,4.6,rain,182,13.8,80,90
+2025-05-24,16.9335,94.8941,Kangyidaunt,Asia/Rangoon,Periods of rain,0.65,0.31,0.31,3.5,rain,178,13.8,79,89
+2025-05-15,16.4463,95.7256,Kyaiklat,Asia/Rangoon,Rain and a thunderstorm,1.0,1.36,1.36,8.1,rain,157,19.6,76,83
+2025-05-16,16.4463,95.7256,Kyaiklat,Asia/Rangoon,Occasional rain,0.93,0.48,0.48,10.4,rain,176,21.9,76,84
+2025-05-17,16.4463,95.7256,Kyaiklat,Asia/Rangoon,Cloudy with a little rain,0.86,0.38,0.38,8.1,rain,188,24.2,78,87
+2025-05-18,16.4463,95.7256,Kyaiklat,Asia/Rangoon,Periods of rain,0.91,0.36,0.36,5.8,rain,150,18.4,78,88
+2025-05-19,16.4463,95.7256,Kyaiklat,Asia/Rangoon,Rain in the afternoon,0.82,0.56,0.56,6.9,rain,176,19.6,78,88
+2025-05-20,16.4463,95.7256,Kyaiklat,Asia/Rangoon,Periods of rain,0.62,0.4,0.4,6.9,rain,203,16.1,79,91
+2025-05-21,16.4463,95.7256,Kyaiklat,Asia/Rangoon,Periods of rain,0.6,0.18,0.18,3.5,rain,170,17.3,80,90
+2025-05-22,16.4463,95.7256,Kyaiklat,Asia/Rangoon,Rain in the afternoon,0.71,0.25,0.25,4.6,rain,169,16.1,79,91
+2025-05-23,16.4463,95.7256,Kyaiklat,Asia/Rangoon,Rain and a thunderstorm,0.65,0.55,0.55,4.6,rain,169,17.3,81,90
+2025-05-24,16.4463,95.7256,Kyaiklat,Asia/Rangoon,Periods of rain and a t-storm,0.65,0.41,0.41,5.8,rain,185,17.3,79,89
+2025-05-15,18.2999,95.1461,Kyangin,Asia/Rangoon,A little afternoon rain,0.75,0.3,0.3,9.2,sprinkles,144,24.2,78,87
+2025-05-16,18.2999,95.1461,Kyangin,Asia/Rangoon,A little afternoon rain,0.65,0.15,0.15,8.1,thunderstorm,122,24.2,77,82
+2025-05-17,18.2999,95.1461,Kyangin,Asia/Rangoon,A little afternoon rain,0.64,0.08,0.08,9.2,rain,150,19.6,77,84
+2025-05-18,18.2999,95.1461,Kyangin,Asia/Rangoon,Periods of rain,0.91,0.35,0.35,8.1,rain,161,24.2,77,91
+2025-05-19,18.2999,95.1461,Kyangin,Asia/Rangoon,A little afternoon rain,0.64,0.1,0.1,5.8,rain,190,17.3,78,93
+2025-05-20,18.2999,95.1461,Kyangin,Asia/Rangoon,Hot with periods of rain,0.61,0.32,0.32,5.8,rain,174,18.4,79,101
+2025-05-21,18.2999,95.1461,Kyangin,Asia/Rangoon,A little afternoon rain,0.55,0.02,0.02,5.8,rain,165,17.3,80,95
+2025-05-22,18.2999,95.1461,Kyangin,Asia/Rangoon,A little afternoon rain,0.56,0.06,0.06,5.8,rain,177,17.3,79,94
+2025-05-23,18.2999,95.1461,Kyangin,Asia/Rangoon,A little afternoon rain,0.61,0.13,0.13,4.6,rain,165,12.7,80,94
+2025-05-24,18.2999,95.1461,Kyangin,Asia/Rangoon,Periods of rain,0.64,0.28,0.28,4.6,rain,144,15.0,78,93
+2025-05-15,18.3405,95.239,Kyangin,Asia/Rangoon,"Morning t-storms, then rain",0.97,0.27,0.27,11.5,thunderstorm,140,25.3,74,87
+2025-05-16,18.3405,95.239,Kyangin,Asia/Rangoon,Occasional rain,0.97,0.75,0.75,10.4,rain,118,21.9,75,83
+2025-05-17,18.3405,95.239,Kyangin,Asia/Rangoon,Occasional afternoon rain,0.78,0.34,0.34,9.2,rain,154,24.2,76,86
+2025-05-18,18.3405,95.239,Kyangin,Asia/Rangoon,"Mostly cloudy, a little rain",0.81,0.1,0.1,10.4,rain,173,23.0,76,88
+2025-05-19,18.3405,95.239,Kyangin,Asia/Rangoon,A little afternoon rain,0.73,0.54,0.54,8.1,rain,187,18.4,78,90
+2025-05-20,18.3405,95.239,Kyangin,Asia/Rangoon,Warm with periods of rain,0.6,0.23,0.23,8.1,rain,193,17.3,79,98
+2025-05-21,18.3405,95.239,Kyangin,Asia/Rangoon,Some rain and a thunderstorm,0.55,0.08,0.08,6.9,rain,169,17.3,81,96
+2025-05-22,18.3405,95.239,Kyangin,Asia/Rangoon,A touch of afternoon rain,0.57,0.08,0.08,6.9,rain,168,18.4,80,95
+2025-05-23,18.3405,95.239,Kyangin,Asia/Rangoon,Afternoon rain,0.72,0.3,0.3,6.9,rain,179,17.3,81,95
+2025-05-24,18.3405,95.239,Kyangin,Asia/Rangoon,Periods of rain,0.62,0.23,0.23,5.8,rain,170,17.3,79,94
+2025-05-15,17.1094,95.1891,Kyaunggon,Asia/Rangoon,"Morning t-storms, then rain",1.0,0.2,0.2,10.4,thunderstorm,108,17.3,74,84
+2025-05-16,17.1094,95.1891,Kyaunggon,Asia/Rangoon,Occasional rain,0.98,0.84,0.84,10.4,rain,148,27.6,75,85
+2025-05-17,17.1094,95.1891,Kyaunggon,Asia/Rangoon,Occasional rain,0.91,0.34,0.34,6.9,rain,130,19.6,77,87
+2025-05-18,17.1094,95.1891,Kyaunggon,Asia/Rangoon,A bit of afternoon rain,0.64,0.1,0.1,8.1,rain,147,19.6,77,87
+2025-05-19,17.1094,95.1891,Kyaunggon,Asia/Rangoon,Periods of rain,0.96,1.12,1.12,6.9,rain,188,21.9,77,90
+2025-05-20,17.1094,95.1891,Kyaunggon,Asia/Rangoon,Periods of rain,0.74,0.61,0.61,6.9,rain,222,20.7,78,94
+2025-05-21,17.1094,95.1891,Kyaunggon,Asia/Rangoon,Periods of rain,0.61,0.31,0.31,4.6,rain,158,15.0,80,91
+2025-05-22,17.1094,95.1891,Kyaunggon,Asia/Rangoon,Rain in the afternoon,0.75,0.6,0.6,4.6,rain,172,13.8,79,92
+2025-05-23,17.1094,95.1891,Kyaunggon,Asia/Rangoon,Periods of rain,0.71,1.07,1.07,4.6,rain,177,12.7,80,91
+2025-05-24,17.1094,95.1891,Kyaunggon,Asia/Rangoon,Rain,0.75,0.3,0.3,4.6,rain,162,16.1,77,90
+2025-05-15,17.3484,95.3347,Kyonpyaw,Asia/Rangoon,Breezy with rain,0.94,0.19,0.19,10.4,rain,116,19.6,74,84
+2025-05-16,17.3484,95.3347,Kyonpyaw,Asia/Rangoon,Occasional rain,0.97,0.62,0.62,11.5,rain,123,24.2,75,84
+2025-05-17,17.3484,95.3347,Kyonpyaw,Asia/Rangoon,Occasional rain,0.97,0.78,0.78,6.9,rain,138,19.6,76,87
+2025-05-18,17.3484,95.3347,Kyonpyaw,Asia/Rangoon,Cloudy with a little rain,0.83,0.11,0.11,8.1,rain,164,19.6,76,87
+2025-05-19,17.3484,95.3347,Kyonpyaw,Asia/Rangoon,"Afternoon rain, some heavy",0.98,0.86,0.86,6.9,rain,192,16.1,78,90
+2025-05-20,17.3484,95.3347,Kyonpyaw,Asia/Rangoon,Occasional afternoon rain,0.73,0.33,0.33,9.2,sprinkles,216,17.3,79,96
+2025-05-21,17.3484,95.3347,Kyonpyaw,Asia/Rangoon,Periods of rain,0.62,0.27,0.27,4.6,rain,176,12.7,80,93
+2025-05-22,17.3484,95.3347,Kyonpyaw,Asia/Rangoon,A little afternoon rain,0.59,0.11,0.11,5.8,rain,174,17.3,79,94
+2025-05-23,17.3484,95.3347,Kyonpyaw,Asia/Rangoon,Rain and a thunderstorm,0.65,0.41,0.41,4.6,rain,192,13.8,80,92
+2025-05-24,17.3484,95.3347,Kyonpyaw,Asia/Rangoon,Periods of rain,0.7,0.57,0.57,4.6,rain,176,13.8,80,92
+2025-05-15,17.2988,95.2011,Kyonpyaw,Asia/Rangoon,Rain this afternoon,0.9,0.19,0.19,8.1,thunderstorm,118,18.4,74,84
+2025-05-16,17.2988,95.2011,Kyonpyaw,Asia/Rangoon,Periods of rain,0.97,0.41,0.41,8.1,rain,142,20.7,75,83
+2025-05-17,17.2988,95.2011,Kyonpyaw,Asia/Rangoon,Periods of rain,0.97,0.78,0.78,6.9,rain,133,18.4,76,85
+2025-05-18,17.2988,95.2011,Kyonpyaw,Asia/Rangoon,Periods of rain,0.91,0.26,0.26,5.8,rain,134,19.6,76,86
+2025-05-19,17.2988,95.2011,Kyonpyaw,Asia/Rangoon,Periods of rain,0.95,0.75,0.75,6.9,rain,190,21.9,77,89
+2025-05-20,17.2988,95.2011,Kyonpyaw,Asia/Rangoon,Rain and a thunderstorm,0.65,0.24,0.24,6.9,rain,229,17.3,78,95
+2025-05-21,17.2988,95.2011,Kyonpyaw,Asia/Rangoon,Periods of rain,0.62,0.3,0.3,3.5,rain,171,13.8,79,92
+2025-05-22,17.2988,95.2011,Kyonpyaw,Asia/Rangoon,Afternoon rain,0.73,0.32,0.32,4.6,rain,175,16.1,78,91
+2025-05-23,17.2988,95.2011,Kyonpyaw,Asia/Rangoon,Periods of rain,0.63,0.37,0.37,4.6,rain,200,16.1,79,90
+2025-05-24,17.2988,95.2011,Kyonpyaw,Asia/Rangoon,Rain,0.75,0.53,0.53,4.6,rain,185,13.8,77,90
+2025-05-15,15.8282,94.8085,Labutta,Asia/Rangoon,Cloudy with rain tapering off,1.0,0.87,0.87,10.4,rain,145,20.7,77,84
+2025-05-16,15.8282,94.8085,Labutta,Asia/Rangoon,Occasional rain,0.96,0.73,0.73,11.5,rain,203,26.5,79,84
+2025-05-17,15.8282,94.8085,Labutta,Asia/Rangoon,Occasional rain,0.91,0.3,0.3,9.2,rain,190,25.3,80,88
+2025-05-18,15.8282,94.8085,Labutta,Asia/Rangoon,"A.M. rain; otherwise, cloudy",0.85,0.43,0.43,5.8,rain,131,17.3,81,85
+2025-05-19,15.8282,94.8085,Labutta,Asia/Rangoon,Periods of rain,0.91,0.35,0.35,6.9,rain,191,21.9,82,86
+2025-05-20,15.8282,94.8085,Labutta,Asia/Rangoon,Rain and a thunderstorm,0.65,0.36,0.36,8.1,rain,219,17.3,81,87
+2025-05-21,15.8282,94.8085,Labutta,Asia/Rangoon,Rain and a thunderstorm,0.65,0.27,0.27,6.9,rain,182,17.3,82,89
+2025-05-22,15.8282,94.8085,Labutta,Asia/Rangoon,"Mostly cloudy, afternoon rain",0.74,0.19,0.19,9.2,rain,203,19.6,81,90
+2025-05-23,15.8282,94.8085,Labutta,Asia/Rangoon,Occasional rain and a t-storm,0.55,0.11,0.11,8.1,rain,214,23.0,83,89
+2025-05-24,15.8282,94.8085,Labutta,Asia/Rangoon,Periods of rain,0.6,0.22,0.22,8.1,rain,189,20.7,81,88
+2025-05-15,16.1982,94.7802,Labutta,Asia/Rangoon,"Morning t-storms, then rain",1.0,1.17,1.17,9.2,thunderstorm,124,17.3,76,86
+2025-05-16,16.1982,94.7802,Labutta,Asia/Rangoon,Occasional rain,0.96,0.63,0.63,11.5,rain,194,23.0,77,85
+2025-05-17,16.1982,94.7802,Labutta,Asia/Rangoon,A couple of morning t-storms,0.97,0.8,0.8,9.2,thunderstorm,191,24.2,79,89
+2025-05-18,16.1982,94.7802,Labutta,Asia/Rangoon,"A.M. rain; otherwise, cloudy",0.7,0.1,0.1,5.8,rain,160,20.7,79,88
+2025-05-19,16.1982,94.7802,Labutta,Asia/Rangoon,Periods of rain,0.91,0.76,0.76,6.9,rain,179,20.7,80,89
+2025-05-20,16.1982,94.7802,Labutta,Asia/Rangoon,Periods of rain and a t-storm,0.65,0.47,0.47,8.1,rain,223,21.9,80,91
+2025-05-21,16.1982,94.7802,Labutta,Asia/Rangoon,A little afternoon rain,0.61,0.25,0.25,5.8,rain,161,17.3,81,90
+2025-05-22,16.1982,94.7802,Labutta,Asia/Rangoon,Periods of rain and a t-storm,0.66,0.93,0.93,5.8,rain,180,19.6,80,91
+2025-05-23,16.1982,94.7802,Labutta,Asia/Rangoon,Rain and a thunderstorm,0.7,0.47,0.47,4.6,rain,178,19.6,82,90
+2025-05-24,16.1982,94.7802,Labutta,Asia/Rangoon,Rain,0.75,0.34,0.34,6.9,rain,189,19.6,80,89
+2025-05-15,16.144,94.7594,Labutta,Asia/Rangoon,"Morning t-storms, then rain",1.0,1.17,1.17,9.2,thunderstorm,124,17.3,76,86
+2025-05-16,16.144,94.7594,Labutta,Asia/Rangoon,Occasional rain,0.96,0.63,0.63,11.5,rain,194,23.0,77,85
+2025-05-17,16.144,94.7594,Labutta,Asia/Rangoon,A couple of morning t-storms,0.97,0.8,0.8,9.2,thunderstorm,191,24.2,79,89
+2025-05-18,16.144,94.7594,Labutta,Asia/Rangoon,"A.M. rain; otherwise, cloudy",0.7,0.1,0.1,5.8,rain,160,20.7,79,88
+2025-05-19,16.144,94.7594,Labutta,Asia/Rangoon,Periods of rain,0.91,0.76,0.76,6.9,rain,179,20.7,80,89
+2025-05-20,16.144,94.7594,Labutta,Asia/Rangoon,Periods of rain and a t-storm,0.65,0.47,0.47,8.1,rain,223,21.9,80,91
+2025-05-21,16.144,94.7594,Labutta,Asia/Rangoon,A little afternoon rain,0.61,0.25,0.25,5.8,rain,161,17.3,81,90
+2025-05-22,16.144,94.7594,Labutta,Asia/Rangoon,Periods of rain and a t-storm,0.66,0.93,0.93,5.8,rain,180,19.6,80,91
+2025-05-23,16.144,94.7594,Labutta,Asia/Rangoon,Rain and a thunderstorm,0.7,0.47,0.47,4.6,rain,178,19.6,82,90
+2025-05-24,16.144,94.7594,Labutta,Asia/Rangoon,Rain,0.75,0.34,0.34,6.9,rain,189,19.6,80,89
+2025-05-15,15.8282,94.8085,Labutta,Asia/Rangoon,Cloudy with rain tapering off,1.0,0.87,0.87,10.4,rain,145,20.7,77,84
+2025-05-16,15.8282,94.8085,Labutta,Asia/Rangoon,Occasional rain,0.96,0.73,0.73,11.5,rain,203,26.5,79,84
+2025-05-17,15.8282,94.8085,Labutta,Asia/Rangoon,Occasional rain,0.91,0.3,0.3,9.2,rain,190,25.3,80,88
+2025-05-18,15.8282,94.8085,Labutta,Asia/Rangoon,"A.M. rain; otherwise, cloudy",0.85,0.43,0.43,5.8,rain,131,17.3,81,85
+2025-05-19,15.8282,94.8085,Labutta,Asia/Rangoon,Periods of rain,0.91,0.35,0.35,6.9,rain,191,21.9,82,86
+2025-05-20,15.8282,94.8085,Labutta,Asia/Rangoon,Rain and a thunderstorm,0.65,0.36,0.36,8.1,rain,219,17.3,81,87
+2025-05-21,15.8282,94.8085,Labutta,Asia/Rangoon,Rain and a thunderstorm,0.65,0.27,0.27,6.9,rain,182,17.3,82,89
+2025-05-22,15.8282,94.8085,Labutta,Asia/Rangoon,"Mostly cloudy, afternoon rain",0.74,0.19,0.19,9.2,rain,203,19.6,81,90
+2025-05-23,15.8282,94.8085,Labutta,Asia/Rangoon,Occasional rain and a t-storm,0.55,0.11,0.11,8.1,rain,214,23.0,83,89
+2025-05-24,15.8282,94.8085,Labutta,Asia/Rangoon,Periods of rain,0.6,0.22,0.22,8.1,rain,189,20.7,81,88
+2025-05-15,17.6009,95.1751,Lemyethna,Asia/Rangoon,Rain this afternoon,0.9,0.19,0.19,8.1,thunderstorm,118,18.4,74,84
+2025-05-16,17.6009,95.1751,Lemyethna,Asia/Rangoon,Periods of rain,0.97,0.41,0.41,8.1,rain,142,20.7,75,83
+2025-05-17,17.6009,95.1751,Lemyethna,Asia/Rangoon,Periods of rain,0.97,0.78,0.78,6.9,rain,133,18.4,76,85
+2025-05-18,17.6009,95.1751,Lemyethna,Asia/Rangoon,Periods of rain,0.91,0.26,0.26,5.8,rain,134,19.6,76,86
+2025-05-19,17.6009,95.1751,Lemyethna,Asia/Rangoon,Periods of rain,0.95,0.75,0.75,6.9,rain,190,21.9,77,89
+2025-05-20,17.6009,95.1751,Lemyethna,Asia/Rangoon,Rain and a thunderstorm,0.65,0.24,0.24,6.9,rain,229,17.3,78,95
+2025-05-21,17.6009,95.1751,Lemyethna,Asia/Rangoon,Periods of rain,0.62,0.3,0.3,3.5,rain,171,13.8,79,92
+2025-05-22,17.6009,95.1751,Lemyethna,Asia/Rangoon,Afternoon rain,0.73,0.32,0.32,4.6,rain,175,16.1,78,91
+2025-05-23,17.6009,95.1751,Lemyethna,Asia/Rangoon,Periods of rain,0.63,0.37,0.37,4.6,rain,200,16.1,79,90
+2025-05-24,17.6009,95.1751,Lemyethna,Asia/Rangoon,Rain,0.75,0.53,0.53,4.6,rain,185,13.8,77,90
+2025-05-15,16.7305,95.6484,Maubin,Asia/Rangoon,Rain,1.0,0.82,0.82,8.1,rain,137,17.3,75,84
+2025-05-16,16.7305,95.6484,Maubin,Asia/Rangoon,Occasional rain,0.95,0.57,0.57,10.4,rain,156,20.7,76,84
+2025-05-17,16.7305,95.6484,Maubin,Asia/Rangoon,Occasional rain,0.97,0.74,0.74,6.9,rain,164,19.6,77,87
+2025-05-18,16.7305,95.6484,Maubin,Asia/Rangoon,A little morning rain; cloudy,0.6,0.06,0.06,6.9,rain,153,19.6,77,89
+2025-05-19,16.7305,95.6484,Maubin,Asia/Rangoon,A morning thunderstorm or two,0.91,0.74,0.74,6.9,thunderstorm,174,21.9,78,90
+2025-05-20,16.7305,95.6484,Maubin,Asia/Rangoon,Periods of rain,0.73,0.79,0.79,6.9,rain,214,17.3,78,92
+2025-05-21,16.7305,95.6484,Maubin,Asia/Rangoon,Periods of rain,0.7,0.67,0.67,3.5,rain,169,13.8,79,89
+2025-05-22,16.7305,95.6484,Maubin,Asia/Rangoon,"Rather cloudy, afternoon rain",0.75,0.63,0.63,3.5,rain,168,15.0,78,90
+2025-05-23,16.7305,95.6484,Maubin,Asia/Rangoon,Periods of rain,0.71,0.73,0.73,3.5,rain,180,10.4,80,89
+2025-05-24,16.7305,95.6484,Maubin,Asia/Rangoon,Rain,0.75,0.58,0.58,4.6,rain,161,13.8,77,88
+2025-05-15,16.3786,95.2608,Mawlamyinegyun,Asia/Rangoon,"Morning t-storms, then rain",1.0,1.15,1.15,8.1,thunderstorm,130,17.3,75,84
+2025-05-16,16.3786,95.2608,Mawlamyinegyun,Asia/Rangoon,Occasional rain,0.93,0.45,0.45,10.4,rain,180,21.9,76,85
+2025-05-17,16.3786,95.2608,Mawlamyinegyun,Asia/Rangoon,Occasional rain,0.91,0.4,0.4,8.1,rain,170,20.7,78,88
+2025-05-18,16.3786,95.2608,Mawlamyinegyun,Asia/Rangoon,Cloudy with a little rain,0.81,0.11,0.11,6.9,rain,137,19.6,78,87
+2025-05-19,16.3786,95.2608,Mawlamyinegyun,Asia/Rangoon,Afternoon rain,0.84,0.36,0.36,6.9,rain,191,21.9,79,90
+2025-05-20,16.3786,95.2608,Mawlamyinegyun,Asia/Rangoon,Periods of rain,0.62,0.37,0.37,6.9,rain,216,16.1,79,93
+2025-05-21,16.3786,95.2608,Mawlamyinegyun,Asia/Rangoon,Rain and a thunderstorm,0.67,0.56,0.56,4.6,rain,146,13.8,80,91
+2025-05-22,16.3786,95.2608,Mawlamyinegyun,Asia/Rangoon,Rain and a thunderstorm,0.68,1.05,1.05,3.5,rain,170,15.0,79,90
+2025-05-23,16.3786,95.2608,Mawlamyinegyun,Asia/Rangoon,Rain and a thunderstorm,0.65,0.24,0.24,4.6,rain,188,16.1,80,90
+2025-05-24,16.3786,95.2608,Mawlamyinegyun,Asia/Rangoon,Rain,0.75,0.34,0.34,4.6,rain,187,12.7,79,88
+2025-05-15,18.0925,95.2681,Myanaung,Asia/Rangoon,Rain,1.0,0.26,0.26,9.2,rain,128,20.7,73,84
+2025-05-16,18.0925,95.2681,Myanaung,Asia/Rangoon,Occasional rain,0.96,0.56,0.56,9.2,rain,124,24.2,75,82
+2025-05-17,18.0925,95.2681,Myanaung,Asia/Rangoon,Occasional rain,0.91,0.43,0.43,6.9,rain,156,18.4,75,83
+2025-05-18,18.0925,95.2681,Myanaung,Asia/Rangoon,Cloudy and becoming rainy,0.92,0.39,0.39,8.1,rain,177,19.6,76,87
+2025-05-19,18.0925,95.2681,Myanaung,Asia/Rangoon,Periods of rain,0.91,0.35,0.35,6.9,rain,201,15.0,77,89
+2025-05-20,18.0925,95.2681,Myanaung,Asia/Rangoon,A little afternoon rain,0.6,0.14,0.14,8.1,rain,207,19.6,78,96
+2025-05-21,18.0925,95.2681,Myanaung,Asia/Rangoon,Some rain and a thunderstorm,0.58,0.44,0.44,5.8,rain,178,15.0,80,94
+2025-05-22,18.0925,95.2681,Myanaung,Asia/Rangoon,Occasional afternoon rain,0.56,0.06,0.06,6.9,rain,177,19.6,79,93
+2025-05-23,18.0925,95.2681,Myanaung,Asia/Rangoon,Periods of rain,0.6,0.22,0.22,6.9,rain,185,17.3,79,92
+2025-05-24,18.0925,95.2681,Myanaung,Asia/Rangoon,Periods of rain,0.61,0.28,0.28,4.6,rain,176,12.7,78,92
+2025-05-15,18.2142,95.3811,Myanaung,Asia/Rangoon,"Morning t-storms, then rain",0.97,0.27,0.27,11.5,thunderstorm,140,25.3,74,87
+2025-05-16,18.2142,95.3811,Myanaung,Asia/Rangoon,Occasional rain,0.97,0.75,0.75,10.4,rain,118,21.9,75,83
+2025-05-17,18.2142,95.3811,Myanaung,Asia/Rangoon,Occasional afternoon rain,0.78,0.34,0.34,9.2,rain,154,24.2,76,86
+2025-05-18,18.2142,95.3811,Myanaung,Asia/Rangoon,"Mostly cloudy, a little rain",0.81,0.1,0.1,10.4,rain,173,23.0,76,88
+2025-05-19,18.2142,95.3811,Myanaung,Asia/Rangoon,A little afternoon rain,0.73,0.54,0.54,8.1,rain,187,18.4,78,90
+2025-05-20,18.2142,95.3811,Myanaung,Asia/Rangoon,Warm with periods of rain,0.6,0.23,0.23,8.1,rain,193,17.3,79,98
+2025-05-21,18.2142,95.3811,Myanaung,Asia/Rangoon,Some rain and a thunderstorm,0.55,0.08,0.08,6.9,rain,169,17.3,81,96
+2025-05-22,18.2142,95.3811,Myanaung,Asia/Rangoon,A touch of afternoon rain,0.57,0.08,0.08,6.9,rain,168,18.4,80,95
+2025-05-23,18.2142,95.3811,Myanaung,Asia/Rangoon,Afternoon rain,0.72,0.3,0.3,6.9,rain,179,17.3,81,95
+2025-05-24,18.2142,95.3811,Myanaung,Asia/Rangoon,Periods of rain,0.62,0.23,0.23,5.8,rain,170,17.3,79,94
+2025-05-15,18.2863,95.3196,Myanaung,Asia/Rangoon,"Morning t-storms, then rain",0.97,0.27,0.27,11.5,thunderstorm,140,25.3,74,87
+2025-05-16,18.2863,95.3196,Myanaung,Asia/Rangoon,Occasional rain,0.97,0.75,0.75,10.4,rain,118,21.9,75,83
+2025-05-17,18.2863,95.3196,Myanaung,Asia/Rangoon,Occasional afternoon rain,0.78,0.34,0.34,9.2,rain,154,24.2,76,86
+2025-05-18,18.2863,95.3196,Myanaung,Asia/Rangoon,"Mostly cloudy, a little rain",0.81,0.1,0.1,10.4,rain,173,23.0,76,88
+2025-05-19,18.2863,95.3196,Myanaung,Asia/Rangoon,A little afternoon rain,0.73,0.54,0.54,8.1,rain,187,18.4,78,90
+2025-05-20,18.2863,95.3196,Myanaung,Asia/Rangoon,Warm with periods of rain,0.6,0.23,0.23,8.1,rain,193,17.3,79,98
+2025-05-21,18.2863,95.3196,Myanaung,Asia/Rangoon,Some rain and a thunderstorm,0.55,0.08,0.08,6.9,rain,169,17.3,81,96
+2025-05-22,18.2863,95.3196,Myanaung,Asia/Rangoon,A touch of afternoon rain,0.57,0.08,0.08,6.9,rain,168,18.4,80,95
+2025-05-23,18.2863,95.3196,Myanaung,Asia/Rangoon,Afternoon rain,0.72,0.3,0.3,6.9,rain,179,17.3,81,95
+2025-05-24,18.2863,95.3196,Myanaung,Asia/Rangoon,Periods of rain,0.62,0.23,0.23,5.8,rain,170,17.3,79,94
+2025-05-15,16.5997,94.9288,Myaungmya,Asia/Rangoon,"Morning t-storms, then rain",0.97,0.34,0.34,6.9,thunderstorm,103,19.6,74,86
+2025-05-16,16.5997,94.9288,Myaungmya,Asia/Rangoon,Occasional rain,0.97,0.7,0.7,9.2,rain,179,25.3,75,85
+2025-05-17,16.5997,94.9288,Myaungmya,Asia/Rangoon,Periods of rain,0.97,0.73,0.73,6.9,rain,174,23.0,78,88
+2025-05-18,16.5997,94.9288,Myaungmya,Asia/Rangoon,A little afternoon rain,0.63,0.13,0.13,6.9,rain,148,20.7,77,87
+2025-05-19,16.5997,94.9288,Myaungmya,Asia/Rangoon,Periods of rain,0.97,1.2,1.2,6.9,rain,188,20.7,77,87
+2025-05-20,16.5997,94.9288,Myaungmya,Asia/Rangoon,Periods of rain,0.7,0.88,0.88,6.9,rain,222,15.0,79,93
+2025-05-21,16.5997,94.9288,Myaungmya,Asia/Rangoon,Periods of rain,0.61,0.31,0.31,4.6,rain,158,12.7,80,91
+2025-05-22,16.5997,94.9288,Myaungmya,Asia/Rangoon,Periods of rain and a t-storm,0.65,0.67,0.67,4.6,rain,179,15.0,79,90
+2025-05-23,16.5997,94.9288,Myaungmya,Asia/Rangoon,Periods of rain and a t-storm,0.65,0.41,0.41,5.8,rain,181,20.7,81,90
+2025-05-24,16.5997,94.9288,Myaungmya,Asia/Rangoon,Rain,0.75,0.56,0.56,4.6,rain,184,13.8,79,90
+2025-05-15,16.0177,94.3462,Ngapudaw,Asia/Rangoon,Rain,1.0,0.85,0.85,9.2,rain,119,20.7,82,86
+2025-05-16,16.0177,94.3462,Ngapudaw,Asia/Rangoon,Occasional rain,0.97,0.92,0.92,11.5,rain,207,24.2,82,86
+2025-05-17,16.0177,94.3462,Ngapudaw,Asia/Rangoon,Occasional rain,0.97,0.72,0.72,9.2,rain,198,25.3,82,88
+2025-05-18,16.0177,94.3462,Ngapudaw,Asia/Rangoon,"A.M. rain; otherwise, cloudy",0.7,0.13,0.13,8.1,rain,45,19.6,83,88
+2025-05-19,16.0177,94.3462,Ngapudaw,Asia/Rangoon,Periods of rain,0.94,0.94,0.94,8.1,rain,182,20.7,84,91
+2025-05-20,16.0177,94.3462,Ngapudaw,Asia/Rangoon,Periods of rain and a t-storm,0.65,0.25,0.25,8.1,rain,216,16.1,82,91
+2025-05-21,16.0177,94.3462,Ngapudaw,Asia/Rangoon,A little afternoon rain,0.64,0.18,0.18,9.2,rain,199,18.4,82,89
+2025-05-22,16.0177,94.3462,Ngapudaw,Asia/Rangoon,Afternoon rain,0.85,0.68,0.68,9.2,rain,203,20.7,83,90
+2025-05-23,16.0177,94.3462,Ngapudaw,Asia/Rangoon,A morning thunderstorm or two,0.59,0.21,0.21,13.8,thunderstorm,210,28.8,82,89
+2025-05-24,16.0177,94.3462,Ngapudaw,Asia/Rangoon,Periods of rain,0.6,0.18,0.18,9.2,rain,189,23.0,82,89
+2025-05-15,16.541,94.6943,Ngapudaw,Asia/Rangoon,"Morning t-storms, then rain",0.97,0.34,0.34,6.9,thunderstorm,103,19.6,74,86
+2025-05-16,16.541,94.6943,Ngapudaw,Asia/Rangoon,Occasional rain,0.97,0.7,0.7,9.2,rain,179,25.3,75,85
+2025-05-17,16.541,94.6943,Ngapudaw,Asia/Rangoon,Periods of rain,0.97,0.73,0.73,6.9,rain,174,23.0,78,88
+2025-05-18,16.541,94.6943,Ngapudaw,Asia/Rangoon,A little afternoon rain,0.63,0.13,0.13,6.9,rain,148,20.7,77,87
+2025-05-19,16.541,94.6943,Ngapudaw,Asia/Rangoon,Periods of rain,0.97,1.2,1.2,6.9,rain,188,20.7,77,87
+2025-05-20,16.541,94.6943,Ngapudaw,Asia/Rangoon,Periods of rain,0.7,0.88,0.88,6.9,rain,222,15.0,79,93
+2025-05-21,16.541,94.6943,Ngapudaw,Asia/Rangoon,Periods of rain,0.61,0.31,0.31,4.6,rain,158,12.7,80,91
+2025-05-22,16.541,94.6943,Ngapudaw,Asia/Rangoon,Periods of rain and a t-storm,0.65,0.67,0.67,4.6,rain,179,15.0,79,90
+2025-05-23,16.541,94.6943,Ngapudaw,Asia/Rangoon,Periods of rain and a t-storm,0.65,0.41,0.41,5.8,rain,181,20.7,81,90
+2025-05-24,16.541,94.6943,Ngapudaw,Asia/Rangoon,Rain,0.75,0.56,0.56,4.6,rain,184,13.8,79,90
+2025-05-15,16.523,94.3019,Ngapudaw,Asia/Rangoon,"Brief a.m. showers, then rain",0.96,0.55,0.55,9.2,rain,108,18.4,82,88
+2025-05-16,16.523,94.3019,Ngapudaw,Asia/Rangoon,Rain; breezy in the afternoon,0.96,0.81,0.81,13.8,rain,197,26.5,81,86
+2025-05-17,16.523,94.3019,Ngapudaw,Asia/Rangoon,A little afternoon rain,0.72,0.52,0.52,10.4,rain,190,24.2,82,86
+2025-05-18,16.523,94.3019,Ngapudaw,Asia/Rangoon,Cloudy with a bit of rain,0.72,0.09,0.09,8.1,rain,142,20.7,83,88
+2025-05-19,16.523,94.3019,Ngapudaw,Asia/Rangoon,A bit of afternoon rain,0.9,0.89,0.89,6.9,rain,178,20.7,84,90
+2025-05-20,16.523,94.3019,Ngapudaw,Asia/Rangoon,Occasional rain and a t-storm,0.61,0.51,0.51,9.2,rain,221,21.9,81,94
+2025-05-21,16.523,94.3019,Ngapudaw,Asia/Rangoon,Periods of rain and a t-storm,0.65,0.41,0.41,9.2,rain,203,19.6,82,90
+2025-05-22,16.523,94.3019,Ngapudaw,Asia/Rangoon,Periods of rain,0.74,1.16,1.16,8.1,rain,205,26.5,81,91
+2025-05-23,16.523,94.3019,Ngapudaw,Asia/Rangoon,A bit of afternoon rain,0.62,0.14,0.14,10.4,rain,208,24.2,83,90
+2025-05-24,16.523,94.3019,Ngapudaw,Asia/Rangoon,Periods of rain,0.69,0.65,0.65,9.2,rain,177,20.7,81,91
+2025-05-15,17.0507,95.6323,Nyaungdon,Asia/Rangoon,"Morning t-storms, then rain",1.0,0.2,0.2,10.4,thunderstorm,108,17.3,74,84
+2025-05-16,17.0507,95.6323,Nyaungdon,Asia/Rangoon,Occasional rain,0.98,0.84,0.84,10.4,rain,148,27.6,75,85
+2025-05-17,17.0507,95.6323,Nyaungdon,Asia/Rangoon,Occasional rain,0.91,0.34,0.34,6.9,rain,130,19.6,77,87
+2025-05-18,17.0507,95.6323,Nyaungdon,Asia/Rangoon,A bit of afternoon rain,0.64,0.1,0.1,8.1,rain,147,19.6,77,87
+2025-05-19,17.0507,95.6323,Nyaungdon,Asia/Rangoon,Periods of rain,0.96,1.12,1.12,6.9,rain,188,21.9,77,90
+2025-05-20,17.0507,95.6323,Nyaungdon,Asia/Rangoon,Periods of rain,0.74,0.61,0.61,6.9,rain,222,20.7,78,94
+2025-05-21,17.0507,95.6323,Nyaungdon,Asia/Rangoon,Periods of rain,0.61,0.31,0.31,4.6,rain,158,15.0,80,91
+2025-05-22,17.0507,95.6323,Nyaungdon,Asia/Rangoon,Rain in the afternoon,0.75,0.6,0.6,4.6,rain,172,13.8,79,92
+2025-05-23,17.0507,95.6323,Nyaungdon,Asia/Rangoon,Periods of rain,0.71,1.07,1.07,4.6,rain,177,12.7,80,91
+2025-05-24,17.0507,95.6323,Nyaungdon,Asia/Rangoon,Rain,0.75,0.3,0.3,4.6,rain,162,16.1,77,90
+2025-05-15,16.9831,95.4665,Pantanaw,Asia/Rangoon,"Morning t-storms, then rain",1.0,0.2,0.2,10.4,thunderstorm,108,17.3,74,84
+2025-05-16,16.9831,95.4665,Pantanaw,Asia/Rangoon,Occasional rain,0.98,0.84,0.84,10.4,rain,148,27.6,75,85
+2025-05-17,16.9831,95.4665,Pantanaw,Asia/Rangoon,Occasional rain,0.91,0.34,0.34,6.9,rain,130,19.6,77,87
+2025-05-18,16.9831,95.4665,Pantanaw,Asia/Rangoon,A bit of afternoon rain,0.64,0.1,0.1,8.1,rain,147,19.6,77,87
+2025-05-19,16.9831,95.4665,Pantanaw,Asia/Rangoon,Periods of rain,0.96,1.12,1.12,6.9,rain,188,21.9,77,90
+2025-05-20,16.9831,95.4665,Pantanaw,Asia/Rangoon,Periods of rain,0.74,0.61,0.61,6.9,rain,222,20.7,78,94
+2025-05-21,16.9831,95.4665,Pantanaw,Asia/Rangoon,Periods of rain,0.61,0.31,0.31,4.6,rain,158,15.0,80,91
+2025-05-22,16.9831,95.4665,Pantanaw,Asia/Rangoon,Rain in the afternoon,0.75,0.6,0.6,4.6,rain,172,13.8,79,92
+2025-05-23,16.9831,95.4665,Pantanaw,Asia/Rangoon,Periods of rain,0.71,1.07,1.07,4.6,rain,177,12.7,80,91
+2025-05-24,16.9831,95.4665,Pantanaw,Asia/Rangoon,Rain,0.75,0.3,0.3,4.6,rain,162,16.1,77,90
+2025-05-15,16.9605,94.4445,Pathein,Asia/Rangoon,Rain at times this afternoon,0.9,0.18,0.18,8.1,thunderstorm,107,19.6,74,85
+2025-05-16,16.9605,94.4445,Pathein,Asia/Rangoon,Rain at times,0.96,0.67,0.67,6.9,rain,168,24.2,76,83
+2025-05-17,16.9605,94.4445,Pathein,Asia/Rangoon,Occasional rain,0.95,0.65,0.65,6.9,rain,162,20.7,78,86
+2025-05-18,16.9605,94.4445,Pathein,Asia/Rangoon,Periods of rain,0.91,0.37,0.37,6.9,rain,139,18.4,78,85
+2025-05-19,16.9605,94.4445,Pathein,Asia/Rangoon,Periods of rain,0.92,0.58,0.58,5.8,rain,188,17.3,79,88
+2025-05-20,16.9605,94.4445,Pathein,Asia/Rangoon,Periods of rain,0.75,1.37,1.37,6.9,rain,233,23.0,80,90
+2025-05-21,16.9605,94.4445,Pathein,Asia/Rangoon,Periods of rain,0.6,0.26,0.26,5.8,rain,196,18.4,81,90
+2025-05-22,16.9605,94.4445,Pathein,Asia/Rangoon,Periods of rain,0.64,0.54,0.54,6.9,rain,196,24.2,80,91
+2025-05-23,16.9605,94.4445,Pathein,Asia/Rangoon,Rain and a thunderstorm,0.69,0.35,0.35,6.9,thunderstorm,203,20.7,82,90
+2025-05-24,16.9605,94.4445,Pathein,Asia/Rangoon,Rain,0.76,0.64,0.64,4.6,rain,183,16.1,80,89
+2025-05-15,16.8658,94.3879,Pathein,Asia/Rangoon,Rain at times this afternoon,0.9,0.18,0.18,8.1,thunderstorm,107,19.6,74,85
+2025-05-16,16.8658,94.3879,Pathein,Asia/Rangoon,Rain at times,0.96,0.67,0.67,6.9,rain,168,24.2,76,83
+2025-05-17,16.8658,94.3879,Pathein,Asia/Rangoon,Occasional rain,0.95,0.65,0.65,6.9,rain,162,20.7,78,86
+2025-05-18,16.8658,94.3879,Pathein,Asia/Rangoon,Periods of rain,0.91,0.37,0.37,6.9,rain,139,18.4,78,85
+2025-05-19,16.8658,94.3879,Pathein,Asia/Rangoon,Periods of rain,0.92,0.58,0.58,5.8,rain,188,17.3,79,88
+2025-05-20,16.8658,94.3879,Pathein,Asia/Rangoon,Periods of rain,0.75,1.37,1.37,6.9,rain,233,23.0,80,90
+2025-05-21,16.8658,94.3879,Pathein,Asia/Rangoon,Periods of rain,0.6,0.26,0.26,5.8,rain,196,18.4,81,90
+2025-05-22,16.8658,94.3879,Pathein,Asia/Rangoon,Periods of rain,0.64,0.54,0.54,6.9,rain,196,24.2,80,91
+2025-05-23,16.8658,94.3879,Pathein,Asia/Rangoon,Rain and a thunderstorm,0.69,0.35,0.35,6.9,thunderstorm,203,20.7,82,90
+2025-05-24,16.8658,94.3879,Pathein,Asia/Rangoon,Rain,0.76,0.64,0.64,4.6,rain,183,16.1,80,89
+2025-05-15,16.7801,94.7335,Pathein,Asia/Rangoon,"Morning t-storms, then rain",0.97,0.34,0.34,6.9,thunderstorm,103,19.6,74,86
+2025-05-16,16.7801,94.7335,Pathein,Asia/Rangoon,Occasional rain,0.97,0.7,0.7,9.2,rain,179,25.3,75,85
+2025-05-17,16.7801,94.7335,Pathein,Asia/Rangoon,Periods of rain,0.97,0.73,0.73,6.9,rain,174,23.0,78,88
+2025-05-18,16.7801,94.7335,Pathein,Asia/Rangoon,A little afternoon rain,0.63,0.13,0.13,6.9,rain,148,20.7,77,87
+2025-05-19,16.7801,94.7335,Pathein,Asia/Rangoon,Periods of rain,0.97,1.2,1.2,6.9,rain,188,20.7,77,87
+2025-05-20,16.7801,94.7335,Pathein,Asia/Rangoon,Periods of rain,0.7,0.88,0.88,6.9,rain,222,15.0,79,93
+2025-05-21,16.7801,94.7335,Pathein,Asia/Rangoon,Periods of rain,0.61,0.31,0.31,4.6,rain,158,12.7,80,91
+2025-05-22,16.7801,94.7335,Pathein,Asia/Rangoon,Periods of rain and a t-storm,0.65,0.67,0.67,4.6,rain,179,15.0,79,90
+2025-05-23,16.7801,94.7335,Pathein,Asia/Rangoon,Periods of rain and a t-storm,0.65,0.41,0.41,5.8,rain,181,20.7,81,90
+2025-05-24,16.7801,94.7335,Pathein,Asia/Rangoon,Rain,0.75,0.56,0.56,4.6,rain,184,13.8,79,90
+2025-05-15,17.0778,94.4599,Pathein,Asia/Rangoon,Rain at times this afternoon,0.9,0.18,0.18,8.1,thunderstorm,107,19.6,74,85
+2025-05-16,17.0778,94.4599,Pathein,Asia/Rangoon,Rain at times,0.96,0.67,0.67,6.9,rain,168,24.2,76,83
+2025-05-17,17.0778,94.4599,Pathein,Asia/Rangoon,Occasional rain,0.95,0.65,0.65,6.9,rain,162,20.7,78,86
+2025-05-18,17.0778,94.4599,Pathein,Asia/Rangoon,Periods of rain,0.91,0.37,0.37,6.9,rain,139,18.4,78,85
+2025-05-19,17.0778,94.4599,Pathein,Asia/Rangoon,Periods of rain,0.92,0.58,0.58,5.8,rain,188,17.3,79,88
+2025-05-20,17.0778,94.4599,Pathein,Asia/Rangoon,Periods of rain,0.75,1.37,1.37,6.9,rain,233,23.0,80,90
+2025-05-21,17.0778,94.4599,Pathein,Asia/Rangoon,Periods of rain,0.6,0.26,0.26,5.8,rain,196,18.4,81,90
+2025-05-22,17.0778,94.4599,Pathein,Asia/Rangoon,Periods of rain,0.64,0.54,0.54,6.9,rain,196,24.2,80,91
+2025-05-23,17.0778,94.4599,Pathein,Asia/Rangoon,Rain and a thunderstorm,0.69,0.35,0.35,6.9,thunderstorm,203,20.7,82,90
+2025-05-24,17.0778,94.4599,Pathein,Asia/Rangoon,Rain,0.76,0.64,0.64,4.6,rain,183,16.1,80,89
+2025-05-15,15.8011,95.289,Pyapon,Asia/Rangoon,"Rain, a thunderstorm",1.0,1.53,1.53,10.4,rain,162,21.9,76,83
+2025-05-16,15.8011,95.289,Pyapon,Asia/Rangoon,Occasional rain,0.94,0.55,0.55,10.4,rain,193,23.0,78,84
+2025-05-17,15.8011,95.289,Pyapon,Asia/Rangoon,"Mostly cloudy, a little rain",0.83,0.26,0.26,8.1,rain,188,21.9,80,87
+2025-05-18,15.8011,95.289,Pyapon,Asia/Rangoon,"A.M. rain; otherwise, cloudy",0.9,0.51,0.51,4.6,rain,165,17.3,80,87
+2025-05-19,15.8011,95.289,Pyapon,Asia/Rangoon,Periods of rain,0.92,0.61,0.61,5.8,rain,222,17.3,81,87
+2025-05-20,15.8011,95.289,Pyapon,Asia/Rangoon,"Mostly cloudy, a little rain",0.58,0.23,0.23,6.9,rain,224,18.4,80,86
+2025-05-21,15.8011,95.289,Pyapon,Asia/Rangoon,"Mostly cloudy, a little rain",0.55,0.1,0.1,5.8,rain,194,17.3,82,88
+2025-05-22,15.8011,95.289,Pyapon,Asia/Rangoon,Afternoon rain,0.75,0.41,0.41,8.1,rain,203,20.7,81,87
+2025-05-23,15.8011,95.289,Pyapon,Asia/Rangoon,Some rain and a thunderstorm,0.55,0.24,0.24,6.9,rain,213,21.9,82,88
+2025-05-24,15.8011,95.289,Pyapon,Asia/Rangoon,Periods of rain and a t-storm,0.65,0.26,0.26,8.1,rain,200,20.7,81,88
+2025-05-15,16.2929,95.6804,Pyapon,Asia/Rangoon,Rain and a thunderstorm,1.0,1.36,1.36,8.1,rain,157,19.6,76,83
+2025-05-16,16.2929,95.6804,Pyapon,Asia/Rangoon,Occasional rain,0.93,0.48,0.48,10.4,rain,176,21.9,76,84
+2025-05-17,16.2929,95.6804,Pyapon,Asia/Rangoon,Cloudy with a little rain,0.86,0.38,0.38,8.1,rain,188,24.2,78,87
+2025-05-18,16.2929,95.6804,Pyapon,Asia/Rangoon,Periods of rain,0.91,0.36,0.36,5.8,rain,150,18.4,78,88
+2025-05-19,16.2929,95.6804,Pyapon,Asia/Rangoon,Rain in the afternoon,0.82,0.56,0.56,6.9,rain,176,19.6,78,88
+2025-05-20,16.2929,95.6804,Pyapon,Asia/Rangoon,Periods of rain,0.62,0.4,0.4,6.9,rain,203,16.1,79,91
+2025-05-21,16.2929,95.6804,Pyapon,Asia/Rangoon,Periods of rain,0.6,0.18,0.18,3.5,rain,170,17.3,80,90
+2025-05-22,16.2929,95.6804,Pyapon,Asia/Rangoon,Rain in the afternoon,0.71,0.25,0.25,4.6,rain,169,16.1,79,91
+2025-05-23,16.2929,95.6804,Pyapon,Asia/Rangoon,Rain and a thunderstorm,0.65,0.55,0.55,4.6,rain,169,17.3,81,90
+2025-05-24,16.2929,95.6804,Pyapon,Asia/Rangoon,Periods of rain and a t-storm,0.65,0.41,0.41,5.8,rain,185,17.3,79,89
+2025-05-15,17.0462,94.8045,Thabaung,Asia/Rangoon,Afternoon rain,1.0,0.28,0.28,6.9,thunderstorm,109,18.4,74,84
+2025-05-16,17.0462,94.8045,Thabaung,Asia/Rangoon,Occasional rain,0.97,0.64,0.64,8.1,rain,169,24.2,75,84
+2025-05-17,17.0462,94.8045,Thabaung,Asia/Rangoon,Periods of rain,0.91,0.44,0.44,5.8,rain,156,17.3,77,87
+2025-05-18,17.0462,94.8045,Thabaung,Asia/Rangoon,Rain in the afternoon,0.77,0.17,0.17,5.8,rain,131,17.3,76,88
+2025-05-19,17.0462,94.8045,Thabaung,Asia/Rangoon,Periods of rain,0.95,1.06,1.06,5.8,rain,193,18.4,77,88
+2025-05-20,17.0462,94.8045,Thabaung,Asia/Rangoon,Heavy rain developing,0.85,0.65,0.65,6.9,rain,231,15.0,79,92
+2025-05-21,17.0462,94.8045,Thabaung,Asia/Rangoon,Rain and a thunderstorm,0.65,0.24,0.24,3.5,rain,155,11.5,80,91
+2025-05-22,17.0462,94.8045,Thabaung,Asia/Rangoon,Periods of rain,0.65,0.61,0.61,5.8,rain,179,16.1,79,90
+2025-05-23,17.0462,94.8045,Thabaung,Asia/Rangoon,Rain in the afternoon,0.75,0.54,0.54,4.6,rain,182,13.8,80,90
+2025-05-24,17.0462,94.8045,Thabaung,Asia/Rangoon,Periods of rain,0.65,0.31,0.31,3.5,rain,178,13.8,79,89
+2025-05-15,16.4373,95.1338,Wakema,Asia/Rangoon,"Morning t-storms, then rain",1.0,1.15,1.15,8.1,thunderstorm,130,17.3,75,84
+2025-05-16,16.4373,95.1338,Wakema,Asia/Rangoon,Occasional rain,0.93,0.45,0.45,10.4,rain,180,21.9,76,85
+2025-05-17,16.4373,95.1338,Wakema,Asia/Rangoon,Occasional rain,0.91,0.4,0.4,8.1,rain,170,20.7,78,88
+2025-05-18,16.4373,95.1338,Wakema,Asia/Rangoon,Cloudy with a little rain,0.81,0.11,0.11,6.9,rain,137,19.6,78,87
+2025-05-19,16.4373,95.1338,Wakema,Asia/Rangoon,Afternoon rain,0.84,0.36,0.36,6.9,rain,191,21.9,79,90
+2025-05-20,16.4373,95.1338,Wakema,Asia/Rangoon,Periods of rain,0.62,0.37,0.37,6.9,rain,216,16.1,79,93
+2025-05-21,16.4373,95.1338,Wakema,Asia/Rangoon,Rain and a thunderstorm,0.67,0.56,0.56,4.6,rain,146,13.8,80,91
+2025-05-22,16.4373,95.1338,Wakema,Asia/Rangoon,Rain and a thunderstorm,0.68,1.05,1.05,3.5,rain,170,15.0,79,90
+2025-05-23,16.4373,95.1338,Wakema,Asia/Rangoon,Rain and a thunderstorm,0.65,0.24,0.24,4.6,rain,188,16.1,80,90
+2025-05-24,16.4373,95.1338,Wakema,Asia/Rangoon,Rain,0.75,0.34,0.34,4.6,rain,187,12.7,79,88
+2025-05-15,16.6042,95.1809,Wakema,Asia/Rangoon,"Morning t-storms, then rain",1.0,1.15,1.15,8.1,thunderstorm,130,17.3,75,84
+2025-05-16,16.6042,95.1809,Wakema,Asia/Rangoon,Occasional rain,0.93,0.45,0.45,10.4,rain,180,21.9,76,85
+2025-05-17,16.6042,95.1809,Wakema,Asia/Rangoon,Occasional rain,0.91,0.4,0.4,8.1,rain,170,20.7,78,88
+2025-05-18,16.6042,95.1809,Wakema,Asia/Rangoon,Cloudy with a little rain,0.81,0.11,0.11,6.9,rain,137,19.6,78,87
+2025-05-19,16.6042,95.1809,Wakema,Asia/Rangoon,Afternoon rain,0.84,0.36,0.36,6.9,rain,191,21.9,79,90
+2025-05-20,16.6042,95.1809,Wakema,Asia/Rangoon,Periods of rain,0.62,0.37,0.37,6.9,rain,216,16.1,79,93
+2025-05-21,16.6042,95.1809,Wakema,Asia/Rangoon,Rain and a thunderstorm,0.67,0.56,0.56,4.6,rain,146,13.8,80,91
+2025-05-22,16.6042,95.1809,Wakema,Asia/Rangoon,Rain and a thunderstorm,0.68,1.05,1.05,3.5,rain,170,15.0,79,90
+2025-05-23,16.6042,95.1809,Wakema,Asia/Rangoon,Rain and a thunderstorm,0.65,0.24,0.24,4.6,rain,188,16.1,80,90
+2025-05-24,16.6042,95.1809,Wakema,Asia/Rangoon,Rain,0.75,0.34,0.34,4.6,rain,187,12.7,79,88
+2025-05-15,17.1996,95.0841,Yegyi,Asia/Rangoon,Rain this afternoon,0.9,0.19,0.19,8.1,thunderstorm,118,18.4,74,84
+2025-05-16,17.1996,95.0841,Yegyi,Asia/Rangoon,Periods of rain,0.97,0.41,0.41,8.1,rain,142,20.7,75,83
+2025-05-17,17.1996,95.0841,Yegyi,Asia/Rangoon,Periods of rain,0.97,0.78,0.78,6.9,rain,133,18.4,76,85
+2025-05-18,17.1996,95.0841,Yegyi,Asia/Rangoon,Periods of rain,0.91,0.26,0.26,5.8,rain,134,19.6,76,86
+2025-05-19,17.1996,95.0841,Yegyi,Asia/Rangoon,Periods of rain,0.95,0.75,0.75,6.9,rain,190,21.9,77,89
+2025-05-20,17.1996,95.0841,Yegyi,Asia/Rangoon,Rain and a thunderstorm,0.65,0.24,0.24,6.9,rain,229,17.3,78,95
+2025-05-21,17.1996,95.0841,Yegyi,Asia/Rangoon,Periods of rain,0.62,0.3,0.3,3.5,rain,171,13.8,79,92
+2025-05-22,17.1996,95.0841,Yegyi,Asia/Rangoon,Afternoon rain,0.73,0.32,0.32,4.6,rain,175,16.1,78,91
+2025-05-23,17.1996,95.0841,Yegyi,Asia/Rangoon,Periods of rain,0.63,0.37,0.37,4.6,rain,200,16.1,79,90
+2025-05-24,17.1996,95.0841,Yegyi,Asia/Rangoon,Rain,0.75,0.53,0.53,4.6,rain,185,13.8,77,90
+2025-05-15,17.398,95.0765,Yegyi,Asia/Rangoon,Rain this afternoon,0.9,0.19,0.19,8.1,thunderstorm,118,18.4,74,84
+2025-05-16,17.398,95.0765,Yegyi,Asia/Rangoon,Periods of rain,0.97,0.41,0.41,8.1,rain,142,20.7,75,83
+2025-05-17,17.398,95.0765,Yegyi,Asia/Rangoon,Periods of rain,0.97,0.78,0.78,6.9,rain,133,18.4,76,85
+2025-05-18,17.398,95.0765,Yegyi,Asia/Rangoon,Periods of rain,0.91,0.26,0.26,5.8,rain,134,19.6,76,86
+2025-05-19,17.398,95.0765,Yegyi,Asia/Rangoon,Periods of rain,0.95,0.75,0.75,6.9,rain,190,21.9,77,89
+2025-05-20,17.398,95.0765,Yegyi,Asia/Rangoon,Rain and a thunderstorm,0.65,0.24,0.24,6.9,rain,229,17.3,78,95
+2025-05-21,17.398,95.0765,Yegyi,Asia/Rangoon,Periods of rain,0.62,0.3,0.3,3.5,rain,171,13.8,79,92
+2025-05-22,17.398,95.0765,Yegyi,Asia/Rangoon,Afternoon rain,0.73,0.32,0.32,4.6,rain,175,16.1,78,91
+2025-05-23,17.398,95.0765,Yegyi,Asia/Rangoon,Periods of rain,0.63,0.37,0.37,4.6,rain,200,16.1,79,90
+2025-05-24,17.398,95.0765,Yegyi,Asia/Rangoon,Rain,0.75,0.53,0.53,4.6,rain,185,13.8,77,90
+2025-05-15,17.3439,95.1196,Yegyi,Asia/Rangoon,Rain this afternoon,0.9,0.19,0.19,8.1,thunderstorm,118,18.4,74,84
+2025-05-16,17.3439,95.1196,Yegyi,Asia/Rangoon,Periods of rain,0.97,0.41,0.41,8.1,rain,142,20.7,75,83
+2025-05-17,17.3439,95.1196,Yegyi,Asia/Rangoon,Periods of rain,0.97,0.78,0.78,6.9,rain,133,18.4,76,85
+2025-05-18,17.3439,95.1196,Yegyi,Asia/Rangoon,Periods of rain,0.91,0.26,0.26,5.8,rain,134,19.6,76,86
+2025-05-19,17.3439,95.1196,Yegyi,Asia/Rangoon,Periods of rain,0.95,0.75,0.75,6.9,rain,190,21.9,77,89
+2025-05-20,17.3439,95.1196,Yegyi,Asia/Rangoon,Rain and a thunderstorm,0.65,0.24,0.24,6.9,rain,229,17.3,78,95
+2025-05-21,17.3439,95.1196,Yegyi,Asia/Rangoon,Periods of rain,0.62,0.3,0.3,3.5,rain,171,13.8,79,92
+2025-05-22,17.3439,95.1196,Yegyi,Asia/Rangoon,Afternoon rain,0.73,0.32,0.32,4.6,rain,175,16.1,78,91
+2025-05-23,17.3439,95.1196,Yegyi,Asia/Rangoon,Periods of rain,0.63,0.37,0.37,4.6,rain,200,16.1,79,90
+2025-05-24,17.3439,95.1196,Yegyi,Asia/Rangoon,Rain,0.75,0.53,0.53,4.6,rain,185,13.8,77,90
+2025-05-15,17.4792,95.5574,Zalun,Asia/Rangoon,Breezy with rain,0.94,0.19,0.19,10.4,rain,116,19.6,74,84
+2025-05-16,17.4792,95.5574,Zalun,Asia/Rangoon,Occasional rain,0.97,0.62,0.62,11.5,rain,123,24.2,75,84
+2025-05-17,17.4792,95.5574,Zalun,Asia/Rangoon,Occasional rain,0.97,0.78,0.78,6.9,rain,138,19.6,76,87
+2025-05-18,17.4792,95.5574,Zalun,Asia/Rangoon,Cloudy with a little rain,0.83,0.11,0.11,8.1,rain,164,19.6,76,87
+2025-05-19,17.4792,95.5574,Zalun,Asia/Rangoon,"Afternoon rain, some heavy",0.98,0.86,0.86,6.9,rain,192,16.1,78,90
+2025-05-20,17.4792,95.5574,Zalun,Asia/Rangoon,Occasional afternoon rain,0.73,0.33,0.33,9.2,sprinkles,216,17.3,79,96
+2025-05-21,17.4792,95.5574,Zalun,Asia/Rangoon,Periods of rain,0.62,0.27,0.27,4.6,rain,176,12.7,80,93
+2025-05-22,17.4792,95.5574,Zalun,Asia/Rangoon,A little afternoon rain,0.59,0.11,0.11,5.8,rain,174,17.3,79,94
+2025-05-23,17.4792,95.5574,Zalun,Asia/Rangoon,Rain and a thunderstorm,0.65,0.41,0.41,4.6,rain,192,13.8,80,92
+2025-05-24,17.4792,95.5574,Zalun,Asia/Rangoon,Periods of rain,0.7,0.57,0.57,4.6,rain,176,13.8,80,92
+2025-05-15,17.3349,96.483,Bago,Asia/Rangoon,Rain and a thunderstorm,1.0,3.39,3.39,8.1,rain,139,13.8,74,82
+2025-05-16,17.3349,96.483,Bago,Asia/Rangoon,Occasional rain,0.91,0.23,0.23,8.1,rain,137,17.3,75,84
+2025-05-17,17.3349,96.483,Bago,Asia/Rangoon,Occasional rain,0.91,0.2,0.2,6.9,rain,165,18.4,77,87
+2025-05-18,17.3349,96.483,Bago,Asia/Rangoon,Occasional rain and a t-storm,0.84,0.17,0.17,6.9,rain,179,18.4,77,88
+2025-05-19,17.3349,96.483,Bago,Asia/Rangoon,Occasional afternoon rain,0.71,0.36,0.36,5.8,rain,147,18.4,77,89
+2025-05-20,17.3349,96.483,Bago,Asia/Rangoon,Afternoon rain,0.73,0.38,0.38,6.9,rain,194,18.4,79,90
+2025-05-21,17.3349,96.483,Bago,Asia/Rangoon,Periods of rain,0.66,0.45,0.45,4.6,rain,174,13.8,79,88
+2025-05-22,17.3349,96.483,Bago,Asia/Rangoon,Afternoon rain,0.75,0.65,0.65,4.6,rain,152,16.1,80,88
+2025-05-23,17.3349,96.483,Bago,Asia/Rangoon,Periods of rain,0.67,0.54,0.54,3.5,rain,158,9.2,80,88
+2025-05-24,17.3349,96.483,Bago,Asia/Rangoon,Periods of rain,0.65,0.37,0.37,6.9,rain,157,19.6,78,87
+2025-05-15,17.4747,96.5269,Bago,Asia/Rangoon,Rain,1.0,0.9,0.9,6.9,rain,120,13.8,73,84
+2025-05-16,17.4747,96.5269,Bago,Asia/Rangoon,Occasional rain,0.91,0.32,0.32,6.9,rain,129,13.8,74,84
+2025-05-17,17.4747,96.5269,Bago,Asia/Rangoon,Occasional rain,0.91,0.34,0.34,6.9,rain,136,19.6,77,85
+2025-05-18,17.4747,96.5269,Bago,Asia/Rangoon,Rain and a thunderstorm,0.94,0.25,0.25,6.9,rain,157,18.4,76,87
+2025-05-19,17.4747,96.5269,Bago,Asia/Rangoon,Periods of rain,0.92,0.61,0.61,4.6,rain,167,15.0,77,89
+2025-05-20,17.4747,96.5269,Bago,Asia/Rangoon,Afternoon rain,0.85,0.31,0.31,5.8,sprinkles,184,16.1,78,94
+2025-05-21,17.4747,96.5269,Bago,Asia/Rangoon,Afternoon rain,0.7,0.19,0.19,5.8,rain,174,17.3,78,91
+2025-05-22,17.4747,96.5269,Bago,Asia/Rangoon,Afternoon rain,0.85,0.67,0.67,3.5,sprinkles,152,15.0,79,92
+2025-05-23,17.4747,96.5269,Bago,Asia/Rangoon,Rain in the afternoon,0.74,0.41,0.41,2.3,rain,169,9.2,79,89
+2025-05-24,17.4747,96.5269,Bago,Asia/Rangoon,Periods of rain,0.66,0.37,0.37,4.6,rain,156,15.0,77,89
+2025-05-15,17.1815,96.3751,Bago,Asia/Rangoon,Rain,1.0,0.63,0.63,9.2,rain,141,15.0,74,82
+2025-05-16,17.1815,96.3751,Bago,Asia/Rangoon,Rain at times,0.94,0.46,0.46,9.2,rain,127,21.9,75,83
+2025-05-17,17.1815,96.3751,Bago,Asia/Rangoon,Occasional rain,0.91,0.34,0.34,6.9,rain,136,20.7,76,86
+2025-05-18,17.1815,96.3751,Bago,Asia/Rangoon,Occasional rain and a t-storm,0.71,0.08,0.08,8.1,rain,173,18.4,76,88
+2025-05-19,17.1815,96.3751,Bago,Asia/Rangoon,Periods of rain,0.97,1.38,1.38,5.8,rain,174,18.4,77,90
+2025-05-20,17.1815,96.3751,Bago,Asia/Rangoon,A bit of afternoon rain,0.61,0.08,0.08,5.8,rain,194,16.1,79,93
+2025-05-21,17.1815,96.3751,Bago,Asia/Rangoon,Periods of rain,0.6,0.18,0.18,3.5,rain,169,12.7,79,89
+2025-05-22,17.1815,96.3751,Bago,Asia/Rangoon,"A morning t-storm, then rain",0.75,1.09,1.09,4.6,rain,168,15.0,78,90
+2025-05-23,17.1815,96.3751,Bago,Asia/Rangoon,Rain and a thunderstorm,0.65,0.38,0.38,3.5,rain,200,10.4,79,90
+2025-05-24,17.1815,96.3751,Bago,Asia/Rangoon,Rain,0.76,0.56,0.56,4.6,rain,154,15.0,77,89
+2025-05-15,17.7903,96.6686,Daik-U,Asia/Rangoon,Rain,1.0,0.9,0.9,6.9,rain,120,13.8,73,84
+2025-05-16,17.7903,96.6686,Daik-U,Asia/Rangoon,Occasional rain,0.91,0.32,0.32,6.9,rain,129,13.8,74,84
+2025-05-17,17.7903,96.6686,Daik-U,Asia/Rangoon,Occasional rain,0.91,0.34,0.34,6.9,rain,136,19.6,77,85
+2025-05-18,17.7903,96.6686,Daik-U,Asia/Rangoon,Rain and a thunderstorm,0.94,0.25,0.25,6.9,rain,157,18.4,76,87
+2025-05-19,17.7903,96.6686,Daik-U,Asia/Rangoon,Periods of rain,0.92,0.61,0.61,4.6,rain,167,15.0,77,89
+2025-05-20,17.7903,96.6686,Daik-U,Asia/Rangoon,Afternoon rain,0.85,0.31,0.31,5.8,sprinkles,184,16.1,78,94
+2025-05-21,17.7903,96.6686,Daik-U,Asia/Rangoon,Afternoon rain,0.7,0.19,0.19,5.8,rain,174,17.3,78,91
+2025-05-22,17.7903,96.6686,Daik-U,Asia/Rangoon,Afternoon rain,0.85,0.67,0.67,3.5,sprinkles,152,15.0,79,92
+2025-05-23,17.7903,96.6686,Daik-U,Asia/Rangoon,Rain in the afternoon,0.74,0.41,0.41,2.3,rain,169,9.2,79,89
+2025-05-24,17.7903,96.6686,Daik-U,Asia/Rangoon,Periods of rain,0.66,0.37,0.37,4.6,rain,156,15.0,77,89
+2025-05-15,18.8454,96.4845,Htantabin,Asia/Rangoon,A p.m. t-storm in spots,0.55,0.22,0.22,5.8,thunderstorm,161,24.2,79,94
+2025-05-16,18.8454,96.4845,Htantabin,Asia/Rangoon,A touch of afternoon rain,0.75,0.21,0.21,5.8,rain,164,16.1,79,88
+2025-05-17,18.8454,96.4845,Htantabin,Asia/Rangoon,Periods of rain,0.95,0.6,0.6,8.1,rain,164,17.3,79,92
+2025-05-18,18.8454,96.4845,Htantabin,Asia/Rangoon,Periods of rain,0.91,0.52,0.52,8.1,rain,172,18.4,78,93
+2025-05-19,18.8454,96.4845,Htantabin,Asia/Rangoon,Occasional afternoon rain,0.81,0.24,0.24,5.8,rain,158,15.0,78,93
+2025-05-20,18.8454,96.4845,Htantabin,Asia/Rangoon,Afternoon rain,0.85,0.21,0.21,6.9,sprinkles,149,17.3,76,99
+2025-05-21,18.8454,96.4845,Htantabin,Asia/Rangoon,Rain in the afternoon,0.85,0.2,0.2,5.8,rain,163,15.0,79,94
+2025-05-22,18.8454,96.4845,Htantabin,Asia/Rangoon,Rain and a thunderstorm,0.75,0.24,0.24,4.6,rain,150,13.8,78,95
+2025-05-23,18.8454,96.4845,Htantabin,Asia/Rangoon,Afternoon rain,0.85,0.32,0.32,5.8,sprinkles,146,16.1,79,92
+2025-05-24,18.8454,96.4845,Htantabin,Asia/Rangoon,"Rather cloudy, a little rain",0.55,0.06,0.06,5.8,rain,170,16.1,79,94
+2025-05-15,17.0913,96.4657,Kawa,Asia/Rangoon,Rain and a thunderstorm,1.0,3.39,3.39,8.1,rain,139,13.8,74,82
+2025-05-16,17.0913,96.4657,Kawa,Asia/Rangoon,Occasional rain,0.91,0.23,0.23,8.1,rain,137,17.3,75,84
+2025-05-17,17.0913,96.4657,Kawa,Asia/Rangoon,Occasional rain,0.91,0.2,0.2,6.9,rain,165,18.4,77,87
+2025-05-18,17.0913,96.4657,Kawa,Asia/Rangoon,Occasional rain and a t-storm,0.84,0.17,0.17,6.9,rain,179,18.4,77,88
+2025-05-19,17.0913,96.4657,Kawa,Asia/Rangoon,Occasional afternoon rain,0.71,0.36,0.36,5.8,rain,147,18.4,77,89
+2025-05-20,17.0913,96.4657,Kawa,Asia/Rangoon,Afternoon rain,0.73,0.38,0.38,6.9,rain,194,18.4,79,90
+2025-05-21,17.0913,96.4657,Kawa,Asia/Rangoon,Periods of rain,0.66,0.45,0.45,4.6,rain,174,13.8,79,88
+2025-05-22,17.0913,96.4657,Kawa,Asia/Rangoon,Afternoon rain,0.75,0.65,0.65,4.6,rain,152,16.1,80,88
+2025-05-23,17.0913,96.4657,Kawa,Asia/Rangoon,Periods of rain,0.67,0.54,0.54,3.5,rain,158,9.2,80,88
+2025-05-24,17.0913,96.4657,Kawa,Asia/Rangoon,Periods of rain,0.65,0.37,0.37,6.9,rain,157,19.6,78,87
+2025-05-15,17.0282,96.5958,Kawa,Asia/Rangoon,Rain and a thunderstorm,1.0,3.39,3.39,8.1,rain,139,13.8,74,82
+2025-05-16,17.0282,96.5958,Kawa,Asia/Rangoon,Occasional rain,0.91,0.23,0.23,8.1,rain,137,17.3,75,84
+2025-05-17,17.0282,96.5958,Kawa,Asia/Rangoon,Occasional rain,0.91,0.2,0.2,6.9,rain,165,18.4,77,87
+2025-05-18,17.0282,96.5958,Kawa,Asia/Rangoon,Occasional rain and a t-storm,0.84,0.17,0.17,6.9,rain,179,18.4,77,88
+2025-05-19,17.0282,96.5958,Kawa,Asia/Rangoon,Occasional afternoon rain,0.71,0.36,0.36,5.8,rain,147,18.4,77,89
+2025-05-20,17.0282,96.5958,Kawa,Asia/Rangoon,Afternoon rain,0.73,0.38,0.38,6.9,rain,194,18.4,79,90
+2025-05-21,17.0282,96.5958,Kawa,Asia/Rangoon,Periods of rain,0.66,0.45,0.45,4.6,rain,174,13.8,79,88
+2025-05-22,17.0282,96.5958,Kawa,Asia/Rangoon,Afternoon rain,0.75,0.65,0.65,4.6,rain,152,16.1,80,88
+2025-05-23,17.0282,96.5958,Kawa,Asia/Rangoon,Periods of rain,0.67,0.54,0.54,3.5,rain,158,9.2,80,88
+2025-05-24,17.0282,96.5958,Kawa,Asia/Rangoon,Periods of rain,0.65,0.37,0.37,6.9,rain,157,19.6,78,87
+2025-05-15,18.3269,96.7692,Kyaukkyi,Asia/Rangoon,Occasional afternoon rain,0.9,0.6,0.6,8.1,sprinkles,132,15.0,72,86
+2025-05-16,18.3269,96.7692,Kyaukkyi,Asia/Rangoon,Some rain and a thunderstorm,0.84,0.18,0.18,6.9,rain,154,17.3,74,84
+2025-05-17,18.3269,96.7692,Kyaukkyi,Asia/Rangoon,"Mostly cloudy, rain",0.92,0.34,0.34,6.9,rain,145,19.6,75,85
+2025-05-18,18.3269,96.7692,Kyaukkyi,Asia/Rangoon,Periods of rain and a t-storm,0.94,0.25,0.25,6.9,rain,168,18.4,76,87
+2025-05-19,18.3269,96.7692,Kyaukkyi,Asia/Rangoon,Periods of rain,0.91,0.23,0.23,4.6,rain,177,17.3,77,90
+2025-05-20,18.3269,96.7692,Kyaukkyi,Asia/Rangoon,Rain in the afternoon,0.7,0.19,0.19,5.8,rain,146,18.4,78,95
+2025-05-21,18.3269,96.7692,Kyaukkyi,Asia/Rangoon,Periods of rain,0.65,0.43,0.43,3.5,rain,174,15.0,79,92
+2025-05-22,18.3269,96.7692,Kyaukkyi,Asia/Rangoon,A little afternoon rain,0.65,0.22,0.22,4.6,rain,148,13.8,78,93
+2025-05-23,18.3269,96.7692,Kyaukkyi,Asia/Rangoon,Periods of rain,0.65,0.48,0.48,4.6,rain,181,15.0,79,90
+2025-05-24,18.3269,96.7692,Kyaukkyi,Asia/Rangoon,Periods of rain,0.6,0.19,0.19,4.6,rain,178,13.8,79,90
+2025-05-15,18.0384,96.5544,Kyauktaga,Asia/Rangoon,Occasional afternoon rain,0.9,0.6,0.6,8.1,sprinkles,132,15.0,72,86
+2025-05-16,18.0384,96.5544,Kyauktaga,Asia/Rangoon,Some rain and a thunderstorm,0.84,0.18,0.18,6.9,rain,154,17.3,74,84
+2025-05-17,18.0384,96.5544,Kyauktaga,Asia/Rangoon,"Mostly cloudy, rain",0.92,0.34,0.34,6.9,rain,145,19.6,75,85
+2025-05-18,18.0384,96.5544,Kyauktaga,Asia/Rangoon,Periods of rain and a t-storm,0.94,0.25,0.25,6.9,rain,168,18.4,76,87
+2025-05-19,18.0384,96.5544,Kyauktaga,Asia/Rangoon,Periods of rain,0.91,0.23,0.23,4.6,rain,177,17.3,77,90
+2025-05-20,18.0384,96.5544,Kyauktaga,Asia/Rangoon,Rain in the afternoon,0.7,0.19,0.19,5.8,rain,146,18.4,78,95
+2025-05-21,18.0384,96.5544,Kyauktaga,Asia/Rangoon,Periods of rain,0.65,0.43,0.43,3.5,rain,174,15.0,79,92
+2025-05-22,18.0384,96.5544,Kyauktaga,Asia/Rangoon,A little afternoon rain,0.65,0.22,0.22,4.6,rain,148,13.8,78,93
+2025-05-23,18.0384,96.5544,Kyauktaga,Asia/Rangoon,Periods of rain,0.65,0.48,0.48,4.6,rain,181,15.0,79,90
+2025-05-24,18.0384,96.5544,Kyauktaga,Asia/Rangoon,Periods of rain,0.6,0.19,0.19,4.6,rain,178,13.8,79,90
+2025-05-15,18.1601,96.6151,Kyauktaga,Asia/Rangoon,Occasional afternoon rain,0.9,0.6,0.6,8.1,sprinkles,132,15.0,72,86
+2025-05-16,18.1601,96.6151,Kyauktaga,Asia/Rangoon,Some rain and a thunderstorm,0.84,0.18,0.18,6.9,rain,154,17.3,74,84
+2025-05-17,18.1601,96.6151,Kyauktaga,Asia/Rangoon,"Mostly cloudy, rain",0.92,0.34,0.34,6.9,rain,145,19.6,75,85
+2025-05-18,18.1601,96.6151,Kyauktaga,Asia/Rangoon,Periods of rain and a t-storm,0.94,0.25,0.25,6.9,rain,168,18.4,76,87
+2025-05-19,18.1601,96.6151,Kyauktaga,Asia/Rangoon,Periods of rain,0.91,0.23,0.23,4.6,rain,177,17.3,77,90
+2025-05-20,18.1601,96.6151,Kyauktaga,Asia/Rangoon,Rain in the afternoon,0.7,0.19,0.19,5.8,rain,146,18.4,78,95
+2025-05-21,18.1601,96.6151,Kyauktaga,Asia/Rangoon,Periods of rain,0.65,0.43,0.43,3.5,rain,174,15.0,79,92
+2025-05-22,18.1601,96.6151,Kyauktaga,Asia/Rangoon,A little afternoon rain,0.65,0.22,0.22,4.6,rain,148,13.8,78,93
+2025-05-23,18.1601,96.6151,Kyauktaga,Asia/Rangoon,Periods of rain,0.65,0.48,0.48,4.6,rain,181,15.0,79,90
+2025-05-24,18.1601,96.6151,Kyauktaga,Asia/Rangoon,Periods of rain,0.6,0.19,0.19,4.6,rain,178,13.8,79,90
+2025-05-15,18.2232,96.5691,Kyauktaga,Asia/Rangoon,Occasional afternoon rain,0.9,0.6,0.6,8.1,sprinkles,132,15.0,72,86
+2025-05-16,18.2232,96.5691,Kyauktaga,Asia/Rangoon,Some rain and a thunderstorm,0.84,0.18,0.18,6.9,rain,154,17.3,74,84
+2025-05-17,18.2232,96.5691,Kyauktaga,Asia/Rangoon,"Mostly cloudy, rain",0.92,0.34,0.34,6.9,rain,145,19.6,75,85
+2025-05-18,18.2232,96.5691,Kyauktaga,Asia/Rangoon,Periods of rain and a t-storm,0.94,0.25,0.25,6.9,rain,168,18.4,76,87
+2025-05-19,18.2232,96.5691,Kyauktaga,Asia/Rangoon,Periods of rain,0.91,0.23,0.23,4.6,rain,177,17.3,77,90
+2025-05-20,18.2232,96.5691,Kyauktaga,Asia/Rangoon,Rain in the afternoon,0.7,0.19,0.19,5.8,rain,146,18.4,78,95
+2025-05-21,18.2232,96.5691,Kyauktaga,Asia/Rangoon,Periods of rain,0.65,0.43,0.43,3.5,rain,174,15.0,79,92
+2025-05-22,18.2232,96.5691,Kyauktaga,Asia/Rangoon,A little afternoon rain,0.65,0.22,0.22,4.6,rain,148,13.8,78,93
+2025-05-23,18.2232,96.5691,Kyauktaga,Asia/Rangoon,Periods of rain,0.65,0.48,0.48,4.6,rain,181,15.0,79,90
+2025-05-24,18.2232,96.5691,Kyauktaga,Asia/Rangoon,Periods of rain,0.6,0.19,0.19,4.6,rain,178,13.8,79,90
+2025-05-15,17.9166,96.8446,Nyaunglebin,Asia/Rangoon,Occasional afternoon rain,0.9,0.6,0.6,8.1,sprinkles,132,15.0,72,86
+2025-05-16,17.9166,96.8446,Nyaunglebin,Asia/Rangoon,Some rain and a thunderstorm,0.84,0.18,0.18,6.9,rain,154,17.3,74,84
+2025-05-17,17.9166,96.8446,Nyaunglebin,Asia/Rangoon,"Mostly cloudy, rain",0.92,0.34,0.34,6.9,rain,145,19.6,75,85
+2025-05-18,17.9166,96.8446,Nyaunglebin,Asia/Rangoon,Periods of rain and a t-storm,0.94,0.25,0.25,6.9,rain,168,18.4,76,87
+2025-05-19,17.9166,96.8446,Nyaunglebin,Asia/Rangoon,Periods of rain,0.91,0.23,0.23,4.6,rain,177,17.3,77,90
+2025-05-20,17.9166,96.8446,Nyaunglebin,Asia/Rangoon,Rain in the afternoon,0.7,0.19,0.19,5.8,rain,146,18.4,78,95
+2025-05-21,17.9166,96.8446,Nyaunglebin,Asia/Rangoon,Periods of rain,0.65,0.43,0.43,3.5,rain,174,15.0,79,92
+2025-05-22,17.9166,96.8446,Nyaunglebin,Asia/Rangoon,A little afternoon rain,0.65,0.22,0.22,4.6,rain,148,13.8,78,93
+2025-05-23,17.9166,96.8446,Nyaunglebin,Asia/Rangoon,Periods of rain,0.65,0.48,0.48,4.6,rain,181,15.0,79,90
+2025-05-24,17.9166,96.8446,Nyaunglebin,Asia/Rangoon,Periods of rain,0.6,0.19,0.19,4.6,rain,178,13.8,79,90
+2025-05-15,17.9527,96.7227,Nyaunglebin,Asia/Rangoon,Occasional afternoon rain,0.9,0.6,0.6,8.1,sprinkles,132,15.0,72,86
+2025-05-16,17.9527,96.7227,Nyaunglebin,Asia/Rangoon,Some rain and a thunderstorm,0.84,0.18,0.18,6.9,rain,154,17.3,74,84
+2025-05-17,17.9527,96.7227,Nyaunglebin,Asia/Rangoon,"Mostly cloudy, rain",0.92,0.34,0.34,6.9,rain,145,19.6,75,85
+2025-05-18,17.9527,96.7227,Nyaunglebin,Asia/Rangoon,Periods of rain and a t-storm,0.94,0.25,0.25,6.9,rain,168,18.4,76,87
+2025-05-19,17.9527,96.7227,Nyaunglebin,Asia/Rangoon,Periods of rain,0.91,0.23,0.23,4.6,rain,177,17.3,77,90
+2025-05-20,17.9527,96.7227,Nyaunglebin,Asia/Rangoon,Rain in the afternoon,0.7,0.19,0.19,5.8,rain,146,18.4,78,95
+2025-05-21,17.9527,96.7227,Nyaunglebin,Asia/Rangoon,Periods of rain,0.65,0.43,0.43,3.5,rain,174,15.0,79,92
+2025-05-22,17.9527,96.7227,Nyaunglebin,Asia/Rangoon,A little afternoon rain,0.65,0.22,0.22,4.6,rain,148,13.8,78,93
+2025-05-23,17.9527,96.7227,Nyaunglebin,Asia/Rangoon,Periods of rain,0.65,0.48,0.48,4.6,rain,181,15.0,79,90
+2025-05-24,17.9527,96.7227,Nyaunglebin,Asia/Rangoon,Periods of rain,0.6,0.19,0.19,4.6,rain,178,13.8,79,90
+2025-05-15,18.0699,96.6668,Nyaunglebin,Asia/Rangoon,Occasional afternoon rain,0.9,0.6,0.6,8.1,sprinkles,132,15.0,72,86
+2025-05-16,18.0699,96.6668,Nyaunglebin,Asia/Rangoon,Some rain and a thunderstorm,0.84,0.18,0.18,6.9,rain,154,17.3,74,84
+2025-05-17,18.0699,96.6668,Nyaunglebin,Asia/Rangoon,"Mostly cloudy, rain",0.92,0.34,0.34,6.9,rain,145,19.6,75,85
+2025-05-18,18.0699,96.6668,Nyaunglebin,Asia/Rangoon,Periods of rain and a t-storm,0.94,0.25,0.25,6.9,rain,168,18.4,76,87
+2025-05-19,18.0699,96.6668,Nyaunglebin,Asia/Rangoon,Periods of rain,0.91,0.23,0.23,4.6,rain,177,17.3,77,90
+2025-05-20,18.0699,96.6668,Nyaunglebin,Asia/Rangoon,Rain in the afternoon,0.7,0.19,0.19,5.8,rain,146,18.4,78,95
+2025-05-21,18.0699,96.6668,Nyaunglebin,Asia/Rangoon,Periods of rain,0.65,0.43,0.43,3.5,rain,174,15.0,79,92
+2025-05-22,18.0699,96.6668,Nyaunglebin,Asia/Rangoon,A little afternoon rain,0.65,0.22,0.22,4.6,rain,148,13.8,78,93
+2025-05-23,18.0699,96.6668,Nyaunglebin,Asia/Rangoon,Periods of rain,0.65,0.48,0.48,4.6,rain,181,15.0,79,90
+2025-05-24,18.0699,96.6668,Nyaunglebin,Asia/Rangoon,Periods of rain,0.6,0.19,0.19,4.6,rain,178,13.8,79,90
+2025-05-15,17.876,96.7141,Nyaunglebin,Asia/Rangoon,Rain,1.0,0.9,0.9,6.9,rain,120,13.8,73,84
+2025-05-16,17.876,96.7141,Nyaunglebin,Asia/Rangoon,Occasional rain,0.91,0.32,0.32,6.9,rain,129,13.8,74,84
+2025-05-17,17.876,96.7141,Nyaunglebin,Asia/Rangoon,Occasional rain,0.91,0.34,0.34,6.9,rain,136,19.6,77,85
+2025-05-18,17.876,96.7141,Nyaunglebin,Asia/Rangoon,Rain and a thunderstorm,0.94,0.25,0.25,6.9,rain,157,18.4,76,87
+2025-05-19,17.876,96.7141,Nyaunglebin,Asia/Rangoon,Periods of rain,0.92,0.61,0.61,4.6,rain,167,15.0,77,89
+2025-05-20,17.876,96.7141,Nyaunglebin,Asia/Rangoon,Afternoon rain,0.85,0.31,0.31,5.8,sprinkles,184,16.1,78,94
+2025-05-21,17.876,96.7141,Nyaunglebin,Asia/Rangoon,Afternoon rain,0.7,0.19,0.19,5.8,rain,174,17.3,78,91
+2025-05-22,17.876,96.7141,Nyaunglebin,Asia/Rangoon,Afternoon rain,0.85,0.67,0.67,3.5,sprinkles,152,15.0,79,92
+2025-05-23,17.876,96.7141,Nyaunglebin,Asia/Rangoon,Rain in the afternoon,0.74,0.41,0.41,2.3,rain,169,9.2,79,89
+2025-05-24,17.876,96.7141,Nyaunglebin,Asia/Rangoon,Periods of rain,0.66,0.37,0.37,4.6,rain,156,15.0,77,89
+2025-05-15,18.7011,96.4087,Oktwin,Asia/Rangoon,Occasional rain and drizzle,0.96,0.03,0.03,8.1,rain,156,23.0,75,88
+2025-05-16,18.7011,96.4087,Oktwin,Asia/Rangoon,Occasional afternoon rain,0.88,0.28,0.28,5.8,rain,144,17.3,76,85
+2025-05-17,18.7011,96.4087,Oktwin,Asia/Rangoon,Occasional rain,0.93,0.43,0.43,8.1,rain,153,20.7,77,88
+2025-05-18,18.7011,96.4087,Oktwin,Asia/Rangoon,Periods of rain,0.91,0.55,0.55,8.1,rain,177,19.6,77,90
+2025-05-19,18.7011,96.4087,Oktwin,Asia/Rangoon,Afternoon rain,0.78,0.17,0.17,5.8,rain,158,17.3,77,92
+2025-05-20,18.7011,96.4087,Oktwin,Asia/Rangoon,A little afternoon rain,0.62,0.13,0.13,6.9,rain,148,19.6,77,98
+2025-05-21,18.7011,96.4087,Oktwin,Asia/Rangoon,Rain in the afternoon,0.75,0.47,0.47,4.6,rain,176,16.1,79,93
+2025-05-22,18.7011,96.4087,Oktwin,Asia/Rangoon,Some rain and a thunderstorm,0.6,0.08,0.08,4.6,rain,152,15.0,78,94
+2025-05-23,18.7011,96.4087,Oktwin,Asia/Rangoon,A little afternoon rain,0.56,0.06,0.06,4.6,rain,155,12.7,79,92
+2025-05-24,18.7011,96.4087,Oktwin,Asia/Rangoon,"Mainly cloudy, a little rain",0.55,0.1,0.1,6.9,rain,177,17.3,78,92
+2025-05-15,18.8319,96.4118,Oktwin,Asia/Rangoon,A p.m. t-storm in spots,0.55,0.22,0.22,5.8,thunderstorm,161,24.2,79,94
+2025-05-16,18.8319,96.4118,Oktwin,Asia/Rangoon,A touch of afternoon rain,0.75,0.21,0.21,5.8,rain,164,16.1,79,88
+2025-05-17,18.8319,96.4118,Oktwin,Asia/Rangoon,Periods of rain,0.95,0.6,0.6,8.1,rain,164,17.3,79,92
+2025-05-18,18.8319,96.4118,Oktwin,Asia/Rangoon,Periods of rain,0.91,0.52,0.52,8.1,rain,172,18.4,78,93
+2025-05-19,18.8319,96.4118,Oktwin,Asia/Rangoon,Occasional afternoon rain,0.81,0.24,0.24,5.8,rain,158,15.0,78,93
+2025-05-20,18.8319,96.4118,Oktwin,Asia/Rangoon,Afternoon rain,0.85,0.21,0.21,6.9,sprinkles,149,17.3,76,99
+2025-05-21,18.8319,96.4118,Oktwin,Asia/Rangoon,Rain in the afternoon,0.85,0.2,0.2,5.8,rain,163,15.0,79,94
+2025-05-22,18.8319,96.4118,Oktwin,Asia/Rangoon,Rain and a thunderstorm,0.75,0.24,0.24,4.6,rain,150,13.8,78,95
+2025-05-23,18.8319,96.4118,Oktwin,Asia/Rangoon,Afternoon rain,0.85,0.32,0.32,5.8,sprinkles,146,16.1,79,92
+2025-05-24,18.8319,96.4118,Oktwin,Asia/Rangoon,"Rather cloudy, a little rain",0.55,0.06,0.06,5.8,rain,170,16.1,79,94
+2025-05-15,18.3405,96.4907,Phyu,Asia/Rangoon,Occasional rain and drizzle,0.96,0.03,0.03,8.1,rain,156,23.0,75,88
+2025-05-16,18.3405,96.4907,Phyu,Asia/Rangoon,Occasional afternoon rain,0.88,0.28,0.28,5.8,rain,144,17.3,76,85
+2025-05-17,18.3405,96.4907,Phyu,Asia/Rangoon,Occasional rain,0.93,0.43,0.43,8.1,rain,153,20.7,77,88
+2025-05-18,18.3405,96.4907,Phyu,Asia/Rangoon,Periods of rain,0.91,0.55,0.55,8.1,rain,177,19.6,77,90
+2025-05-19,18.3405,96.4907,Phyu,Asia/Rangoon,Afternoon rain,0.78,0.17,0.17,5.8,rain,158,17.3,77,92
+2025-05-20,18.3405,96.4907,Phyu,Asia/Rangoon,A little afternoon rain,0.62,0.13,0.13,6.9,rain,148,19.6,77,98
+2025-05-21,18.3405,96.4907,Phyu,Asia/Rangoon,Rain in the afternoon,0.75,0.47,0.47,4.6,rain,176,16.1,79,93
+2025-05-22,18.3405,96.4907,Phyu,Asia/Rangoon,Some rain and a thunderstorm,0.6,0.08,0.08,4.6,rain,152,15.0,78,94
+2025-05-23,18.3405,96.4907,Phyu,Asia/Rangoon,A little afternoon rain,0.56,0.06,0.06,4.6,rain,155,12.7,79,92
+2025-05-24,18.3405,96.4907,Phyu,Asia/Rangoon,"Mainly cloudy, a little rain",0.55,0.1,0.1,6.9,rain,177,17.3,78,92
+2025-05-15,18.4847,96.4366,Phyu,Asia/Rangoon,Occasional rain and drizzle,0.96,0.03,0.03,8.1,rain,156,23.0,75,88
+2025-05-16,18.4847,96.4366,Phyu,Asia/Rangoon,Occasional afternoon rain,0.88,0.28,0.28,5.8,rain,144,17.3,76,85
+2025-05-17,18.4847,96.4366,Phyu,Asia/Rangoon,Occasional rain,0.93,0.43,0.43,8.1,rain,153,20.7,77,88
+2025-05-18,18.4847,96.4366,Phyu,Asia/Rangoon,Periods of rain,0.91,0.55,0.55,8.1,rain,177,19.6,77,90
+2025-05-19,18.4847,96.4366,Phyu,Asia/Rangoon,Afternoon rain,0.78,0.17,0.17,5.8,rain,158,17.3,77,92
+2025-05-20,18.4847,96.4366,Phyu,Asia/Rangoon,A little afternoon rain,0.62,0.13,0.13,6.9,rain,148,19.6,77,98
+2025-05-21,18.4847,96.4366,Phyu,Asia/Rangoon,Rain in the afternoon,0.75,0.47,0.47,4.6,rain,176,16.1,79,93
+2025-05-22,18.4847,96.4366,Phyu,Asia/Rangoon,Some rain and a thunderstorm,0.6,0.08,0.08,4.6,rain,152,15.0,78,94
+2025-05-23,18.4847,96.4366,Phyu,Asia/Rangoon,A little afternoon rain,0.56,0.06,0.06,4.6,rain,155,12.7,79,92
+2025-05-24,18.4847,96.4366,Phyu,Asia/Rangoon,"Mainly cloudy, a little rain",0.55,0.1,0.1,6.9,rain,177,17.3,78,92
+2025-05-15,18.5388,96.4298,Phyu,Asia/Rangoon,Occasional rain and drizzle,0.96,0.03,0.03,8.1,rain,156,23.0,75,88
+2025-05-16,18.5388,96.4298,Phyu,Asia/Rangoon,Occasional afternoon rain,0.88,0.28,0.28,5.8,rain,144,17.3,76,85
+2025-05-17,18.5388,96.4298,Phyu,Asia/Rangoon,Occasional rain,0.93,0.43,0.43,8.1,rain,153,20.7,77,88
+2025-05-18,18.5388,96.4298,Phyu,Asia/Rangoon,Periods of rain,0.91,0.55,0.55,8.1,rain,177,19.6,77,90
+2025-05-19,18.5388,96.4298,Phyu,Asia/Rangoon,Afternoon rain,0.78,0.17,0.17,5.8,rain,158,17.3,77,92
+2025-05-20,18.5388,96.4298,Phyu,Asia/Rangoon,A little afternoon rain,0.62,0.13,0.13,6.9,rain,148,19.6,77,98
+2025-05-21,18.5388,96.4298,Phyu,Asia/Rangoon,Rain in the afternoon,0.75,0.47,0.47,4.6,rain,176,16.1,79,93
+2025-05-22,18.5388,96.4298,Phyu,Asia/Rangoon,Some rain and a thunderstorm,0.6,0.08,0.08,4.6,rain,152,15.0,78,94
+2025-05-23,18.5388,96.4298,Phyu,Asia/Rangoon,A little afternoon rain,0.56,0.06,0.06,4.6,rain,155,12.7,79,92
+2025-05-24,18.5388,96.4298,Phyu,Asia/Rangoon,"Mainly cloudy, a little rain",0.55,0.1,0.1,6.9,rain,177,17.3,78,92
+2025-05-15,17.9211,96.8774,Shwegyin,Asia/Rangoon,Occasional afternoon rain,0.9,0.6,0.6,8.1,sprinkles,132,15.0,72,86
+2025-05-16,17.9211,96.8774,Shwegyin,Asia/Rangoon,Some rain and a thunderstorm,0.84,0.18,0.18,6.9,rain,154,17.3,74,84
+2025-05-17,17.9211,96.8774,Shwegyin,Asia/Rangoon,"Mostly cloudy, rain",0.92,0.34,0.34,6.9,rain,145,19.6,75,85
+2025-05-18,17.9211,96.8774,Shwegyin,Asia/Rangoon,Periods of rain and a t-storm,0.94,0.25,0.25,6.9,rain,168,18.4,76,87
+2025-05-19,17.9211,96.8774,Shwegyin,Asia/Rangoon,Periods of rain,0.91,0.23,0.23,4.6,rain,177,17.3,77,90
+2025-05-20,17.9211,96.8774,Shwegyin,Asia/Rangoon,Rain in the afternoon,0.7,0.19,0.19,5.8,rain,146,18.4,78,95
+2025-05-21,17.9211,96.8774,Shwegyin,Asia/Rangoon,Periods of rain,0.65,0.43,0.43,3.5,rain,174,15.0,79,92
+2025-05-22,17.9211,96.8774,Shwegyin,Asia/Rangoon,A little afternoon rain,0.65,0.22,0.22,4.6,rain,148,13.8,78,93
+2025-05-23,17.9211,96.8774,Shwegyin,Asia/Rangoon,Periods of rain,0.65,0.48,0.48,4.6,rain,181,15.0,79,90
+2025-05-24,17.9211,96.8774,Shwegyin,Asia/Rangoon,Periods of rain,0.6,0.19,0.19,4.6,rain,178,13.8,79,90
+2025-05-15,19.0122,96.4047,Taungoo,Asia/Rangoon,A p.m. t-storm in spots,0.55,0.22,0.22,5.8,thunderstorm,161,24.2,79,94
+2025-05-16,19.0122,96.4047,Taungoo,Asia/Rangoon,A touch of afternoon rain,0.75,0.21,0.21,5.8,rain,164,16.1,79,88
+2025-05-17,19.0122,96.4047,Taungoo,Asia/Rangoon,Periods of rain,0.95,0.6,0.6,8.1,rain,164,17.3,79,92
+2025-05-18,19.0122,96.4047,Taungoo,Asia/Rangoon,Periods of rain,0.91,0.52,0.52,8.1,rain,172,18.4,78,93
+2025-05-19,19.0122,96.4047,Taungoo,Asia/Rangoon,Occasional afternoon rain,0.81,0.24,0.24,5.8,rain,158,15.0,78,93
+2025-05-20,19.0122,96.4047,Taungoo,Asia/Rangoon,Afternoon rain,0.85,0.21,0.21,6.9,sprinkles,149,17.3,76,99
+2025-05-21,19.0122,96.4047,Taungoo,Asia/Rangoon,Rain in the afternoon,0.85,0.2,0.2,5.8,rain,163,15.0,79,94
+2025-05-22,19.0122,96.4047,Taungoo,Asia/Rangoon,Rain and a thunderstorm,0.75,0.24,0.24,4.6,rain,150,13.8,78,95
+2025-05-23,19.0122,96.4047,Taungoo,Asia/Rangoon,Afternoon rain,0.85,0.32,0.32,5.8,sprinkles,146,16.1,79,92
+2025-05-24,19.0122,96.4047,Taungoo,Asia/Rangoon,"Rather cloudy, a little rain",0.55,0.06,0.06,5.8,rain,170,16.1,79,94
+2025-05-15,18.9401,96.4339,Taungoo,Asia/Rangoon,A p.m. t-storm in spots,0.55,0.22,0.22,5.8,thunderstorm,161,24.2,79,94
+2025-05-16,18.9401,96.4339,Taungoo,Asia/Rangoon,A touch of afternoon rain,0.75,0.21,0.21,5.8,rain,164,16.1,79,88
+2025-05-17,18.9401,96.4339,Taungoo,Asia/Rangoon,Periods of rain,0.95,0.6,0.6,8.1,rain,164,17.3,79,92
+2025-05-18,18.9401,96.4339,Taungoo,Asia/Rangoon,Periods of rain,0.91,0.52,0.52,8.1,rain,172,18.4,78,93
+2025-05-19,18.9401,96.4339,Taungoo,Asia/Rangoon,Occasional afternoon rain,0.81,0.24,0.24,5.8,rain,158,15.0,78,93
+2025-05-20,18.9401,96.4339,Taungoo,Asia/Rangoon,Afternoon rain,0.85,0.21,0.21,6.9,sprinkles,149,17.3,76,99
+2025-05-21,18.9401,96.4339,Taungoo,Asia/Rangoon,Rain in the afternoon,0.85,0.2,0.2,5.8,rain,163,15.0,79,94
+2025-05-22,18.9401,96.4339,Taungoo,Asia/Rangoon,Rain and a thunderstorm,0.75,0.24,0.24,4.6,rain,150,13.8,78,95
+2025-05-23,18.9401,96.4339,Taungoo,Asia/Rangoon,Afternoon rain,0.85,0.32,0.32,5.8,sprinkles,146,16.1,79,92
+2025-05-24,18.9401,96.4339,Taungoo,Asia/Rangoon,"Rather cloudy, a little rain",0.55,0.06,0.06,5.8,rain,170,16.1,79,94
+2025-05-15,17.2898,96.5772,Thanatpin,Asia/Rangoon,Rain and a thunderstorm,1.0,3.39,3.39,8.1,rain,139,13.8,74,82
+2025-05-16,17.2898,96.5772,Thanatpin,Asia/Rangoon,Occasional rain,0.91,0.23,0.23,8.1,rain,137,17.3,75,84
+2025-05-17,17.2898,96.5772,Thanatpin,Asia/Rangoon,Occasional rain,0.91,0.2,0.2,6.9,rain,165,18.4,77,87
+2025-05-18,17.2898,96.5772,Thanatpin,Asia/Rangoon,Occasional rain and a t-storm,0.84,0.17,0.17,6.9,rain,179,18.4,77,88
+2025-05-19,17.2898,96.5772,Thanatpin,Asia/Rangoon,Occasional afternoon rain,0.71,0.36,0.36,5.8,rain,147,18.4,77,89
+2025-05-20,17.2898,96.5772,Thanatpin,Asia/Rangoon,Afternoon rain,0.73,0.38,0.38,6.9,rain,194,18.4,79,90
+2025-05-21,17.2898,96.5772,Thanatpin,Asia/Rangoon,Periods of rain,0.66,0.45,0.45,4.6,rain,174,13.8,79,88
+2025-05-22,17.2898,96.5772,Thanatpin,Asia/Rangoon,Afternoon rain,0.75,0.65,0.65,4.6,rain,152,16.1,80,88
+2025-05-23,17.2898,96.5772,Thanatpin,Asia/Rangoon,Periods of rain,0.67,0.54,0.54,3.5,rain,158,9.2,80,88
+2025-05-24,17.2898,96.5772,Thanatpin,Asia/Rangoon,Periods of rain,0.65,0.37,0.37,6.9,rain,157,19.6,78,87
+2025-05-15,17.4837,96.6828,Waw,Asia/Rangoon,Rain,1.0,0.9,0.9,6.9,rain,120,13.8,73,84
+2025-05-16,17.4837,96.6828,Waw,Asia/Rangoon,Occasional rain,0.91,0.32,0.32,6.9,rain,129,13.8,74,84
+2025-05-17,17.4837,96.6828,Waw,Asia/Rangoon,Occasional rain,0.91,0.34,0.34,6.9,rain,136,19.6,77,85
+2025-05-18,17.4837,96.6828,Waw,Asia/Rangoon,Rain and a thunderstorm,0.94,0.25,0.25,6.9,rain,157,18.4,76,87
+2025-05-19,17.4837,96.6828,Waw,Asia/Rangoon,Periods of rain,0.92,0.61,0.61,4.6,rain,167,15.0,77,89
+2025-05-20,17.4837,96.6828,Waw,Asia/Rangoon,Afternoon rain,0.85,0.31,0.31,5.8,sprinkles,184,16.1,78,94
+2025-05-21,17.4837,96.6828,Waw,Asia/Rangoon,Afternoon rain,0.7,0.19,0.19,5.8,rain,174,17.3,78,91
+2025-05-22,17.4837,96.6828,Waw,Asia/Rangoon,Afternoon rain,0.85,0.67,0.67,3.5,sprinkles,152,15.0,79,92
+2025-05-23,17.4837,96.6828,Waw,Asia/Rangoon,Rain in the afternoon,0.74,0.41,0.41,2.3,rain,169,9.2,79,89
+2025-05-24,17.4837,96.6828,Waw,Asia/Rangoon,Periods of rain,0.66,0.37,0.37,4.6,rain,156,15.0,77,89
+2025-05-15,19.2646,96.2902,Yedashe,Asia/Rangoon,A p.m. t-storm in spots,0.55,0.22,0.22,5.8,thunderstorm,161,24.2,79,94
+2025-05-16,19.2646,96.2902,Yedashe,Asia/Rangoon,A touch of afternoon rain,0.75,0.21,0.21,5.8,rain,164,16.1,79,88
+2025-05-17,19.2646,96.2902,Yedashe,Asia/Rangoon,Periods of rain,0.95,0.6,0.6,8.1,rain,164,17.3,79,92
+2025-05-18,19.2646,96.2902,Yedashe,Asia/Rangoon,Periods of rain,0.91,0.52,0.52,8.1,rain,172,18.4,78,93
+2025-05-19,19.2646,96.2902,Yedashe,Asia/Rangoon,Occasional afternoon rain,0.81,0.24,0.24,5.8,rain,158,15.0,78,93
+2025-05-20,19.2646,96.2902,Yedashe,Asia/Rangoon,Afternoon rain,0.85,0.21,0.21,6.9,sprinkles,149,17.3,76,99
+2025-05-21,19.2646,96.2902,Yedashe,Asia/Rangoon,Rain in the afternoon,0.85,0.2,0.2,5.8,rain,163,15.0,79,94
+2025-05-22,19.2646,96.2902,Yedashe,Asia/Rangoon,Rain and a thunderstorm,0.75,0.24,0.24,4.6,rain,150,13.8,78,95
+2025-05-23,19.2646,96.2902,Yedashe,Asia/Rangoon,Afternoon rain,0.85,0.32,0.32,5.8,sprinkles,146,16.1,79,92
+2025-05-24,19.2646,96.2902,Yedashe,Asia/Rangoon,"Rather cloudy, a little rain",0.55,0.06,0.06,5.8,rain,170,16.1,79,94
+2025-05-15,19.4043,96.2656,Yedashe,Asia/Rangoon,An afternoon t-storm or two,0.87,0.34,0.34,6.9,thunderstorm,153,21.9,77,92
+2025-05-16,19.4043,96.2656,Yedashe,Asia/Rangoon,"Cloudy, downpours in the p.m.",0.87,0.62,0.62,4.6,rain,129,16.1,76,84
+2025-05-17,19.4043,96.2656,Yedashe,Asia/Rangoon,Occasional rain,0.94,0.49,0.49,6.9,rain,152,18.4,75,81
+2025-05-18,19.4043,96.2656,Yedashe,Asia/Rangoon,Humid with periods of rain,0.92,0.52,0.52,6.9,rain,169,19.6,75,90
+2025-05-19,19.4043,96.2656,Yedashe,Asia/Rangoon,"Cloudy, a little rain; humid",0.84,0.21,0.21,5.8,rain,172,15.0,76,92
+2025-05-20,19.4043,96.2656,Yedashe,Asia/Rangoon,Occasional afternoon rain,0.57,0.09,0.09,5.8,rain,155,19.6,78,101
+2025-05-21,19.4043,96.2656,Yedashe,Asia/Rangoon,Humid with periods of rain,0.6,0.18,0.18,5.8,rain,179,17.3,79,95
+2025-05-22,19.4043,96.2656,Yedashe,Asia/Rangoon,A couple of t-storms; humid,0.71,0.44,0.44,4.6,thunderstorm,162,17.3,78,94
+2025-05-23,19.4043,96.2656,Yedashe,Asia/Rangoon,Occasional afternoon rain,0.75,0.25,0.25,4.6,rain,162,15.0,79,94
+2025-05-24,19.4043,96.2656,Yedashe,Asia/Rangoon,Humid with a little rain,0.57,0.1,0.1,6.9,rain,168,18.4,79,94
+2025-05-15,19.4765,96.2681,Yedashe,Asia/Rangoon,Warm; a stray p.m. t-storm,0.55,0.24,0.24,9.2,thunderstorm,168,26.5,79,98
+2025-05-16,19.4765,96.2681,Yedashe,Asia/Rangoon,"Cloudy, a t-storm in the p.m.",0.7,0.41,0.41,4.6,thunderstorm,200,12.7,78,89
+2025-05-17,19.4765,96.2681,Yedashe,Asia/Rangoon,"Mostly cloudy, afternoon rain",0.9,0.56,0.56,8.1,rain,158,19.6,77,89
+2025-05-18,19.4765,96.2681,Yedashe,Asia/Rangoon,"Mostly cloudy, afternoon rain",0.9,0.53,0.53,10.4,rain,171,21.9,77,93
+2025-05-19,19.4765,96.2681,Yedashe,Asia/Rangoon,Periods of rain,0.91,0.35,0.35,6.9,rain,169,15.0,79,92
+2025-05-20,19.4765,96.2681,Yedashe,Asia/Rangoon,Warm with periods of rain,0.6,0.19,0.19,8.1,rain,175,18.4,76,99
+2025-05-21,19.4765,96.2681,Yedashe,Asia/Rangoon,A little afternoon rain,0.59,0.1,0.1,5.8,rain,179,18.4,79,95
+2025-05-22,19.4765,96.2681,Yedashe,Asia/Rangoon,A couple of thunderstorms,0.75,0.8,0.8,4.6,thunderstorm,164,13.8,78,94
+2025-05-23,19.4765,96.2681,Yedashe,Asia/Rangoon,Occasional afternoon rain,0.73,0.37,0.37,4.6,rain,159,15.0,79,94
+2025-05-24,19.4765,96.2681,Yedashe,Asia/Rangoon,Periods of rain,0.6,0.18,0.18,4.6,rain,182,16.1,79,94
+2025-05-15,19.1564,96.3428,Yedashe,Asia/Rangoon,A p.m. t-storm in spots,0.55,0.22,0.22,5.8,thunderstorm,161,24.2,79,94
+2025-05-16,19.1564,96.3428,Yedashe,Asia/Rangoon,A touch of afternoon rain,0.75,0.21,0.21,5.8,rain,164,16.1,79,88
+2025-05-17,19.1564,96.3428,Yedashe,Asia/Rangoon,Periods of rain,0.95,0.6,0.6,8.1,rain,164,17.3,79,92
+2025-05-18,19.1564,96.3428,Yedashe,Asia/Rangoon,Periods of rain,0.91,0.52,0.52,8.1,rain,172,18.4,78,93
+2025-05-19,19.1564,96.3428,Yedashe,Asia/Rangoon,Occasional afternoon rain,0.81,0.24,0.24,5.8,rain,158,15.0,78,93
+2025-05-20,19.1564,96.3428,Yedashe,Asia/Rangoon,Afternoon rain,0.85,0.21,0.21,6.9,sprinkles,149,17.3,76,99
+2025-05-21,19.1564,96.3428,Yedashe,Asia/Rangoon,Rain in the afternoon,0.85,0.2,0.2,5.8,rain,163,15.0,79,94
+2025-05-22,19.1564,96.3428,Yedashe,Asia/Rangoon,Rain and a thunderstorm,0.75,0.24,0.24,4.6,rain,150,13.8,78,95
+2025-05-23,19.1564,96.3428,Yedashe,Asia/Rangoon,Afternoon rain,0.85,0.32,0.32,5.8,sprinkles,146,16.1,79,92
+2025-05-24,19.1564,96.3428,Yedashe,Asia/Rangoon,"Rather cloudy, a little rain",0.55,0.06,0.06,5.8,rain,170,16.1,79,94
+2025-05-15,18.2277,95.6503,Gyobingauk,Asia/Rangoon,"Brief a.m. showers, then rain",0.96,0.11,0.11,9.2,rain,133,25.3,74,85
+2025-05-16,18.2277,95.6503,Gyobingauk,Asia/Rangoon,Occasional rain,0.95,0.58,0.58,8.1,rain,117,23.0,75,83
+2025-05-17,18.2277,95.6503,Gyobingauk,Asia/Rangoon,Occasional rain,0.91,0.36,0.36,6.9,rain,147,19.6,75,84
+2025-05-18,18.2277,95.6503,Gyobingauk,Asia/Rangoon,Afternoon rain,0.78,0.22,0.22,8.1,rain,166,20.7,76,87
+2025-05-19,18.2277,95.6503,Gyobingauk,Asia/Rangoon,Afternoon rain,0.81,0.31,0.31,6.9,rain,180,17.3,77,89
+2025-05-20,18.2277,95.6503,Gyobingauk,Asia/Rangoon,A little afternoon rain,0.56,0.07,0.07,8.1,sprinkles,162,19.6,80,97
+2025-05-21,18.2277,95.6503,Gyobingauk,Asia/Rangoon,Occasional rain and a t-storm,0.55,0.19,0.19,5.8,rain,167,15.0,81,94
+2025-05-22,18.2277,95.6503,Gyobingauk,Asia/Rangoon,A little afternoon rain,0.59,0.09,0.09,5.8,rain,166,16.1,80,95
+2025-05-23,18.2277,95.6503,Gyobingauk,Asia/Rangoon,Periods of rain,0.6,0.21,0.21,5.8,rain,172,15.0,81,93
+2025-05-24,18.2277,95.6503,Gyobingauk,Asia/Rangoon,Periods of rain,0.65,0.34,0.34,5.8,rain,178,15.0,79,93
+2025-05-15,17.7768,95.7473,Letpadan,Asia/Rangoon,A little rain this afternoon,0.91,0.02,0.02,10.4,rain,127,24.2,74,83
+2025-05-16,17.7768,95.7473,Letpadan,Asia/Rangoon,Rain at times,0.91,0.32,0.32,10.4,rain,123,26.5,74,83
+2025-05-17,17.7768,95.7473,Letpadan,Asia/Rangoon,Rain in the afternoon,0.9,0.65,0.65,8.1,rain,142,20.7,75,86
+2025-05-18,17.7768,95.7473,Letpadan,Asia/Rangoon,A bit of afternoon rain,0.64,0.11,0.11,8.1,rain,162,20.7,76,87
+2025-05-19,17.7768,95.7473,Letpadan,Asia/Rangoon,Rain in the afternoon,0.81,0.5,0.5,5.8,rain,177,16.1,77,89
+2025-05-20,17.7768,95.7473,Letpadan,Asia/Rangoon,Rain in the afternoon,0.72,0.27,0.27,8.1,sprinkles,186,18.4,79,96
+2025-05-21,17.7768,95.7473,Letpadan,Asia/Rangoon,Periods of rain and a t-storm,0.65,0.46,0.46,4.6,rain,169,13.8,78,88
+2025-05-22,17.7768,95.7473,Letpadan,Asia/Rangoon,A little afternoon rain,0.58,0.1,0.1,5.8,rain,166,17.3,79,89
+2025-05-23,17.7768,95.7473,Letpadan,Asia/Rangoon,Afternoon rain,0.72,0.28,0.28,4.6,rain,178,13.8,78,89
+2025-05-24,17.7768,95.7473,Letpadan,Asia/Rangoon,Periods of rain,0.62,0.37,0.37,4.6,rain,172,13.8,79,85
+2025-05-15,17.9752,95.708,Minhla,Asia/Rangoon,"Brief a.m. showers, then rain",0.96,0.11,0.11,9.2,rain,133,25.3,74,85
+2025-05-16,17.9752,95.708,Minhla,Asia/Rangoon,Occasional rain,0.95,0.58,0.58,8.1,rain,117,23.0,75,83
+2025-05-17,17.9752,95.708,Minhla,Asia/Rangoon,Occasional rain,0.91,0.36,0.36,6.9,rain,147,19.6,75,84
+2025-05-18,17.9752,95.708,Minhla,Asia/Rangoon,Afternoon rain,0.78,0.22,0.22,8.1,rain,166,20.7,76,87
+2025-05-19,17.9752,95.708,Minhla,Asia/Rangoon,Afternoon rain,0.81,0.31,0.31,6.9,rain,180,17.3,77,89
+2025-05-20,17.9752,95.708,Minhla,Asia/Rangoon,A little afternoon rain,0.56,0.07,0.07,8.1,sprinkles,162,19.6,80,97
+2025-05-21,17.9752,95.708,Minhla,Asia/Rangoon,Occasional rain and a t-storm,0.55,0.19,0.19,5.8,rain,167,15.0,81,94
+2025-05-22,17.9752,95.708,Minhla,Asia/Rangoon,A little afternoon rain,0.59,0.09,0.09,5.8,rain,166,16.1,80,95
+2025-05-23,17.9752,95.708,Minhla,Asia/Rangoon,Periods of rain,0.6,0.21,0.21,5.8,rain,172,15.0,81,93
+2025-05-24,17.9752,95.708,Minhla,Asia/Rangoon,Periods of rain,0.65,0.34,0.34,5.8,rain,178,15.0,79,93
+2025-05-15,17.8941,95.7226,Minhla,Asia/Rangoon,A little rain this afternoon,0.91,0.02,0.02,10.4,rain,127,24.2,74,83
+2025-05-16,17.8941,95.7226,Minhla,Asia/Rangoon,Rain at times,0.91,0.32,0.32,10.4,rain,123,26.5,74,83
+2025-05-17,17.8941,95.7226,Minhla,Asia/Rangoon,Rain in the afternoon,0.9,0.65,0.65,8.1,rain,142,20.7,75,86
+2025-05-18,17.8941,95.7226,Minhla,Asia/Rangoon,A bit of afternoon rain,0.64,0.11,0.11,8.1,rain,162,20.7,76,87
+2025-05-19,17.8941,95.7226,Minhla,Asia/Rangoon,Rain in the afternoon,0.81,0.5,0.5,5.8,rain,177,16.1,77,89
+2025-05-20,17.8941,95.7226,Minhla,Asia/Rangoon,Rain in the afternoon,0.72,0.27,0.27,8.1,sprinkles,186,18.4,79,96
+2025-05-21,17.8941,95.7226,Minhla,Asia/Rangoon,Periods of rain and a t-storm,0.65,0.46,0.46,4.6,rain,169,13.8,78,88
+2025-05-22,17.8941,95.7226,Minhla,Asia/Rangoon,A little afternoon rain,0.58,0.1,0.1,5.8,rain,166,17.3,79,89
+2025-05-23,17.8941,95.7226,Minhla,Asia/Rangoon,Afternoon rain,0.72,0.28,0.28,4.6,rain,178,13.8,78,89
+2025-05-24,17.8941,95.7226,Minhla,Asia/Rangoon,Periods of rain,0.62,0.37,0.37,4.6,rain,172,13.8,79,85
+2025-05-15,18.0293,95.5131,Monyo,Asia/Rangoon,Rain this afternoon,0.96,0.19,0.19,11.5,rain,135,25.3,74,86
+2025-05-16,18.0293,95.5131,Monyo,Asia/Rangoon,Rain at times,0.93,0.45,0.45,10.4,rain,120,23.0,75,83
+2025-05-17,18.0293,95.5131,Monyo,Asia/Rangoon,Occasional rain,0.91,0.3,0.3,8.1,rain,151,20.7,76,85
+2025-05-18,18.0293,95.5131,Monyo,Asia/Rangoon,A little afternoon rain,0.62,0.08,0.08,9.2,rain,170,20.7,76,87
+2025-05-19,18.0293,95.5131,Monyo,Asia/Rangoon,Rain in the afternoon,0.8,0.3,0.3,8.1,rain,189,16.1,79,89
+2025-05-20,18.0293,95.5131,Monyo,Asia/Rangoon,Rain in the afternoon,0.75,0.21,0.21,9.2,rain,205,17.3,79,97
+2025-05-21,18.0293,95.5131,Monyo,Asia/Rangoon,Occasional rain and a t-storm,0.55,0.09,0.09,5.8,rain,175,16.1,81,95
+2025-05-22,18.0293,95.5131,Monyo,Asia/Rangoon,A little afternoon rain,0.55,0.06,0.06,6.9,rain,171,18.4,80,94
+2025-05-23,18.0293,95.5131,Monyo,Asia/Rangoon,Periods of rain,0.62,0.32,0.32,5.8,rain,185,17.3,81,94
+2025-05-24,18.0293,95.5131,Monyo,Asia/Rangoon,Periods of rain,0.71,0.62,0.62,5.8,rain,179,16.1,79,93
+2025-05-15,18.4261,95.5482,Nattalin,Asia/Rangoon,"Morning t-storms, then rain",0.97,0.27,0.27,11.5,thunderstorm,140,25.3,74,87
+2025-05-16,18.4261,95.5482,Nattalin,Asia/Rangoon,Occasional rain,0.97,0.75,0.75,10.4,rain,118,21.9,75,83
+2025-05-17,18.4261,95.5482,Nattalin,Asia/Rangoon,Occasional afternoon rain,0.78,0.34,0.34,9.2,rain,154,24.2,76,86
+2025-05-18,18.4261,95.5482,Nattalin,Asia/Rangoon,"Mostly cloudy, a little rain",0.81,0.1,0.1,10.4,rain,173,23.0,76,88
+2025-05-19,18.4261,95.5482,Nattalin,Asia/Rangoon,A little afternoon rain,0.73,0.54,0.54,8.1,rain,187,18.4,78,90
+2025-05-20,18.4261,95.5482,Nattalin,Asia/Rangoon,Warm with periods of rain,0.6,0.23,0.23,8.1,rain,193,17.3,79,98
+2025-05-21,18.4261,95.5482,Nattalin,Asia/Rangoon,Some rain and a thunderstorm,0.55,0.08,0.08,6.9,rain,169,17.3,81,96
+2025-05-22,18.4261,95.5482,Nattalin,Asia/Rangoon,A touch of afternoon rain,0.57,0.08,0.08,6.9,rain,168,18.4,80,95
+2025-05-23,18.4261,95.5482,Nattalin,Asia/Rangoon,Afternoon rain,0.72,0.3,0.3,6.9,rain,179,17.3,81,95
+2025-05-24,18.4261,95.5482,Nattalin,Asia/Rangoon,Periods of rain,0.62,0.23,0.23,5.8,rain,170,17.3,79,94
+2025-05-15,18.363,95.4549,Nattalin,Asia/Rangoon,"Morning t-storms, then rain",0.97,0.27,0.27,11.5,thunderstorm,140,25.3,74,87
+2025-05-16,18.363,95.4549,Nattalin,Asia/Rangoon,Occasional rain,0.97,0.75,0.75,10.4,rain,118,21.9,75,83
+2025-05-17,18.363,95.4549,Nattalin,Asia/Rangoon,Occasional afternoon rain,0.78,0.34,0.34,9.2,rain,154,24.2,76,86
+2025-05-18,18.363,95.4549,Nattalin,Asia/Rangoon,"Mostly cloudy, a little rain",0.81,0.1,0.1,10.4,rain,173,23.0,76,88
+2025-05-19,18.363,95.4549,Nattalin,Asia/Rangoon,A little afternoon rain,0.73,0.54,0.54,8.1,rain,187,18.4,78,90
+2025-05-20,18.363,95.4549,Nattalin,Asia/Rangoon,Warm with periods of rain,0.6,0.23,0.23,8.1,rain,193,17.3,79,98
+2025-05-21,18.363,95.4549,Nattalin,Asia/Rangoon,Some rain and a thunderstorm,0.55,0.08,0.08,6.9,rain,169,17.3,81,96
+2025-05-22,18.363,95.4549,Nattalin,Asia/Rangoon,A touch of afternoon rain,0.57,0.08,0.08,6.9,rain,168,18.4,80,95
+2025-05-23,18.363,95.4549,Nattalin,Asia/Rangoon,Afternoon rain,0.72,0.3,0.3,6.9,rain,179,17.3,81,95
+2025-05-24,18.363,95.4549,Nattalin,Asia/Rangoon,Periods of rain,0.62,0.23,0.23,5.8,rain,170,17.3,79,94
+2025-05-15,18.0429,95.6927,Okpho,Asia/Rangoon,"Brief a.m. showers, then rain",0.96,0.11,0.11,9.2,rain,133,25.3,74,85
+2025-05-16,18.0429,95.6927,Okpho,Asia/Rangoon,Occasional rain,0.95,0.58,0.58,8.1,rain,117,23.0,75,83
+2025-05-17,18.0429,95.6927,Okpho,Asia/Rangoon,Occasional rain,0.91,0.36,0.36,6.9,rain,147,19.6,75,84
+2025-05-18,18.0429,95.6927,Okpho,Asia/Rangoon,Afternoon rain,0.78,0.22,0.22,8.1,rain,166,20.7,76,87
+2025-05-19,18.0429,95.6927,Okpho,Asia/Rangoon,Afternoon rain,0.81,0.31,0.31,6.9,rain,180,17.3,77,89
+2025-05-20,18.0429,95.6927,Okpho,Asia/Rangoon,A little afternoon rain,0.56,0.07,0.07,8.1,sprinkles,162,19.6,80,97
+2025-05-21,18.0429,95.6927,Okpho,Asia/Rangoon,Occasional rain and a t-storm,0.55,0.19,0.19,5.8,rain,167,15.0,81,94
+2025-05-22,18.0429,95.6927,Okpho,Asia/Rangoon,A little afternoon rain,0.59,0.09,0.09,5.8,rain,166,16.1,80,95
+2025-05-23,18.0429,95.6927,Okpho,Asia/Rangoon,Periods of rain,0.6,0.21,0.21,5.8,rain,172,15.0,81,93
+2025-05-24,18.0429,95.6927,Okpho,Asia/Rangoon,Periods of rain,0.65,0.34,0.34,5.8,rain,178,15.0,79,93
+2025-05-15,18.1285,95.6727,Okpho,Asia/Rangoon,"Brief a.m. showers, then rain",0.96,0.11,0.11,9.2,rain,133,25.3,74,85
+2025-05-16,18.1285,95.6727,Okpho,Asia/Rangoon,Occasional rain,0.95,0.58,0.58,8.1,rain,117,23.0,75,83
+2025-05-17,18.1285,95.6727,Okpho,Asia/Rangoon,Occasional rain,0.91,0.36,0.36,6.9,rain,147,19.6,75,84
+2025-05-18,18.1285,95.6727,Okpho,Asia/Rangoon,Afternoon rain,0.78,0.22,0.22,8.1,rain,166,20.7,76,87
+2025-05-19,18.1285,95.6727,Okpho,Asia/Rangoon,Afternoon rain,0.81,0.31,0.31,6.9,rain,180,17.3,77,89
+2025-05-20,18.1285,95.6727,Okpho,Asia/Rangoon,A little afternoon rain,0.56,0.07,0.07,8.1,sprinkles,162,19.6,80,97
+2025-05-21,18.1285,95.6727,Okpho,Asia/Rangoon,Occasional rain and a t-storm,0.55,0.19,0.19,5.8,rain,167,15.0,81,94
+2025-05-22,18.1285,95.6727,Okpho,Asia/Rangoon,A little afternoon rain,0.59,0.09,0.09,5.8,rain,166,16.1,80,95
+2025-05-23,18.1285,95.6727,Okpho,Asia/Rangoon,Periods of rain,0.6,0.21,0.21,5.8,rain,172,15.0,81,93
+2025-05-24,18.1285,95.6727,Okpho,Asia/Rangoon,Periods of rain,0.65,0.34,0.34,5.8,rain,178,15.0,79,93
+2025-05-15,18.6831,95.0128,Padaung,Asia/Rangoon,A little afternoon rain,0.75,0.3,0.3,9.2,sprinkles,144,24.2,78,87
+2025-05-16,18.6831,95.0128,Padaung,Asia/Rangoon,A little afternoon rain,0.65,0.15,0.15,8.1,thunderstorm,122,24.2,77,82
+2025-05-17,18.6831,95.0128,Padaung,Asia/Rangoon,A little afternoon rain,0.64,0.08,0.08,9.2,rain,150,19.6,77,84
+2025-05-18,18.6831,95.0128,Padaung,Asia/Rangoon,Periods of rain,0.91,0.35,0.35,8.1,rain,161,24.2,77,91
+2025-05-19,18.6831,95.0128,Padaung,Asia/Rangoon,A little afternoon rain,0.64,0.1,0.1,5.8,rain,190,17.3,78,93
+2025-05-20,18.6831,95.0128,Padaung,Asia/Rangoon,Hot with periods of rain,0.61,0.32,0.32,5.8,rain,174,18.4,79,101
+2025-05-21,18.6831,95.0128,Padaung,Asia/Rangoon,A little afternoon rain,0.55,0.02,0.02,5.8,rain,165,17.3,80,95
+2025-05-22,18.6831,95.0128,Padaung,Asia/Rangoon,A little afternoon rain,0.56,0.06,0.06,5.8,rain,177,17.3,79,94
+2025-05-23,18.6831,95.0128,Padaung,Asia/Rangoon,A little afternoon rain,0.61,0.13,0.13,4.6,rain,165,12.7,80,94
+2025-05-24,18.6831,95.0128,Padaung,Asia/Rangoon,Periods of rain,0.64,0.28,0.28,4.6,rain,144,15.0,78,93
+2025-05-15,18.7192,95.1549,Padaung,Asia/Rangoon,Not as warm; p.m. showers,1.0,0.3,0.3,8.1,sprinkles,146,25.3,78,88
+2025-05-16,18.7192,95.1549,Padaung,Asia/Rangoon,Occasional rain,0.91,0.38,0.38,8.1,rain,129,23.0,77,85
+2025-05-17,18.7192,95.1549,Padaung,Asia/Rangoon,Afternoon rain,0.77,0.17,0.17,9.2,rain,157,19.6,77,83
+2025-05-18,18.7192,95.1549,Padaung,Asia/Rangoon,Afternoon rain,0.84,0.32,0.32,8.1,rain,173,23.0,77,91
+2025-05-19,18.7192,95.1549,Padaung,Asia/Rangoon,A little afternoon rain,0.65,0.16,0.16,6.9,rain,188,18.4,77,93
+2025-05-20,18.7192,95.1549,Padaung,Asia/Rangoon,Hot with periods of rain,0.6,0.18,0.18,5.8,rain,196,16.1,79,101
+2025-05-21,18.7192,95.1549,Padaung,Asia/Rangoon,"Mostly cloudy, a little rain",0.55,0.04,0.04,6.9,rain,176,19.6,80,95
+2025-05-22,18.7192,95.1549,Padaung,Asia/Rangoon,A little afternoon rain,0.62,0.14,0.14,6.9,rain,166,18.4,79,96
+2025-05-23,18.7192,95.1549,Padaung,Asia/Rangoon,A little afternoon rain,0.59,0.1,0.1,5.8,rain,164,15.0,80,94
+2025-05-24,18.7192,95.1549,Padaung,Asia/Rangoon,Cloudy with a little rain,0.57,0.1,0.1,6.9,rain,171,18.4,78,94
+2025-05-15,18.904,95.5489,Paukkhaung,Asia/Rangoon,Periods of rain,0.97,0.17,0.17,8.1,rain,146,24.2,78,89
+2025-05-16,18.904,95.5489,Paukkhaung,Asia/Rangoon,A little afternoon rain,0.75,0.27,0.27,6.9,rain,127,21.9,77,85
+2025-05-17,18.904,95.5489,Paukkhaung,Asia/Rangoon,Occasional rain,0.91,0.21,0.21,8.1,rain,157,19.6,77,84
+2025-05-18,18.904,95.5489,Paukkhaung,Asia/Rangoon,Afternoon rain,0.84,0.21,0.21,8.1,rain,177,21.9,77,90
+2025-05-19,18.904,95.5489,Paukkhaung,Asia/Rangoon,A little afternoon rain,0.64,0.11,0.11,6.9,rain,190,18.4,78,93
+2025-05-20,18.904,95.5489,Paukkhaung,Asia/Rangoon,Hot with rain and a t-storm,0.65,0.42,0.42,6.9,rain,184,20.7,80,103
+2025-05-21,18.904,95.5489,Paukkhaung,Asia/Rangoon,Cloudy with a little rain,0.55,0.05,0.05,6.9,rain,181,18.4,81,96
+2025-05-22,18.904,95.5489,Paukkhaung,Asia/Rangoon,A little afternoon rain,0.61,0.28,0.28,6.9,rain,152,18.4,80,97
+2025-05-23,18.904,95.5489,Paukkhaung,Asia/Rangoon,Occasional afternoon rain,0.55,0.06,0.06,6.9,rain,175,18.4,82,96
+2025-05-24,18.904,95.5489,Paukkhaung,Asia/Rangoon,Cloudy with a little rain,0.55,0.07,0.07,8.1,rain,181,19.6,80,94
+2025-05-15,18.4892,95.5058,Paungde,Asia/Rangoon,"Morning t-storms, then rain",0.97,0.27,0.27,11.5,thunderstorm,140,25.3,74,87
+2025-05-16,18.4892,95.5058,Paungde,Asia/Rangoon,Occasional rain,0.97,0.75,0.75,10.4,rain,118,21.9,75,83
+2025-05-17,18.4892,95.5058,Paungde,Asia/Rangoon,Occasional afternoon rain,0.78,0.34,0.34,9.2,rain,154,24.2,76,86
+2025-05-18,18.4892,95.5058,Paungde,Asia/Rangoon,"Mostly cloudy, a little rain",0.81,0.1,0.1,10.4,rain,173,23.0,76,88
+2025-05-19,18.4892,95.5058,Paungde,Asia/Rangoon,A little afternoon rain,0.73,0.54,0.54,8.1,rain,187,18.4,78,90
+2025-05-20,18.4892,95.5058,Paungde,Asia/Rangoon,Warm with periods of rain,0.6,0.23,0.23,8.1,rain,193,17.3,79,98
+2025-05-21,18.4892,95.5058,Paungde,Asia/Rangoon,Some rain and a thunderstorm,0.55,0.08,0.08,6.9,rain,169,17.3,81,96
+2025-05-22,18.4892,95.5058,Paungde,Asia/Rangoon,A touch of afternoon rain,0.57,0.08,0.08,6.9,rain,168,18.4,80,95
+2025-05-23,18.4892,95.5058,Paungde,Asia/Rangoon,Afternoon rain,0.72,0.3,0.3,6.9,rain,179,17.3,81,95
+2025-05-24,18.4892,95.5058,Paungde,Asia/Rangoon,Periods of rain,0.62,0.23,0.23,5.8,rain,170,17.3,79,94
+2025-05-15,18.8499,95.3855,Pyay,Asia/Rangoon,Periods of rain,0.97,0.17,0.17,8.1,rain,146,24.2,78,89
+2025-05-16,18.8499,95.3855,Pyay,Asia/Rangoon,A little afternoon rain,0.75,0.27,0.27,6.9,rain,127,21.9,77,85
+2025-05-17,18.8499,95.3855,Pyay,Asia/Rangoon,Occasional rain,0.91,0.21,0.21,8.1,rain,157,19.6,77,84
+2025-05-18,18.8499,95.3855,Pyay,Asia/Rangoon,Afternoon rain,0.84,0.21,0.21,8.1,rain,177,21.9,77,90
+2025-05-19,18.8499,95.3855,Pyay,Asia/Rangoon,A little afternoon rain,0.64,0.11,0.11,6.9,rain,190,18.4,78,93
+2025-05-20,18.8499,95.3855,Pyay,Asia/Rangoon,Hot with rain and a t-storm,0.65,0.42,0.42,6.9,rain,184,20.7,80,103
+2025-05-21,18.8499,95.3855,Pyay,Asia/Rangoon,Cloudy with a little rain,0.55,0.05,0.05,6.9,rain,181,18.4,81,96
+2025-05-22,18.8499,95.3855,Pyay,Asia/Rangoon,A little afternoon rain,0.61,0.28,0.28,6.9,rain,152,18.4,80,97
+2025-05-23,18.8499,95.3855,Pyay,Asia/Rangoon,Occasional afternoon rain,0.55,0.06,0.06,6.9,rain,175,18.4,82,96
+2025-05-24,18.8499,95.3855,Pyay,Asia/Rangoon,Cloudy with a little rain,0.55,0.07,0.07,8.1,rain,181,19.6,80,94
+2025-05-15,18.8228,95.2218,Pyay,Asia/Rangoon,Not as warm; p.m. showers,1.0,0.3,0.3,8.1,sprinkles,146,25.3,78,88
+2025-05-16,18.8228,95.2218,Pyay,Asia/Rangoon,Occasional rain,0.91,0.38,0.38,8.1,rain,129,23.0,77,85
+2025-05-17,18.8228,95.2218,Pyay,Asia/Rangoon,Afternoon rain,0.77,0.17,0.17,9.2,rain,157,19.6,77,83
+2025-05-18,18.8228,95.2218,Pyay,Asia/Rangoon,Afternoon rain,0.84,0.32,0.32,8.1,rain,173,23.0,77,91
+2025-05-19,18.8228,95.2218,Pyay,Asia/Rangoon,A little afternoon rain,0.65,0.16,0.16,6.9,rain,188,18.4,77,93
+2025-05-20,18.8228,95.2218,Pyay,Asia/Rangoon,Hot with periods of rain,0.6,0.18,0.18,5.8,rain,196,16.1,79,101
+2025-05-21,18.8228,95.2218,Pyay,Asia/Rangoon,"Mostly cloudy, a little rain",0.55,0.04,0.04,6.9,rain,176,19.6,80,95
+2025-05-22,18.8228,95.2218,Pyay,Asia/Rangoon,A little afternoon rain,0.62,0.14,0.14,6.9,rain,166,18.4,79,96
+2025-05-23,18.8228,95.2218,Pyay,Asia/Rangoon,A little afternoon rain,0.59,0.1,0.1,5.8,rain,164,15.0,80,94
+2025-05-24,18.8228,95.2218,Pyay,Asia/Rangoon,Cloudy with a little rain,0.57,0.1,0.1,6.9,rain,171,18.4,78,94
+2025-05-15,18.7056,95.2145,Shwedaung,Asia/Rangoon,Not as warm; p.m. showers,1.0,0.3,0.3,8.1,sprinkles,146,25.3,78,88
+2025-05-16,18.7056,95.2145,Shwedaung,Asia/Rangoon,Occasional rain,0.91,0.38,0.38,8.1,rain,129,23.0,77,85
+2025-05-17,18.7056,95.2145,Shwedaung,Asia/Rangoon,Afternoon rain,0.77,0.17,0.17,9.2,rain,157,19.6,77,83
+2025-05-18,18.7056,95.2145,Shwedaung,Asia/Rangoon,Afternoon rain,0.84,0.32,0.32,8.1,rain,173,23.0,77,91
+2025-05-19,18.7056,95.2145,Shwedaung,Asia/Rangoon,A little afternoon rain,0.65,0.16,0.16,6.9,rain,188,18.4,77,93
+2025-05-20,18.7056,95.2145,Shwedaung,Asia/Rangoon,Hot with periods of rain,0.6,0.18,0.18,5.8,rain,196,16.1,79,101
+2025-05-21,18.7056,95.2145,Shwedaung,Asia/Rangoon,"Mostly cloudy, a little rain",0.55,0.04,0.04,6.9,rain,176,19.6,80,95
+2025-05-22,18.7056,95.2145,Shwedaung,Asia/Rangoon,A little afternoon rain,0.62,0.14,0.14,6.9,rain,166,18.4,79,96
+2025-05-23,18.7056,95.2145,Shwedaung,Asia/Rangoon,A little afternoon rain,0.59,0.1,0.1,5.8,rain,164,15.0,80,94
+2025-05-24,18.7056,95.2145,Shwedaung,Asia/Rangoon,Cloudy with a little rain,0.57,0.1,0.1,6.9,rain,171,18.4,78,94
+2025-05-15,17.6551,95.7863,Thayarwady,Asia/Rangoon,A little rain this afternoon,0.91,0.02,0.02,10.4,rain,127,24.2,74,83
+2025-05-16,17.6551,95.7863,Thayarwady,Asia/Rangoon,Rain at times,0.91,0.32,0.32,10.4,rain,123,26.5,74,83
+2025-05-17,17.6551,95.7863,Thayarwady,Asia/Rangoon,Rain in the afternoon,0.9,0.65,0.65,8.1,rain,142,20.7,75,86
+2025-05-18,17.6551,95.7863,Thayarwady,Asia/Rangoon,A bit of afternoon rain,0.64,0.11,0.11,8.1,rain,162,20.7,76,87
+2025-05-19,17.6551,95.7863,Thayarwady,Asia/Rangoon,Rain in the afternoon,0.81,0.5,0.5,5.8,rain,177,16.1,77,89
+2025-05-20,17.6551,95.7863,Thayarwady,Asia/Rangoon,Rain in the afternoon,0.72,0.27,0.27,8.1,sprinkles,186,18.4,79,96
+2025-05-21,17.6551,95.7863,Thayarwady,Asia/Rangoon,Periods of rain and a t-storm,0.65,0.46,0.46,4.6,rain,169,13.8,78,88
+2025-05-22,17.6551,95.7863,Thayarwady,Asia/Rangoon,A little afternoon rain,0.58,0.1,0.1,5.8,rain,166,17.3,79,89
+2025-05-23,17.6551,95.7863,Thayarwady,Asia/Rangoon,Afternoon rain,0.72,0.28,0.28,4.6,rain,178,13.8,78,89
+2025-05-24,17.6551,95.7863,Thayarwady,Asia/Rangoon,Periods of rain,0.62,0.37,0.37,4.6,rain,172,13.8,79,85
+2025-05-15,17.628,95.7877,Thayarwady,Asia/Rangoon,A little rain this afternoon,0.91,0.02,0.02,10.4,rain,127,24.2,74,83
+2025-05-16,17.628,95.7877,Thayarwady,Asia/Rangoon,Rain at times,0.91,0.32,0.32,10.4,rain,123,26.5,74,83
+2025-05-17,17.628,95.7877,Thayarwady,Asia/Rangoon,Rain in the afternoon,0.9,0.65,0.65,8.1,rain,142,20.7,75,86
+2025-05-18,17.628,95.7877,Thayarwady,Asia/Rangoon,A bit of afternoon rain,0.64,0.11,0.11,8.1,rain,162,20.7,76,87
+2025-05-19,17.628,95.7877,Thayarwady,Asia/Rangoon,Rain in the afternoon,0.81,0.5,0.5,5.8,rain,177,16.1,77,89
+2025-05-20,17.628,95.7877,Thayarwady,Asia/Rangoon,Rain in the afternoon,0.72,0.27,0.27,8.1,sprinkles,186,18.4,79,96
+2025-05-21,17.628,95.7877,Thayarwady,Asia/Rangoon,Periods of rain and a t-storm,0.65,0.46,0.46,4.6,rain,169,13.8,78,88
+2025-05-22,17.628,95.7877,Thayarwady,Asia/Rangoon,A little afternoon rain,0.58,0.1,0.1,5.8,rain,166,17.3,79,89
+2025-05-23,17.628,95.7877,Thayarwady,Asia/Rangoon,Afternoon rain,0.72,0.28,0.28,4.6,rain,178,13.8,78,89
+2025-05-24,17.628,95.7877,Thayarwady,Asia/Rangoon,Periods of rain,0.62,0.37,0.37,4.6,rain,172,13.8,79,85
+2025-05-15,18.5298,95.3507,Thegon,Asia/Rangoon,"Morning t-storms, then rain",0.97,0.27,0.27,11.5,thunderstorm,140,25.3,74,87
+2025-05-16,18.5298,95.3507,Thegon,Asia/Rangoon,Occasional rain,0.97,0.75,0.75,10.4,rain,118,21.9,75,83
+2025-05-17,18.5298,95.3507,Thegon,Asia/Rangoon,Occasional afternoon rain,0.78,0.34,0.34,9.2,rain,154,24.2,76,86
+2025-05-18,18.5298,95.3507,Thegon,Asia/Rangoon,"Mostly cloudy, a little rain",0.81,0.1,0.1,10.4,rain,173,23.0,76,88
+2025-05-19,18.5298,95.3507,Thegon,Asia/Rangoon,A little afternoon rain,0.73,0.54,0.54,8.1,rain,187,18.4,78,90
+2025-05-20,18.5298,95.3507,Thegon,Asia/Rangoon,Warm with periods of rain,0.6,0.23,0.23,8.1,rain,193,17.3,79,98
+2025-05-21,18.5298,95.3507,Thegon,Asia/Rangoon,Some rain and a thunderstorm,0.55,0.08,0.08,6.9,rain,169,17.3,81,96
+2025-05-22,18.5298,95.3507,Thegon,Asia/Rangoon,A touch of afternoon rain,0.57,0.08,0.08,6.9,rain,168,18.4,80,95
+2025-05-23,18.5298,95.3507,Thegon,Asia/Rangoon,Afternoon rain,0.72,0.3,0.3,6.9,rain,179,17.3,81,95
+2025-05-24,18.5298,95.3507,Thegon,Asia/Rangoon,Periods of rain,0.62,0.23,0.23,5.8,rain,170,17.3,79,94
+2025-05-15,18.5704,95.456,Thegon,Asia/Rangoon,"Morning t-storms, then rain",0.97,0.27,0.27,11.5,thunderstorm,140,25.3,74,87
+2025-05-16,18.5704,95.456,Thegon,Asia/Rangoon,Occasional rain,0.97,0.75,0.75,10.4,rain,118,21.9,75,83
+2025-05-17,18.5704,95.456,Thegon,Asia/Rangoon,Occasional afternoon rain,0.78,0.34,0.34,9.2,rain,154,24.2,76,86
+2025-05-18,18.5704,95.456,Thegon,Asia/Rangoon,"Mostly cloudy, a little rain",0.81,0.1,0.1,10.4,rain,173,23.0,76,88
+2025-05-19,18.5704,95.456,Thegon,Asia/Rangoon,A little afternoon rain,0.73,0.54,0.54,8.1,rain,187,18.4,78,90
+2025-05-20,18.5704,95.456,Thegon,Asia/Rangoon,Warm with periods of rain,0.6,0.23,0.23,8.1,rain,193,17.3,79,98
+2025-05-21,18.5704,95.456,Thegon,Asia/Rangoon,Some rain and a thunderstorm,0.55,0.08,0.08,6.9,rain,169,17.3,81,96
+2025-05-22,18.5704,95.456,Thegon,Asia/Rangoon,A touch of afternoon rain,0.57,0.08,0.08,6.9,rain,168,18.4,80,95
+2025-05-23,18.5704,95.456,Thegon,Asia/Rangoon,Afternoon rain,0.72,0.3,0.3,6.9,rain,179,17.3,81,95
+2025-05-24,18.5704,95.456,Thegon,Asia/Rangoon,Periods of rain,0.62,0.23,0.23,5.8,rain,170,17.3,79,94
+2025-05-15,18.7372,95.3609,Thegon,Asia/Rangoon,Not as warm; p.m. showers,1.0,0.3,0.3,8.1,sprinkles,146,25.3,78,88
+2025-05-16,18.7372,95.3609,Thegon,Asia/Rangoon,Occasional rain,0.91,0.38,0.38,8.1,rain,129,23.0,77,85
+2025-05-17,18.7372,95.3609,Thegon,Asia/Rangoon,Afternoon rain,0.77,0.17,0.17,9.2,rain,157,19.6,77,83
+2025-05-18,18.7372,95.3609,Thegon,Asia/Rangoon,Afternoon rain,0.84,0.32,0.32,8.1,rain,173,23.0,77,91
+2025-05-19,18.7372,95.3609,Thegon,Asia/Rangoon,A little afternoon rain,0.65,0.16,0.16,6.9,rain,188,18.4,77,93
+2025-05-20,18.7372,95.3609,Thegon,Asia/Rangoon,Hot with periods of rain,0.6,0.18,0.18,5.8,rain,196,16.1,79,101
+2025-05-21,18.7372,95.3609,Thegon,Asia/Rangoon,"Mostly cloudy, a little rain",0.55,0.04,0.04,6.9,rain,176,19.6,80,95
+2025-05-22,18.7372,95.3609,Thegon,Asia/Rangoon,A little afternoon rain,0.62,0.14,0.14,6.9,rain,166,18.4,79,96
+2025-05-23,18.7372,95.3609,Thegon,Asia/Rangoon,A little afternoon rain,0.59,0.1,0.1,5.8,rain,164,15.0,80,94
+2025-05-24,18.7372,95.3609,Thegon,Asia/Rangoon,Cloudy with a little rain,0.57,0.1,0.1,6.9,rain,171,18.4,78,94
+2025-05-15,18.647,95.4161,Thegon,Asia/Rangoon,Not as warm; p.m. showers,1.0,0.3,0.3,8.1,sprinkles,146,25.3,78,88
+2025-05-16,18.647,95.4161,Thegon,Asia/Rangoon,Occasional rain,0.91,0.38,0.38,8.1,rain,129,23.0,77,85
+2025-05-17,18.647,95.4161,Thegon,Asia/Rangoon,Afternoon rain,0.77,0.17,0.17,9.2,rain,157,19.6,77,83
+2025-05-18,18.647,95.4161,Thegon,Asia/Rangoon,Afternoon rain,0.84,0.32,0.32,8.1,rain,173,23.0,77,91
+2025-05-19,18.647,95.4161,Thegon,Asia/Rangoon,A little afternoon rain,0.65,0.16,0.16,6.9,rain,188,18.4,77,93
+2025-05-20,18.647,95.4161,Thegon,Asia/Rangoon,Hot with periods of rain,0.6,0.18,0.18,5.8,rain,196,16.1,79,101
+2025-05-21,18.647,95.4161,Thegon,Asia/Rangoon,"Mostly cloudy, a little rain",0.55,0.04,0.04,6.9,rain,176,19.6,80,95
+2025-05-22,18.647,95.4161,Thegon,Asia/Rangoon,A little afternoon rain,0.62,0.14,0.14,6.9,rain,166,18.4,79,96
+2025-05-23,18.647,95.4161,Thegon,Asia/Rangoon,A little afternoon rain,0.59,0.1,0.1,5.8,rain,164,15.0,80,94
+2025-05-24,18.647,95.4161,Thegon,Asia/Rangoon,Cloudy with a little rain,0.57,0.1,0.1,6.9,rain,171,18.4,78,94
+2025-05-15,18.3405,95.6235,Zigon,Asia/Rangoon,"Morning t-storms, then rain",0.97,0.27,0.27,11.5,thunderstorm,140,25.3,74,87
+2025-05-16,18.3405,95.6235,Zigon,Asia/Rangoon,Occasional rain,0.97,0.75,0.75,10.4,rain,118,21.9,75,83
+2025-05-17,18.3405,95.6235,Zigon,Asia/Rangoon,Occasional afternoon rain,0.78,0.34,0.34,9.2,rain,154,24.2,76,86
+2025-05-18,18.3405,95.6235,Zigon,Asia/Rangoon,"Mostly cloudy, a little rain",0.81,0.1,0.1,10.4,rain,173,23.0,76,88
+2025-05-19,18.3405,95.6235,Zigon,Asia/Rangoon,A little afternoon rain,0.73,0.54,0.54,8.1,rain,187,18.4,78,90
+2025-05-20,18.3405,95.6235,Zigon,Asia/Rangoon,Warm with periods of rain,0.6,0.23,0.23,8.1,rain,193,17.3,79,98
+2025-05-21,18.3405,95.6235,Zigon,Asia/Rangoon,Some rain and a thunderstorm,0.55,0.08,0.08,6.9,rain,169,17.3,81,96
+2025-05-22,18.3405,95.6235,Zigon,Asia/Rangoon,A touch of afternoon rain,0.57,0.08,0.08,6.9,rain,168,18.4,80,95
+2025-05-23,18.3405,95.6235,Zigon,Asia/Rangoon,Afternoon rain,0.72,0.3,0.3,6.9,rain,179,17.3,81,95
+2025-05-24,18.3405,95.6235,Zigon,Asia/Rangoon,Periods of rain,0.62,0.23,0.23,5.8,rain,170,17.3,79,94
+2025-05-15,22.9089,93.6805,Falam,Asia/Rangoon,A heavy t-storm in the p.m.,0.86,0.58,0.58,3.5,thunderstorm,73,15.0,56,75
+2025-05-16,22.9089,93.6805,Falam,Asia/Rangoon,A couple of p.m. t-showers,0.8,0.61,0.61,3.5,thunderstorm,86,11.5,56,70
+2025-05-17,22.9089,93.6805,Falam,Asia/Rangoon,A shower and thunderstorm,0.85,0.52,0.52,4.6,thunderstorm,92,15.0,56,70
+2025-05-18,22.9089,93.6805,Falam,Asia/Rangoon,A shower and thunderstorm,0.88,0.31,0.31,6.9,thunderstorm,268,15.0,56,71
+2025-05-19,22.9089,93.6805,Falam,Asia/Rangoon,Couple of thunderstorms,0.75,0.4,0.4,5.8,thunderstorm,248,16.1,54,67
+2025-05-20,22.9089,93.6805,Falam,Asia/Rangoon,Couple of thunderstorms,0.71,0.36,0.36,5.8,thunderstorm,243,16.1,59,72
+2025-05-21,22.9089,93.6805,Falam,Asia/Rangoon,Some sun with a thunderstorm,0.55,0.18,0.18,1.2,part-sun,259,5.8,59,69
+2025-05-22,22.9089,93.6805,Falam,Asia/Rangoon,Couple of thunderstorms,0.72,0.57,0.57,1.2,thunderstorm,183,5.8,61,68
+2025-05-23,22.9089,93.6805,Falam,Asia/Rangoon,Variable clouds with t-storms,0.7,0.4,0.4,2.3,thunderstorm,72,11.5,61,68
+2025-05-24,22.9089,93.6805,Falam,Asia/Rangoon,Couple of thunderstorms,0.75,0.58,0.58,1.2,thunderstorm,117,4.6,60,68
+2025-05-15,23.3591,93.39,Falam,Asia/Rangoon,A bit of afternoon rain; warm,0.64,0.1,0.1,2.3,sprinkles,48,11.5,66,91
+2025-05-16,23.3591,93.39,Falam,Asia/Rangoon,Afternoon rain,0.9,0.58,0.58,3.5,sprinkles,108,10.4,67,85
+2025-05-17,23.3591,93.39,Falam,Asia/Rangoon,An afternoon t-storm or two,0.65,0.09,0.09,3.5,thunderstorm,107,9.2,67,82
+2025-05-18,23.3591,93.39,Falam,Asia/Rangoon,A little afternoon rain,0.65,0.11,0.11,4.6,rain,272,12.7,67,83
+2025-05-19,23.3591,93.39,Falam,Asia/Rangoon,Some rain and a thunderstorm,0.64,0.24,0.24,3.5,rain,208,12.7,66,81
+2025-05-20,23.3591,93.39,Falam,Asia/Rangoon,Some rain and a thunderstorm,0.63,0.24,0.24,3.5,rain,243,11.5,70,88
+2025-05-21,23.3591,93.39,Falam,Asia/Rangoon,A little afternoon rain,0.65,0.25,0.25,2.3,rain,270,9.2,69,86
+2025-05-22,23.3591,93.39,Falam,Asia/Rangoon,An afternoon t-storm or two,0.67,0.18,0.18,2.3,thunderstorm,124,11.5,72,85
+2025-05-23,23.3591,93.39,Falam,Asia/Rangoon,A couple of thunderstorms,0.73,0.23,0.23,2.3,thunderstorm,39,9.2,74,84
+2025-05-24,23.3591,93.39,Falam,Asia/Rangoon,Periods of rain,0.75,1.02,1.02,1.2,rain,7,3.5,72,83
