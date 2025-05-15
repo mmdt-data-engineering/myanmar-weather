@@ -4,12 +4,16 @@ on:
   push:
     branches:
       - main
+    paths:
+      - ".github/workflows/main.yml"
   schedule:
     - cron: "0 21 11 3 *" ## Trigger on May 11 - 9PM (timezone?)
+
   workflow_dispatch: ## manual trigger
 jobs:
   simple-etl:
     runs-on: ubuntu-latest
+    environment: production
     steps:
       - name: Checkout repo content
         uses: actions/checkout@v4
