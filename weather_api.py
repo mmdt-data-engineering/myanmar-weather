@@ -30,17 +30,15 @@ class WeatherAPI:
             township_name = row["Township_Name_Eng"]
             latitude = row["Latitude"]
             longitude = row["Longitude"]
-            self.logger.info(
-                f"Township: {township_name}, Latitude: {latitude}, Longitude: {longitude}"
-            )
+
+            info = f"Township: {township_name}, Latitude: {latitude}, Longitude: {longitude}"
+            self.logger.info(info)
 
             # Construct the API request URL
             url = f"{BASE_URL}?key={WEATHER_API_KEY}&q={latitude},{longitude}"
-            self.logger.info(url)
 
-            sleep_time = random.uniform(
-                1, 5
-            )  # Random sleep time between 1 and 5 seconds
+            # Random sleep time between 1 and 5 seconds
+            sleep_time = random.uniform(1, 5)
             self.logger.info(f"Sleeping for {sleep_time:.2f} seconds...")
             time.sleep(sleep_time)
 
