@@ -3,11 +3,13 @@ from psycopg2 import OperationalError
 from sqlalchemy import create_engine
 from dotenv import load_dotenv
 import os
+from Logger import Logger
 
 
 class PostgresDB:
     def __init__(self):
-        pass
+        self.logger = Logger().get_logger()
+        self.logger.info("WeatherAPI initialized")
 
     def load_to_postgres(self, df: pd.DataFrame, table_name: str) -> None:
         """
@@ -34,10 +36,11 @@ class PostgresDB:
                 # Save the DataFrame to the database
                 df.to_sql(table_name, conn, if_exists="replace", index=False)
 
-                print(f"{table_name} table is created at the database: {DB_URL}")
+                info = f"{table_name} table is created at the database: {DB_URL}"
+                self.logger.info(info)
 
         except OperationalError as e:
-            print(f"Connection failed: {e}")
+            self.logger.info(f"Connection failed: {e}")
 
     def load_to_neon_postgres(self, df: pd.DataFrame, table_name: str) -> None:
         """
@@ -71,9 +74,8 @@ class PostgresDB:
                 # Save the DataFrame to the database
                 df.to_sql(table_name, conn, if_exists="replace", index=False)
 
-                print(
-                    f"{table_name} table is created at the database: {NEON_POSTGRES_URL}"
-                )
+                info = f"{table_name} table is created at the database: {NEON_POSTGRES_URL}"
+                self.logger.info(info)
 
         except OperationalError as e:
-            print(f"Connection failed: {e}")
+            self.logger.info(f"Connection failed: {e}")
