@@ -51,6 +51,11 @@ class WeatherAPI:
                 data = response.json()
                 df = pd.json_normalize(data)
 
+                # remove the prefix from column names
+                df.columns = df.columns.str.replace("current.", "")
+                df.columns = df.columns.str.replace("location.", "")
+                df.columns = df.columns.str.replace("condition.", "")
+
                 result_df = pd.concat([result_df, df], ignore_index=True)
             else:
                 raise ConnectionError(f"Failed to fetch data: {response.status_code}")
@@ -119,6 +124,10 @@ class WeatherAPI:
 
                 # Combine location and forecast
                 final_df = pd.concat([forecast_df, location_repeated], axis=1)
+
+                # remove the "current." prefix from column names
+                final_df.columns = final_df.columns.str.replace("day.", "")
+                final_df.columns = final_df.columns.str.replace("condition.", "")
 
                 result_df = pd.concat([result_df, final_df], ignore_index=True)
             else:
