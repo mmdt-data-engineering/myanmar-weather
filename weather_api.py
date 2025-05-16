@@ -27,6 +27,7 @@ class WeatherAPI:
         result_df = pd.DataFrame()
 
         for index, row in township_df.iterrows():
+
             township_name = row["Township_Name_Eng"]
             latitude = row["Latitude"]
             longitude = row["Longitude"]

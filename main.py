@@ -11,7 +11,7 @@ def fetch_weather_data():
     mimu_data = MIMU_Data()
     township_df = mimu_data.get_townships()
 
-    township_df = township_df.head(1)
+    township_df = township_df.head(5)
 
     weather_api = WeatherAPI()
 
@@ -25,7 +25,7 @@ def fetch_weather_data():
 
     # weatherapi - daily
     weatherapi_daily_df = weather_api.get_daily(township_df, no_of_days=7)
-    filename = f"./output/{str_today}_weatherapi_daily.csv"
+    filename = f"./output/{str_today}_weatherapi_forecast.csv"
     weatherapi_daily_df.to_csv(filename, index=False, header=True)
 
     openmeteo_api = OpenMeteoAPI()
@@ -37,7 +37,7 @@ def fetch_weather_data():
 
     # open-meteo - daily
     openmeteo_daily_df = openmeteo_api.get_daily(township_df)
-    filename = f"./output/{str_today}_open_meteo_daily.csv"
+    filename = f"./output/{str_today}_open_meteo_forecast.csv"
     openmeteo_daily_df.to_csv(filename, index=False, header=True)
 
     # Fetch AmbientWeather data

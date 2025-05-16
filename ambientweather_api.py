@@ -71,7 +71,7 @@ class AmbientWeatherAPI:
 
             except requests.RequestException as e:
                 info = f"[ERROR] Failed to fetch data for ({lat}, {lon}): {e}"
-                self.logger.info(info)
+                self.logger.error(info)
 
         if all_data:
             return pd.concat(all_data, ignore_index=True)
