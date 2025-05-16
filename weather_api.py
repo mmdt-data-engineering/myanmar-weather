@@ -1,15 +1,13 @@
-import time
 import pandas as pd
 from dotenv import load_dotenv
-import os
-import requests
-from data_utils import MIMU_Data
-import random
+import os, time, random, requests
+from Logger import Logger
 
 
 class WeatherAPI:
     def __init__(self):
-        pass
+        self.logger = Logger().get_logger()
+        self.logger.info("WeatherAPI initialized")
 
     def get_current(self, township_df: pd.DataFrame) -> pd.DataFrame:
         """
@@ -32,18 +30,18 @@ class WeatherAPI:
             township_name = row["Township_Name_Eng"]
             latitude = row["Latitude"]
             longitude = row["Longitude"]
-            print(
+            self.logger.info(
                 f"Township: {township_name}, Latitude: {latitude}, Longitude: {longitude}"
             )
 
             # Construct the API request URL
             url = f"{BASE_URL}?key={WEATHER_API_KEY}&q={latitude},{longitude}"
-            print(url)
+            self.logger.info(url)
 
             sleep_time = random.uniform(
                 1, 5
             )  # Random sleep time between 1 and 5 seconds
-            print(f"Sleeping for {sleep_time:.2f} seconds...")
+            self.logger.info(f"Sleeping for {sleep_time:.2f} seconds...")
             time.sleep(sleep_time)
 
             response = requests.get(url)
@@ -80,22 +78,21 @@ class WeatherAPI:
             township_name = row["Township_Name_Eng"]
             latitude = row["Latitude"]
             longitude = row["Longitude"]
-            print(
+            self.logger.info(
                 f"Township: {township_name}, Latitude: {latitude}, Longitude: {longitude}"
             )
 
             # Construct the API request URL
             url = f"{BASE_URL}?key={WEATHER_API_KEY}&q={latitude},{longitude}&days={no_of_days}&aqi=no&alerts=no"
-            # print(url)
+            # self.logger.info(url)
 
             sleep_time = random.uniform(
                 1, 5
             )  # Random sleep time between 1 and 5 seconds
-            print(f"Sleeping for {sleep_time:.2f} seconds...")
+            self.logger.info(f"Sleeping for {sleep_time:.2f} seconds...")
             time.sleep(sleep_time)
 
             response = requests.get(url)
-            print(response.json())
 
             # Check if the request was successful
             if response.status_code == 200:
@@ -103,17 +100,22 @@ class WeatherAPI:
 
                 # Location
                 location = data["location"]
-                location_df = pd.json_normalize(location)   
+                location_df = pd.json_normalize(location)
 
                 # Forecast
                 forecast_data = data["forecast"]["forecastday"]
                 df = pd.json_normalize(forecast_data)
 
                 # Select only required columns
-                forecast_df = df[['date', 'date_epoch'] + [col for col in df.columns if col.startswith('day.')]]
+                forecast_df = df[
+                    ["date", "date_epoch"]
+                    + [col for col in df.columns if col.startswith("day.")]
+                ]
 
                 # Repeat location for each forecast row
-                location_repeated = pd.concat([location_df] * len(forecast_df), ignore_index=True)
+                location_repeated = pd.concat(
+                    [location_df] * len(forecast_df), ignore_index=True
+                )
 
                 # Combine location and forecast
                 final_df = pd.concat([forecast_df, location_repeated], axis=1)
