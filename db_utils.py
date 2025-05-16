@@ -61,7 +61,7 @@ class PostgresDB:
         PGUSER = os.getenv("PGUSER")
         PGPASSWORD = os.getenv("PGPASSWORD")
         ENDPOINT = os.getenv("ENDPOINT")
-        NEON_POSTGRES_URL = f"postgresql://{PGUSER}:{PGPASSWORD}@{PGHOST}/{PGDATABASE}?options=endpoint={ENDPOINT}"
+        NEON_POSTGRES_URL = f"postgresql://{PGUSER}:{PGPASSWORD}@{PGHOST}/{PGDATABASE}?sslmode=require&options=endpoint={ENDPOINT}"
 
         # NEON_POSTGRES_URL = os.getenv("NEON_POSTGRES_URL")
 
