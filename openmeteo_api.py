@@ -5,6 +5,7 @@ import requests_cache
 from retry_requests import retry
 import time
 from openmeteo_attributes import hourly_attributes, daily_attributes
+from Logger import Logger
 
 
 class OpenMeteoAPI:
@@ -12,6 +13,8 @@ class OpenMeteoAPI:
         self.cache_session = requests_cache.CachedSession(".cache", expire_after=3600)
         self.retry_session = retry(self.cache_session, retries=5, backoff_factor=0.2)
         self.openmeteo = openmeteo_requests.Client(session=self.retry_session)
+        self.logger = Logger().get_logger()
+        self.logger.info("WeatherAPI initialized")
 
     def get_current(self, df: pd.DataFrame) -> pd.DataFrame:
         """
@@ -27,7 +30,7 @@ class OpenMeteoAPI:
             township_name = row["Township_Name_Eng"]
             latitude = row["Latitude"]
             longitude = row["Longitude"]
-            print(
+            self.logger.info(
                 f"Township: {township_name}, Latitude: {latitude}, Longitude: {longitude}"
             )
 
@@ -42,12 +45,13 @@ class OpenMeteoAPI:
         result_df = pd.DataFrame()
 
         for index, row in df.iterrows():
+
             township_name = row["Township_Name_Eng"]
             latitude = row["Latitude"]
             longitude = row["Longitude"]
-            print(
-                f"Township: {township_name}, Latitude: {latitude}, Longitude: {longitude}"
-            )
+
+            info = f"Township: {township_name}, Latitude: {latitude}, Longitude: {longitude}"
+            self.logger.info(info)
 
             time.sleep(10)
 
@@ -75,10 +79,15 @@ class OpenMeteoAPI:
 
         # Process first location. Add a for-loop for multiple locations or weather models
         response = responses[0]
-        print(f"Coordinates {response.Latitude()}°N {response.Longitude()}°E")
-        print(f"Elevation {response.Elevation()} m asl")
-        print(f"Timezone {response.Timezone()}{response.TimezoneAbbreviation()}")
-        print(f"Timezone difference to GMT+0 {response.UtcOffsetSeconds()} s")
+
+        info = f"Coordinates {response.Latitude()}°N {response.Longitude()}°E"
+        self.logger.info(info)
+        info = f"Elevation {response.Elevation()} m asl"
+        self.logger.info(info)
+        info = f"Timezone {response.Timezone()}{response.TimezoneAbbreviation()}"
+        self.logger.info(info)
+        info = f"Timezone difference to GMT+0 {response.UtcOffsetSeconds()} s"
+        self.logger.info(info)
 
         # Process hourly data. The order of variables needs to be the same as requested.
         hourly = response.Hourly()
@@ -93,7 +102,7 @@ class OpenMeteoAPI:
         }
 
         for i, attribute in enumerate(hourly_attributes):
-            print(f"{attribute}: {hourly.Variables(i).ValuesAsNumpy()}")
+            self.logger.info(f"{attribute}: {hourly.Variables(i).ValuesAsNumpy()}")
             hourly_data[str(attribute)] = hourly.Variables(i).ValuesAsNumpy()
 
         df = pd.DataFrame(data=hourly_data)
@@ -118,15 +127,18 @@ class OpenMeteoAPI:
 
         # Process first location. Add a for-loop for multiple locations or weather models
         response = responses[0]
-        print(f"Coordinates {response.Latitude()}°N {response.Longitude()}°E")
-        print(f"Elevation {response.Elevation()} m asl")
-        print(f"Timezone {response.Timezone()}{response.TimezoneAbbreviation()}")
-        print(f"Timezone difference to GMT+0 {response.UtcOffsetSeconds()} s")
-        print(f"response: {response}")
+
+        info = f"Coordinates {response.Latitude()}°N {response.Longitude()}°E"
+        self.logger.info(info)
+        info = f"Elevation {response.Elevation()} m asl"
+        self.logger.info(info)
+        info = f"Timezone {response.Timezone()}{response.TimezoneAbbreviation()}"
+        self.logger.info(info)
+        info = f"Timezone difference to GMT+0 {response.UtcOffsetSeconds()} s"
+        self.logger.info(info)
 
         # Process daily data. The order of variables needs to be the same as requested.
         daily = response.Daily()
-        print(f"Daily: {daily}")
 
         daily_data = {
             "date": pd.date_range(
@@ -138,7 +150,6 @@ class OpenMeteoAPI:
         }
 
         for i, attribute in enumerate(daily_attributes):
-            print(f"{attribute}: {daily.Variables(i).ValuesAsNumpy()}")
             daily_data[str(attribute)] = daily.Variables(i).ValuesAsNumpy()
 
         df = pd.DataFrame(data=daily_data)
