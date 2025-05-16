@@ -10,6 +10,10 @@ on:
     - cron: "0 21 11 3 *" ## Trigger on May 11 - 9PM (timezone?)
 
   workflow_dispatch: ## manual trigger
+
+permissions:
+  contents: write
+
 jobs:
   simple-etl:
     runs-on: ubuntu-latest
@@ -17,17 +21,12 @@ jobs:
     env:
       meteoblue_api_key: ${{ secrets.meteoblue_api_key }}
       WEATHER_API_COM_KEY: ${{ secrets.WEATHER_API_COM_KEY }}
-      GOOGLE_SHEET_ID: ${{ secrets.GOOGLE_SHEET_ID }}
       PGHOST: ${{ secrets.PGHOST }}
       PGDATABASE: ${{ secrets.PGDATABASE }}
       PGUSER: ${{ secrets.PGUSER }}
       PGPASSWORD: ${{ secrets.PGPASSWORD }}
       ENDPOINT: ${{ secrets.ENDPOINT }}
     steps:
-      - name: Print environment variable
-        run: echo "${{ vars.WEATHER_API_COM_KEY }}"
-      - name: Print environment variables
-        run: env
       - name: Checkout repo content
         uses: actions/checkout@v4
       - name: Setup Python
