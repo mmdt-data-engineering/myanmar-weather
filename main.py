@@ -3,6 +3,7 @@ from weather_api import WeatherAPI
 from openmeteo_api import OpenMeteoAPI
 from ambientweather_api import AmbientWeatherAPI
 from datetime import date
+from meteoblue_api import MeteoBlueWeatherAPI
 
 
 def fetch_weather_data():
@@ -45,6 +46,18 @@ def fetch_weather_data():
     ambient_df = ambient_api.get_forecast_df(township_df)  # Get forecast data
     filename = f"./output/{str_today}_ambientweather_data.csv"
     ambient_df.to_csv(filename, index=False, header=True)
+
+    # Fetch MeteoBlue data
+    meteoblue_api = MeteoBlueWeatherAPI()
+    meteoblue_df = meteoblue_api.get_meteoblue_current_weather_data(township_df)
+    filename = f"./output/{str_today}_meteoblue_current.csv"
+    meteoblue_df.to_csv(filename, index=False, header=True)
+
+    meteoblue_forecast_df = meteoblue_api.get_meteoblue_forecast_weather_data(
+        township_df
+    )
+    filename = f"./output/{str_today}_meteoblue_forecast.csv"
+    meteoblue_forecast_df.to_csv(filename, index=False, header=True)
 
 
 if __name__ == "__main__":
