@@ -7,7 +7,7 @@ on:
     paths:
       - ".github/workflows/main.yml"
   schedule:
-    - cron: "0 21 11 3 *" ## Trigger on May 11 - 9PM (timezone?)
+    - cron: "0 8 * * *" ## Trigger on every day at 8:00 UTC
 
   workflow_dispatch: ## manual trigger
 
@@ -26,6 +26,9 @@ jobs:
       PGUSER: ${{ secrets.PGUSER }}
       PGPASSWORD: ${{ secrets.PGPASSWORD }}
       ENDPOINT: ${{ secrets.ENDPOINT }}
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
     steps:
       - name: Checkout repo content
         uses: actions/checkout@v4
@@ -41,3 +44,11 @@ jobs:
 
       - name: 🚀 Run ETL pipeline
         run: python main.py
+
+      - name: Upload to S3
+        run: |
+          pip install awscli
+          aws s3 cp ./data/ s3://weather-data-myanmar/ --recursive
+
+      - name: Upload to Neon PostgreSQL
+        run: python load_to_db.py

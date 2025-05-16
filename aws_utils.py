@@ -11,9 +11,9 @@ class AmazonS3:
         # Load environment variables from .env file
         load_dotenv()
 
-        self.aws_access_key = os.getenv("AWS_S3_ACCESS_KEY")
-        self.aws_secret_key = os.getenv("AWS_S3_SECRET_KEY")
-        self.aws_region = os.getenv("AWS_S3_REGION", "us-east-1")
+        self.aws_access_key = os.getenv("AWS_ACCESS_KEY_ID")
+        self.aws_secret_key = os.getenv("AWS_SECRET_ACCESS_KEY")
+        self.aws_region = os.getenv("AWS_DEFAULT_REGION", "us-east-1")
         self.bucket_name = os.getenv("AWS_S3_BUCKET_NAME", "mmdtdeprojectbucket")
         self.logger = Logger().get_logger()
         self.logger.info("AWS initialized")
