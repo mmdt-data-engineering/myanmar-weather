@@ -78,4 +78,4 @@ class PostgresDB:
                 self.logger.info(info)
 
         except OperationalError as e:
-            self.logger.info(f"Connection failed: {e}")
+            self.logger.error(f"Connection failed: {e}")
