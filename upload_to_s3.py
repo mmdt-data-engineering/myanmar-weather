@@ -4,7 +4,7 @@ from openmeteo_api import OpenMeteoAPI
 from ambientweather_api import AmbientWeatherAPI
 from datetime import date
 import os
-from cloud_utils import AWS
+from aws_utils import AmazonS3
 
 
 def fetch_weather_data():
@@ -52,7 +52,7 @@ def fetch_weather_data():
 def upload_to_s3():
 
     # Initialize CloudUtils
-    aws_client = AWS()
+    aws_client = AmazonS3()
 
     # Set the directory containing the CSV files
     folder_path = "./output"
@@ -77,5 +77,5 @@ def upload_to_s3():
 
 
 if __name__ == "__main__":
-    # fetch_weather_data()
+    fetch_weather_data()
     upload_to_s3()

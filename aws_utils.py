@@ -6,7 +6,7 @@ import pandas as pd
 from Logger import Logger
 
 
-class AWS:
+class AmazonS3:
     def __init__(self):
         # Load environment variables from .env file
         load_dotenv()
