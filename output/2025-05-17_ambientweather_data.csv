@@ -49,3 +49,53 @@ date,latitude,longitude,township,timezone,summary,precipProbability,precipIntens
 2025-05-24,17.5604,95.4821,Hinthada,Asia/Rangoon,Afternoon rain,0.69,0.14,0.14,4.6,rain,159,13.8,81,90
 2025-05-25,17.5604,95.4821,Hinthada,Asia/Rangoon,Rain at times,0.72,1.13,1.13,3.5,rain,165,13.8,80,89
 2025-05-26,17.5604,95.4821,Hinthada,Asia/Rangoon,Rain becoming steadier; humid,0.85,0.71,0.71,9.2,rain,121,25.3,80,88
+2025-05-17,17.6506,95.4566,Hinthada,Asia/Rangoon,Occasional rain,0.91,0.14,0.14,6.9,rain,148,19.6,77,91
+2025-05-18,17.6506,95.4566,Hinthada,Asia/Rangoon,"Rather cloudy, a little rain",0.88,0.17,0.17,6.9,rain,139,17.3,77,92
+2025-05-19,17.6506,95.4566,Hinthada,Asia/Rangoon,Afternoon rain,0.78,0.19,0.19,6.9,rain,177,21.9,77,94
+2025-05-20,17.6506,95.4566,Hinthada,Asia/Rangoon,Occasional afternoon rain,0.61,0.04,0.04,8.1,rain,176,19.6,78,94
+2025-05-21,17.6506,95.4566,Hinthada,Asia/Rangoon,"Mostly cloudy, a little rain",0.82,0.19,0.19,8.1,rain,163,24.2,79,92
+2025-05-22,17.6506,95.4566,Hinthada,Asia/Rangoon,A bit of afternoon rain,0.56,0.06,0.06,6.9,rain,181,15.0,79,96
+2025-05-23,17.6506,95.4566,Hinthada,Asia/Rangoon,Rain and a thunderstorm,0.65,0.31,0.31,3.5,rain,158,11.5,80,92
+2025-05-24,17.6506,95.4566,Hinthada,Asia/Rangoon,Afternoon rain,0.69,0.14,0.14,4.6,rain,159,13.8,81,90
+2025-05-25,17.6506,95.4566,Hinthada,Asia/Rangoon,Rain at times,0.72,1.13,1.13,3.5,rain,165,13.8,80,89
+2025-05-26,17.6506,95.4566,Hinthada,Asia/Rangoon,Rain becoming steadier; humid,0.85,0.71,0.71,9.2,rain,121,25.3,80,88
+2025-05-17,17.6415,95.3057,Hinthada,Asia/Rangoon,Occasional rain,0.91,0.14,0.14,6.9,rain,148,19.6,77,91
+2025-05-18,17.6415,95.3057,Hinthada,Asia/Rangoon,"Rather cloudy, a little rain",0.88,0.17,0.17,6.9,rain,139,17.3,77,92
+2025-05-19,17.6415,95.3057,Hinthada,Asia/Rangoon,Afternoon rain,0.78,0.19,0.19,6.9,rain,177,21.9,77,94
+2025-05-20,17.6415,95.3057,Hinthada,Asia/Rangoon,Occasional afternoon rain,0.61,0.04,0.04,8.1,rain,176,19.6,78,94
+2025-05-21,17.6415,95.3057,Hinthada,Asia/Rangoon,"Mostly cloudy, a little rain",0.82,0.19,0.19,8.1,rain,163,24.2,79,92
+2025-05-22,17.6415,95.3057,Hinthada,Asia/Rangoon,A bit of afternoon rain,0.56,0.06,0.06,6.9,rain,181,15.0,79,96
+2025-05-23,17.6415,95.3057,Hinthada,Asia/Rangoon,Rain and a thunderstorm,0.65,0.31,0.31,3.5,rain,158,11.5,80,92
+2025-05-24,17.6415,95.3057,Hinthada,Asia/Rangoon,Afternoon rain,0.69,0.14,0.14,4.6,rain,159,13.8,81,90
+2025-05-25,17.6415,95.3057,Hinthada,Asia/Rangoon,Rain at times,0.72,1.13,1.13,3.5,rain,165,13.8,80,89
+2025-05-26,17.6415,95.3057,Hinthada,Asia/Rangoon,Rain becoming steadier; humid,0.85,0.71,0.71,9.2,rain,121,25.3,80,88
+2025-05-17,17.9707,95.2602,Ingapu,Asia/Rangoon,On-and-off rain and drizzle,0.96,0.42,0.42,5.8,rain,184,16.1,77,92
+2025-05-18,17.9707,95.2602,Ingapu,Asia/Rangoon,"Mostly cloudy, a little rain",0.81,0.11,0.11,5.8,rain,180,16.1,77,92
+2025-05-19,17.9707,95.2602,Ingapu,Asia/Rangoon,Periods of rain,0.91,0.36,0.36,6.9,rain,200,18.4,76,93
+2025-05-20,17.9707,95.2602,Ingapu,Asia/Rangoon,A touch of afternoon rain,0.55,0.05,0.05,6.9,rain,190,18.4,77,92
+2025-05-21,17.9707,95.2602,Ingapu,Asia/Rangoon,Some rain and a thunderstorm,0.84,0.14,0.14,6.9,rain,180,18.4,78,90
+2025-05-22,17.9707,95.2602,Ingapu,Asia/Rangoon,A t-storm around in the a.m.,0.4,0.04,0.04,6.9,part-sun,190,16.1,78,97
+2025-05-23,17.9707,95.2602,Ingapu,Asia/Rangoon,Periods of rain,0.6,0.18,0.18,4.6,rain,173,17.3,79,92
+2025-05-24,17.9707,95.2602,Ingapu,Asia/Rangoon,Afternoon rain,0.71,0.25,0.25,5.8,rain,167,16.1,81,91
+2025-05-25,17.9707,95.2602,Ingapu,Asia/Rangoon,Afternoon rain,0.75,0.25,0.25,4.6,rain,181,11.5,80,89
+2025-05-26,17.9707,95.2602,Ingapu,Asia/Rangoon,Occasional rain,0.73,0.75,0.75,6.9,rain,116,20.7,79,88
+2025-05-17,17.8084,95.27,Ingapu,Asia/Rangoon,On-and-off rain and drizzle,0.96,0.42,0.42,5.8,rain,184,16.1,77,92
+2025-05-18,17.8084,95.27,Ingapu,Asia/Rangoon,"Mostly cloudy, a little rain",0.81,0.11,0.11,5.8,rain,180,16.1,77,92
+2025-05-19,17.8084,95.27,Ingapu,Asia/Rangoon,Periods of rain,0.91,0.36,0.36,6.9,rain,200,18.4,76,93
+2025-05-20,17.8084,95.27,Ingapu,Asia/Rangoon,A touch of afternoon rain,0.55,0.05,0.05,6.9,rain,190,18.4,77,92
+2025-05-21,17.8084,95.27,Ingapu,Asia/Rangoon,Some rain and a thunderstorm,0.84,0.14,0.14,6.9,rain,180,18.4,78,90
+2025-05-22,17.8084,95.27,Ingapu,Asia/Rangoon,A t-storm around in the a.m.,0.4,0.04,0.04,6.9,part-sun,190,16.1,78,97
+2025-05-23,17.8084,95.27,Ingapu,Asia/Rangoon,Periods of rain,0.6,0.18,0.18,4.6,rain,173,17.3,79,92
+2025-05-24,17.8084,95.27,Ingapu,Asia/Rangoon,Afternoon rain,0.71,0.25,0.25,5.8,rain,167,16.1,81,91
+2025-05-25,17.8084,95.27,Ingapu,Asia/Rangoon,Afternoon rain,0.75,0.25,0.25,4.6,rain,181,11.5,80,89
+2025-05-26,17.8084,95.27,Ingapu,Asia/Rangoon,Occasional rain,0.73,0.75,0.75,6.9,rain,116,20.7,79,88
+2025-05-17,17.9031,95.2277,Ingapu,Asia/Rangoon,On-and-off rain and drizzle,0.96,0.42,0.42,5.8,rain,184,16.1,77,92
+2025-05-18,17.9031,95.2277,Ingapu,Asia/Rangoon,"Mostly cloudy, a little rain",0.81,0.11,0.11,5.8,rain,180,16.1,77,92
+2025-05-19,17.9031,95.2277,Ingapu,Asia/Rangoon,Periods of rain,0.91,0.36,0.36,6.9,rain,200,18.4,76,93
+2025-05-20,17.9031,95.2277,Ingapu,Asia/Rangoon,A touch of afternoon rain,0.55,0.05,0.05,6.9,rain,190,18.4,77,92
+2025-05-21,17.9031,95.2277,Ingapu,Asia/Rangoon,Some rain and a thunderstorm,0.84,0.14,0.14,6.9,rain,180,18.4,78,90
+2025-05-22,17.9031,95.2277,Ingapu,Asia/Rangoon,A t-storm around in the a.m.,0.4,0.04,0.04,6.9,part-sun,190,16.1,78,97
+2025-05-23,17.9031,95.2277,Ingapu,Asia/Rangoon,Periods of rain,0.6,0.18,0.18,4.6,rain,173,17.3,79,92
+2025-05-24,17.9031,95.2277,Ingapu,Asia/Rangoon,Afternoon rain,0.71,0.25,0.25,5.8,rain,167,16.1,81,91
+2025-05-25,17.9031,95.2277,Ingapu,Asia/Rangoon,Afternoon rain,0.75,0.25,0.25,4.6,rain,181,11.5,80,89
+2025-05-26,17.9031,95.2277,Ingapu,Asia/Rangoon,Occasional rain,0.73,0.75,0.75,6.9,rain,116,20.7,79,88

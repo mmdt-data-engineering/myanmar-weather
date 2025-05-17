@@ -11,7 +11,7 @@ def fetch_weather_data():
     mimu_data = MIMU_Data()
     township_df = mimu_data.get_townships()
 
-    township_df = township_df.head(5)
+    township_df = township_df.head(10)
 
     weather_api = WeatherAPI()
 
