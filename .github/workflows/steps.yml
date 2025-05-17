@@ -1,0 +1,60 @@
+name: step by step workflow
+
+on:
+  push:
+    branches:
+      - "**"
+    paths:
+      - ".github/workflows/steps.yml"
+  schedule:
+    - cron: "0 8 * * *" ## Trigger on every day at 8:00 UTC
+
+  workflow_dispatch: ## manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  simple-etl:
+    runs-on: ubuntu-latest
+    environment: production
+    env:
+      meteoblue_api_key: ${{ secrets.meteoblue_api_key }}
+      WEATHER_API_COM_KEY: ${{ secrets.WEATHER_API_COM_KEY }}
+      PGHOST: ${{ secrets.PGHOST }}
+      PGDATABASE: ${{ secrets.PGDATABASE }}
+      PGUSER: ${{ secrets.PGUSER }}
+      PGPASSWORD: ${{ secrets.PGPASSWORD }}
+      ENDPOINT: ${{ secrets.ENDPOINT }}
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
+    steps:
+      - name: Checkout repo content
+        uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+      - name: 📦 Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: weatherapi task
+        run: python task_weatherapi.py
+
+      - name: openmeteo task
+        run: python task_openmeteo.py
+
+      - name: ambient task
+        run: python task_ambient.py
+
+      - name: meteoblue task
+        run: python task_meteoblue.py
+
+      - name: Upload to S3
+        run: |
+          pip install awscli
+          aws s3 cp ./output/ s3://${{secrets.AWS_S3_BUCKET_NAME}}/ --recursive
