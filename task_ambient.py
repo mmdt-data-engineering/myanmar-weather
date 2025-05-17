@@ -4,6 +4,7 @@ import pandas as pd
 from load_to_db import load_file_to_db
 from data_utils import MIMU_Data
 from Logger import Logger
+from time import time
 
 
 def print_info(message: str):
@@ -18,7 +19,7 @@ def ambient_task():
     print_info("getting townships from MIMU data")
     mimu = MIMU_Data()
     township_df = mimu.get_townships()
-    township_df = township_df.head(5)
+    # township_df = township_df.head(5)
 
     print_info("extracting data from api and save as csv file")
     ambient_api = AmbientWeatherAPI()
@@ -34,4 +35,8 @@ def ambient_task():
     load_file_to_db(file_path)
 
 
+start_time = time()
 ambient_task()
+end_time = time()
+
+print_info(f"Completed! Total time taken was {end_time-start_time:10.3f} seconds.")
