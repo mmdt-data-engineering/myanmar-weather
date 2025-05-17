@@ -115,9 +115,13 @@ class OpenMeteoAPI:
             )
         }
 
-        for i, attribute in enumerate(hourly_attributes):
-            self.logger.info(f"{attribute}: {hourly.Variables(i).ValuesAsNumpy()}")
-            hourly_data[str(attribute)] = hourly.Variables(i).ValuesAsNumpy()
+        for i in range(current.VariablesLength()):
+            variable = current.Variables(i)
+            attribute = variable.Variable()
+            if attribute in current_attributes:
+                print(f"{attribute}: {variable.ValuesAsNumpy()}")
+                current_data[attribute] = variable.ValuesAsNumpy()
+
 
         df = pd.DataFrame(data=current_data)
 
