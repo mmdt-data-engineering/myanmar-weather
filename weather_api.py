@@ -6,8 +6,15 @@ from Logger import Logger
 
 class WeatherAPI:
     def __init__(self):
-        self.logger = Logger().get_logger()
-        self.logger.info("WeatherAPI initialized")
+        self.logger = Logger().get_logger("WeatherAPI")
+        self.logger.info("WeatherAPI is initialized")
+
+    def print_info(self, message):
+        """
+        Prints the log message to the console and logs it.
+        """
+        print(message)
+        self.logger.info(message)
 
     def get_current(self, township_df: pd.DataFrame) -> pd.DataFrame:
         """
@@ -27,22 +34,22 @@ class WeatherAPI:
         result_df = pd.DataFrame()
 
         for index, row in township_df.iterrows():
+
             township_name = row["Township_Name_Eng"]
             latitude = row["Latitude"]
             longitude = row["Longitude"]
-            self.logger.info(
-                f"Township: {township_name}, Latitude: {latitude}, Longitude: {longitude}"
-            )
+
+            message = f"Township: {township_name}, Latitude: {latitude}, Longitude: {longitude}"
+            self.print_info(message)
 
             # Construct the API request URL
             url = f"{BASE_URL}?key={WEATHER_API_KEY}&q={latitude},{longitude}"
-            self.logger.info(url)
 
-            sleep_time = random.uniform(
-                1, 5
-            )  # Random sleep time between 1 and 5 seconds
-            self.logger.info(f"Sleeping for {sleep_time:.2f} seconds...")
-            time.sleep(sleep_time)
+            # Random sleep time between 1 and 5 seconds
+            sleep_time = random.uniform(1, 5)
+
+            message = f"Sleeping for {sleep_time:.2f} seconds..."
+            self.print_info(message)
 
             response = requests.get(url)
 
@@ -83,18 +90,16 @@ class WeatherAPI:
             township_name = row["Township_Name_Eng"]
             latitude = row["Latitude"]
             longitude = row["Longitude"]
-            self.logger.info(
-                f"Township: {township_name}, Latitude: {latitude}, Longitude: {longitude}"
-            )
+
+            message = f"Township: {township_name}, Latitude: {latitude}, Longitude: {longitude}"
+            self.print_info(message)
 
             # Construct the API request URL
             url = f"{BASE_URL}?key={WEATHER_API_KEY}&q={latitude},{longitude}&days={no_of_days}&aqi=no&alerts=no"
-            # self.logger.info(url)
 
-            sleep_time = random.uniform(
-                1, 5
-            )  # Random sleep time between 1 and 5 seconds
-            self.logger.info(f"Sleeping for {sleep_time:.2f} seconds...")
+            sleep_time = random.uniform(1, 5)
+
+            self.print_info(f"Sleeping for {sleep_time:.2f} seconds...")
             time.sleep(sleep_time)
 
             response = requests.get(url)

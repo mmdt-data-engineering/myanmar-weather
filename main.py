@@ -3,6 +3,7 @@ from weather_api import WeatherAPI
 from openmeteo_api import OpenMeteoAPI
 from ambientweather_api import AmbientWeatherAPI
 from datetime import date
+from meteoblue_api import MeteoBlueWeatherAPI
 
 
 def fetch_weather_data():
@@ -10,7 +11,7 @@ def fetch_weather_data():
     mimu_data = MIMU_Data()
     township_df = mimu_data.get_townships()
 
-    township_df = township_df.head(1)
+    township_df = township_df.head(10)
 
     weather_api = WeatherAPI()
 
@@ -24,7 +25,7 @@ def fetch_weather_data():
 
     # weatherapi - daily
     weatherapi_daily_df = weather_api.get_daily(township_df, no_of_days=7)
-    filename = f"./output/{str_today}_weatherapi_daily.csv"
+    filename = f"./output/{str_today}_weatherapi_forecast.csv"
     weatherapi_daily_df.to_csv(filename, index=False, header=True)
 
     openmeteo_api = OpenMeteoAPI()
@@ -36,15 +37,25 @@ def fetch_weather_data():
 
     # open-meteo - daily
     openmeteo_daily_df = openmeteo_api.get_daily(township_df)
-    filename = f"./output/{str_today}_open_meteo_daily.csv"
+    filename = f"./output/{str_today}_open_meteo_forecast.csv"
     openmeteo_daily_df.to_csv(filename, index=False, header=True)
 
     # Fetch AmbientWeather data
     ambient_api = AmbientWeatherAPI()  # New instance for AmbientWeatherAPI
 
     ambient_df = ambient_api.get_forecast_df(township_df)  # Get forecast data
-    filename = f"./output/{str_today}_ambientweather_data.csv"
+    filename = f"./output/{str_today}_ambientweather_data_forecast.csv"
     ambient_df.to_csv(filename, index=False, header=True)
+
+    # Fetch MeteoBlue data
+    meteoblue_api = MeteoBlueWeatherAPI()
+    meteoblue_df = meteoblue_api.get_meteoblue_current_weather_data(township_df)
+    filename = f"./output/{str_today}_meteoblue_current.csv"
+    meteoblue_df.to_csv(filename, index=False, header=True)
+
+    meteoblue_df = meteoblue_api.get_meteoblue_forecast_weather_data(township_df)
+    filename = f"./output/{str_today}_meteoblue_forecast.csv"
+    meteoblue_df.to_csv(filename, index=False, header=True)
 
 
 if __name__ == "__main__":

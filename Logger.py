@@ -7,9 +7,9 @@ class Logger:
     def __init__(self):
         pass
 
-    def get_logger(self):
+    def get_logger(self, name):
         # Setup logging
-        logger = logging.getLogger(__name__)
+        logger = logging.getLogger(name)
         logger.setLevel(logging.INFO)
 
         today = date.today()
