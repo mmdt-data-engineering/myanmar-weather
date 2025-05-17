@@ -19,26 +19,26 @@ def fetch_weather_data():
     str_today = today.strftime("%Y-%m-%d")  # Output like '2025-05-16'
 
     # weatherapi - current
-    #weatherapi_current_df = weather_api.get_current(township_df)
-    #filename = f"./output/{str_today}_weatherapi_current.csv"
-    #weatherapi_current_df.to_csv(filename, index=False, header=True)
+    weatherapi_current_df = weather_api.get_current(township_df)
+    filename = f"./output/{str_today}_weatherapi_current.csv"
+    weatherapi_current_df.to_csv(filename, index=False, header=True)
 
     # weatherapi - daily
-    #weatherapi_daily_df = weather_api.get_daily(township_df, no_of_days=7)
-    #filename = f"./output/{str_today}_weatherapi_forecast.csv"
-    #weatherapi_daily_df.to_csv(filename, index=False, header=True)
+    weatherapi_daily_df = weather_api.get_daily(township_df, no_of_days=7)
+    filename = f"./output/{str_today}_weatherapi_forecast.csv"
+    weatherapi_daily_df.to_csv(filename, index=False, header=True)
 
-    #openmeteo_api = OpenMeteoAPI()
+    openmeteo_api = OpenMeteoAPI()
 
     # open-meteo - current
-    #openmeteo_current_df = openmeteo_api.get_current(township_df)
-    #filename = f"./output/{str_today}_open_meteo_current.csv"
-    #openmeteo_current_df.to_csv(filename, index=False, header=True)
+    openmeteo_current_df = openmeteo_api.get_current(township_df)
+    filename = f"./output/{str_today}_open_meteo_current.csv"
+    openmeteo_current_df.to_csv(filename, index=False, header=True)
 
     # open-meteo - daily
-    #openmeteo_daily_df = openmeteo_api.get_daily(township_df)
-    #filename = f"./output/{str_today}_open_meteo_forecast.csv"
-    #openmeteo_daily_df.to_csv(filename, index=False, header=True)
+    openmeteo_daily_df = openmeteo_api.get_daily(township_df)
+    filename = f"./output/{str_today}_open_meteo_forecast.csv"
+    openmeteo_daily_df.to_csv(filename, index=False, header=True)
 
     # Fetch AmbientWeather data
     ambient_api = AmbientWeatherAPI()  # New instance for AmbientWeatherAPI
@@ -48,16 +48,14 @@ def fetch_weather_data():
     ambient_df.to_csv(filename, index=False, header=True)
 
     # Fetch MeteoBlue data
-    #meteoblue_api = MeteoBlueWeatherAPI()
-    #meteoblue_df = meteoblue_api.get_meteoblue_current_weather_data(township_df)
-    #filename = f"./output/{str_today}_meteoblue_current.csv"
-    #meteoblue_df.to_csv(filename, index=False, header=True)
+    meteoblue_api = MeteoBlueWeatherAPI()
+    meteoblue_df = meteoblue_api.get_meteoblue_current_weather_data(township_df)
+    filename = f"./output/{str_today}_meteoblue_current.csv"
+    meteoblue_df.to_csv(filename, index=False, header=True)
 
-    #meteoblue_forecast_df = meteoblue_api.get_meteoblue_forecast_weather_data(
-        #township_df
-    #)
-    #filename = f"./output/{str_today}_meteoblue_forecast.csv"
-    #meteoblue_forecast_df.to_csv(filename, index=False, header=True)
+    meteoblue_df = meteoblue_api.get_meteoblue_forecast_weather_data(township_df)
+    filename = f"./output/{str_today}_meteoblue_forecast.csv"
+    meteoblue_df.to_csv(filename, index=False, header=True)
 
 
 if __name__ == "__main__":
