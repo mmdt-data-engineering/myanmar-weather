@@ -2,7 +2,7 @@ import requests
 import pandas as pd
 import random
 import time
-from datetime import datetime
+from datetime import datetime,date
 from Logger import Logger
 
 
@@ -19,6 +19,10 @@ class AmbientWeatherAPI:
 
     def get_forecast_df(self, township_df: pd.DataFrame) -> pd.DataFrame:
         all_data = []
+
+        # Get today's date
+        today = date.today()
+        str_today = today.strftime("%Y-%m-%d")  
 
         for _, row in township_df.iterrows():
             township_name = row["Township_Name_Eng"]
@@ -69,6 +73,7 @@ class AmbientWeatherAPI:
                             "windGust": item.get("windGust", None),
                             "temperatureMin": item.get("temperatureMin", None),
                             "temperatureMax": item.get("temperatureMax", None),
+                            "extraction_date": str_today  # Add today's date as extraction date
                         }
                     )
 

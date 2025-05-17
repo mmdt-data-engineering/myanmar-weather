@@ -44,7 +44,7 @@ def fetch_weather_data():
     ambient_api = AmbientWeatherAPI()  # New instance for AmbientWeatherAPI
 
     ambient_df = ambient_api.get_forecast_df(township_df)  # Get forecast data
-    filename = f"./output/{str_today}_ambientweather_data.csv"
+    filename = f"./output/{str_today}_ambientweather_data_forecast.csv"
     ambient_df.to_csv(filename, index=False, header=True)
 
     # Fetch MeteoBlue data
