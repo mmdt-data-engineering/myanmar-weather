@@ -15,7 +15,7 @@ permissions:
   contents: write
 
 jobs:
-  simple-etl:
+  step-by-step-workflow:
     runs-on: ubuntu-latest
     environment: production
     env:
@@ -42,16 +42,16 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: weatherapi task
+      - name: WeatherAPI
         run: python task_weatherapi.py
 
-      - name: openmeteo task
+      - name: Openmeteo
         run: python task_openmeteo.py
 
-      - name: ambient task
+      - name: Ambient
         run: python task_ambient.py
 
-      - name: meteoblue task
+      - name: Meteoblue
         run: python task_meteoblue.py
 
       - name: Upload to S3
