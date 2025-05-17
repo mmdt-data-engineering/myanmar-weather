@@ -24,6 +24,9 @@ class AmbientWeatherAPI:
             township_name = row["Township_Name_Eng"]
             lat = row["Latitude"]
             lon = row["Longitude"]
+            town_name = row["Town_Name_Eng"]
+            district_name = row["District/SAZ_Name_Eng"]
+            state_name = row["SR_Name_Eng"]
 
             # ✅ Skip rows with missing values
             if pd.isnull(lat) or pd.isnull(lon) or pd.isnull(township_name):
@@ -52,6 +55,9 @@ class AmbientWeatherAPI:
                             "latitude": data.get("lat", lat),
                             "longitude": data.get("lon", lon),
                             "township": township_name,
+                            "town name": town_name,
+                            "district name": district_name,
+                            "state name": state_name,
                             "timezone": data.get("tz", None),
                             "summary": item.get("summary", None),
                             "precipProbability": item.get("precipProbability", None),
