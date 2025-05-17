@@ -28,20 +28,23 @@ def meteoblue_task():
     # meteoblue - current
     meteoblue_df = meteoblue_api.get_meteoblue_current_weather_data(township_df)
 
-    filename = f"./output/{str_today}_meteoblue_current.csv"
-    meteoblue_df.to_csv(filename, index=False, header=True)
+    file_path = f"./output/{str_today}_meteoblue_current.csv"
 
-    print_info("load csv file to database")
-    load_file_to_db(file_path)
+    if meteoblue_df.shape != (0, 0):
+        meteoblue_df.to_csv(file_path, index=False, header=True)
+
+        print_info("load csv file to database")
+        load_file_to_db(file_path)
 
     # meteoblue - forecast
     meteoblue_df = meteoblue_api.get_meteoblue_forecast_weather_data(township_df)
 
     file_path = f"./output/{str_today}_meteoblue_forecast.csv"
-    meteoblue_df.to_csv(file_path, index=False, header=True)
+    if meteoblue_df.shape != (0, 0):
+        meteoblue_df.to_csv(file_path, index=False, header=True)
 
-    print_info("load csv file to database")
-    load_file_to_db(file_path)
+        print_info("load csv file to database")
+        load_file_to_db(file_path)
 
 
 meteoblue_task()
