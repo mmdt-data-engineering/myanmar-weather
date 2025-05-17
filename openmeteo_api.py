@@ -5,6 +5,7 @@ import time, random
 from retry_requests import retry
 import time
 from openmeteo_attributes import current_attributes, daily_attributes
+from Logger import Logger
 
 
 class OpenMeteoAPI:
@@ -87,7 +88,7 @@ class OpenMeteoAPI:
         params = {
             "latitude": latitude,
             "longitude": longitude,
-	        "current": current_attributes
+            "current": current_attributes,
         }
         responses = openmeteo.weather_api(url, params=params)
 
@@ -121,7 +122,6 @@ class OpenMeteoAPI:
             if attribute in current_attributes:
                 print(f"{attribute}: {variable.ValuesAsNumpy()}")
                 current_data[attribute] = variable.ValuesAsNumpy()
-
 
         df = pd.DataFrame(data=current_data)
 
@@ -175,5 +175,3 @@ class OpenMeteoAPI:
         df = pd.DataFrame(data=daily_data)
 
         return df
-
-
