@@ -20,7 +20,7 @@ def get_csv_files(folder_path: str) -> list:
     return csv_files
 
 
-def load_to_local_postgres():
+def load_all_files_to_localdb():
     """Load CSV files from a folder to local PostgreSQL database."""
 
     folder_path = "./output"
@@ -40,25 +40,27 @@ def load_to_local_postgres():
         db.load_to_postgres(df, table_name=df.Name)
 
 
-def load_to_neon_postgres():
+def load_file_to_db(file_path: str):
+    """Load CSV files from a folder to Neon PostgreSQL database."""
+
+    df = pd.read_csv(file_path)
+    filename = os.path.basename(file_path)
+    df.Name = os.path.splitext(filename)[0]
+
+    print(f"DataFrame Name: {df.Name}")
+    print(f"DataFrame Shape: {df.shape}")
+
+    db = PostgresDB()
+
+    # Load the DataFrame to Neon PostgreSQL
+    db.load_to_neon_postgres(df, table_name=df.Name)
+
+
+def load_all_csv_files_to_db():
     """Load CSV files from a folder to Neon PostgreSQL database."""
 
     folder_path = "./output"
     csv_files = get_csv_files(folder_path)
 
     for file in csv_files:
-
-        df = pd.read_csv(os.path.join(folder_path, file))
-        df.Name = os.path.splitext(file)[0]
-
-        print(f"DataFrame Name: {df.Name}")
-        print(f"DataFrame Shape: {df.shape}")
-
-        db = PostgresDB()
-
-        # Load the DataFrame to Neon PostgreSQL
-        db.load_to_neon_postgres(df, table_name=df.Name)
-
-
-# load_to_local_postgres()
-load_to_neon_postgres()
+        load_file_to_db(os.path.join(folder_path, file))

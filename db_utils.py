@@ -8,7 +8,7 @@ from Logger import Logger
 
 class PostgresDB:
     def __init__(self):
-        self.logger = Logger().get_logger()
+        self.logger = Logger().get_logger("PostgresDB")
         self.logger.info("WeatherAPI initialized")
 
     def load_to_postgres(self, df: pd.DataFrame, table_name: str) -> None:
