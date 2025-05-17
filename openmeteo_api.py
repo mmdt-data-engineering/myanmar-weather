@@ -3,8 +3,8 @@ import pandas as pd
 import requests_cache
 import time, random
 from retry_requests import retry
-from openmeteo_attributes import hourly_attributes, daily_attributes
-from Logger import Logger
+import time
+from openmeteo_attributes import current_attributes, daily_attributes
 
 
 class OpenMeteoAPI:
@@ -56,7 +56,6 @@ class OpenMeteoAPI:
         result_df = pd.DataFrame()
 
         for index, row in df.iterrows():
-
             township_name = row["Township_Name_Eng"]
             latitude = row["Latitude"]
             longitude = row["Longitude"]
@@ -88,7 +87,7 @@ class OpenMeteoAPI:
         params = {
             "latitude": latitude,
             "longitude": longitude,
-            "hourly": hourly_attributes,
+	        "current": current_attributes
         }
         responses = openmeteo.weather_api(url, params=params)
 
@@ -104,23 +103,23 @@ class OpenMeteoAPI:
         message = f"Timezone difference to GMT+0 {response.UtcOffsetSeconds()} s"
         self.print_info(message)
 
-        # Process hourly data. The order of variables needs to be the same as requested.
-        hourly = response.Hourly()
+        # Current values. The order of variables needs to be the same as requested.
+        current = response.Current()
 
-        hourly_data = {
+        current_data = {
             "date": pd.date_range(
-                start=pd.to_datetime(hourly.Time(), unit="s", utc=True),
-                end=pd.to_datetime(hourly.TimeEnd(), unit="s", utc=True),
-                freq=pd.Timedelta(seconds=hourly.Interval()),
+                start=pd.to_datetime(current.Time(), unit="s", utc=True),
+                end=pd.to_datetime(current.TimeEnd(), unit="s", utc=True),
+                freq=pd.Timedelta(seconds=current.Interval()),
                 inclusive="left",
             )
         }
 
         for i, attribute in enumerate(hourly_attributes):
-            self.print_info(f"{attribute}: {hourly.Variables(i).ValuesAsNumpy()}")
+            self.logger.info(f"{attribute}: {hourly.Variables(i).ValuesAsNumpy()}")
             hourly_data[str(attribute)] = hourly.Variables(i).ValuesAsNumpy()
 
-        df = pd.DataFrame(data=hourly_data)
+        df = pd.DataFrame(data=current_data)
 
         return df
 
@@ -154,6 +153,7 @@ class OpenMeteoAPI:
 
         # Process daily data. The order of variables needs to be the same as requested.
         daily = response.Daily()
+        print(f"Daily: {daily}")
 
         daily_data = {
             "date": pd.date_range(
@@ -165,8 +165,11 @@ class OpenMeteoAPI:
         }
 
         for i, attribute in enumerate(daily_attributes):
+            print(f"{attribute}: {daily.Variables(i).ValuesAsNumpy()}")
             daily_data[str(attribute)] = daily.Variables(i).ValuesAsNumpy()
 
         df = pd.DataFrame(data=daily_data)
 
         return df
+
+
