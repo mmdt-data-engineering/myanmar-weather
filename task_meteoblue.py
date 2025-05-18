@@ -7,6 +7,7 @@ from Logger import Logger
 from time import time
 from time_utils import readable_time
 from upload_to_s3 import upload_file_to_s3
+import asyncio
 
 
 def print_info(message: str):
@@ -15,7 +16,7 @@ def print_info(message: str):
     logger.info(message)
 
 
-def meteoblue_task():
+async def meteoblue_task():
     print_info("starting the task...")
 
     print_info("getting townships from MIMU data")
@@ -29,7 +30,7 @@ def meteoblue_task():
     str_today = date.today().strftime("%Y-%m-%d")  # Output like '2025-05-16'
 
     # meteoblue - current
-    meteoblue_df = meteoblue_api.get_meteoblue_current_weather_data(township_df)
+    meteoblue_df = await meteoblue_api.get_meteoblue_current_weather_data(township_df)
 
     file_path = f"./output/{str_today}_meteoblue_current.csv"
 
@@ -43,7 +44,7 @@ def meteoblue_task():
         load_file_to_db(file_path)
 
     # meteoblue - forecast
-    meteoblue_df = meteoblue_api.get_meteoblue_forecast_weather_data(township_df)
+    meteoblue_df = await meteoblue_api.get_meteoblue_forecast_weather_data(township_df)
 
     file_path = f"./output/{str_today}_meteoblue_forecast.csv"
     if meteoblue_df.shape != (0, 0):
@@ -57,7 +58,7 @@ def meteoblue_task():
 
 
 start_time = time()
-meteoblue_task()
+asyncio.run(meteoblue_task())
 end_time = time()
 
 time_taken_seconds = end_time - start_time
