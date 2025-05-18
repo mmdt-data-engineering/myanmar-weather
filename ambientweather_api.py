@@ -1,9 +1,10 @@
-import requests
 import pandas as pd
 import random
 import time
 from datetime import datetime, date
 from Logger import Logger
+from fetch_data import fetch_with_headers
+import json
 
 
 class AmbientWeatherAPI:
@@ -24,7 +25,7 @@ class AmbientWeatherAPI:
         print(message)
         self.logger.info(message)
 
-    def get_forecast_df(self, township_df: pd.DataFrame) -> pd.DataFrame:
+    async def get_forecast_df(self, township_df: pd.DataFrame) -> pd.DataFrame:
         all_data = []
 
         # Get today's date
@@ -51,46 +52,42 @@ class AmbientWeatherAPI:
             url = f"{self.base_url}/{lat}/{lon}"
             time.sleep(random.uniform(1, 5))  # Sleep between 1 to 5 seconds
 
-            try:
-                response = requests.get(url, headers=self.headers)
-                response.raise_for_status()
-                data = response.json()
+            # response = requests.get(url, headers=self.headers)
+            response = await fetch_with_headers(url, headers=self.headers)
+            # response.raise_for_status()
 
-                weather_list = []
-                for item in data["daily"]["data"]:
-                    weather_list.append(
-                        {
-                            "date": datetime.fromtimestamp(item["time"]).strftime(
-                                "%Y-%m-%d"
-                            ),
-                            "latitude": data.get("lat", lat),
-                            "longitude": data.get("lon", lon),
-                            "township": township_name,
-                            "town name": town_name,
-                            "district name": district_name,
-                            "state name": state_name,
-                            "timezone": data.get("tz", None),
-                            "summary": item.get("summary", None),
-                            "precipProbability": item.get("precipProbability", None),
-                            "precipIntensity": item.get("precipIntensity", None),
-                            "precipAccumulation": item.get("precipAccumulation", None),
-                            "windSpeed": item.get("windSpeed", None),
-                            "icon": item.get("icon", None),
-                            "windBearing": item.get("windBearing", None),
-                            "windGust": item.get("windGust", None),
-                            "temperatureMin": item.get("temperatureMin", None),
-                            "temperatureMax": item.get("temperatureMax", None),
-                            "extraction_date": str_today,  # Add today's date as extraction date
-                        }
-                    )
+            data = json.loads(response)
 
-                daily_df = pd.DataFrame(weather_list)
-                all_data.append(daily_df)
+            weather_list = []
+            for item in data["daily"]["data"]:
+                weather_list.append(
+                    {
+                        "date": datetime.fromtimestamp(item["time"]).strftime(
+                            "%Y-%m-%d"
+                        ),
+                        "latitude": data.get("lat", lat),
+                        "longitude": data.get("lon", lon),
+                        "township": township_name,
+                        "town name": town_name,
+                        "district name": district_name,
+                        "state name": state_name,
+                        "timezone": data.get("tz", None),
+                        "summary": item.get("summary", None),
+                        "precipProbability": item.get("precipProbability", None),
+                        "precipIntensity": item.get("precipIntensity", None),
+                        "precipAccumulation": item.get("precipAccumulation", None),
+                        "windSpeed": item.get("windSpeed", None),
+                        "icon": item.get("icon", None),
+                        "windBearing": item.get("windBearing", None),
+                        "windGust": item.get("windGust", None),
+                        "temperatureMin": item.get("temperatureMin", None),
+                        "temperatureMax": item.get("temperatureMax", None),
+                        "extraction_date": str_today,  # Add today's date as extraction date
+                    }
+                )
 
-            except requests.RequestException as e:
-                message = f"[ERROR] Failed to fetch data for ({lat}, {lon}): {e}"
-                print(message)
-                self.logger.error(message)
+            daily_df = pd.DataFrame(weather_list)
+            all_data.append(daily_df)
 
         if all_data:
             return pd.concat(all_data, ignore_index=True)
