@@ -4,14 +4,15 @@ from openmeteo_api import OpenMeteoAPI
 from ambientweather_api import AmbientWeatherAPI
 from datetime import date
 from meteoblue_api import MeteoBlueWeatherAPI
+import asyncio
 
 
-def fetch_weather_data():
+async def fetch_weather_data():
     # Get townships from MIMU data
     mimu_data = MIMU_Data()
     township_df = mimu_data.get_townships()
 
-    township_df = township_df.head(10)
+    township_df = township_df.head(50)
 
     weather_api = WeatherAPI()
 
@@ -19,12 +20,12 @@ def fetch_weather_data():
     str_today = today.strftime("%Y-%m-%d")  # Output like '2025-05-16'
 
     # weatherapi - current
-    weatherapi_current_df = weather_api.get_current(township_df)
+    weatherapi_current_df = await weather_api.get_current(township_df)
     filename = f"./output/{str_today}_weatherapi_current.csv"
     weatherapi_current_df.to_csv(filename, index=False, header=True)
 
     # weatherapi - daily
-    weatherapi_daily_df = weather_api.get_daily(township_df, no_of_days=7)
+    weatherapi_daily_df = await weather_api.get_daily(township_df, no_of_days=7)
     filename = f"./output/{str_today}_weatherapi_forecast.csv"
     weatherapi_daily_df.to_csv(filename, index=False, header=True)
 
@@ -59,4 +60,4 @@ def fetch_weather_data():
 
 
 if __name__ == "__main__":
-    fetch_weather_data()
+    asyncio.run(fetch_weather_data())
