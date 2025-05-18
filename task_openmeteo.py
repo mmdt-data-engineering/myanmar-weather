@@ -8,6 +8,7 @@ from time import time
 from time_utils import readable_time
 from upload_to_s3 import upload_file_to_s3
 
+
 def print_info(message: str):
     print(message)
     logger = Logger().get_logger("OpenMeteo Task")
@@ -20,7 +21,7 @@ def openmeteo_task():
     print_info("getting townships from MIMU data")
     mimu = MIMU_Data()
     township_df = mimu.get_townships()
-    township_df = township_df.head(50)
+    township_df = township_df.head(100)
 
     print_info("extracting data from api and save as csv file")
     openmeteo_api = OpenMeteoAPI()

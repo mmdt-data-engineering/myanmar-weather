@@ -9,7 +9,7 @@ on:
   schedule:
     - cron: "0 8 * * *" ## Trigger on every day at 8:00 UTC
 
-  workflow_dispatch: ## manual trigger
+  workflow_dispatch:
 
 permissions:
   contents: write

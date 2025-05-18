@@ -60,7 +60,7 @@ print_info("starting the task...")
 print_info("getting townships from MIMU data")
 mimu = MIMU_Data()
 township_df = mimu.get_townships()
-township_df = township_df.head(50)
+township_df = township_df.head(100)
 
 asyncio.run(weatherapi_current(township_df))
 
