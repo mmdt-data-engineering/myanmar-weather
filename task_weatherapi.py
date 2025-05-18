@@ -6,6 +6,7 @@ from data_utils import MIMU_Data
 from Logger import Logger
 from time import time
 from time_utils import readable_time
+import asyncio
 
 
 def print_info(message: str):
@@ -14,13 +15,13 @@ def print_info(message: str):
     logger.info(message)
 
 
-def weatherapi_daily(township_df: pd.DataFrame, days: int):
+async def weatherapi_daily(township_df: pd.DataFrame, days: int):
 
     print_info("extracting data from api and save as csv file")
     weather_api = WeatherAPI()
 
     # weatherapi - daily
-    weatherapi_daily_df = weather_api.get_daily(township_df, no_of_days=days)
+    weatherapi_daily_df = await weather_api.get_daily(township_df, no_of_days=days)
 
     str_today = date.today().strftime("%Y-%m-%d")  # Output like '2025-05-16'
     file_path = f"./output/{str_today}_weatherapi_forecast.csv"
@@ -30,12 +31,12 @@ def weatherapi_daily(township_df: pd.DataFrame, days: int):
     load_file_to_db(file_path)
 
 
-def weatherapi_current(township_df):
+async def weatherapi_current(township_df):
     print_info("extracting data from api and save as csv file")
     weather_api = WeatherAPI()
 
     # weatherapi - current
-    weatherapi_current_df = weather_api.get_current(township_df)
+    weatherapi_current_df = await weather_api.get_current(township_df)
 
     str_today = date.today().strftime("%Y-%m-%d")  # Output like '2025-05-16'
     file_path = f"./output/{str_today}_weatherapi_current.csv"
@@ -54,9 +55,9 @@ mimu = MIMU_Data()
 township_df = mimu.get_townships()
 township_df = township_df.head(50)
 
-weatherapi_current(township_df)
+asyncio.run(weatherapi_current(township_df))
 
-weatherapi_daily(township_df, 7)
+asyncio.run(weatherapi_daily(township_df, 7))
 
 end_time = time()
 
