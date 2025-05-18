@@ -15,7 +15,7 @@ permissions:
   contents: write
 
 jobs:
-  ambient:
+  ambient-job:
     runs-on: ubuntu-latest
     environment: production
     env:
@@ -43,7 +43,7 @@ jobs:
       - name: Ambient
         run: python task_ambient.py
 
-  meteoblue:
+  meteoblue-job:
     runs-on: ubuntu-latest
     environment: production
     env:
@@ -72,7 +72,7 @@ jobs:
       - name: Meteoblue
         run: python task_meteoblue.py
 
-  openmeteo:
+  openmeteo-job:
     runs-on: ubuntu-latest
     environment: production
     env:
@@ -100,7 +100,7 @@ jobs:
       - name: Openmeteo
         run: python task_openmeteo.py
 
-  weather_api:
+  weather_api-job:
     runs-on: ubuntu-latest
     environment: production
     env:
