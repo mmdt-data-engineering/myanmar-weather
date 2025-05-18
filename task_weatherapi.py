@@ -52,7 +52,7 @@ print_info("starting the task...")
 print_info("getting townships from MIMU data")
 mimu = MIMU_Data()
 township_df = mimu.get_townships()
-township_df = township_df.head(100)
+township_df = township_df.head(50)
 
 weatherapi_current(township_df)
 
