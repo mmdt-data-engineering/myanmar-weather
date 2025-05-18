@@ -5,6 +5,7 @@ from load_to_db import load_file_to_db
 from data_utils import MIMU_Data
 from Logger import Logger
 from time import time
+from time_utils import readable_time
 
 
 def print_info(message: str):
@@ -52,4 +53,7 @@ start_time = time()
 meteoblue_task()
 end_time = time()
 
-print_info(f"Completed! Total time taken was {end_time-start_time:10.3f} seconds.")
+time_taken_seconds = end_time - start_time
+hours, minutes, seconds = readable_time(time_taken_seconds)
+
+print_info(f"Total time taken was {hours} hours, {minutes} minutes, {seconds} seconds.")

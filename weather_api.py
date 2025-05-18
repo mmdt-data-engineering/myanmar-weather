@@ -66,9 +66,6 @@ class WeatherAPI:
 
             data = response.json()
 
-            df = pd.json_normalize(data)
-            df.to_json(os.path.join("output", "sample.json"))
-
             location = data["location"]
             current = data["current"]
             condition = data["current"]["condition"]
