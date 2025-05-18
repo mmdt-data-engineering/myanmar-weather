@@ -7,6 +7,7 @@ from Logger import Logger
 from time import time
 from time_utils import readable_time
 from upload_to_s3 import upload_file_to_s3
+import asyncio
 
 
 def print_info(message: str):
@@ -15,7 +16,7 @@ def print_info(message: str):
     logger.info(message)
 
 
-def ambient_task():
+async def ambient_task():
     print_info("starting the task...")
 
     print_info("getting townships from MIMU data")
@@ -27,7 +28,7 @@ def ambient_task():
     ambient_api = AmbientWeatherAPI()
 
     # ambient - current
-    ambient_forecast_df = ambient_api.get_forecast_df(township_df)
+    ambient_forecast_df = await ambient_api.get_forecast_df(township_df)
 
     str_today = date.today().strftime("%Y-%m-%d")  # Output like '2025-05-16'
     file_path = f"./output/{str_today}_ambient_forecast.csv"
@@ -41,7 +42,7 @@ def ambient_task():
 
 
 start_time = time()
-ambient_task()
+asyncio.run(ambient_task())
 end_time = time()
 
 time_taken_seconds = end_time - start_time
