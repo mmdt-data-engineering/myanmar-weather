@@ -6,7 +6,7 @@ from data_utils import MIMU_Data
 from Logger import Logger
 from time import time
 from time_utils import readable_time
-
+from upload_to_s3 import upload_file_to_s3
 
 def print_info(message: str):
     print(message)
@@ -32,6 +32,9 @@ def openmeteo_task():
     file_path = f"./output/{str_today}_openmeteo_current.csv"
     openmeteo_current_df.to_csv(file_path, index=False, header=True)
 
+    print_info("uploading csv file to s3")
+    upload_file_to_s3(file_path)
+
     print_info("load csv file to database")
     load_file_to_db(file_path)
 
@@ -39,6 +42,9 @@ def openmeteo_task():
     openmeteo_daily_df = openmeteo_api.get_daily(township_df)
     file_path = f"./output/{str_today}_openmeteo_forecast.csv"
     openmeteo_daily_df.to_csv(file_path, index=False, header=True)
+
+    print_info("uploading csv file to s3")
+    upload_file_to_s3(file_path)
 
     print_info("load csv file to database")
     load_file_to_db(file_path)

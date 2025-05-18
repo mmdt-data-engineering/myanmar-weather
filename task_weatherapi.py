@@ -7,6 +7,7 @@ from Logger import Logger
 from time import time
 from time_utils import readable_time
 import asyncio
+from upload_to_s3 import upload_file_to_s3
 
 
 def print_info(message: str):
@@ -27,6 +28,9 @@ async def weatherapi_daily(township_df: pd.DataFrame, days: int):
     file_path = f"./output/{str_today}_weatherapi_forecast.csv"
     weatherapi_daily_df.to_csv(file_path, index=False, header=True)
 
+    print_info("uploading csv file to s3")
+    upload_file_to_s3(file_path)
+
     print_info("load csv file to database")
     load_file_to_db(file_path)
 
@@ -42,6 +46,9 @@ async def weatherapi_current(township_df):
     file_path = f"./output/{str_today}_weatherapi_current.csv"
     weatherapi_current_df.to_csv(file_path, index=False, header=True)
 
+    print_info("uploading csv file to s3")
+    upload_file_to_s3(file_path)
+
     print_info("load csv file to database")
     load_file_to_db(file_path)
 
@@ -53,7 +60,7 @@ print_info("starting the task...")
 print_info("getting townships from MIMU data")
 mimu = MIMU_Data()
 township_df = mimu.get_townships()
-township_df = township_df.head(50)
+township_df = township_df.head(5)
 
 asyncio.run(weatherapi_current(township_df))
 
