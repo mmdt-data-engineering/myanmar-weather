@@ -6,6 +6,7 @@ import time
 from Logger import Logger
 from fetch_data import fetch
 import json
+from dotenv import load_dotenv
 
 class MeteoBlueWeatherAPI:
     def __init__(self):
@@ -51,9 +52,10 @@ class MeteoBlueWeatherAPI:
                 continue
 
             message = f"Fetching weather data for Town: {town_name}, Latitude: {lat}, Longitude: {lon}"
-            self.logger.info(message)
+            self.print_info(message)
 
-            API_KEY = os.getenv("meteoblue_api_key")
+            load_dotenv()
+            API_KEY = os.getenv("METEOBLUE_API_KEY")
             url = f"https://my.meteoblue.com/packages/current?apikey={API_KEY}&lat={lat}&lon={lon}&asl=30&format=json"
             time.sleep(random.uniform(1, 5))  # Sleep between 1 to 5 seconds
 

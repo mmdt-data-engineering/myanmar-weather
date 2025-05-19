@@ -3,7 +3,7 @@ import random
 import time
 from datetime import datetime, date
 from Logger import Logger
-from fetch_data import fetch_with_headers
+from fetch_data import fetch
 import json
 
 
@@ -53,7 +53,7 @@ class AmbientWeatherAPI:
             time.sleep(random.uniform(1, 5))  # Sleep between 1 to 5 seconds
 
             # response = requests.get(url, headers=self.headers)
-            response = await fetch_with_headers(url, headers=self.headers)
+            response = await fetch(url, headers=self.headers)
             # response.raise_for_status()
 
             data = json.loads(response)

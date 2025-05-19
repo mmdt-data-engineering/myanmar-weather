@@ -24,7 +24,7 @@ async def meteoblue_task():
     township_df = mimu.get_townships()
     township_df = township_df.head(50)
 
-    print_info("extracting data from api and save as csv file")
+    print_info("extracting data from meteoblue weather api")
     meteoblue_api = MeteoBlueWeatherAPI()
 
     str_today = date.today().strftime("%Y-%m-%d")  # Output like '2025-05-16'
