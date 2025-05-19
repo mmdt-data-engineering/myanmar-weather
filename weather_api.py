@@ -57,9 +57,9 @@ class WeatherAPI:
 
         # Random sleep time between 1 and 5 seconds
         sleep_time = random.uniform(1, 5)
-
         message = f"Sleeping for {sleep_time:.2f} seconds..."
         self.print_info(message)
+        time.sleep(sleep_time)
 
         # response = requests.get(url)
         response = await fetch(url)

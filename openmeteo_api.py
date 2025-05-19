@@ -46,9 +46,10 @@ class OpenMeteoAPI:
 
             # Random sleep time between 1 and 5 seconds
             sleep_time = random.uniform(1, 5)
-
             message = f"Sleeping for {sleep_time:.2f} seconds..."
             self.print_info(message)
+
+            time.sleep(sleep_time)
 
             df = self._get_current(latitude, longitude)
             result_df = pd.concat([result_df, df], ignore_index=True)
@@ -68,9 +69,10 @@ class OpenMeteoAPI:
 
             # Random sleep time between 1 and 5 seconds
             sleep_time = random.uniform(1, 5)
-
             message = f"Sleeping for {sleep_time:.2f} seconds..."
             self.print_info(message)
+
+            time.sleep(sleep_time)
 
             df = self._get_daily(latitude, longitude)
             result_df = pd.concat([result_df, df], ignore_index=True)
@@ -273,6 +275,7 @@ class OpenMeteoAPI:
                     ],
                 }
             )
+
 
         df = pd.DataFrame(daily_list)
 
