@@ -47,7 +47,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: production
     env:
-      meteoblue_api_key: ${{ secrets.meteoblue_api_key }}
+      METEOBLUE_API_KEY: ${{ secrets.METEOBLUE_API_KEY }}
       PGHOST: ${{ secrets.PGHOST }}
       PGDATABASE: ${{ secrets.PGDATABASE }}
       PGUSER: ${{ secrets.PGUSER }}
