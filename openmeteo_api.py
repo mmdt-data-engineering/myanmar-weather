@@ -44,9 +44,10 @@ class OpenMeteoAPI:
 
             # Random sleep time between 1 and 5 seconds
             sleep_time = random.uniform(1, 5)
-
             message = f"Sleeping for {sleep_time:.2f} seconds..."
             self.print_info(message)
+
+            time.sleep(sleep_time)
 
             df = self._get_current(latitude, longitude)
             result_df = pd.concat([result_df, df], ignore_index=True)
@@ -66,9 +67,10 @@ class OpenMeteoAPI:
 
             # Random sleep time between 1 and 5 seconds
             sleep_time = random.uniform(1, 5)
-
             message = f"Sleeping for {sleep_time:.2f} seconds..."
             self.print_info(message)
+
+            time.sleep(sleep_time)
 
             df = self._get_daily(latitude, longitude)
             result_df = pd.concat([result_df, df], ignore_index=True)
@@ -94,15 +96,6 @@ class OpenMeteoAPI:
 
         # Process first location. Add a for-loop for multiple locations or weather models
         response = responses[0]
-
-        message = f"Coordinates {response.Latitude()}°N {response.Longitude()}°E"
-        self.print_info(message)
-        message = f"Elevation {response.Elevation()} m asl"
-        self.print_info(message)
-        message = f"Timezone {response.Timezone()}{response.TimezoneAbbreviation()}"
-        self.print_info(message)
-        message = f"Timezone difference to GMT+0 {response.UtcOffsetSeconds()} s"
-        self.print_info(message)
 
         # Current values. The order of variables needs to be the same as requested.
         current = response.Current()
@@ -146,18 +139,8 @@ class OpenMeteoAPI:
         # Process first location. Add a for-loop for multiple locations or weather models
         response = responses[0]
 
-        message = f"Coordinates {response.Latitude()}°N {response.Longitude()}°E"
-        self.print_info(message)
-        message = f"Elevation {response.Elevation()} m asl"
-        self.print_info(message)
-        message = f"Timezone {response.Timezone()}{response.TimezoneAbbreviation()}"
-        self.print_info(message)
-        message = f"Timezone difference to GMT+0 {response.UtcOffsetSeconds()} s"
-        self.print_info(message)
-
         # Process daily data. The order of variables needs to be the same as requested.
         daily = response.Daily()
-        print(f"Daily: {daily}")
 
         daily_data = {
             "date": pd.date_range(
@@ -169,7 +152,7 @@ class OpenMeteoAPI:
         }
 
         for i, attribute in enumerate(daily_attributes):
-            print(f"{attribute}: {daily.Variables(i).ValuesAsNumpy()}")
+            # print(f"{attribute}: {daily.Variables(i).ValuesAsNumpy()}")
             daily_data[str(attribute)] = daily.Variables(i).ValuesAsNumpy()
 
         df = pd.DataFrame(data=daily_data)
