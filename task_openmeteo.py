@@ -7,6 +7,7 @@ from Logger import Logger
 from time import time
 from time_utils import readable_time
 from upload_to_s3 import upload_file_to_s3
+import asyncio
 
 
 def print_info(message: str):
@@ -15,7 +16,7 @@ def print_info(message: str):
     logger.info(message)
 
 
-def openmeteo_task():
+async def openmeteo_task():
     print_info("starting the task...")
 
     print_info("getting townships from MIMU data")
@@ -27,11 +28,13 @@ def openmeteo_task():
     openmeteo_api = OpenMeteoAPI()
 
     # openmeteo - current
-    openmeteo_current_df = openmeteo_api.get_current(township_df)
+    openmeteo_current_df = await openmeteo_api.get_current(township_df)
 
     str_today = date.today().strftime("%Y-%m-%d")  # Output like '2025-05-16'
     file_path = f"./output/{str_today}_openmeteo_current.csv"
-    openmeteo_current_df.to_csv(file_path, index=False, header=True)
+
+    if openmeteo_current_df is not None:
+        openmeteo_current_df.to_csv(file_path, index=False, header=True)
 
     print_info("uploading csv file to s3")
     upload_file_to_s3(file_path)
@@ -42,7 +45,9 @@ def openmeteo_task():
     # openmeteo - daily
     openmeteo_daily_df = openmeteo_api.get_daily(township_df)
     file_path = f"./output/{str_today}_openmeteo_forecast.csv"
-    openmeteo_daily_df.to_csv(file_path, index=False, header=True)
+
+    if openmeteo_daily_df is not None:
+        openmeteo_daily_df.to_csv(file_path, index=False, header=True)
 
     print_info("uploading csv file to s3")
     upload_file_to_s3(file_path)
@@ -52,7 +57,7 @@ def openmeteo_task():
 
 
 start_time = time()
-openmeteo_task()
+asyncio.run(openmeteo_task())
 end_time = time()
 
 time_taken_seconds = end_time - start_time
