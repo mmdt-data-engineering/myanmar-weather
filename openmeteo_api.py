@@ -16,6 +16,14 @@ class OpenMeteoAPI:
         self.cache_session = requests_cache.CachedSession(".cache", expire_after=3600)
         self.retry_session = retry(self.cache_session, retries=5, backoff_factor=0.2)
         self.openmeteo = openmeteo_requests.Client(session=self.retry_session)
+
+        self.headers = {
+            "User-Agent": "Chrome/135.0.0.0 Safari/537.36",
+            "Referer": "https://open-meteo.com/",
+            "Origin": "https://open-meteo.com/",
+            "Accept": "application/json",
+        }
+
         self.logger = Logger().get_logger("OpenMeteoAPI")
         self.print_info("OpenMeteoAPI is initialized")
 
@@ -87,7 +95,7 @@ class OpenMeteoAPI:
         }
 
         # responses = openmeteo.weather_api(url, params=params)
-        res = requests.get(url, params=params)
+        res = requests.get(url, headers=self.headers, params=params)
 
         response = json.loads(res.text)
 
