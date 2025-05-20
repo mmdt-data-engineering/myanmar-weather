@@ -8,6 +8,7 @@ from openmeteo_attributes import current_attributes, daily_attributes
 from Logger import Logger
 import requests
 import json
+from fetch_data import fetch
 
 
 class OpenMeteoAPI:
@@ -34,7 +35,7 @@ class OpenMeteoAPI:
         print(message)
         self.logger.info(message)
 
-    def get_current(self, df: pd.DataFrame) -> pd.DataFrame:
+    async def get_current(self, df: pd.DataFrame) -> pd.DataFrame:
         """
         Fetches hourly weather data for the specified townships by using latitude and longitude.
 
@@ -58,7 +59,7 @@ class OpenMeteoAPI:
             # self.print_info(message)
             # time.sleep(sleep_time)
 
-            df = self._get_current(latitude, longitude)
+            df = await self._get_current(latitude, longitude)
             result_df = pd.concat([result_df, df], ignore_index=True)
 
         return result_df
@@ -85,7 +86,7 @@ class OpenMeteoAPI:
 
         return result_df
 
-    def _get_current(self, latitude: float, longitude: float) -> pd.DataFrame:
+    async def _get_current(self, latitude: float, longitude: float) -> pd.DataFrame:
 
         url = "https://api.open-meteo.com/v1/forecast"
         params = {
@@ -96,9 +97,10 @@ class OpenMeteoAPI:
         }
 
         # responses = openmeteo.weather_api(url, params=params)
-        res = requests.get(url, headers=self.headers, params=params, timeout=10)
+        # res = requests.get(url, headers=self.headers, params=params, timeout=10)
+        res = await fetch(url=url, headers=self.headers, params=params)
 
-        response = json.loads(res.text)
+        response = json.loads(res)
         self.print_info(response)
 
         message = f"Coordinates {response['latitude']}°N {response['longitude']}°E"
