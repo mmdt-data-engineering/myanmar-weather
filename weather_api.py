@@ -9,7 +9,7 @@ import json
 class WeatherAPI:
     def __init__(self):
         self.logger = Logger().get_logger("WeatherAPI")
-        self.logger.info("WeatherAPI is initialized")
+        self.print_info("WeatherAPI is initialized")
 
     def print_info(self, message):
         """
@@ -61,7 +61,10 @@ class WeatherAPI:
         # time.sleep(sleep_time)
 
         # response = requests.get(url)
-        response = await fetch(url)
+        response, status = await fetch(url)
+
+        if status != 200: 
+            raise ConnectionError(f"Fetch data from Weather API - FAILED ")
 
         data = json.loads(response)
 
@@ -169,7 +172,10 @@ class WeatherAPI:
         # time.sleep(sleep_time)
 
         # response = requests.get(url)
-        response = await fetch(url)
+        response, status = await fetch(url)
+
+        if status != 200: 
+            raise ConnectionError(f"Fetch data from Weather API - FAILED ")
 
         data = json.loads(response)
 

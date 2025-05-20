@@ -55,8 +55,10 @@ class AmbientWeatherAPI:
             # time.sleep(random.uniform(1, 5))  
 
             # response = requests.get(url, headers=self.headers)
-            response = await fetch(url, headers=self.headers)
-            # response.raise_for_status()
+            response, status = await fetch(url, headers=self.headers)
+
+            if status != 200: 
+                raise ConnectionError(f"Fetch data from Ambient Weather API - FAILED ")
 
             data = json.loads(response)
 

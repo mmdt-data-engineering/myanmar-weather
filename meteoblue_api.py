@@ -12,7 +12,7 @@ from dotenv import load_dotenv
 class MeteoBlueWeatherAPI:
     def __init__(self):
         self.logger = Logger().get_logger("MeteoBlueWeatherAPI")
-        self.logger.info("MeteoBlueWeatherAPI is initialized")
+        self.print_info("MeteoBlueWeatherAPI is initialized")
 
     def print_info(self, message):
         """
@@ -63,7 +63,13 @@ class MeteoBlueWeatherAPI:
             # time.sleep(random.uniform(1, 3))  
 
             # response = requests.get(url)
-            response = await fetch(url)
+            response, status = await fetch(url)
+
+            if status == 429: 
+                raise ValueError("Available credits exceeded for this API key")
+            
+            if status != 200: 
+                raise ConnectionError(f"Fetch data from meteo-blue API - FAILED ")
 
             data = json.loads(response)
 
@@ -137,7 +143,7 @@ class MeteoBlueWeatherAPI:
             # time.sleep(random.uniform(1, 5))  
 
             # response = requests.get(url)
-            response = await fetch(url)
+            response, status = await fetch(url)
 
             data = json.loads(response)
 

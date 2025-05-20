@@ -17,13 +17,13 @@ async def fetch(url, headers=None, params=None):
             async with aiohttp.ClientSession() as session:
                 if headers != None and params != None:
                     async with session.get(url, headers=headers, params=params) as response:
-                        return await response.text()
+                        return await response.text(), response.status
                 elif headers != None: 
                     async with session.get(url, headers=headers) as response:
-                        return await response.text()
+                        return await response.text(), response.status
                 else:
                     async with session.get(url) as response:
-                        return await response.text()
+                        return await response.text(), response.status
         except aiohttp.ClientError as e:  # Catch general aiohttp errors
             print_error(f"Request error: {e}")
             print_error(f"Attempt {attempt+1} failed: {e}")

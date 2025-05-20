@@ -92,25 +92,27 @@ class OpenMeteoAPI:
         params = {
             "latitude": latitude,
             "longitude": longitude,
-            # "current": current_attributes,
-            "current": ["temperature_2m", "weather_code"],
+            "current": current_attributes,
+            # "current": ["temperature_2m", "weather_code"],
         }
 
         # responses = openmeteo.weather_api(url, params=params)
         # res = requests.get(url, headers=self.headers, params=params, timeout=10)
-        res = await fetch(url=url, headers=self.headers, params=params)
+        res, status = await fetch(url=url, headers=self.headers, params=params)
+
+        if status != 200: 
+            raise ConnectionError(f"Fetch data from open-meteo weather API - FAILED ")
 
         response = json.loads(res)
-        self.print_info(response)
 
-        message = f"Coordinates {response['latitude']}°N {response['longitude']}°E"
-        self.print_info(message)
-        message = f"Elevation {response['elevation']} m asl"
-        self.print_info(message)
-        message = f"Timezone {response['timezone']}{response['timezone_abbreviation']}"
-        self.print_info(message)
-        message = f"Timezone difference to GMT+0 {response['utc_offset_seconds']} s"
-        self.print_info(message)
+        # message = f"Coordinates {response['latitude']}°N {response['longitude']}°E"
+        # self.print_info(message)
+        # message = f"Elevation {response['elevation']} m asl"
+        # self.print_info(message)
+        # message = f"Timezone {response['timezone']}{response['timezone_abbreviation']}"
+        # self.print_info(message)
+        # message = f"Timezone difference to GMT+0 {response['utc_offset_seconds']} s"
+        # self.print_info(message)
 
         current_units = response["current_units"]
         current = response["current"]
@@ -132,34 +134,34 @@ class OpenMeteoAPI:
                 "interval_units": current_units["interval"],
                 "temperature_2m": current["temperature_2m"],
                 "temperature_2m_units": current_units["temperature_2m"],
-                # "relative_humidity_2m": current["relative_humidity_2m"],
-                # "relative_humidity_2m_units": current_units["relative_humidity_2m"],
-                # "apparent_temperature": current["apparent_temperature"],
-                # "apparent_temperature_units": current_units["apparent_temperature"],
-                # "is_day": current["is_day"],
-                # "is_day_units": current_units["is_day"],
-                # "wind_speed_10m": current["wind_speed_10m"],
-                # "wind_speed_10m_units": current_units["wind_speed_10m"],
-                # "wind_direction_10m": current["wind_direction_10m"],
-                # "wind_direction_10m_units": current_units["wind_direction_10m"],
-                # "wind_gusts_10m": current["wind_gusts_10m"],
-                # "wind_gusts_10m_units": current_units["wind_gusts_10m"],
-                # "precipitation": current["precipitation"],
-                # "precipitation_units": current_units["precipitation"],
-                # "showers": current["showers"],
-                # "showers_units": current_units["showers"],
-                # "snowfall": current["snowfall"],
-                # "snowfall_units": current_units["snowfall"],
-                # "rain": current["rain"],
-                # "rain_units": current_units["rain"],
+                "relative_humidity_2m": current["relative_humidity_2m"],
+                "relative_humidity_2m_units": current_units["relative_humidity_2m"],
+                "apparent_temperature": current["apparent_temperature"],
+                "apparent_temperature_units": current_units["apparent_temperature"],
+                "is_day": current["is_day"],
+                "is_day_units": current_units["is_day"],
+                "wind_speed_10m": current["wind_speed_10m"],
+                "wind_speed_10m_units": current_units["wind_speed_10m"],
+                "wind_direction_10m": current["wind_direction_10m"],
+                "wind_direction_10m_units": current_units["wind_direction_10m"],
+                "wind_gusts_10m": current["wind_gusts_10m"],
+                "wind_gusts_10m_units": current_units["wind_gusts_10m"],
+                "precipitation": current["precipitation"],
+                "precipitation_units": current_units["precipitation"],
+                "showers": current["showers"],
+                "showers_units": current_units["showers"],
+                "snowfall": current["snowfall"],
+                "snowfall_units": current_units["snowfall"],
+                "rain": current["rain"],
+                "rain_units": current_units["rain"],
                 "weather_code": current["weather_code"],
                 "weather_code_units": current_units["weather_code"],
-                # "cloud_cover": current["cloud_cover"],
-                # "cloud_cover_units": current_units["cloud_cover"],
-                # "pressure_msl": current["pressure_msl"],
-                # "pressure_msl_units": current_units["pressure_msl"],
-                # "surface_pressure": current["surface_pressure"],
-                # "surface_pressure_units": current_units["surface_pressure"],
+                "cloud_cover": current["cloud_cover"],
+                "cloud_cover_units": current_units["cloud_cover"],
+                "pressure_msl": current["pressure_msl"],
+                "pressure_msl_units": current_units["pressure_msl"],
+                "surface_pressure": current["surface_pressure"],
+                "surface_pressure_units": current_units["surface_pressure"],
             }
         )
 
@@ -173,24 +175,26 @@ class OpenMeteoAPI:
         params = {
             "latitude": latitude,
             "longitude": longitude,
-            # "daily": daily_attributes,
-            "daily": ["weather_code", "temperature_2m_max", "temperature_2m_min"],
+            "daily": daily_attributes,
+            # "daily": ["weather_code", "temperature_2m_max", "temperature_2m_min"],
         }
         # responses = openmeteo.weather_api(url, params=params)
-        # res = requests.get(url,headers=self.headers, params=params, timeout=10)
-        res = await fetch(url=url, headers=self.headers, params=params)
+        # res = requests.get(url, headers=self.headers, params=params, timeout=10)
+        res, status = await fetch(url=url, headers=self.headers, params=params)
+
+        if status != 200: 
+            raise ConnectionError(f"Fetch data from open-meteo weather API - FAILED ")
 
         response = json.loads(res)
-        self.print_info(response)
 
-        message = f"Coordinates {response['latitude']}°N {response['longitude']}°E"
-        self.print_info(message)
-        message = f"Elevation {response['elevation']} m asl"
-        self.print_info(message)
-        message = f"Timezone {response['timezone']}{response['timezone_abbreviation']}"
-        self.print_info(message)
-        message = f"Timezone difference to GMT+0 {response['utc_offset_seconds']} s"
-        self.print_info(message)
+        # message = f"Coordinates {response['latitude']}°N {response['longitude']}°E"
+        # self.print_info(message)
+        # message = f"Elevation {response['elevation']} m asl"
+        # self.print_info(message)
+        # message = f"Timezone {response['timezone']}{response['timezone_abbreviation']}"
+        # self.print_info(message)
+        # message = f"Timezone difference to GMT+0 {response['utc_offset_seconds']} s"
+        # self.print_info(message)
 
         daily = response["daily"]
         daily_units = response["daily_units"]
@@ -215,64 +219,64 @@ class OpenMeteoAPI:
                     "temperature_2m_max_units": daily_units["temperature_2m_max"],
                     "temperature_2m_min": daily["temperature_2m_min"][i],
                     "temperature_2m_min_units": daily_units["temperature_2m_min"],
-                    # "apparent_temperature_max": daily["apparent_temperature_max"][i],
-                    # "apparent_temperature_max_units": daily_units[
-                    #     "apparent_temperature_max"
-                    # ],
-                    # "apparent_temperature_min": daily["apparent_temperature_min"][i],
-                    # "apparent_temperature_min_units": daily_units[
-                    #     "apparent_temperature_min"
-                    # ],
-                    # "sunrise": daily["sunrise"][i],
-                    # "sunrise_units": daily_units["sunrise"],
-                    # "sunset": daily["sunset"][i],
-                    # "sunset_units": daily_units["sunset"],
-                    # "daylight_duration": daily["daylight_duration"][i],
-                    # "daylight_duration_units": daily_units["daylight_duration"],
-                    # "sunshine_duration": daily["sunshine_duration"][i],
-                    # "sunshine_duration_units": daily_units["sunshine_duration"],
-                    # "uv_index_max": daily["uv_index_max"][i],
-                    # "uv_index_max_units": daily_units["uv_index_max"],
-                    # "uv_index_clear_sky_max": daily["uv_index_clear_sky_max"][i],
-                    # "uv_index_clear_sky_max_units": daily_units[
-                    #     "uv_index_clear_sky_max"
-                    # ],
-                    # "rain_sum": daily["rain_sum"][i],
-                    # "rain_sum_units": daily_units["rain_sum"],
-                    # "showers_sum": daily["showers_sum"][i],
-                    # "showers_sum_units": daily_units["showers_sum"],
-                    # "snowfall_sum": daily["snowfall_sum"][i],
-                    # "snowfall_sum_units": daily_units["snowfall_sum"],
-                    # "precipitation_sum": daily["precipitation_sum"][i],
-                    # "precipitation_sum_units": daily_units["precipitation_sum"],
-                    # "precipitation_hours": daily["precipitation_hours"][i],
-                    # "precipitation_hours_units": daily_units["precipitation_hours"],
-                    # "precipitation_probability_max": daily[
-                    #     "precipitation_probability_max"
-                    # ][i],
-                    # "precipitation_probability_max_units": daily_units[
-                    #     "precipitation_probability_max"
-                    # ],
-                    # "wind_speed_10m_max": daily["wind_speed_10m_max"][i],
-                    # "wind_speed_10m_max_units": daily_units["wind_speed_10m_max"],
-                    # "wind_gusts_10m_max": daily["wind_gusts_10m_max"][i],
-                    # "wind_gusts_10m_max_units": daily_units["wind_gusts_10m_max"],
-                    # "wind_direction_10m_dominant": daily["wind_direction_10m_dominant"][
-                    #     i
-                    # ],
-                    # "wind_direction_10m_dominant_units": daily_units[
-                    #     "wind_direction_10m_dominant"
-                    # ],
-                    # "shortwave_radiation_sum": daily["shortwave_radiation_sum"][i],
-                    # "shortwave_radiation_sum_units": daily_units[
-                    #     "shortwave_radiation_sum"
-                    # ],
-                    # "et0_fao_evapotranspiration": daily["et0_fao_evapotranspiration"][
-                    #     i
-                    # ],
-                    # "et0_fao_evapotranspiration_units": daily_units[
-                    #     "et0_fao_evapotranspiration"
-                    # ],
+                    "apparent_temperature_max": daily["apparent_temperature_max"][i],
+                    "apparent_temperature_max_units": daily_units[
+                        "apparent_temperature_max"
+                    ],
+                    "apparent_temperature_min": daily["apparent_temperature_min"][i],
+                    "apparent_temperature_min_units": daily_units[
+                        "apparent_temperature_min"
+                    ],
+                    "sunrise": daily["sunrise"][i],
+                    "sunrise_units": daily_units["sunrise"],
+                    "sunset": daily["sunset"][i],
+                    "sunset_units": daily_units["sunset"],
+                    "daylight_duration": daily["daylight_duration"][i],
+                    "daylight_duration_units": daily_units["daylight_duration"],
+                    "sunshine_duration": daily["sunshine_duration"][i],
+                    "sunshine_duration_units": daily_units["sunshine_duration"],
+                    "uv_index_max": daily["uv_index_max"][i],
+                    "uv_index_max_units": daily_units["uv_index_max"],
+                    "uv_index_clear_sky_max": daily["uv_index_clear_sky_max"][i],
+                    "uv_index_clear_sky_max_units": daily_units[
+                        "uv_index_clear_sky_max"
+                    ],
+                    "rain_sum": daily["rain_sum"][i],
+                    "rain_sum_units": daily_units["rain_sum"],
+                    "showers_sum": daily["showers_sum"][i],
+                    "showers_sum_units": daily_units["showers_sum"],
+                    "snowfall_sum": daily["snowfall_sum"][i],
+                    "snowfall_sum_units": daily_units["snowfall_sum"],
+                    "precipitation_sum": daily["precipitation_sum"][i],
+                    "precipitation_sum_units": daily_units["precipitation_sum"],
+                    "precipitation_hours": daily["precipitation_hours"][i],
+                    "precipitation_hours_units": daily_units["precipitation_hours"],
+                    "precipitation_probability_max": daily[
+                        "precipitation_probability_max"
+                    ][i],
+                    "precipitation_probability_max_units": daily_units[
+                        "precipitation_probability_max"
+                    ],
+                    "wind_speed_10m_max": daily["wind_speed_10m_max"][i],
+                    "wind_speed_10m_max_units": daily_units["wind_speed_10m_max"],
+                    "wind_gusts_10m_max": daily["wind_gusts_10m_max"][i],
+                    "wind_gusts_10m_max_units": daily_units["wind_gusts_10m_max"],
+                    "wind_direction_10m_dominant": daily["wind_direction_10m_dominant"][
+                        i
+                    ],
+                    "wind_direction_10m_dominant_units": daily_units[
+                        "wind_direction_10m_dominant"
+                    ],
+                    "shortwave_radiation_sum": daily["shortwave_radiation_sum"][i],
+                    "shortwave_radiation_sum_units": daily_units[
+                        "shortwave_radiation_sum"
+                    ],
+                    "et0_fao_evapotranspiration": daily["et0_fao_evapotranspiration"][
+                        i
+                    ],
+                    "et0_fao_evapotranspiration_units": daily_units[
+                        "et0_fao_evapotranspiration"
+                    ],
                 }
             )
 
