@@ -180,7 +180,7 @@ class OpenMeteoAPI:
         # res = requests.get(url,headers=self.headers, params=params, timeout=10)
         res = await fetch(url=url, headers=self.headers, params=params)
 
-        response = json.loads(res.text)
+        response = json.loads(res)
         self.print_info(response)
 
         message = f"Coordinates {response['latitude']}°N {response['longitude']}°E"
