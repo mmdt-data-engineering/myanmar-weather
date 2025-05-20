@@ -58,7 +58,9 @@ class MeteoBlueWeatherAPI:
             load_dotenv()
             API_KEY = os.getenv("METEOBLUE_API_KEY")
             url = f"https://my.meteoblue.com/packages/current?apikey={API_KEY}&lat={lat}&lon={lon}&asl=30&format=json"
-            time.sleep(random.uniform(1, 5))  # Sleep between 1 to 5 seconds
+            
+            # Sleep between 1 to 5 seconds
+            # time.sleep(random.uniform(1, 3))  
 
             # response = requests.get(url)
             response = await fetch(url)
@@ -130,7 +132,9 @@ class MeteoBlueWeatherAPI:
             API_KEY = os.getenv("METEOBLUE_API_KEY")
             forecast_days = 7
             url = f"https://my.meteoblue.com/packages/basic-day?apikey={API_KEY}&lat={lat}&lon={lon}&asl=30&format=json&forecast_days={forecast_days}"
-            time.sleep(random.uniform(1, 5))  # Sleep between 1 to 5 seconds
+            
+            # Sleep between 1 to 5 seconds
+            # time.sleep(random.uniform(1, 5))  
 
             # response = requests.get(url)
             response = await fetch(url)

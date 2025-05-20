@@ -56,10 +56,9 @@ class WeatherAPI:
         url = f"{BASE_URL}?key={WEATHER_API_KEY}&q={latitude},{longitude}"
 
         # Random sleep time between 1 and 5 seconds
-        sleep_time = random.uniform(1, 5)
-        message = f"Sleeping for {sleep_time:.2f} seconds..."
-        self.print_info(message)
-        time.sleep(sleep_time)
+        # sleep_time = random.uniform(1, 5)
+        # self.print_info(f"Sleeping for {sleep_time:.2f} seconds...")
+        # time.sleep(sleep_time)
 
         # response = requests.get(url)
         response = await fetch(url)
@@ -164,10 +163,10 @@ class WeatherAPI:
         # Construct the API request URL
         url = f"{BASE_URL}?key={WEATHER_API_KEY}&q={latitude},{longitude}&days={NO_OF_DAYS}&aqi=no&alerts=no"
 
-        sleep_time = random.uniform(1, 5)
-
-        self.print_info(f"Sleeping for {sleep_time:.2f} seconds...")
-        time.sleep(sleep_time)
+        # Random sleep time between 1 and 5 seconds
+        # sleep_time = random.uniform(1, 5)
+        # self.print_info(f"Sleeping for {sleep_time:.2f} seconds...")
+        # time.sleep(sleep_time)
 
         # response = requests.get(url)
         response = await fetch(url)

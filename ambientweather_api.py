@@ -50,7 +50,9 @@ class AmbientWeatherAPI:
             self.print_info(message)
 
             url = f"{self.base_url}/{lat}/{lon}"
-            time.sleep(random.uniform(1, 5))  # Sleep between 1 to 5 seconds
+            
+            # Sleep between 1 to 5 seconds
+            # time.sleep(random.uniform(1, 5))  
 
             # response = requests.get(url, headers=self.headers)
             response = await fetch(url, headers=self.headers)
