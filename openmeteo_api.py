@@ -64,7 +64,7 @@ class OpenMeteoAPI:
 
         return result_df
 
-    def get_daily(self, df: pd.DataFrame) -> pd.DataFrame:
+    async def get_daily(self, df: pd.DataFrame) -> pd.DataFrame:
         result_df = pd.DataFrame()
 
         for index, row in df.iterrows():
@@ -81,7 +81,7 @@ class OpenMeteoAPI:
             # self.print_info(message)
             # time.sleep(sleep_time)
 
-            df = self._get_daily(latitude, longitude)
+            df = await self._get_daily(latitude, longitude)
             result_df = pd.concat([result_df, df], ignore_index=True)
 
         return result_df
@@ -93,7 +93,7 @@ class OpenMeteoAPI:
             "latitude": latitude,
             "longitude": longitude,
             # "current": current_attributes,
-            "current": ["temperature_2m", "weather_code"]
+            "current": ["temperature_2m", "weather_code"],
         }
 
         # responses = openmeteo.weather_api(url, params=params)
@@ -167,17 +167,18 @@ class OpenMeteoAPI:
 
         return df
 
-    def _get_daily(self, latitude: float, longitude: float) -> pd.DataFrame:
+    async def _get_daily(self, latitude: float, longitude: float) -> pd.DataFrame:
 
         url = "https://api.open-meteo.com/v1/forecast"
         params = {
             "latitude": latitude,
             "longitude": longitude,
             # "daily": daily_attributes,
-            "daily": ["weather_code", "temperature_2m_max", "temperature_2m_min"]
+            "daily": ["weather_code", "temperature_2m_max", "temperature_2m_min"],
         }
         # responses = openmeteo.weather_api(url, params=params)
-        res = requests.get(url,headers=self.headers, params=params, timeout=10)
+        # res = requests.get(url,headers=self.headers, params=params, timeout=10)
+        res = await fetch(url=url, headers=self.headers, params=params)
 
         response = json.loads(res.text)
         self.print_info(response)

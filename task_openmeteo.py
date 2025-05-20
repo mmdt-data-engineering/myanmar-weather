@@ -43,7 +43,7 @@ async def openmeteo_task():
     load_file_to_db(file_path)
 
     # openmeteo - daily
-    openmeteo_daily_df = openmeteo_api.get_daily(township_df)
+    openmeteo_daily_df = await openmeteo_api.get_daily(township_df)
     file_path = f"./output/{str_today}_openmeteo_forecast.csv"
 
     if openmeteo_daily_df is not None:
