@@ -41,11 +41,19 @@ def load_all_files_to_localdb():
 
 
 def load_file_to_db(file_path: str):
-    """Load CSV files from a folder to Neon PostgreSQL database."""
+    """
+    Load CSV file to Neon PostgreSQL database.
+
+    Parameters:
+    file_path (str): Path to the CSV file to be loaded.
+
+    """
 
     df = pd.read_csv(file_path)
+
     filename = os.path.basename(file_path)
-    df.Name = os.path.splitext(filename)[0]
+    date_part = os.path.splitext(filename)[0].split("_")[0]
+    df.Name = filename.replace(f"{date_part}_", "").replace(".csv", "")
 
     print(f"DataFrame Name: {df.Name}")
     print(f"DataFrame Shape: {df.shape}")
