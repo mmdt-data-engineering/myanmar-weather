@@ -50,7 +50,7 @@ jobs:
           python-version: "3.12"
           cache: "pip"
 
-      - name: 📦 Install dependencies
+      - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
@@ -59,13 +59,35 @@ jobs:
         run: |
           python ${{ matrix.source }}
 
-      - name: upload artifact output csv files
+      - name: upload ambient artifact
         uses: actions/upload-artifact@v4
         with:
-          name: csv-artifact
+          name: ambient-artifact
+          path: ./output/ambient_forecast.csv
+          if-no-files-found: ignore
+      - name: upload meteoblue csv artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: meteoblue-artifact
           path: |
-            ./output/*
-            !./output/mimu_townships.csv
+            ./output/meteoblue_current.csv
+            ./output/meteoblue_forecast.csv
+          if-no-files-found: ignore
+      - name: upload openmeteo artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: openmeteo-artifact
+          path: |
+            ./output/openmeteo_current.csv
+            ./output/openmeteo_forecast.csv
+          if-no-files-found: ignore
+      - name: upload weatherapi artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: weatherapi-artifact
+          path: |
+            ./output/weatherapi_current.csv
+            ./output/weatherapi_forecast.csv
 
   load-to-db:
     runs-on: ubuntu-latest
@@ -82,16 +104,32 @@ jobs:
           python-version: "3.12"
           cache: "pip"
 
-      - name: 📦 Install dependencies
+      - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: download csv files artifact
+      - name: download ambient artifact
         uses: actions/download-artifact@v4
         with:
-          name: csv-artifact
+          name: ambient-artifact
           path: ./output
+      - name: download meteoblue artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: meteoblue-artifact
+          path: ./output
+      - name: download openmeteo artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: openmeteo-artifact
+          path: ./output
+      - name: download weatherapi artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: weatherapi-artifact
+          path: ./output
+
       - name: load data to postgres
         run: |
           python load_files_to_db.py
