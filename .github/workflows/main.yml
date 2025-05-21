@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - main
-    paths:
-      - ".github/workflows/main.yml"
   schedule:
     - cron: "0 1 * * *" ## Trigger on every day at 1:00 UTC | 8:00 AM Thailand
 
