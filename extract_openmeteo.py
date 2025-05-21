@@ -30,8 +30,9 @@ async def openmeteo_task():
     # openmeteo - current
     openmeteo_current_df = await openmeteo_api.get_current(township_df)
 
-    str_today = date.today().strftime("%Y-%m-%d")  # Output like '2025-05-16'
-    file_path = f"./output/{str_today}_openmeteo_current.csv"
+    # str_today = date.today().strftime("%Y-%m-%d")  # Output like '2025-05-16'
+    # file_path = f"./output/{str_today}_openmeteo_current.csv"
+    file_path = f"./output/openmeteo_current.csv"
 
     if openmeteo_current_df is not None:
         openmeteo_current_df.to_csv(file_path, index=False, header=True)
@@ -44,7 +45,8 @@ async def openmeteo_task():
 
     # openmeteo - daily
     openmeteo_daily_df = await openmeteo_api.get_daily(township_df)
-    file_path = f"./output/{str_today}_openmeteo_forecast.csv"
+    # file_path = f"./output/{str_today}_openmeteo_forecast.csv"
+    file_path = f"./output/openmeteo_forecast.csv"
 
     if openmeteo_daily_df is not None:
         openmeteo_daily_df.to_csv(file_path, index=False, header=True)

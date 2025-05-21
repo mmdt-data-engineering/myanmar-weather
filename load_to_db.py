@@ -52,8 +52,9 @@ def load_file_to_db(file_path: str):
     df = pd.read_csv(file_path)
 
     filename = os.path.basename(file_path)
-    date_part = os.path.splitext(filename)[0].split("_")[0]
-    df.Name = filename.replace(f"{date_part}_", "").replace(".csv", "")
+    # date_part = os.path.splitext(filename)[0].split("_")[0]
+    # df.Name = filename.replace(f"{date_part}_", "").replace(".csv", "")
+    df.Name = os.path.splitext(filename)[0]
 
     print(f"DataFrame Name: {df.Name}")
     print(f"DataFrame Shape: {df.shape}")
@@ -62,13 +63,3 @@ def load_file_to_db(file_path: str):
 
     # Load the DataFrame to Neon PostgreSQL
     db.load_to_neon_postgres(df, table_name=df.Name)
-
-
-def load_all_csv_files_to_db():
-    """Load CSV files from a folder to Neon PostgreSQL database."""
-
-    folder_path = "./output"
-    csv_files = get_csv_files(folder_path)
-
-    for file in csv_files:
-        load_file_to_db(os.path.join(folder_path, file))

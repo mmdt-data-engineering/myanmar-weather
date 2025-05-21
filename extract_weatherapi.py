@@ -24,8 +24,9 @@ async def weatherapi_daily(township_df: pd.DataFrame, days: int):
     # weatherapi - daily
     weatherapi_daily_df = await weather_api.get_daily(township_df, no_of_days=days)
 
-    str_today = date.today().strftime("%Y-%m-%d")  # Output like '2025-05-16'
-    file_path = f"./output/{str_today}_weatherapi_forecast.csv"
+    # str_today = date.today().strftime("%Y-%m-%d")  # Output like '2025-05-16'
+    # file_path = f"./output/{str_today}_weatherapi_forecast.csv"
+    file_path = f"./output/weatherapi_forecast.csv"
     weatherapi_daily_df.to_csv(file_path, index=False, header=True)
 
     print_info("uploading csv file to s3")
@@ -42,8 +43,9 @@ async def weatherapi_current(township_df):
     # weatherapi - current
     weatherapi_current_df = await weather_api.get_current(township_df)
 
-    str_today = date.today().strftime("%Y-%m-%d")  # Output like '2025-05-16'
-    file_path = f"./output/{str_today}_weatherapi_current.csv"
+    # str_today = date.today().strftime("%Y-%m-%d")  # Output like '2025-05-16'
+    # file_path = f"./output/{str_today}_weatherapi_current.csv"
+    file_path = f"./output/weatherapi_current.csv"
     weatherapi_current_df.to_csv(file_path, index=False, header=True)
 
     print_info("uploading csv file to s3")
