@@ -21,7 +21,7 @@ class MeteoBlueWeatherAPI:
         print(message)
         self.logger.info(message)
 
-    def get_meteoblue_current_weather_data(
+    async def get_meteoblue_current_weather_data(
         self, township_df: pd.DataFrame
     ) -> pd.DataFrame:
         """
@@ -39,12 +39,11 @@ class MeteoBlueWeatherAPI:
         today = date.today()
         str_today = today.strftime("%Y-%m-%d")
 
-
         all_data = []
 
         for _, row in township_df.iterrows():
-            region_name = row['SR_Name_Eng']
-            district_name = row['District/SAZ_Name_Eng']
+            region_name = row["SR_Name_Eng"]
+            district_name = row["District/SAZ_Name_Eng"]
             township_name = row["Township_Name_Eng"]
             town_name = row["Town_Name_Eng"]
             lat = row["Latitude"]
@@ -62,41 +61,42 @@ class MeteoBlueWeatherAPI:
             load_dotenv()
             API_KEY = os.getenv("METEOBLUE_API_KEY")
             url = f"https://my.meteoblue.com/packages/current?apikey={API_KEY}&lat={lat}&lon={lon}&asl=30&format=json"
-            
+
             # Sleep between 1 to 5 seconds
-            # time.sleep(random.uniform(1, 3))  
+            # time.sleep(random.uniform(1, 3))
 
             # response = requests.get(url)
             response, status = await fetch(url)
 
-            if status == 429: 
+            if status == 429:
                 raise ValueError("Available credits exceeded for this API key")
-            
-            if status != 200: 
+
+            if status != 200:
                 raise ConnectionError(f"Fetch data from meteo-blue API - FAILED ")
 
             data = json.loads(response)
 
             current_weather_list = []
 
-
-            current_weather_list.append({
-                "date" : pd.to_datetime(data['data_current']['time']),
-                'state' : region_name,
-                'district' : district_name,
-                'township' : township_name,
-                'latitude': lat,
-                'longitude' : lon,
-                "isobserveddata" : data['data_current']['isobserveddata'],
-                "metarid" : data['data_current']['metarid'],
-                'isdaylight' : data['data_current']['isdaylight'],
-                'windspeed' : data['data_current']['windspeed'],
-                'zenithangle' : data['data_current']['zenithangle'],
-                "pictocode_detailed" : data['data_current']['pictocode_detailed'],
-                "pictocode" : data['data_current']['pictocode'],
-                "temperature_celsius" : data['data_current']['temperature'],
-                "extraction_date": str_today,  # Add today's date as extraction date
-            })
+            current_weather_list.append(
+                {
+                    "date": pd.to_datetime(data["data_current"]["time"]),
+                    "state": region_name,
+                    "district": district_name,
+                    "township": township_name,
+                    "latitude": lat,
+                    "longitude": lon,
+                    "isobserveddata": data["data_current"]["isobserveddata"],
+                    "metarid": data["data_current"]["metarid"],
+                    "isdaylight": data["data_current"]["isdaylight"],
+                    "windspeed": data["data_current"]["windspeed"],
+                    "zenithangle": data["data_current"]["zenithangle"],
+                    "pictocode_detailed": data["data_current"]["pictocode_detailed"],
+                    "pictocode": data["data_current"]["pictocode"],
+                    "temperature_celsius": data["data_current"]["temperature"],
+                    "extraction_date": str_today,  # Add today's date as extraction date
+                }
+            )
 
             current_weather_df = pd.DataFrame(current_weather_list)
             all_data.append(current_weather_df)
@@ -125,8 +125,8 @@ class MeteoBlueWeatherAPI:
         all_data = []
 
         for _, row in township_df.iterrows():
-            region_name = row['SR_Name_Eng']
-            district_name = row['District/SAZ_Name_Eng']
+            region_name = row["SR_Name_Eng"]
+            district_name = row["District/SAZ_Name_Eng"]
             township_name = row["Township_Name_Eng"]
             town_name = row["Town_Name_Eng"]
             lat = row["Latitude"]
@@ -144,9 +144,9 @@ class MeteoBlueWeatherAPI:
             API_KEY = os.getenv("METEOBLUE_API_KEY")
             forecast_days = 7
             url = f"https://my.meteoblue.com/packages/basic-day?apikey={API_KEY}&lat={lat}&lon={lon}&asl=30&format=json&forecast_days={forecast_days}"
-            
+
             # Sleep between 1 to 5 seconds
-            # time.sleep(random.uniform(1, 5))  
+            # time.sleep(random.uniform(1, 5))
 
             # response = requests.get(url)
             response, status = await fetch(url)
@@ -155,40 +155,80 @@ class MeteoBlueWeatherAPI:
 
             meteo_weather_data = []
 
-            for i in range(len(data['data_day']['time'])):
+            for i in range(len(data["data_day"]["time"])):
                 # print(i)
-                meteo_weather_data.append({
-                    'date' : data['data_day']['time'][i],
-                    'state' : region_name,
-                    'district' : district_name,
-                    'township' : township_name,
-                    'town' : town_name,
-                    'latitude': lat,
-                    'longitude' : lon,
-                    'temperature_instant_celsius' : data['data_day']['temperature_instant'][i],
-                    'temperature_min_celsius' : data['data_day']['temperature_min'][i],
-                    'temperature_max_celsius' : data['data_day']['temperature_max'][i],
-                    'temperature_mean_celsius' : data['data_day']['temperature_mean'][i],
-                    'sealevelpressure_min_hectopascals' : data['data_day']['sealevelpressure_min'][i],
-                    'sealevelpressure_max_hectopascals' : data['data_day']['sealevelpressure_max'][i],
-                    'sealevelpressure_mean_hectopascals' : data['data_day']['sealevelpressure_mean'][i],
-                    'windspeed_min_meters_per_second' : data['data_day']['windspeed_min'][i],
-                    'windspeed_max_meters_per_second' : data['data_day']['windspeed_max'][i],
-                    'windspeed_mean_meters_per_second' : data['data_day']['windspeed_mean'][i],
-                    'winddirection_degree' : data['data_day']['winddirection'][i],
-                    'humiditygreater90_hours_percent' : (data['data_day']['humiditygreater90_hours'][i] / 100),
-                    'relativehumidity_min_percent' : (data['data_day']['relativehumidity_min'][i] / 100),
-                    'relativehumidity_max_percent' : (data['data_day']['relativehumidity_max'][i] / 100),
-                    'relativehumidity_mean_percent' : (data['data_day']['relativehumidity_mean'][i] / 100),
-                    'precipitation_millimeters' : data['data_day']['precipitation'][i],
-                    'precipitation_probability_percent' : (data['data_day']['precipitation_probability'][i] / 100),
-                    'predictability_percent' : (data['data_day']['predictability'][i] / 100),
-                    'convective_precipitation_percent' : (data['data_day']['convective_precipitation'][i] / 100),
-                    'uvindex' : data['data_day']['uvindex'][i],
-                    'rainspot' : data['data_day']['rainspot'][i],
-                    'predictability_class' : data['data_day']['predictability_class'][i],
-                    "extraction_date": str_today,  # Add today's date as extraction date
-                })
+                meteo_weather_data.append(
+                    {
+                        "date": data["data_day"]["time"][i],
+                        "state": region_name,
+                        "district": district_name,
+                        "township": township_name,
+                        "town": town_name,
+                        "latitude": lat,
+                        "longitude": lon,
+                        "temperature_instant_celsius": data["data_day"][
+                            "temperature_instant"
+                        ][i],
+                        "temperature_min_celsius": data["data_day"]["temperature_min"][
+                            i
+                        ],
+                        "temperature_max_celsius": data["data_day"]["temperature_max"][
+                            i
+                        ],
+                        "temperature_mean_celsius": data["data_day"][
+                            "temperature_mean"
+                        ][i],
+                        "sealevelpressure_min_hectopascals": data["data_day"][
+                            "sealevelpressure_min"
+                        ][i],
+                        "sealevelpressure_max_hectopascals": data["data_day"][
+                            "sealevelpressure_max"
+                        ][i],
+                        "sealevelpressure_mean_hectopascals": data["data_day"][
+                            "sealevelpressure_mean"
+                        ][i],
+                        "windspeed_min_meters_per_second": data["data_day"][
+                            "windspeed_min"
+                        ][i],
+                        "windspeed_max_meters_per_second": data["data_day"][
+                            "windspeed_max"
+                        ][i],
+                        "windspeed_mean_meters_per_second": data["data_day"][
+                            "windspeed_mean"
+                        ][i],
+                        "winddirection_degree": data["data_day"]["winddirection"][i],
+                        "humiditygreater90_hours_percent": (
+                            data["data_day"]["humiditygreater90_hours"][i] / 100
+                        ),
+                        "relativehumidity_min_percent": (
+                            data["data_day"]["relativehumidity_min"][i] / 100
+                        ),
+                        "relativehumidity_max_percent": (
+                            data["data_day"]["relativehumidity_max"][i] / 100
+                        ),
+                        "relativehumidity_mean_percent": (
+                            data["data_day"]["relativehumidity_mean"][i] / 100
+                        ),
+                        "precipitation_millimeters": data["data_day"]["precipitation"][
+                            i
+                        ],
+                        "precipitation_probability_percent": (
+                            data["data_day"]["precipitation_probability"][i] / 100
+                        ),
+                        "predictability_percent": (
+                            data["data_day"]["predictability"][i] / 100
+                        ),
+                        "convective_precipitation_percent": (
+                            data["data_day"]["convective_precipitation"][i] / 100
+                        ),
+                        "uvindex": data["data_day"]["uvindex"][i],
+                        "rainspot": data["data_day"]["rainspot"][i],
+                        "predictability_class": data["data_day"][
+                            "predictability_class"
+                        ][i],
+                        "extraction_date": str_today,  # Add today's date as extraction date
+                    }
+                )
 
             meteo_weather_dataFrame = pd.DataFrame(meteo_weather_data)
             all_data.append(meteo_weather_dataFrame)
