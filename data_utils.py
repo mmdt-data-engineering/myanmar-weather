@@ -20,9 +20,15 @@ class MIMU_Data:
             sheet_name=sheet_name,
         )
 
-        # Select relevant columns
-        # selected_columns = ["Township_Name_Eng", "Latitude", "Longitude"]
-        # township_df = township_df[selected_columns]
+        # We are not able to use sheet 3 [03_Township] because there is no latitude, longitude columns in sheet.
+        # we will continue using the sheet [04_Town] by drop duplicates of township names.
+
+        # 535 rows in total - towns
+        # 351 rows after drop duplicates - township
+
+        township_df.drop_duplicates(
+            subset=["Township_Name_Eng"], inplace=True, keep="first"
+        )
 
         # Drop rows with NaN values in Latitude or Longitude
         township_df = township_df.dropna(subset=["Latitude", "Longitude"])
