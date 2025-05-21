@@ -18,13 +18,7 @@ jobs:
     environment: production
     strategy:
       matrix:
-        source:
-          [
-            extract_ambient.py,
-            extract_meteoblue.py,
-            extract_openmeteo.py,
-            extract_weatherapi.py,
-          ]
+        source: [ambient.py, meteoblue.py, openmeteo.py, weatherapi.py]
 
     env:
       METEOBLUE_API_KEY: ${{ secrets.METEOBLUE_API_KEY }}
@@ -86,6 +80,7 @@ jobs:
           path: |
             ./output/weatherapi_current.csv
             ./output/weatherapi_forecast.csv
+          if-no-files-found: ignore
 
   load-to-db:
     runs-on: ubuntu-latest
