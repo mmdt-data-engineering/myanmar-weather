@@ -41,8 +41,8 @@ async def meteoblue_task():
         print_info("uploading csv file to s3")
         upload_file_to_s3(file_path)
 
-        print_info("load csv file to database")
-        load_file_to_db(file_path)
+        # print_info("load csv file to database")
+        # load_file_to_db(file_path)
 
     # meteoblue - forecast
     meteoblue_df = await meteoblue_api.get_meteoblue_forecast_weather_data(township_df)
@@ -55,8 +55,8 @@ async def meteoblue_task():
         print_info("uploading csv file to s3")
         upload_file_to_s3(file_path)
 
-        print_info("load csv file to database")
-        load_file_to_db(file_path)
+        # print_info("load csv file to database")
+        # load_file_to_db(file_path)
 
 
 start_time = time()

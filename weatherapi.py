@@ -32,8 +32,8 @@ async def weatherapi_daily(township_df: pd.DataFrame, days: int):
     print_info("uploading csv file to s3")
     upload_file_to_s3(file_path)
 
-    print_info("load csv file to database")
-    load_file_to_db(file_path)
+    # print_info("load csv file to database")
+    # load_file_to_db(file_path)
 
 
 async def weatherapi_current(township_df):
@@ -51,8 +51,8 @@ async def weatherapi_current(township_df):
     print_info("uploading csv file to s3")
     upload_file_to_s3(file_path)
 
-    print_info("load csv file to database")
-    load_file_to_db(file_path)
+    # print_info("load csv file to database")
+    # load_file_to_db(file_path)
 
 
 start_time = time()

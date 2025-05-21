@@ -38,8 +38,8 @@ async def ambient_task():
     print_info("uploading csv file to s3")
     upload_file_to_s3(file_path)
 
-    print_info("load csv file to database")
-    load_file_to_db(file_path)
+    # print_info("load csv file to database")
+    # load_file_to_db(file_path)
 
 
 start_time = time()
