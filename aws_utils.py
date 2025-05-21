@@ -45,7 +45,7 @@ class AmazonS3:
         try:
             s3_client.put_object(
                 Bucket=self.bucket_name,
-                Key=today + "_" + str.os.path.basename(file_path),
+                Key=today + "_" + os.path.basename(file_path),
                 Body=csv_buffer.getvalue(),
             )
 
