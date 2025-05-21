@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, date
 import os
 import pandas as pd
 import random
@@ -18,6 +18,8 @@ class MeteoBlueWeatherAPI:
         print(message)
         self.logger.info(message)
 
+    
+
     def get_meteoblue_current_weather_data(
         self, township_df: pd.DataFrame
     ) -> pd.DataFrame:
@@ -33,10 +35,14 @@ class MeteoBlueWeatherAPI:
 
         """
 
+        today = date.today()
+        str_today = today.strftime("%Y-%m-%d")
+
+
         all_data = []
 
         for _, row in township_df.iterrows():
-            region_name = row['SR_Name_Eng']
+            state_name = row['SR_Name_Eng']
             district_name = row['District/SAZ_Name_Eng']
             township_name = row["Township_Name_Eng"]
             town_name = row['Town_Name_Eng']
@@ -66,10 +72,9 @@ class MeteoBlueWeatherAPI:
 
                 current_weather_list.append({
                     "date" : pd.to_datetime(data['data_current']['time']),
-                    'region' : region_name,
+                    'state' : state_name,
                     'district' : district_name,
                     'township' : township_name,
-                    'town' : town_name,
                     'latitude': lat,
                     'longitude' : lon,
                     "isobserveddata" : data['data_current']['isobserveddata'],
@@ -79,7 +84,8 @@ class MeteoBlueWeatherAPI:
                     'zenithangle' : data['data_current']['zenithangle'],
                     "pictocode_detailed" : data['data_current']['pictocode_detailed'],
                     "pictocode" : data['data_current']['pictocode'],
-                    "temperature" : data['data_current']['temperature'],
+                    "temperature_celsius" : data['data_current']['temperature'],
+                    "extraction_date": str_today,  # Add today's date as extraction date
                 })
 
                 current_weather_df = pd.DataFrame(current_weather_list)
@@ -106,10 +112,13 @@ class MeteoBlueWeatherAPI:
             pd.DataFrame: Weather data in DataFrame format
         """
 
+        today = date.today()
+        str_today = today.strftime("%Y-%m-%d")
+
         all_data = []
 
         for _, row in township_df.iterrows():
-            region_name = row['SR_Name_Eng']
+            state_name = row['SR_Name_Eng']
             district_name = row['District/SAZ_Name_Eng']
             township_name = row["Township_Name_Eng"]
             town_name = row['Town_Name_Eng']
@@ -141,24 +150,21 @@ class MeteoBlueWeatherAPI:
                     # print(i)
                     meteo_weather_data.append({
                         'date' : data['data_day']['time'][i],
-                        'region' : region_name,
+                        'state' : state_name,
                         'district' : district_name,
                         'township' : township_name,
-                        'town' : town_name,
                         'latitude': lat,
                         'longitude' : lon,
-                        'temperature_instant_°C' : data['data_day']['temperature_instant'][i],
-                        'precipitation_mm' : data['data_day']['precipitation'][i],
-                        'predictability_percent' : data['data_day']['predictability'][i],
-                        'temperature_min_°C' : data['data_day']['temperature_min'][i],
-                        'temperature_max_°C' : data['data_day']['temperature_max'][i],
-                        'temperature_mean_°C' : data['data_day']['temperature_mean'][i],
-                        'sealevelpressure_min_hPa' : data['data_day']['sealevelpressure_min'][i],
-                        'sealevelpressure_max_hPa' : data['data_day']['sealevelpressure_max'][i],
-                        'sealevelpressure_mean_hPa' : data['data_day']['sealevelpressure_mean'][i],
-                        'windspeed_min_ms-1' : data['data_day']['windspeed_min'][i],
-                        'windspeed_max_ms-1' : data['data_day']['windspeed_max'][i],
-                        'windspeed_mean_ms-1' : data['data_day']['windspeed_mean'][i],
+                        'temperature_instant_celsius' : data['data_day']['temperature_instant'][i],
+                        'temperature_min_celsius' : data['data_day']['temperature_min'][i],
+                        'temperature_max_celsius' : data['data_day']['temperature_max'][i],
+                        'temperature_mean_celsius' : data['data_day']['temperature_mean'][i],
+                        'sealevelpressure_min_hectopascals' : data['data_day']['sealevelpressure_min'][i],
+                        'sealevelpressure_max_hectopascals' : data['data_day']['sealevelpressure_max'][i],
+                        'sealevelpressure_mean_hectopascals' : data['data_day']['sealevelpressure_mean'][i],
+                        'windspeed_min_meters_per_second' : data['data_day']['windspeed_min'][i],
+                        'windspeed_max_meters_per_second' : data['data_day']['windspeed_max'][i],
+                        'windspeed_mean_meters_per_second' : data['data_day']['windspeed_mean'][i],
                         'humiditygreater90_hours_percent' : data['data_day']['humiditygreater90_hours'][i],
                         'convective_precipitation_percent' : data['data_day']['convective_precipitation'][i],
                         'relativehumidity_min_percent' : data['data_day']['relativehumidity_min'][i],
@@ -166,9 +172,12 @@ class MeteoBlueWeatherAPI:
                         'relativehumidity_mean_percent' : data['data_day']['relativehumidity_mean'][i],
                         'winddirection_degree' : data['data_day']['winddirection'][i],
                         'precipitation_probability_percent' : data['data_day']['precipitation_probability'][i],
+                        'precipitation_millimeters' : data['data_day']['precipitation'][i],
+                        'predictability_percent' : (data['data_day']['predictability'][i] / 100),
+                        'predictability_class' : data['data_day']['predictability_class'][i],
                         'uvindex' : data['data_day']['uvindex'][i],
                         'rainspot' : data['data_day']['rainspot'][i],
-                        'predictability_class' : data['data_day']['predictability_class'][i],
+                        "extraction_date": str_today,  # Add today's date as extraction date
                     })
 
                 meteo_weather_dataFrame = pd.DataFrame(meteo_weather_data)
