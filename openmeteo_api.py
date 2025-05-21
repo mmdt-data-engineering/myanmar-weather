@@ -9,6 +9,7 @@ from Logger import Logger
 import requests
 import json
 from fetch_data import fetch
+from data_utils import get_weather_description
 
 
 class OpenMeteoAPI:
@@ -122,6 +123,10 @@ class OpenMeteoAPI:
             "longitude": response["longitude"],
             "elevation": response["elevation"],
             "interval_second": current["interval"],
+            "weather_code": current["weather_code"],
+            "weather_description": get_weather_description(
+                int(current["weather_code"])
+            ),
             "temperature_2m_celsius": current["temperature_2m"],
             "relative_humidity_2m_percent": current["relative_humidity_2m"],
             "apparent_temperature_celsius": current["apparent_temperature"],
@@ -133,7 +138,6 @@ class OpenMeteoAPI:
             "showers_mm": current["showers"],
             "snowfall_cm": current["snowfall"],
             "rain_mm": current["rain"],
-            "weather_code": current["weather_code"],
             "cloud_cover_percent": current["cloud_cover"],
             "pressure_msl_hectopascal": current["pressure_msl"],
             "surface_pressure_hectopascal": current["surface_pressure"],
@@ -209,6 +213,9 @@ class OpenMeteoAPI:
                 "longitude": response["longitude"],
                 "elevation": response["elevation"],
                 "weather_code": daily["weather_code"][i],
+                "weather_description": get_weather_description(
+                    int(daily["weather_code"][i])
+                ),
                 "temperature_2m_max_celsius": daily["temperature_2m_max"][i],
                 "temperature_2m_min_celsius": daily["temperature_2m_min"][i],
                 "apparent_temperature_max_celsius": daily["apparent_temperature_max"][
