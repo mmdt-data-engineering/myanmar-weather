@@ -80,7 +80,7 @@ class MeteoBlueWeatherAPI:
 
             current_weather_list.append(
                 {
-                    "source": "meteoblue",
+                    "data_source": "meteoblue",
                     "date": pd.to_datetime(data["data_current"]["time"]),
                     "extraction_date": str_today,  # Add today's date as extraction date
                     "state": region_name,
@@ -160,7 +160,7 @@ class MeteoBlueWeatherAPI:
                 # print(i)
                 meteo_weather_data.append(
                     {
-                        "source": "meteoblue",
+                        "data_source": "meteoblue",
                         "date": data["data_day"]["time"][i],
                         "extraction_date": str_today,  # Add today's date as extraction date
                         "state": region_name,
