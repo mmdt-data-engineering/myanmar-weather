@@ -117,6 +117,7 @@ class OpenMeteoAPI:
         today = date.today().strftime("%Y-%m-%d")
 
         data = {
+            "source": "openmeteo",
             "date": pd.to_datetime(current["time"]),
             # Add today's date as extraction date
             "extraction_date": pd.to_datetime(today),
@@ -188,6 +189,7 @@ class OpenMeteoAPI:
         for i in range(len(response["daily"]["time"])):
 
             data = {
+                "source": "openmeteo",
                 "date": pd.to_datetime(response["daily"]["time"][i]),
                 "extraction_date": pd.to_datetime(time.strftime("%Y-%m-%d")),
                 "region": region,
