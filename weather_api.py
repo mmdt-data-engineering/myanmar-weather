@@ -75,7 +75,9 @@ class WeatherAPI:
         current_list = []
         current_list.append(
             {
+                "source": "weatherapi",
                 "date": current.get("last_updated", None),
+                "extraction_date": pd.to_datetime(time.strftime("%Y-%m-%d")),
                 "town": location.get("name", None),
                 "region": location.get("region", None),
                 "country": location.get("country", None),
