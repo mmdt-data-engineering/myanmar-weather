@@ -205,8 +205,71 @@ class WeatherAPI:
         final_df.columns = final_df.columns.str.replace("day.", "")
         final_df.columns = final_df.columns.str.replace("condition.", "")
 
+        # Drop unwanted columns (e.g. Fahrenheit, miles, inches)
+        columns_to_drop = [
+            "maxtemp_f",
+            "mintemp_f",
+            "avgtemp_f",
+            "totalprecip_in",
+        ]
+        final_df = final_df.drop(columns=columns_to_drop, errors="ignore")
+
+
+        # Rename to standardized column names
+        standardized_columns = {
+            "date": "date",
+            "date_epoch": "date_epoch",
+
+            "maxtemp_c": "temperature_max_celsius",
+            "mintemp_c": "temperature_min_celsius",
+            "avgtemp_c": "temperature_mean_celsius",
+
+            "maxwind_mph": "wind_speed_max_mph",
+            "maxwind_kph": "wind_speed_max_kph",
+    
+            "totalprecip_mm": "precipitation_millimeters",
+            "totalsnow_cm": "snow_total_centimeters",
+
+            "avgvis_km": "visibility_avg_kilometers",
+            "avgvis_miles": "visibility_average_miles",
+
+            "avghumidity": "humidity_average",
+
+            "daily_will_it_rain": "will_it_rain",
+            "daily_chance_of_rain": "chance_of_rain",
+
+            "daily_will_it_snow": "will_it_snow",
+            "daily_chance_of_snow": "chance_of_snow",
+
+            "text": "weather_text",
+            "icon": "weather_icon_url",
+            "code": "weather_code",
+
+            "uv": "uv_index",
+
+            "name": "township_name",
+            "region": "region",
+            "country": "country",
+            "lat": "latitude",
+            "lon": "longitude",
+            "tz_id": "timezone",
+            "localtime_epoch": "localtime_epoch",
+            "localtime": "localtime",
+
+            "town_name": "town_name",
+            "district_name": "district_name",
+            "state_name": "state_name",
+            }
+
+        # Apply the rename
+        final_df = final_df.rename(columns=standardized_columns)
+
         final_df["town_name"] = town_name
         final_df["district_name"] = district_name
         final_df["state_name"] = state_name
+        final_df["source"] = "weatherapi"
+
+        print(final_df.columns)
+        print(final_df.head(5))
 
         return final_df
