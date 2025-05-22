@@ -58,11 +58,11 @@ def load_file_to_db(file_path: str):
 
     if "current" in filename:
         df["date"] = pd.to_datetime(df["date"], format="%Y-%m-%d %H:%M:%S")
-        df["extraction_date"] = pd.to_datetime(df["extraction_date"], format="%Y-%m-%d")
+        # df["extraction_date"] = pd.to_datetime(df["extraction_date"], format="%Y-%m-%d")
 
     if "forecast" in filename:
         df["date"] = pd.to_datetime(df["date"], format="%Y-%m-%d")
-        df["extraction_date"] = pd.to_datetime(df["extraction_date"], format="%Y-%m-%d")
+        # df["extraction_date"] = pd.to_datetime(df["extraction_date"], format="%Y-%m-%d")
 
     print(f"DataFrame Name: {df.Name}")
     print(f"DataFrame Shape: {df.shape}")
