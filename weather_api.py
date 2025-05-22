@@ -201,6 +201,7 @@ class WeatherAPI:
         # Combine location and forecast
         final_df = pd.concat([forecast_df, location_repeated], axis=1)
 
+
         # remove the prefix from column names
         final_df.columns = final_df.columns.str.replace("day.", "")
         final_df.columns = final_df.columns.str.replace("condition.", "")
@@ -267,7 +268,8 @@ class WeatherAPI:
         final_df["town_name"] = town_name
         final_df["district_name"] = district_name
         final_df["state_name"] = state_name
-        final_df["source"] = "weatherapi"
+        final_df.insert(0, "source", "weatherapi")        
+        final_df.insert(1, "extraction_date", pd.to_datetime(time.strftime("%Y-%m-%d")))
 
         print(final_df.columns)
         print(final_df.head(5))
