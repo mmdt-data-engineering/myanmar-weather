@@ -80,7 +80,9 @@ class MeteoBlueWeatherAPI:
 
             current_weather_list.append(
                 {
+                    "source": "meteoblue",
                     "date": pd.to_datetime(data["data_current"]["time"]),
+                    "extraction_date": str_today,  # Add today's date as extraction date
                     "state": region_name,
                     "district": district_name,
                     "township": township_name,
@@ -94,7 +96,6 @@ class MeteoBlueWeatherAPI:
                     "pictocode_detailed": data["data_current"]["pictocode_detailed"],
                     "pictocode": data["data_current"]["pictocode"],
                     "temperature_celsius": data["data_current"]["temperature"],
-                    "extraction_date": str_today,  # Add today's date as extraction date
                 }
             )
 
@@ -159,7 +160,9 @@ class MeteoBlueWeatherAPI:
                 # print(i)
                 meteo_weather_data.append(
                     {
+                        "source": "meteoblue",
                         "date": data["data_day"]["time"][i],
+                        "extraction_date": str_today,  # Add today's date as extraction date
                         "state": region_name,
                         "district": district_name,
                         "township": township_name,
@@ -226,7 +229,6 @@ class MeteoBlueWeatherAPI:
                         "predictability_class": data["data_day"][
                             "predictability_class"
                         ][i],
-                        "extraction_date": str_today,  # Add today's date as extraction date
                     }
                 )
 

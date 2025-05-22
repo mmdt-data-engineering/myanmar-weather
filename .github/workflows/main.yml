@@ -18,7 +18,13 @@ jobs:
     environment: production
     strategy:
       matrix:
-        source: [ambient.py, meteoblue.py, openmeteo.py, weatherapi.py]
+        source:
+          [
+            ambient_job.py,
+            meteoblue_job.py,
+            openmeteo_job.py,
+            weatherapi_job.py,
+          ]
 
     env:
       METEOBLUE_API_KEY: ${{ secrets.METEOBLUE_API_KEY }}
