@@ -66,6 +66,7 @@ class AmbientWeatherAPI:
             for item in data["daily"]["data"]:
                 weather_list.append(
                     {
+                        "data_source": "ambient weather",
                         "date": datetime.fromtimestamp(item["time"]).strftime(
                             "%Y-%m-%d"
                         ),
