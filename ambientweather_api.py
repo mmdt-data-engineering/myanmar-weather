@@ -69,25 +69,25 @@ class AmbientWeatherAPI:
                         "date": datetime.fromtimestamp(item["time"]).strftime(
                             "%Y-%m-%d"
                         ),
+                        "extraction_date": str_today,  # Add today's date as extraction date
+                        "state": state_name,
+                        "district": district_name,
+                        "township": township_name,
                         "latitude": data.get("lat", lat),
                         "longitude": data.get("lon", lon),
-                        "township": township_name,
-                        "town name": town_name,
-                        "district name": district_name,
-                        "state name": state_name,
                         "timezone": data.get("tz", None),
                         "summary": item.get("summary", None),
-                        "precipProbability": item.get("precipProbability", None),
-                        "precipIntensity": item.get("precipIntensity", None),
-                        "precipAccumulation": item.get("precipAccumulation", None),
-                        "windSpeed": item.get("windSpeed", None),
+                        "precipitation_probability": item.get("precipProbability", None),
+                        "precipitation_intensity_millimeters_per_hour": item.get("precipIntensity", None),
+                        "precipitation_accumulation_millimeters": item.get("precipAccumulation", None),
+                        "wind_speed_kilometers_per_hour": item.get("windSpeed", None),
                         "icon": item.get("icon", None),
-                        "windBearing": item.get("windBearing", None),
-                        "windGust": item.get("windGust", None),
-                        "temperatureMin": item.get("temperatureMin", None),
-                        "temperatureMax": item.get("temperatureMax", None),
-                        "extraction_date": str_today,  # Add today's date as extraction date
-                    }
+                        "wind_bearing_degrees": item.get("windBearing", None),
+                        "wind_gust_kilometers_per_hour": item.get("windGust", None),
+                         #convert temperature from Fahrenheit to Celsius
+                        "temperature_min_celsius": (item.get("temperatureMin", None) - 32) * 5.0 / 9.0 if item.get("temperatureMin", None) is not None else None,
+                        "temperature_max_celsius": (item.get("temperatureMax", None) - 32) * 5.0 / 9.0 if item.get("temperatureMax", None) is not None else None,
+                    }   
                 )
 
             daily_df = pd.DataFrame(weather_list)
