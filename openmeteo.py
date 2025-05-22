@@ -2,6 +2,7 @@ from datetime import date
 from openmeteo_api import OpenMeteoAPI
 import pandas as pd
 from load_to_db import load_file_to_db
+from load_to_db import load_df_to_db
 from data_utils import MIMU_Data
 from Logger import Logger
 from time import time
@@ -17,14 +18,13 @@ def print_info(message: str):
 
 
 async def openmeteo_task():
-    print_info("starting the task...")
 
-    print_info("getting townships from MIMU data")
+    print_info("Getting townships from MIMU data")
     mimu = MIMU_Data()
     township_df = mimu.get_townships()
     township_df = township_df.head(5)
 
-    print_info("extracting data from api and save as csv file")
+    print_info("Extracting data from API")
     openmeteo_api = OpenMeteoAPI()
 
     # openmeteo - current
@@ -56,6 +56,10 @@ async def openmeteo_task():
 
     # print_info("load csv file to database")
     # load_file_to_db(file_path)
+
+    # print_info("load current_df and daily_df to database")
+    # load_df_to_db(openmeteo_current_df, table_name="openmeteo_current")
+    # load_df_to_db(openmeteo_daily_df, table_name="openmeteo_daily")
 
 
 start_time = time()

@@ -119,7 +119,7 @@ class OpenMeteoAPI:
         data = {
             "date": pd.to_datetime(current["time"]),
             # Add today's date as extraction date
-            "extration_date": pd.to_datetime(today),
+            "extraction_date": pd.to_datetime(today),
             "state": region,
             "district": district,
             "township": township,
