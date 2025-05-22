@@ -85,9 +85,10 @@ class AmbientWeatherAPI:
                         "icon": item.get("icon", None),
                         "wind_bearing_degrees": item.get("windBearing", None),
                         "wind_gust_kilometers_per_hour": item.get("windGust", None),
-                         #convert temperature from Fahrenheit to Celsius
-                        "temperature_min_celsius": (item.get("temperatureMin", None) - 32) * 5.0 / 9.0 if item.get("temperatureMin", None) is not None else None,
-                        "temperature_max_celsius": (item.get("temperatureMax", None) - 32) * 5.0 / 9.0 if item.get("temperatureMax", None) is not None else None,
+                         #convert temperature from Fahrenheit to Celsius #rounding the value to 3 decimal places
+                        "temperature_min_celsius": round((item.get("temperatureMin", None) - 32) * 5.0 / 9.0, 3) if item.get("temperatureMin", None) is not None else None,
+                        "temperature_max_celsius": round((item.get("temperatureMax", None) - 32) * 5.0 / 9.0, 3) if item.get("temperatureMax", None) is not None else None,
+ 
                     }   
                 )
 
