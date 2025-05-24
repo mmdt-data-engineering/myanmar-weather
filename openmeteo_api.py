@@ -192,8 +192,7 @@ class OpenMeteoAPI:
             "daily": daily_attributes,
             # "daily": ["weather_code", "temperature_2m_max", "temperature_2m_min"],
         }
-        # responses = openmeteo.weather_api(url, params=params)
-        # res = requests.get(url, headers=self.headers, params=params, timeout=10)
+
         res, status = await fetch(url=url, headers=self.headers, params=params)
 
         if status != 200:
@@ -218,42 +217,71 @@ class OpenMeteoAPI:
                 "latitude": response["latitude"],
                 "longitude": response["longitude"],
                 "elevation": response["elevation"],
+                "generationtime_ms": response["generationtime_ms"],
+                "utc_offset_seconds": response["utc_offset_seconds"],
+                "timezone": response["timezone"],
+                "timezone_abbreviation": response["timezone_abbreviation"],
+                "date_units": daily_units["time"],
                 "weather_code": daily["weather_code"][i],
                 "weather_description": get_weather_description(
                     int(daily["weather_code"][i])
                 ),
-                "temperature_max_celsius": daily["temperature_2m_max"][i],
-                "temperature_min_celsius": daily["temperature_2m_min"][i],
-                "apparent_temperature_max_celsius": daily["apparent_temperature_max"][
-                    i
+                "weather_code_units": daily_units["weather_code"],
+                "temperature_2m_max": daily["temperature_2m_max"][i],
+                "temperature_2m_max_units": daily_units["temperature_2m_max"],
+                "temperature_2m_min": daily["temperature_2m_min"][i],
+                "temperature_2m_min_units": daily_units["temperature_2m_min"],
+                "apparent_temperature_max": daily["apparent_temperature_max"][i],
+                "apparent_temperature_max_units": daily_units[
+                    "apparent_temperature_max"
                 ],
-                "apparent_temperature_min_celsius": daily["apparent_temperature_min"][
-                    i
+                "apparent_temperature_min": daily["apparent_temperature_min"][i],
+                "apparent_temperature_min_units": daily_units[
+                    "apparent_temperature_min"
                 ],
-                "sunrise_time": daily["sunrise"][i],
-                "sunset_time": daily["sunset"][i],
-                "daylight_duration_second": daily["daylight_duration"][i],
-                "sunshine_duration_second": daily["sunshine_duration"][i],
+                "sunrise": daily["sunrise"][i],
+                "sunrise_units": daily_units["sunrise"],
+                "sunset": daily["sunset"][i],
+                "sunset_units": daily_units["sunset"],
+                "daylight_duration": daily["daylight_duration"][i],
+                "daylight_duration_units": daily_units["daylight_duration"],
+                "sunshine_duration": daily["sunshine_duration"][i],
+                "sunshine_duration_units": daily_units["sunshine_duration"],
                 "uv_index_max": daily["uv_index_max"][i],
+                "uv_index_max_units": daily_units["uv_index_max"],
                 "uv_index_clear_sky_max": daily["uv_index_clear_sky_max"][i],
-                "rain_sum_millimeters": daily["rain_sum"][i],
-                "showers_sum_millimeters": daily["showers_sum"][i],
-                "snowfall_sum_centimeters": daily["snowfall_sum"][i],
-                "precipitation_sum_millimeters": daily["precipitation_sum"][i],
+                "uv_index_clear_sky_max_units": daily_units["uv_index_clear_sky_max"],
+                "rain_sum": daily["rain_sum"][i],
+                "rain_sum_units": daily_units["rain_sum"],
+                "showers_sum": daily["showers_sum"][i],
+                "showers_sum_units": daily_units["showers_sum"],
+                "snowfall_sum": daily["snowfall_sum"][i],
+                "snowfall_sum_units": daily_units["snowfall_sum"],
+                "precipitation_sum": daily["precipitation_sum"][i],
+                "precipitation_sum_units": daily_units["precipitation_sum"],
                 "precipitation_hours": daily["precipitation_hours"][i],
-                "precipitation_probability_max_percent": daily[
-                    "precipitation_probability_max"
-                ][i],
-                "wind_speed_max_kilometers_per_hour": daily["wind_speed_10m_max"][i],
-                "wind_gusts_max_kilometers_per_hour": daily["wind_gusts_10m_max"][i],
-                "wind_direction_dominant_degree": daily["wind_direction_10m_dominant"][
+                "precipitation_hours_units": daily_units["precipitation_hours"],
+                "precipitation_probability_max": daily["precipitation_probability_max"][
                     i
+                ],
+                "precipitation_probability_max_units": daily_units[
+                    "precipitation_probability_max"
+                ],
+                "wind_speed_10m_max": daily["wind_speed_10m_max"][i],
+                "wind_speed_10m_max_units": daily_units["wind_speed_10m_max"],
+                "wind_gusts_10m_max": daily["wind_gusts_10m_max"][i],
+                "wind_gusts_10m_max_units": daily_units["wind_gusts_10m_max"],
+                "wind_direction_10m_dominant": daily["wind_direction_10m_dominant"][i],
+                "wind_direction_10m_dominant_units": daily_units[
+                    "wind_direction_10m_dominant"
                 ],
                 # mjm2 = mega joules per square meter
-                "shortwave_radiation_sum_mjm2": daily["shortwave_radiation_sum"][i],
-                "et0_fao_evapotranspiration_milimeters": daily[
+                "shortwave_radiation_sum": daily["shortwave_radiation_sum"][i],
+                "shortwave_radiation_sum_units": daily_units["shortwave_radiation_sum"],
+                "et0_fao_evapotranspiration": daily["et0_fao_evapotranspiration"][i],
+                "et0_fao_evapotranspiration_units": daily_units[
                     "et0_fao_evapotranspiration"
-                ][i],
+                ],
             }
 
             daily_list.append(data)
