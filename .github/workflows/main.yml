@@ -134,8 +134,10 @@ jobs:
       - name: load data to postgres
         run: |
           python load_files_to_db.py
-  transform:
+  Transform:
     runs-on: ubuntu-latest
+    needs: Extract
+    environment: production
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -148,6 +150,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install dbt-core
       - name: Run dbt models
-        run: dbt debug --profiles-dir . --project-dir ./transform
+        run: dbt debug --profiles-dir ./transform --project-dir ./transform
         env:
           DBT_PROFILES_DIR: ${{ secrets.DBT_PROFILES_DIR }}
