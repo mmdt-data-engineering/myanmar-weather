@@ -136,7 +136,7 @@ jobs:
           python load_files_to_db.py
   Transform:
     runs-on: ubuntu-latest
-    needs: Extract
+    needs: Load
     environment: production
     steps:
       - name: Checkout repository
