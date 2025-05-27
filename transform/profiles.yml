@@ -1,0 +1,12 @@
+transform:
+  outputs:
+    dev:
+      dbname: neondb
+      host: ep-shrill-wind-a83p3yr0-pooler.eastus2.azure.neon.tech
+      pass: npg_5yBSMsR8bjfz
+      port: 5432
+      schema: public
+      threads: 1
+      type: postgres
+      user: neondb_owner
+  target: dev
