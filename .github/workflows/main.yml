@@ -58,6 +58,7 @@ jobs:
           name: ambient-artifact
           path: ./output/ambient_forecast.csv
           if-no-files-found: ignore
+          retention-days: 7
       - name: upload meteoblue csv artifact
         uses: actions/upload-artifact@v4
         with:
@@ -66,6 +67,7 @@ jobs:
             ./output/meteoblue_current.csv
             ./output/meteoblue_forecast.csv
           if-no-files-found: ignore
+          retention-days: 7
       - name: upload openmeteo artifact
         uses: actions/upload-artifact@v4
         with:
@@ -74,6 +76,7 @@ jobs:
             ./output/openmeteo_current.csv
             ./output/openmeteo_forecast.csv
           if-no-files-found: ignore
+          retention-days: 7
       - name: upload weatherapi artifact
         uses: actions/upload-artifact@v4
         with:
@@ -82,6 +85,7 @@ jobs:
             ./output/weatherapi_current.csv
             ./output/weatherapi_forecast.csv
           if-no-files-found: ignore
+          retention-days: 7
 
   Load:
     runs-on: ubuntu-latest
