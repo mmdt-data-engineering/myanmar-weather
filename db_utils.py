@@ -72,7 +72,7 @@ class PostgresDB:
             with engine.connect() as conn:
 
                 # Save the DataFrame to the database
-                df.to_sql(table_name, conn, if_exists="replace", index=False)
+                df.to_sql(table_name, conn, if_exists="append", index=False)
 
                 info = f"{table_name} table is created at the database: {NEON_POSTGRES_URL}"
                 self.logger.info(info)

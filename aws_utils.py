@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 from io import StringIO
 import pandas as pd
 from Logger import Logger
+from datetime import date
 
 
 class AmazonS3:
@@ -33,6 +34,8 @@ class AmazonS3:
             region_name=self.aws_region,
         )
 
+        today = date.today().strftime("%Y-%m-%d")  # Output like '2025-05-16'
+
         df = pd.read_csv(file_path)
 
         # Convert DataFrame to CSV in-memory
@@ -42,7 +45,7 @@ class AmazonS3:
         try:
             s3_client.put_object(
                 Bucket=self.bucket_name,
-                Key=os.path.basename(file_path),
+                Key=today + "_" + os.path.basename(file_path),
                 Body=csv_buffer.getvalue(),
             )
 

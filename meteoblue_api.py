@@ -21,7 +21,7 @@ class MeteoBlueWeatherAPI:
         print(message)
         self.logger.info(message)
 
-    def get_meteoblue_current_weather_data(
+    async def get_meteoblue_current_weather_data(
         self, township_df: pd.DataFrame
     ) -> pd.DataFrame:
         """
@@ -39,12 +39,11 @@ class MeteoBlueWeatherAPI:
         today = date.today()
         str_today = today.strftime("%Y-%m-%d")
 
-
         all_data = []
 
         for _, row in township_df.iterrows():
-            region_name = row['SR_Name_Eng']
-            district_name = row['District/SAZ_Name_Eng']
+            region_name = row["SR_Name_Eng"]
+            district_name = row["District/SAZ_Name_Eng"]
             township_name = row["Township_Name_Eng"]
             town_name = row["Town_Name_Eng"]
             lat = row["Latitude"]
@@ -62,17 +61,17 @@ class MeteoBlueWeatherAPI:
             load_dotenv()
             API_KEY = os.getenv("METEOBLUE_API_KEY")
             url = f"https://my.meteoblue.com/packages/current?apikey={API_KEY}&lat={lat}&lon={lon}&asl=30&format=json"
-            
+
             # Sleep between 1 to 5 seconds
-            # time.sleep(random.uniform(1, 3))  
+            # time.sleep(random.uniform(1, 3))
 
             # response = requests.get(url)
             response, status = await fetch(url)
 
-            if status == 429: 
+            if status == 429:
                 raise ValueError("Available credits exceeded for this API key")
-            
-            if status != 200: 
+
+            if status != 200:
                 raise ConnectionError(f"Fetch data from meteo-blue API - FAILED ")
 
             data = json.loads(response)
@@ -132,8 +131,8 @@ class MeteoBlueWeatherAPI:
         all_data = []
 
         for _, row in township_df.iterrows():
-            region_name = row['SR_Name_Eng']
-            district_name = row['District/SAZ_Name_Eng']
+            region_name = row["SR_Name_Eng"]
+            district_name = row["District/SAZ_Name_Eng"]
             township_name = row["Township_Name_Eng"]
             town_name = row["Town_Name_Eng"]
             lat = row["Latitude"]
@@ -153,7 +152,7 @@ class MeteoBlueWeatherAPI:
             url = f"https://my.meteoblue.com/packages/basic-day?apikey={API_KEY}&lat={lat}&lon={lon}&asl=30&format=json&forecast_days={forecast_days}"
 
             # Sleep between 1 to 5 seconds
-            # time.sleep(random.uniform(1, 5))  
+            # time.sleep(random.uniform(1, 5))
 
             # response = requests.get(url)
             response, status = await fetch(url)
@@ -164,7 +163,7 @@ class MeteoBlueWeatherAPI:
 
             meteo_weather_data = []
 
-            for i in range(len(data['data_day']['time'])):
+            for i in range(len(data["data_day"]["time"])):
                 # print(i)
                 meteo_weather_data.append({
                     'date' : data['data_day']['time'][i],

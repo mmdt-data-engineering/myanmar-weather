@@ -20,11 +20,45 @@ class MIMU_Data:
             sheet_name=sheet_name,
         )
 
-        # Select relevant columns
-        # selected_columns = ["Township_Name_Eng", "Latitude", "Longitude"]
-        # township_df = township_df[selected_columns]
+        # We are not able to use sheet 3 [03_Township] because there is no latitude, longitude columns in sheet.
+        # we will continue using the sheet [04_Town] by drop duplicates of township names.
+
+        # 535 rows in total - towns
+        # 351 rows after drop duplicates - township
+
+        township_df.drop_duplicates(
+            subset=["Township_Name_Eng"], inplace=True, keep="first"
+        )
 
         # Drop rows with NaN values in Latitude or Longitude
         township_df = township_df.dropna(subset=["Latitude", "Longitude"])
 
         return township_df
+
+
+def get_weather_description(weather_code: int) -> str:
+    """
+    Returns the weather description based on the weather code.
+    """
+    weather_codes = {
+        0: "Clear sky",
+        1: "Mostly clear",
+        2: "Partly cloudy",
+        3: "Cloudy",
+        45: "Fog",
+        48: "Freezing fog",
+        51: "Light drizzle",
+        53: "Drizzle",
+        55: "Heavy drizzle",
+        61: "Light rain",
+        63: "Rain",
+        65: "Heavy rain",
+        80: "Light rain shower",
+        81: "Rain shower",
+        82: "Heavy rain shower",
+        95: "Thunderstorm",
+        96: "Thunderstorm with heavy rain",
+        99: "Severe thunderstorm",
+    }
+
+    return weather_codes.get(weather_code, "Unknown weather code")

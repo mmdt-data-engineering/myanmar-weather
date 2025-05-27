@@ -22,7 +22,7 @@ async def ambient_task():
     print_info("getting townships from MIMU data")
     mimu = MIMU_Data()
     township_df = mimu.get_townships()
-    # township_df = township_df.head(50)
+    township_df = township_df.head(5)
 
     print_info("extracting data from api and save as csv file")
     ambient_api = AmbientWeatherAPI()
@@ -30,15 +30,16 @@ async def ambient_task():
     # ambient - current
     ambient_forecast_df = await ambient_api.get_forecast_df(township_df)
 
-    str_today = date.today().strftime("%Y-%m-%d")  # Output like '2025-05-16'
-    file_path = f"./output/{str_today}_ambient_forecast.csv"
+    # str_today = date.today().strftime("%Y-%m-%d")  # Output like '2025-05-16'
+    # file_path = f"./output/{str_today}_ambient_forecast.csv"
+    file_path = f"./output/ambient_forecast.csv"
     ambient_forecast_df.to_csv(file_path, index=False, header=True)
 
     print_info("uploading csv file to s3")
     upload_file_to_s3(file_path)
 
-    print_info("load csv file to database")
-    load_file_to_db(file_path)
+    # print_info("load csv file to database")
+    # load_file_to_db(file_path)
 
 
 start_time = time()

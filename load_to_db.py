@@ -41,11 +41,32 @@ def load_all_files_to_localdb():
 
 
 def load_file_to_db(file_path: str):
-    """Load CSV files from a folder to Neon PostgreSQL database."""
+    """
+    Load CSV file to Neon PostgreSQL database.
+
+    Parameters:
+    file_path (str): Path to the CSV file to be loaded.
+
+    """
 
     df = pd.read_csv(file_path)
+
     filename = os.path.basename(file_path)
     df.Name = os.path.splitext(filename)[0]
+
+    print(filename)
+
+    if "current" in filename:
+        df["extraction_date"] = pd.to_datetime(df["extraction_date"], format="%Y-%m-%d")
+
+        if "weatherapi" in filename:
+            df["date"] = pd.to_datetime(df["date"], format="%Y-%m-%d %H:%M")
+        else:
+            df["date"] = pd.to_datetime(df["date"], format="%Y-%m-%d %H:%M:%S")
+
+    if "forecast" in filename:
+        df["date"] = pd.to_datetime(df["date"], format="%Y-%m-%d")
+        df["extraction_date"] = pd.to_datetime(df["extraction_date"], format="%Y-%m-%d")
 
     print(f"DataFrame Name: {df.Name}")
     print(f"DataFrame Shape: {df.shape}")
@@ -56,11 +77,14 @@ def load_file_to_db(file_path: str):
     db.load_to_neon_postgres(df, table_name=df.Name)
 
 
-def load_all_csv_files_to_db():
-    """Load CSV files from a folder to Neon PostgreSQL database."""
+def load_df_to_db(df: pd.DataFrame, table_name: str):
+    """
+    Load DataFrame to Neon PostgreSQL database.
 
-    folder_path = "./output"
-    csv_files = get_csv_files(folder_path)
+    Parameters:
+    df (pd.DataFrame): DataFrame to be loaded.
+    table_name (str): Name of the table in the database.
 
-    for file in csv_files:
-        load_file_to_db(os.path.join(folder_path, file))
+    """
+    db = PostgresDB()
+    db.load_to_neon_postgres(df, table_name=table_name)

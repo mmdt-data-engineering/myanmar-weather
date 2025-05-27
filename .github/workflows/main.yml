@@ -1,13 +1,11 @@
-name: Myanmar Weather ETL Pipeline
+name: Myanmar Weather ELT Pipeline
 
 on:
   push:
     branches:
-      - "**"
-    paths:
-      - ".github/workflows/main.yml"
+      - main
   schedule:
-    - cron: "0 8 * * *" ## Trigger on every day at 8:00 UTC
+    - cron: "0 1 * * *" ## Trigger on every day at 1:00 UTC | 8:00 AM Thailand
 
   workflow_dispatch: ## manual trigger
 
@@ -15,40 +13,156 @@ permissions:
   contents: write
 
 jobs:
-  simple-etl:
+  Extract:
     runs-on: ubuntu-latest
     environment: production
+    strategy:
+      matrix:
+        source:
+          [
+            ambient_job.py,
+            meteoblue_job.py,
+            openmeteo_job.py,
+            weatherapi_job.py,
+          ]
+
     env:
-      meteoblue_api_key: ${{ secrets.meteoblue_api_key }}
+      METEOBLUE_API_KEY: ${{ secrets.METEOBLUE_API_KEY }}
       WEATHER_API_COM_KEY: ${{ secrets.WEATHER_API_COM_KEY }}
-      PGHOST: ${{ secrets.PGHOST }}
-      PGDATABASE: ${{ secrets.PGDATABASE }}
-      PGUSER: ${{ secrets.PGUSER }}
-      PGPASSWORD: ${{ secrets.PGPASSWORD }}
-      ENDPOINT: ${{ secrets.ENDPOINT }}
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
+
     steps:
       - name: Checkout repo content
         uses: actions/checkout@v4
+
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
           cache: "pip"
-      - name: 📦 Install dependencies
+
+      - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: 🚀 Run ETL pipeline
-        run: python main.py
-
-      - name: Upload to S3
+      - name: run extract scripts
         run: |
-          pip install awscli
-          aws s3 cp ./output/ s3://${{secrets.AWS_S3_BUCKET_NAME}}/ --recursive
+          python ${{ matrix.source }}
 
-      - name: Upload to Neon PostgreSQL
-        run: python load_to_db.py
+      - name: upload ambient artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ambient-artifact
+          path: ./output/ambient_forecast.csv
+          if-no-files-found: ignore
+          retention-days: 7
+      - name: upload meteoblue csv artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: meteoblue-artifact
+          path: |
+            ./output/meteoblue_current.csv
+            ./output/meteoblue_forecast.csv
+          if-no-files-found: ignore
+          retention-days: 7
+      - name: upload openmeteo artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: openmeteo-artifact
+          path: |
+            ./output/openmeteo_current.csv
+            ./output/openmeteo_forecast.csv
+          if-no-files-found: ignore
+          retention-days: 7
+      - name: upload weatherapi artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: weatherapi-artifact
+          path: |
+            ./output/weatherapi_current.csv
+            ./output/weatherapi_forecast.csv
+          if-no-files-found: ignore
+          retention-days: 7
+
+  Load:
+    runs-on: ubuntu-latest
+    needs: Extract
+    environment: production
+
+    env:
+      PGHOST: ${{ secrets.PGHOST }}
+      PGDATABASE: ${{ secrets.PGDATABASE }}
+      PGUSER: ${{ secrets.PGUSER }}
+      PGPASSWORD: ${{ secrets.PGPASSWORD }}
+      ENDPOINT: ${{ secrets.ENDPOINT }}
+
+    steps:
+      - name: Checkout repo content
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: download ambient artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: ambient-artifact
+          path: ./output
+      - name: download meteoblue artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: meteoblue-artifact
+          path: ./output
+      - name: download openmeteo artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: openmeteo-artifact
+          path: ./output
+      - name: download weatherapi artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: weatherapi-artifact
+          path: ./output
+
+      - name: load data to postgres
+        run: |
+          python load_files_to_db.py
+  Transform:
+    runs-on: ubuntu-latest
+    needs: Load
+    environment: production
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install dbt dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install dbt-core dbt-postgres
+
+      - name: Debug dbt models
+        run: dbt debug --profiles-dir ./transform --project-dir ./transform
+        env:
+          DBT_PROFILES_DIR: ${{ secrets.DBT_PROFILES_DIR }}
+
+      - name: Run dbt models
+        run: dbt debug --profiles-dir ./transform --project-dir ./transform
+        env:
+          DBT_PROFILES_DIR: ${{ secrets.DBT_PROFILES_DIR }}

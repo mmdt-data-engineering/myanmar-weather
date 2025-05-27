@@ -22,17 +22,18 @@ async def meteoblue_task():
     print_info("getting townships from MIMU data")
     mimu = MIMU_Data()
     township_df = mimu.get_townships()
-    # township_df = township_df.head(50)
+    township_df = township_df.head(5)
 
     print_info("extracting data from meteoblue weather api")
     meteoblue_api = MeteoBlueWeatherAPI()
 
-    str_today = date.today().strftime("%Y-%m-%d")  # Output like '2025-05-16'
+    # str_today = date.today().strftime("%Y-%m-%d")  # Output like '2025-05-16'
 
     # meteoblue - current
     meteoblue_df = await meteoblue_api.get_meteoblue_current_weather_data(township_df)
 
-    file_path = f"./output/{str_today}_meteoblue_current.csv"
+    # file_path = f"./output/{str_today}_meteoblue_current.csv"
+    file_path = f"./output/meteoblue_current.csv"
 
     if meteoblue_df.shape != (0, 0):
         meteoblue_df.to_csv(file_path, index=False, header=True)
@@ -40,21 +41,22 @@ async def meteoblue_task():
         print_info("uploading csv file to s3")
         upload_file_to_s3(file_path)
 
-        print_info("load csv file to database")
-        load_file_to_db(file_path)
+        # print_info("load csv file to database")
+        # load_file_to_db(file_path)
 
     # meteoblue - forecast
     meteoblue_df = await meteoblue_api.get_meteoblue_forecast_weather_data(township_df)
 
-    file_path = f"./output/{str_today}_meteoblue_forecast.csv"
+    # file_path = f"./output/{str_today}_meteoblue_forecast.csv"
+    file_path = f"./output/meteoblue_forecast.csv"
     if meteoblue_df.shape != (0, 0):
         meteoblue_df.to_csv(file_path, index=False, header=True)
 
         print_info("uploading csv file to s3")
         upload_file_to_s3(file_path)
 
-        print_info("load csv file to database")
-        load_file_to_db(file_path)
+        # print_info("load csv file to database")
+        # load_file_to_db(file_path)
 
 
 start_time = time()
