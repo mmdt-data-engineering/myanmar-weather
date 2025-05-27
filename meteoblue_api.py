@@ -77,24 +77,31 @@ class MeteoBlueWeatherAPI:
 
             data = json.loads(response)
 
+            current_data = data['data_current']
+            current_units = data['units']
+
+
             current_weather_list = []
 
 
             current_weather_list.append({
-                "date" : pd.to_datetime(data['data_current']['time']),
+                "date" : current_data['time'],
+                "date_units" : current_units['time'],
                 'state' : region_name,
                 'district' : district_name,
                 'township' : township_name,
                 'latitude': lat,
                 'longitude' : lon,
-                "isobserveddata" : data['data_current']['isobserveddata'],
-                "metarid" : data['data_current']['metarid'],
-                'isdaylight' : data['data_current']['isdaylight'],
-                'windspeed' : data['data_current']['windspeed'],
-                'zenithangle' : data['data_current']['zenithangle'],
-                "pictocode_detailed" : data['data_current']['pictocode_detailed'],
-                "pictocode" : data['data_current']['pictocode'],
-                "temperature_celsius" : data['data_current']['temperature'],
+                "isoberveddata" : current_data['isobervedata'],
+                "metarid" : current_data['metarid'],
+                'isdaylight' : current_data['isdaylight'],
+                'windspeed' : current_data['windspeed'],
+                "windspeed_unit" : current_units['windspeed'],
+                'zenithangle' : current_data['zenithangle'],
+                "pictocode_detailed" : current_data['pictocode_detailed'],
+                "pictocode" : current_data['pictocode'],
+                "temperature" : current_data['temperature'],
+                "temperature_unit" : current_units['temperature'],
                 "extraction_date": str_today,  # Add today's date as extraction date
             })
 
@@ -144,7 +151,7 @@ class MeteoBlueWeatherAPI:
             API_KEY = os.getenv("METEOBLUE_API_KEY")
             forecast_days = 7
             url = f"https://my.meteoblue.com/packages/basic-day?apikey={API_KEY}&lat={lat}&lon={lon}&asl=30&format=json&forecast_days={forecast_days}"
-            
+
             # Sleep between 1 to 5 seconds
             # time.sleep(random.uniform(1, 5))  
 
@@ -153,37 +160,58 @@ class MeteoBlueWeatherAPI:
 
             data = json.loads(response)
 
+            units = data['units']
+
             meteo_weather_data = []
 
             for i in range(len(data['data_day']['time'])):
                 # print(i)
                 meteo_weather_data.append({
                     'date' : data['data_day']['time'][i],
+                    'date_unit' : units['time'],
                     'state' : region_name,
                     'district' : district_name,
                     'township' : township_name,
                     'town' : town_name,
                     'latitude': lat,
                     'longitude' : lon,
-                    'temperature_instant_celsius' : data['data_day']['temperature_instant'][i],
-                    'temperature_min_celsius' : data['data_day']['temperature_min'][i],
-                    'temperature_max_celsius' : data['data_day']['temperature_max'][i],
-                    'temperature_mean_celsius' : data['data_day']['temperature_mean'][i],
-                    'sealevelpressure_min_hectopascals' : data['data_day']['sealevelpressure_min'][i],
-                    'sealevelpressure_max_hectopascals' : data['data_day']['sealevelpressure_max'][i],
-                    'sealevelpressure_mean_hectopascals' : data['data_day']['sealevelpressure_mean'][i],
-                    'windspeed_min_meters_per_second' : data['data_day']['windspeed_min'][i],
-                    'windspeed_max_meters_per_second' : data['data_day']['windspeed_max'][i],
-                    'windspeed_mean_meters_per_second' : data['data_day']['windspeed_mean'][i],
+                    'temperature_instant' : data['data_day']['temperature_instant'][i],
+                    'temperature_instant_unit' : units['temperature'],
+                    'temperature_min' : data['data_day']['temperature_min'][i],
+                    'temperature_min_unit' : units['temperature'],
+                    'temperature_max' : data['data_day']['temperature_max'][i],
+                    'temperature_max_unit' : units['temperature'],
+                    'temperature_mean' : data['data_day']['temperature_mean'][i],
+                    'temperature_mean_unit' : units['temperature'],
+                    'sealevelpressure_min' : data['data_day']['sealevelpressure_min'][i],
+                    'sealevelpressure_min_unit' : units['pressure'],
+                    'sealevelpressure_max' : data['data_day']['sealevelpressure_max'][i],
+                    'sealevelpressure_max_unit' : units['pressure'],
+                    'sealevelpressure_mean' : data['data_day']['sealevelpressure_mean'][i],
+                    'sealevelpressure_mean_unit' : units['pressure'],
+                    'windspeed_min' : data['data_day']['windspeed_min'][i],
+                    'windspeed_min_unit' : units['windspeed'],
+                    'windspeed_max' : data['data_day']['windspeed_max'][i],
+                    'windspeed_max_unit' : units['windspeed'],
+                    'windspeed_mean' : data['data_day']['windspeed_mean'][i],
+                    'windspeed_mean_unit' : units['windspeed'],
                     'winddirection_degree' : data['data_day']['winddirection'][i],
-                    'humiditygreater90_hours_percent' : (data['data_day']['humiditygreater90_hours'][i] / 100),
-                    'relativehumidity_min_percent' : (data['data_day']['relativehumidity_min'][i] / 100),
-                    'relativehumidity_max_percent' : (data['data_day']['relativehumidity_max'][i] / 100),
-                    'relativehumidity_mean_percent' : (data['data_day']['relativehumidity_mean'][i] / 100),
-                    'precipitation_millimeters' : data['data_day']['precipitation'][i],
-                    'precipitation_probability_percent' : (data['data_day']['precipitation_probability'][i] / 100),
-                    'predictability_percent' : (data['data_day']['predictability'][i] / 100),
-                    'convective_precipitation_percent' : (data['data_day']['convective_precipitation'][i] / 100),
+                    'humiditygreater90_hours' : (data['data_day']['humiditygreater90_hours'][i] / 100),
+                    'humiditygreater90_hours_unit' : units['relativehumidity'],
+                    'relativehumidity_min' : (data['data_day']['relativehumidity_min'][i] / 100),
+                    'relativehumidity_min_unit' : units['relativehumidity'],
+                    'relativehumidity_max' : (data['data_day']['relativehumidity_max'][i] / 100),
+                    'relativehumidity_max_unit' : units['relativehumidity'],
+                    'relativehumidity_mean' : (data['data_day']['relativehumidity_mean'][i] / 100),
+                    'relativehumidity_mean_unit' : units['relativehumidity'],
+                    'precipitation' : data['data_day']['precipitation'][i],
+                    'precipitation_unit' : units['precipitation'],
+                    'precipitation_probability' : (data['data_day']['precipitation_probability'][i] / 100),
+                    'precipitation_probability_unit' : units['precipitation_probability'],
+                    'predictability' : (data['data_day']['predictability'][i] / 100),
+                    'predictability_unit' : units['predictability'],
+                    'convective_precipitation' : (data['data_day']['convective_precipitation'][i] / 100),
+                    'convective_precipitation_unit' : units('precipitation_probability'),
                     'uvindex' : data['data_day']['uvindex'][i],
                     'rainspot' : data['data_day']['rainspot'][i],
                     'predictability_class' : data['data_day']['predictability_class'][i],
