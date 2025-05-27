@@ -1,0 +1,54 @@
+version: 2
+
+models:
+  - name: stg_openmeteo_current
+    description: "Staging model for OpenMeteo current weather data"
+    columns:
+      - name: data_source
+        description: "The source of the weather data"
+        data_tests:
+          - accepted_values:
+              values: ["openmeteo"]
+              quote: false
+      - name: date
+        description: "The date and time of the weather data"
+      - name: extraction_date
+        description: "The date and time when the data was extracted"
+      - name: state
+        description: "The state or region of the location for the weather data"
+      - name: district
+        description: "The district or locality of the location for the weather data"
+      - name: township
+        description: "The township or area of the location for the weather data"
+      - name: latitude
+        description: "The latitude of the location for the weather data"
+      - name: longitude
+        description: "The longitude of the location for the weather data"
+      - name: weather_description
+        description: "A textual description of the current weather condition"
+
+  - name: stg_openmeteo_forecast
+    description: "Staging model for OpenMeteo forecast weather data"
+    columns:
+      - name: data_source
+        description: "The source of the weather data"
+        data_tests:
+          - accepted_values:
+              values: ["openmeteo"]
+              quote: false
+      - name: date
+        description: "The date and time of the weather data"
+      - name: extraction_date
+        description: "The date and time when the data was extracted"
+      - name: state
+        description: "The state or region of the location for the weather data"
+      - name: district
+        description: "The district or locality of the location for the weather data"
+      - name: township
+        description: "The township or area of the location for the weather data"
+      - name: latitude
+        description: "The latitude of the location for the weather data"
+      - name: longitude
+        description: "The longitude of the location for the weather data"
+      - name: weather_description
+        description: "A textual description of the current weather condition"
