@@ -91,7 +91,7 @@ class MeteoBlueWeatherAPI:
                 'township' : township_name,
                 'latitude': lat,
                 'longitude' : lon,
-                "isoberveddata" : current_data['isobervedata'],
+                "isobserveddata" : current_data['isobserveddata'],
                 "metarid" : current_data['metarid'],
                 'isdaylight' : current_data['isdaylight'],
                 'windspeed' : current_data['windspeed'],
