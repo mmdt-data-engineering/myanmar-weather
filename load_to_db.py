@@ -62,7 +62,7 @@ def load_file_to_db(file_path: str):
         if "weatherapi" in filename:
             df["date"] = pd.to_datetime(df["date"], format="%Y-%m-%d %H:%M")
         else:
-            df["date"] = pd.to_datetime(df["date"]) # Automatically infers format
+            df["date"] = pd.to_datetime(df["date"], format="%Y-%m-%d %H:%M:%S")# Automatically infers format
 
     if "forecast" in filename:
         df["date"] = pd.to_datetime(df["date"], format="%Y-%m-%d")
