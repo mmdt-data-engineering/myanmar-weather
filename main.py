@@ -106,11 +106,11 @@ if __name__ == "__main__":
 
     asyncio.run(fetch_ambient_data(township_df))
     
-    #asyncio.run(fetch_meteoblue_data(township_df))
+    asyncio.run(fetch_meteoblue_data(township_df))
     
-    #asyncio.run(fetch_openmeteo_data(township_df))
+    asyncio.run(fetch_openmeteo_data(township_df))
     
-    #asyncio.run(fetch_weatherapi_data(township_df))
+    asyncio.run(fetch_weatherapi_data(township_df))
 
     end_time = time()
     time_taken_seconds = end_time - start_time
