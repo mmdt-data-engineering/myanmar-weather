@@ -201,8 +201,7 @@ class MeteoBlueWeatherAPI:
                     'windspeed_mean_unit' : units['windspeed'],
                     'winddirection_degree' : data['data_day']['winddirection'][i],
                     'humiditygreater90_hours' : (data['data_day']['humiditygreater90_hours'][i] / 100),
-                    'humiditygreself.logger.info(f"Fetching weather data for Town: {town_name}, Latitude: {lat}, Longitude: {lon}")
-self.logger.info(f"Fetching weather data for Township: {township_name}, Latitude: {lat}, Longitude: {lon}")ater90_hours_unit' : units['relativehumidity'],
+                    'humiditygreater90_hours_unit' : units['relativehumidity'],
                     'relativehumidity_min' : (data['data_day']['relativehumidity_min'][i] / 100),
                     'relativehumidity_min_unit' : units['relativehumidity'],
                     'relativehumidity_max' : (data['data_day']['relativehumidity_max'][i] / 100),
