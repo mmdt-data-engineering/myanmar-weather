@@ -82,9 +82,14 @@ class MeteoBlueWeatherAPI:
 
             current_weather_list = []
 
+            # Format the date string to always include seconds
+            date_str = current_data['time']
+            if len(date_str) == 16:  # "YYYY-MM-DD HH:MM"
+                date_str = date_str + ":00"
+
 
             current_weather_list.append({
-                "date" : current_data['time'],
+                "date" : date_str,
                 "date_units" : current_units['time'],
                 'state' : region_name,
                 'district' : district_name,
