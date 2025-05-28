@@ -56,19 +56,29 @@ def load_file_to_db(file_path: str):
 
     print(filename)
 
-    if "current" in filename:
-        df["extraction_date"] = pd.to_datetime(df["extraction_date"], format="%Y-%m-%d")
+    # if "current" in filename:
+    #     df["extraction_date"] = pd.to_datetime(df["extraction_date"], format="%Y-%m-%d")
 
-        if "weatherapi" in filename:
-            df["date"] = pd.to_datetime(df["date"], format="%Y-%m-%d %H:%M")
-        else:
-            #df["date"] = pd.to_datetime(df["date"], format="%Y-%m-%d %H:%M:%S")# Automatically infers format
+    #     if "weatherapi" in filename:
+    #         df["date"] = pd.to_datetime(df["date"], format="%Y-%m-%d %H:%M")
+    #     else:
+    #         df["date"] = pd.to_datetime(df["date"], format="%Y-%m-%d %H:%M:%S")# Automatically infers format
                     
-            df["date"] = pd.to_datetime(df["date"])  # Let pandas infer the format
+    #         #df["date"] = pd.to_datetime(df["date"])  # Let pandas infer the format
 
-    if "forecast" in filename:
-        df["date"] = pd.to_datetime(df["date"], format="%Y-%m-%d")
-        df["extraction_date"] = pd.to_datetime(df["extraction_date"], format="%Y-%m-%d")
+    # if "forecast" in filename:
+    #     df["date"] = pd.to_datetime(df["date"], format="%Y-%m-%d")
+    #     df["extraction_date"] = pd.to_datetime(df["extraction_date"], format="%Y-%m-%d")
+
+    if "meteoblue" in filename:
+        # Only parse date columns for meteoblue files
+        if "current" in filename:
+            df["extraction_date"] = pd.to_datetime(df["extraction_date"], format="%Y-%m-%d")
+            df["date"] = pd.to_datetime(df["date"], errors="coerce")  # Let pandas infer the format
+        if "forecast" in filename:
+            df["date"] = pd.to_datetime(df["date"], format="%Y-%m-%d")
+            df["extraction_date"] = pd.to_datetime(df["extraction_date"], format="%Y-%m-%d")
+    # For other files, skip date parsing for speed
 
     print(f"DataFrame Name: {df.Name}")
     print(f"DataFrame Shape: {df.shape}")
