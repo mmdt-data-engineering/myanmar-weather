@@ -210,7 +210,7 @@ class MeteoBlueWeatherAPI:
                     'predictability' : (data['data_day']['predictability'][i] / 100),
                     'predictability_unit' : units['predictability'],
                     'convective_precipitation' : (data['data_day']['convective_precipitation'][i] / 100),
-                    'convective_precipitation_unit' : units('precipitation_probability'),
+                    'convective_precipitation_unit' : units('predictability'),
                     'uvindex' : data['data_day']['uvindex'][i],
                     'rainspot' : data['data_day']['rainspot'][i],
                     'predictability_class' : data['data_day']['predictability_class'][i],
