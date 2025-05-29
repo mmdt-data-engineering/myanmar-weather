@@ -93,7 +93,6 @@ models:
       - name: weather_description
         description: "A textual description of the current weather condition"
 
-<<<<<<< HEAD
 
   - name: stg_ambientweather_forecast
     description: "Staging model for Ambient Weather forecast data with standardized units"
@@ -158,7 +157,6 @@ models:
 
     - name: weather_icon
       description: "Icon representing the weather conditions visually"
-=======
   - name: stg_ambientweather_forecast
     description: "Staging model for Ambient Weather forecast data"
     columns:
@@ -204,4 +202,3 @@ models:
         description: "Minimum forecasted temperature (F)"
       - name: temperature_max
         description: "Maximum forecasted temperature (F)"
->>>>>>> ecf339cecd70e195acc3e9038da46b64750e639a
