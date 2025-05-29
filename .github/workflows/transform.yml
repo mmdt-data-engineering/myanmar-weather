@@ -1,0 +1,40 @@
+name: Myanmar Weather ELT Pipeline (Transform)
+
+on:
+  workflow_run:
+    workflows: [Myanmar Weather ELT Pipeline (Extract -> Load)]
+    types:
+      - completed
+  workflow_dispatch: ## manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  Transform:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install dbt dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install dbt-core dbt-postgres
+
+      - name: Debug dbt models
+        run: dbt debug --profiles-dir ./transform --project-dir ./transform
+        env:
+          DBT_PROFILES_DIR: ${{ secrets.DBT_PROFILES_DIR }}
+
+      - name: Run dbt models
+        run: dbt run --profiles-dir ./transform --project-dir ./transform
+        env:
+          DBT_PROFILES_DIR: ${{ secrets.DBT_PROFILES_DIR }}

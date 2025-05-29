@@ -1,4 +1,4 @@
-name: Myanmar Weather ELT Pipeline
+name: Myanmar Weather ELT Pipeline (Extract -> Load)
 
 on:
   push:
