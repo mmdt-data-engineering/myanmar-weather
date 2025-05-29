@@ -3,10 +3,10 @@
 with meteoblue_forecast as (
 
     select data_source as data_source,
-        [date] as [date],
+        date as date,
         date_unit as date_unit,
         extraction_date as extraction_date,
-        [state] as [state],
+        state as state,
         district as district,
         township as township,
         latitude as latitude,
