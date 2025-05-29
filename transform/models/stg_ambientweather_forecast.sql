@@ -42,7 +42,7 @@ with ambientweather_forecast as (
 
         icon as weather_icon
 
-    from {{ source('myanmar_weather', 'ambient_forecast')}}
+    from public.ambientweather_forecast
 
 )
 

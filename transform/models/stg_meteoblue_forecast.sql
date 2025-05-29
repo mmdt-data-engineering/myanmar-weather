@@ -52,7 +52,7 @@ with meteoblue_forecast as (
         rainspot as rain_spot,
         predictability_class as predictability_class
 
-    from {{ source('myanmar_weather', 'meteoblue_forecast') }}
+    from public.meteoblue_forecast
 )
 
 select *

@@ -29,7 +29,7 @@ with weatherapi_forecast as (
             condition_icon as weather_icon,
             condition_code as weather_code
             
-    from {{ source('myanmar_weather', 'weatherapi_forecast') }}
+    from public.weatherapi_forecast
     
 
 )
