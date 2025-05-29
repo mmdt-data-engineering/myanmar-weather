@@ -48,8 +48,8 @@ with meteoblue_forecast as (
         predictability_unit as predictability_unit,
         convective_precipitation as convective_precipitation,
         convective_precipitation_unit as convective_precipitation_unit,
-        uv_index as uv_index,
-        rain_spot as rain_spot,
+        uvindex as uv_index,
+        rainspot as rain_spot,
         predictability_class as predictability_class
 
     from public.meteoblue_forecast
