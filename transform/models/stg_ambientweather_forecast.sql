@@ -16,26 +16,30 @@ with ambientweather_forecast as (
 
         precipitation_probability as precipitation_probability,
 
-        precipitation_intensity as precipitation_intensity,
-        precipitation_intensity_unit as precipitation_intensity_unit,
+         -- ✅ Convert inches/hour → mm/hour
+        precipitation_intensity * 25.4 as precipitation_intensity,
+        #'mm/hr' as precipitation_intensity_unit,
 
-        precipitation_accumulation as precipitation_accumulation,
-        precipitation_accumulation_unit as precipitation_accumulation_unit,
+        -- ✅ Convert inches → mm
+        precipitation_accumulation * 25.4 as precipitation_accumulation,
+        #'mm' as precipitation_accumulation_unit,
 
-        wind_speed as wind_speed,
-        wind_speed_unit as wind_speed_unit,
+        -- ✅ Convert mph → kph
+        wind_speed * 1.60934 as wind_speed,
+        #'kph' as wind_speed_unit,
 
-        wind_gust as wind_gust,
-        wind_gust_unit as wind_gust_unit,
+        wind_gust * 1.60934 as wind_gust,
+        #'kph' as wind_gust_unit,
 
         wind_bearing as wind_bearing,
-        wind_bearing_unit as wind_bearing_unit,
+        #'degrees' as wind_bearing_unit,
 
-        temperature_min as temperature_min,
-        temperature_min_unit as temperature_min_unit,
+        -- ✅ Convert °F → °C
+        (temperature_min - 32) * 5.0 / 9.0 as temperature_min,
+        #'C' as temperature_min_unit,
 
-        temperature_max as temperature_max,
-        temperature_max_unit as temperature_max_unit,
+        (temperature_max - 32) * 5.0 / 9.0 as temperature_max,
+        #'C' as temperature_max_unit,
 
         icon as weather_icon
 
