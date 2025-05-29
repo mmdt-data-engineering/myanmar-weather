@@ -21,3 +21,5 @@ requests-cache >= 1.2.1
 retry-requests >= 2.0.0
 boto3>=1.38.17
 aiohttp>=3.11.18
+dbt-core>=1.9.4
+dbt-postgres>=1.9.0
