@@ -82,7 +82,7 @@ class OpenMeteoAPI:
 
     async def _get_current(self, township_info: dict) -> pd.DataFrame:
 
-        tsp_pcode = township_info["Tsp_Pcode"]
+        tsp_pcode = township_info["tsp_pcode"]
         township = township_info["township"]
         latitude = township_info["latitude"]
         longitude = township_info["longitude"]
