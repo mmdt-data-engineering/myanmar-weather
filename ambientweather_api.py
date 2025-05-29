@@ -79,14 +79,21 @@ class AmbientWeatherAPI:
                         "timezone": data.get("tz", None),
                         "summary": item.get("summary", None),
                         "precipitation_probability": item.get("precipProbability", None),
-                        "precipitation_intensity_inches_per_hour": item.get("precipIntensity", None),
-                        "precipitation_accumulation_inches": item.get("precipAccumulation", None),
-                        "wind_speed_miles_per_hour": item.get("windSpeed", None),
+                        "precipitation_intensity": item.get("precipIntensity", None),
+                        "precipitation_intensity_unit": "in/hr",
+                        "precipitation_accumulation": item.get("precipAccumulation", None),
+                        "precipitation_accumulation_unit": "in",  # <-- add unit
+                        "wind_speed": item.get("windSpeed", None),
+                        "wind_speed_unit": "mph",  # <-- add unit
                         "icon": item.get("icon", None),
-                        "wind_bearing_degrees": item.get("windBearing", None),
-                        "wind_gust_miles_per_hour": item.get("windGust", None),
-                        "temperature_min_fahrenheit": item.get("temperatureMin", None),
-                        "temperature_max_fahrenheit": item.get("temperatureMax", None),
+                        "wind_bearing": item.get("windBearing", None),
+                        "wind_bearing_unit": "degrees",  # <-- add unit
+                        "wind_gust": item.get("windGust", None),
+                        "wind_gust_unit": "mph",  # <-- add unit
+                        "temperature_min": item.get("temperatureMin", None),
+                        "temperature_min_unit": "F",  # <-- add unit
+                        "temperature_max": item.get("temperatureMax", None),
+                        "temperature_max_unit": "F",  # <-- add unit
  
                     }   
                 )
