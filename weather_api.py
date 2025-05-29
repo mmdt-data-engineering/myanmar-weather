@@ -227,11 +227,13 @@ class WeatherAPI:
             weather_data.append(
                 {
                     "source": "weatherapi",
-                    "extraction_date": row["extraction_date"],
                     "date": row["date"],
-                    "date_epoch": row["date_epoch"],
+                    "extraction_date": row["extraction_date"],
+                    "tsp_code": tsp_pcode,
+                    "township": township_name,
                     "latitude": row["lat"],
                     "longitude": row["lon"],
+                    "date_epoch": row["date_epoch"],
                     "temperature_min_c": row["mintemp_c"],
                     "temperature_min_c_unit": units["temp_c"],
                     "temperature_max_c": row["maxtemp_c"],
