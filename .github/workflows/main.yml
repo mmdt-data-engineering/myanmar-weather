@@ -163,6 +163,6 @@ jobs:
           DBT_PROFILES_DIR: ${{ secrets.DBT_PROFILES_DIR }}
 
       - name: Run dbt models
-        run: dbt debug --profiles-dir ./transform --project-dir ./transform
+        run: dbt run --profiles-dir ./transform --project-dir ./transform
         env:
           DBT_PROFILES_DIR: ${{ secrets.DBT_PROFILES_DIR }}
