@@ -14,6 +14,7 @@ models:
         description: "The date and time of the weather data"
       - name: extraction_date
         description: "The date and time when the data was extracted"
+        datatype: "date"
       - name: state
         description: "The state or region of the location for the weather data"
       - name: district
@@ -26,6 +27,45 @@ models:
         description: "The longitude of the location for the weather data"
       - name: weather_description
         description: "A textual description of the current weather condition"
+      - name: temperature
+        description: "The current temperature in degree Celsius"
+        unit: "degrees celsius"
+      - name: apparent_temperature
+        description: "The apparent temperature in degree Celsius"
+        unit: "degrees celsius"
+      - name: humidity
+        description: "The current humidity percentage"
+        unit: "percentage"
+      - name: wind_speed
+        description: "The current wind speed in kilometers per hour"
+        unit: "km/h"
+      - name: wind_direction
+        description: "The wind direction in degrees"
+        unit: "degrees"
+      - name: wind_gust
+        description: "The current wind gust speed in kilometers per hour"
+        unit: "km/h"
+      - name: precipitation
+        description: "The current precipitation in millimeters"
+        unit: "mm"
+      - name: showers
+        description: "The current showers in millimeters"
+        unit: "mm"
+      - name: snowfall
+        description: "The current snowfall in centimeters"
+        unit: "cm"
+      - name: rain
+        description: "The current rain in millimeters"
+        unit: "mm"
+      - name: cloud_cover
+        description: "The current cloud cover percentage"
+        unit: "percentage"
+      - name: pressure
+        description: "The current atmospheric pressure in hectopascals"
+        unit: "hPa"
+      - name: surface_pressure
+        description: "The current surface pressure in hectopascals"
+        unit: "hPa"
 
   - name: stg_openmeteo_forecast
     description: "Staging model for OpenMeteo forecast weather data"
@@ -98,4 +138,3 @@ models:
         description: "Minimum forecasted temperature (F)"
       - name: temperature_max
         description: "Maximum forecasted temperature (F)"
-
