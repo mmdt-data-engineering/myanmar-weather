@@ -53,49 +53,67 @@ models:
       - name: weather_description
         description: "A textual description of the current weather condition"
 
-  - name: stg_ambientweather_forecast
-    description: "Staging model for Ambient Weather forecast data"
-    columns:
-      - name: data_source
-        description: "The source of the weather data"
-        data_tests:
-          - accepted_values:
-              values: ["ambient weather"]
-              quote: true
-      - name: date
-        description: "The forecasted date"
-      - name: extraction_date
-        description: "The date when the data was extracted"
-      - name: state
-        description: "State or region of the observation"
-      - name: district
-        description: "District of the observation"
-      - name: township
-        description: "Township of the observation"
-      - name: latitude
-        description: "Latitude of the location"
-      - name: longitude
-        description: "Longitude of the location"
-      - name: timezone
-        description: "Timezone of the forecasted location"
-      - name: weather_summary
-        description: "Textual summary of the forecast"
-      - name: precipitation_probability
-        description: "Probability of precipitation"
-      - name: precipitation_intensity
-        description: "Intensity of precipitation (inches/hour)"
-      - name: precipitation_accumulation
-        description: "Accumulated precipitation (inches)"
-      - name: wind_speed
-        description: "Wind speed (mph)"
-      - name: weather_icon
-        description: "Icon representing the weather"
-      - name: wind_bearing
-        description: "Wind bearing in degrees"
-      - name: wind_gust
-        description: "Wind gust (mph)"
-      - name: temperature_min
-        description: "Minimum forecasted temperature (F)"
-      - name: temperature_max
-        description: "Maximum forecasted temperature (F)"
 
+  - name: stg_ambientweather_forecast
+    description: "Staging model for Ambient Weather forecast data with standardized units"
+    columns:
+    - name: data_source
+      description: "The source of the weather data"
+      data_tests:
+        - accepted_values:
+            values: ["ambient weather"]
+            quote: true
+
+    - name: date
+      description: "The forecasted date"
+
+    - name: extraction_date
+      description: "The date when the data was extracted"
+
+    - name: state
+      description: "State or region of the observation"
+
+    - name: district
+      description: "District of the observation"
+
+    - name: township
+      description: "Township of the observation"
+
+    - name: latitude
+      description: "Latitude of the location"
+
+    - name: longitude
+      description: "Longitude of the location"
+
+    - name: timezone
+      description: "Timezone of the forecasted location"
+
+    - name: weather_summary
+      description: "Textual summary of the forecast"
+
+    - name: precipitation_probability
+      description: "Probability of precipitation (0–1 scale)"
+
+    - name: precipitation_intensity_mm_per_hr
+      description: "Intensity of precipitation in mm/hour (converted from inches/hour × 25.4)"
+
+    - name: precipitation_accumulation_mm
+      description: "Total precipitation in millimeters (converted from inches × 25.4)"
+
+    - name: wind_speed_kph
+      description: "Wind speed in kilometers per hour (converted from mph × 1.60934)"
+
+    - name: wind_gust_kph
+      description: "Wind gust in kilometers per hour (converted from mph × 1.60934)"
+
+    - name: wind_bearing_degrees
+      description: "Wind direction in degrees (0–360° from North)"
+
+    - name: temperature_min_celsius
+      description: "Minimum temperature in Celsius (converted from Fahrenheit using (°F − 32) × 5/9)"
+
+    - name: temperature_max_celsius
+      description: "Maximum temperature in Celsius (converted from Fahrenheit using (°F − 32) × 5/9)"
+
+    - name: weather_icon
+      description: "Icon representing the weather conditions visually"
