@@ -40,7 +40,7 @@ with meteoblue_forecast as (
         relativehumidity_max_unit as relative_humidity_max_unit,
         relativehumidity_mean as relative_humidity_mean,
         relativehumidity_mean_unit as relative_humidity_mean_unit,
-        precipitaion as precipitation,
+        precipitation as precipitation,
         precipitation_unit as precipitation_unit,
         precipitation_probability as precipitation_probability,
         precipitation_probability_unit as precipitation_probability_unit,
