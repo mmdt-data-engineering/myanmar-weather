@@ -42,10 +42,8 @@ class MeteoBlueWeatherAPI:
         all_data = []
 
         for _, row in township_df.iterrows():
-            region_name = row["SR_Name_Eng"]
-            district_name = row["District/SAZ_Name_Eng"]
+            tsp_pcode = row["Tsp_Pcode"]
             township_name = row["Township_Name_Eng"]
-            town_name = row["Town_Name_Eng"]
             lat = row["Latitude"]
             lon = row["Longitude"]
 
@@ -88,10 +86,10 @@ class MeteoBlueWeatherAPI:
 
             current_weather_list.append(
                 {
+                    "data_source": "MeteoBlue",
                     "date": date_str,
                     "date_units": current_units["time"],
-                    "state": region_name,
-                    "district": district_name,
+                    "tsp_pcode": tsp_pcode,
                     "township": township_name,
                     "latitude": lat,
                     "longitude": lon,
@@ -136,10 +134,8 @@ class MeteoBlueWeatherAPI:
         all_data = []
 
         for _, row in township_df.iterrows():
-            region_name = row["SR_Name_Eng"]
-            district_name = row["District/SAZ_Name_Eng"]
+            tsp_pcode = row["Tsp_Pcode"]
             township_name = row["Township_Name_Eng"]
-            town_name = row["Town_Name_Eng"]
             lat = row["Latitude"]
             lon = row["Longitude"]
 
@@ -172,12 +168,11 @@ class MeteoBlueWeatherAPI:
                 # print(i)
                 meteo_weather_data.append(
                     {
+                        "data_source": "MeteoBlue",
                         "date": data["data_day"]["time"][i],
                         "date_unit": units["time"],
-                        "state": region_name,
-                        "district": district_name,
+                        "tsp_pcode": tsp_pcode,
                         "township": township_name,
-                        "town": town_name,
                         "latitude": lat,
                         "longitude": lon,
                         "temperature_instant": data["data_day"]["temperature_instant"][

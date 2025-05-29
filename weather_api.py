@@ -42,14 +42,14 @@ class WeatherAPI:
         return result_df
 
     async def get_current_data_from_api(self, BASE_URL, WEATHER_API_KEY, row):
+        tsp_pcode = row["Tsp_Pcode"]
         township_name = row["Township_Name_Eng"]
         latitude = row["Latitude"]
         longitude = row["Longitude"]
-        town_name = row["Town_Name_Eng"]
-        district_name = row["District/SAZ_Name_Eng"]
-        state_name = row["SR_Name_Eng"]
 
-        message = f"TownName: {town_name}, Latitude: {latitude}, Longitude: {longitude}"
+        message = (
+            f"TownName: {township_name}, Latitude: {latitude}, Longitude: {longitude}"
+        )
         self.print_info(message)
 
         # Construct the API request URL
@@ -78,15 +78,10 @@ class WeatherAPI:
                 "source": "weatherapi",
                 "date": current.get("last_updated", None),
                 "extraction_date": pd.to_datetime(time.strftime("%Y-%m-%d")),
-                "town": location.get("name", None),
-                "region": location.get("region", None),
-                "country": location.get("country", None),
+                "tsp_code": tsp_pcode,
+                "township": township_name,
                 "latitude": location.get("lat", None),
                 "longitude": location.get("lon", None),
-                "township": township_name,
-                "town_name": town_name,
-                "district_name": district_name,
-                "state_name": state_name,
                 "timezone": location.get("tz_id", None),
                 "localtime": location.get("localtime", None),
                 "localtime_epoch": location.get("localtime_epoch", None),
@@ -156,12 +151,11 @@ class WeatherAPI:
     ) -> pd.DataFrame:
 
         NO_OF_DAYS = 7
+        tsp_pcode = row["Tsp_Pcode"]
         township_name = row["Township_Name_Eng"]
         latitude = row["Latitude"]
         longitude = row["Longitude"]
         town_name = row["Town_Name_Eng"]
-        district_name = row["District/SAZ_Name_Eng"]
-        state_name = row["SR_Name_Eng"]
 
         message = f"Town Name:{town_name}, Latitude:{latitude}, Longitude:{longitude}"
         self.print_info(message)
@@ -213,68 +207,64 @@ class WeatherAPI:
 
         units = {
             "temp_c": "celsius",
-            "temp_f" : "farenheit",
-            "wind_kph" : "kph",
-            "wind_mph" : "kph",
+            "temp_f": "farenheit",
+            "wind_kph": "kph",
+            "wind_mph": "kph",
             "precip_mm": "millimeters",
-            "precip_in" : "inches",
+            "precip_in": "inches",
             "snow_cm": "centimeters",
-            "vis_km" : "kilometers",
-            "vis_miles" : "miles"
+            "vis_km": "kilometers",
+            "vis_miles": "miles",
         }
 
+        final_df["tsp_code"] = tsp_pcode
         final_df["township_name"] = township_name
-        final_df["town_name"] = town_name
-        final_df["district_name"] = district_name
-        final_df["state_name"] = state_name
         final_df["extraction_date"] = pd.to_datetime(time.strftime("%Y-%m-%d"))
-
 
         # Build final list of dicts
         weather_data = []
         for _, row in final_df.iterrows():
-            weather_data.append({
-            "source": "weatherapi",
-            "extraction_date": row["extraction_date"],
-            "date": row["date"],
-            "date_epoch": row["date_epoch"],
-            "state_name": row["state_name"],
-            "district_name": row["district_name"],
-            "township_name": row["township_name"],
-            "latitude": row["lat"],
-            "longitude": row["lon"],
-            "temperature_min_c": row["mintemp_c"],
-            "temperature_min_c_unit": units["temp_c"],
-            "temperature_max_c": row["maxtemp_c"],
-            "temperature_max_c_unit": units["temp_c"],
-            "temperature_avg_c": row["avgtemp_c"],
-            "temperature_avg_c_unit": units["temp_c"],
-            "temperature_min_f": row["mintemp_f"],
-            "temperature_min_f_unit": units["temp_f"],
-            "temperature_max_f": row["maxtemp_f"],
-            "temperature_max_f_unit": units["temp_f"],
-            "temperature_avg_f": row["avgtemp_f"],
-            "temperature_avg_f_unit": units["temp_f"],
-            "wind_max_kph": row["maxwind_kph"],
-            "wind_max_kph_unit": units["wind_kph"],
-            "wind_max_mph": row["maxwind_mph"],
-            "wind_max_mph_unit": units["wind_mph"],
-            "precipitation_total_mm": row["totalprecip_mm"],
-            "precipitation_total_mm_unit": units["precip_mm"],
-            "precipitation_total_in": row["totalprecip_in"],
-            "precipitation_total_in_unit": units["precip_in"],
-            "snow_total_cm": row["totalsnow_cm"],
-            "snow_total_cm_unit": units["snow_cm"],
-            "visibility_avg_km": row["avgvis_km"],
-            "visibility_avg_km_unit": units["vis_km"],
-            "visibility_avg_miles": row["avgvis_miles"],
-            "visibility_avg_miles_unit": units["vis_miles"],
-            "humidity_avg": row["avghumidity"],
-            "uv_index": row["uv"],
-            "condition_text": row["text"],
-            "condition_icon": row["icon"],
-            "condition_code": row["code"]
-        })
+            weather_data.append(
+                {
+                    "source": "weatherapi",
+                    "extraction_date": row["extraction_date"],
+                    "date": row["date"],
+                    "date_epoch": row["date_epoch"],
+                    "latitude": row["lat"],
+                    "longitude": row["lon"],
+                    "temperature_min_c": row["mintemp_c"],
+                    "temperature_min_c_unit": units["temp_c"],
+                    "temperature_max_c": row["maxtemp_c"],
+                    "temperature_max_c_unit": units["temp_c"],
+                    "temperature_avg_c": row["avgtemp_c"],
+                    "temperature_avg_c_unit": units["temp_c"],
+                    "temperature_min_f": row["mintemp_f"],
+                    "temperature_min_f_unit": units["temp_f"],
+                    "temperature_max_f": row["maxtemp_f"],
+                    "temperature_max_f_unit": units["temp_f"],
+                    "temperature_avg_f": row["avgtemp_f"],
+                    "temperature_avg_f_unit": units["temp_f"],
+                    "wind_max_kph": row["maxwind_kph"],
+                    "wind_max_kph_unit": units["wind_kph"],
+                    "wind_max_mph": row["maxwind_mph"],
+                    "wind_max_mph_unit": units["wind_mph"],
+                    "precipitation_total_mm": row["totalprecip_mm"],
+                    "precipitation_total_mm_unit": units["precip_mm"],
+                    "precipitation_total_in": row["totalprecip_in"],
+                    "precipitation_total_in_unit": units["precip_in"],
+                    "snow_total_cm": row["totalsnow_cm"],
+                    "snow_total_cm_unit": units["snow_cm"],
+                    "visibility_avg_km": row["avgvis_km"],
+                    "visibility_avg_km_unit": units["vis_km"],
+                    "visibility_avg_miles": row["avgvis_miles"],
+                    "visibility_avg_miles_unit": units["vis_miles"],
+                    "humidity_avg": row["avghumidity"],
+                    "uv_index": row["uv"],
+                    "condition_text": row["text"],
+                    "condition_icon": row["icon"],
+                    "condition_code": row["code"],
+                }
+            )
         weather_df = pd.DataFrame(weather_data)
         print(weather_df.columns)
         print(weather_df.head(5))

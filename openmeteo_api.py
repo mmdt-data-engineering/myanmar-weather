@@ -50,8 +50,7 @@ class OpenMeteoAPI:
         for index, row in df.iterrows():
 
             township_info = {
-                "region": row["SR_Name_Eng"],
-                "district": row["District/SAZ_Name_Eng"],
+                "tsp_pcode": row["Tsp_Pcode"],
                 "township": row["Township_Name_Eng"],
                 "latitude": row["Latitude"],
                 "longitude": row["Longitude"],
@@ -69,8 +68,7 @@ class OpenMeteoAPI:
         for index, row in df.iterrows():
 
             township_info = {
-                "region": row["SR_Name_Eng"],
-                "district": row["District/SAZ_Name_Eng"],
+                "tsp_pcode": row["Tsp_Pcode"],
                 "township": row["Township_Name_Eng"],
                 "latitude": row["Latitude"],
                 "longitude": row["Longitude"],
@@ -84,8 +82,7 @@ class OpenMeteoAPI:
 
     async def _get_current(self, township_info: dict) -> pd.DataFrame:
 
-        region = township_info["region"]
-        district = township_info["district"]
+        tsp_pcode = township_info["Tsp_Pcode"]
         township = township_info["township"]
         latitude = township_info["latitude"]
         longitude = township_info["longitude"]
@@ -121,8 +118,7 @@ class OpenMeteoAPI:
             "date": pd.to_datetime(current["time"]),
             # Add today's date as extraction date
             "extraction_date": pd.to_datetime(today),
-            "state": region,
-            "district": district,
+            "tsp_pcode": tsp_pcode,
             "township": township,
             "latitude": response["latitude"],
             "longitude": response["longitude"],
@@ -176,8 +172,7 @@ class OpenMeteoAPI:
 
     async def _get_forecast(self, township_info: dict) -> pd.DataFrame:
 
-        region = township_info["region"]
-        district = township_info["district"]
+        tsp_pcode = township_info["tsp_pcode"]
         township = township_info["township"]
         latitude = township_info["latitude"]
         longitude = township_info["longitude"]
@@ -211,8 +206,7 @@ class OpenMeteoAPI:
                 "data_source": "openmeteo",
                 "date": pd.to_datetime(response["daily"]["time"][i]),
                 "extraction_date": pd.to_datetime(time.strftime("%Y-%m-%d")),
-                "region": region,
-                "district": district,
+                "tsp_pcode": tsp_pcode,
                 "township": township,
                 "latitude": response["latitude"],
                 "longitude": response["longitude"],

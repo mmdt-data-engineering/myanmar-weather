@@ -26,9 +26,7 @@ class MIMU_Data:
         # 535 rows in total - towns
         # 351 rows after drop duplicates - township
 
-        township_df.drop_duplicates(
-            subset=["Township_Name_Eng"], inplace=True, keep="first"
-        )
+        township_df.drop_duplicates(subset=["Tsp_Pcode"], inplace=True, keep="first")
 
         # Drop rows with NaN values in Latitude or Longitude
         township_df = township_df.dropna(subset=["Latitude", "Longitude"])

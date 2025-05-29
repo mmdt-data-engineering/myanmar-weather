@@ -33,12 +33,11 @@ class AmbientWeatherAPI:
         str_today = today.strftime("%Y-%m-%d")
 
         for _, row in township_df.iterrows():
+
+            tsp_pcode = row["Tsp_Pcode"]
             township_name = row["Township_Name_Eng"]
             lat = row["Latitude"]
             lon = row["Longitude"]
-            town_name = row["Town_Name_Eng"]
-            district_name = row["District/SAZ_Name_Eng"]
-            state_name = row["SR_Name_Eng"]
 
             # ✅ Skip rows with missing values
             if pd.isnull(lat) or pd.isnull(lon) or pd.isnull(township_name):
@@ -50,14 +49,14 @@ class AmbientWeatherAPI:
             self.print_info(message)
 
             url = f"{self.base_url}/{lat}/{lon}"
-            
+
             # Sleep between 1 to 5 seconds
-            # time.sleep(random.uniform(1, 5))  
+            # time.sleep(random.uniform(1, 5))
 
             # response = requests.get(url, headers=self.headers)
             response, status = await fetch(url, headers=self.headers)
 
-            if status != 200: 
+            if status != 200:
                 raise ConnectionError(f"Fetch data from Ambient Weather API - FAILED ")
 
             data = json.loads(response)
@@ -71,17 +70,20 @@ class AmbientWeatherAPI:
                             "%Y-%m-%d"
                         ),
                         "extraction_date": str_today,  # Add today's date as extraction date
-                        "state": state_name,
-                        "district": district_name,
+                        "tsp_pcode": tsp_pcode,
                         "township": township_name,
                         "latitude": data.get("lat", lat),
                         "longitude": data.get("lon", lon),
                         "timezone": data.get("tz", None),
                         "summary": item.get("summary", None),
-                        "precipitation_probability": item.get("precipProbability", None),
+                        "precipitation_probability": item.get(
+                            "precipProbability", None
+                        ),
                         "precipitation_intensity": item.get("precipIntensity", None),
                         "precipitation_intensity_unit": "in/hr",
-                        "precipitation_accumulation": item.get("precipAccumulation", None),
+                        "precipitation_accumulation": item.get(
+                            "precipAccumulation", None
+                        ),
                         "precipitation_accumulation_unit": "in",  # <-- add unit
                         "wind_speed": item.get("windSpeed", None),
                         "wind_speed_unit": "mph",  # <-- add unit
@@ -94,8 +96,7 @@ class AmbientWeatherAPI:
                         "temperature_min_unit": "F",  # <-- add unit
                         "temperature_max": item.get("temperatureMax", None),
                         "temperature_max_unit": "F",  # <-- add unit
- 
-                    }   
+                    }
                 )
 
             daily_df = pd.DataFrame(weather_list)
