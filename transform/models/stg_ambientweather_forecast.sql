@@ -42,7 +42,7 @@ with ambientweather_forecast as (
 
         icon as weather_icon
 
-    from public.ambientweather_forecast
+    from public.ambient_forecast
 
 )
 
