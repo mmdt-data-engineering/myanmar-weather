@@ -43,17 +43,17 @@ class MeteoBlueWeatherAPI:
 
         for _, row in township_df.iterrows():
             tsp_pcode = row["Tsp_Pcode"]
-            township_name = row["Township_Name_Eng"]
+            township = row["Township_Name_Eng"]
             lat = row["Latitude"]
             lon = row["Longitude"]
 
             # ✅ Skip rows with missing values
-            if pd.isnull(lat) or pd.isnull(lon) or pd.isnull(township_name):
-                message = f"[SKIP] Missing data for township: {township_name}, lat: {lat}, lon: {lon}"
+            if pd.isnull(lat) or pd.isnull(lon) or pd.isnull(township):
+                message = f"[SKIP] Missing data for township: {township}, lat: {lat}, lon: {lon}"
                 self.print_info(message)
                 continue
 
-            message = f"Fetching weather data for Town: {town_name}, Latitude: {lat}, Longitude: {lon}"
+            message = f"Fetching weather data for Town: {township}, Latitude: {lat}, Longitude: {lon}"
             self.print_info(message)
 
             load_dotenv()
@@ -90,7 +90,7 @@ class MeteoBlueWeatherAPI:
                     "date": date_str,
                     "date_units": current_units["time"],
                     "tsp_pcode": tsp_pcode,
-                    "township": township_name,
+                    "township": township,
                     "latitude": lat,
                     "longitude": lon,
                     "isobserveddata": current_data["isobserveddata"],
