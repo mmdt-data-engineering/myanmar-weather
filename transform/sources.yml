@@ -1,7 +1,7 @@
 version: 2
 
 sources:
-  - name: openmeteo_source
+  - name: myanmar_weather
     database: neondb
     schema: public
     tables:

@@ -54,7 +54,7 @@ with openmeteo_forecast as (
         et0_fao_evapotranspiration_units as evapotranspiration_units
 
            
-    from public.openmeteo_forecast
+    from {{ source('myanmar_weather', 'openmeteo_forecast') }}
 )
 
 select *
