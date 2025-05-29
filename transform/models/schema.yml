@@ -79,7 +79,7 @@ models:
       - name: date
         description: "The date and time of the weather data"
       - name: extraction_date
-        description: "The date and time when the data was extracted"
+        description: "The date and time when the data was extracted "
       - name: state
         description: "The state or region of the location for the weather data"
       - name: district
