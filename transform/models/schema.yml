@@ -14,6 +14,7 @@ models:
         description: "The date and time of the weather data"
       - name: extraction_date
         description: "The date and time when the data was extracted"
+        datatype: "date"
       - name: state
         description: "The state or region of the location for the weather data"
       - name: district
@@ -26,6 +27,45 @@ models:
         description: "The longitude of the location for the weather data"
       - name: weather_description
         description: "A textual description of the current weather condition"
+      - name: temperature
+        description: "The current temperature in degree Celsius"
+        unit: "degrees celsius"
+      - name: apparent_temperature
+        description: "The apparent temperature in degree Celsius"
+        unit: "degrees celsius"
+      - name: humidity
+        description: "The current humidity percentage"
+        unit: "percentage"
+      - name: wind_speed
+        description: "The current wind speed in kilometers per hour"
+        unit: "km/h"
+      - name: wind_direction
+        description: "The wind direction in degrees"
+        unit: "degrees"
+      - name: wind_gust
+        description: "The current wind gust speed in kilometers per hour"
+        unit: "km/h"
+      - name: precipitation
+        description: "The current precipitation in millimeters"
+        unit: "mm"
+      - name: showers
+        description: "The current showers in millimeters"
+        unit: "mm"
+      - name: snowfall
+        description: "The current snowfall in centimeters"
+        unit: "cm"
+      - name: rain
+        description: "The current rain in millimeters"
+        unit: "mm"
+      - name: cloud_cover
+        description: "The current cloud cover percentage"
+        unit: "percentage"
+      - name: pressure
+        description: "The current atmospheric pressure in hectopascals"
+        unit: "hPa"
+      - name: surface_pressure
+        description: "The current surface pressure in hectopascals"
+        unit: "hPa"
 
   - name: stg_openmeteo_forecast
     description: "Staging model for OpenMeteo forecast weather data"
@@ -53,6 +93,7 @@ models:
       - name: weather_description
         description: "A textual description of the current weather condition"
 
+<<<<<<< HEAD
 
   - name: stg_ambientweather_forecast
     description: "Staging model for Ambient Weather forecast data with standardized units"
@@ -117,3 +158,50 @@ models:
 
     - name: weather_icon
       description: "Icon representing the weather conditions visually"
+=======
+  - name: stg_ambientweather_forecast
+    description: "Staging model for Ambient Weather forecast data"
+    columns:
+      - name: data_source
+        description: "The source of the weather data"
+        data_tests:
+          - accepted_values:
+              values: ["ambient weather"]
+              quote: true
+      - name: date
+        description: "The forecasted date"
+      - name: extraction_date
+        description: "The date when the data was extracted"
+      - name: state
+        description: "State or region of the observation"
+      - name: district
+        description: "District of the observation"
+      - name: township
+        description: "Township of the observation"
+      - name: latitude
+        description: "Latitude of the location"
+      - name: longitude
+        description: "Longitude of the location"
+      - name: timezone
+        description: "Timezone of the forecasted location"
+      - name: weather_summary
+        description: "Textual summary of the forecast"
+      - name: precipitation_probability
+        description: "Probability of precipitation"
+      - name: precipitation_intensity
+        description: "Intensity of precipitation (inches/hour)"
+      - name: precipitation_accumulation
+        description: "Accumulated precipitation (inches)"
+      - name: wind_speed
+        description: "Wind speed (mph)"
+      - name: weather_icon
+        description: "Icon representing the weather"
+      - name: wind_bearing
+        description: "Wind bearing in degrees"
+      - name: wind_gust
+        description: "Wind gust (mph)"
+      - name: temperature_min
+        description: "Minimum forecasted temperature (F)"
+      - name: temperature_max
+        description: "Maximum forecasted temperature (F)"
+>>>>>>> ecf339cecd70e195acc3e9038da46b64750e639a
