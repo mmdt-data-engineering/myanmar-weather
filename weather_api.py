@@ -229,7 +229,7 @@ class WeatherAPI:
                     "source": "weatherapi",
                     "date": row["date"],
                     "extraction_date": row["extraction_date"],
-                    "tsp_code": tsp_pcode,
+                    "tsp_pcode": tsp_pcode,
                     "township": township_name,
                     "latitude": row["lat"],
                     "longitude": row["lon"],
