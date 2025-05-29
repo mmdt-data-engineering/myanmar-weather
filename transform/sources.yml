@@ -1,0 +1,18 @@
+version: 2
+
+sources:
+  - name: openmeteo_source
+    database: neondb
+    schema: public
+    tables:
+      - name: ambient_forecast
+        description: "Ambient weather forecast data from OpenMeteo API"
+
+      - name: meteoblue_forecast
+        description: "Weather forecast data from Meteoblue API"
+
+      - name: openmeteo_forecast
+        description: "Weather forecast data from OpenMeteo API"
+
+      - name: weatherapi_forecast
+        description: "Weather forecast data from WeatherAPI.com"
