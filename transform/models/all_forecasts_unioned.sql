@@ -1,0 +1,210 @@
+{{ config(materialized='table') }}
+
+with ambient_weather_unioned as (
+    select
+        data_source,
+        date,
+        extraction_date,
+        tsp_pcode,
+        township,
+        CAST(latitude AS double precision) AS latitude, -- Added cast
+        CAST(longitude AS double precision) AS longitude, -- Added cast
+        weather_summary,
+        CAST(temperature_min AS double precision) AS temperature_min_value,
+        temperature_min_unit,
+        CAST(temperature_max AS double precision) AS temperature_max_value,
+        temperature_max_unit,
+        CAST(precipitation_probability AS double precision) AS precipitation_probability, -- Added cast
+        CAST(precipitation_intensity AS double precision) AS precipitation_intensity_value,
+        precipitation_intensity_unit,
+        CAST(precipitation_accumulation AS double precision) AS precipitation_total_value, -- Already present, confirmed
+        precipitation_accumulation_unit as precipitation_total_unit,
+        CAST(wind_speed AS double precision) AS wind_speed_value,
+        wind_speed_unit,
+        CAST(wind_gust AS double precision) AS wind_gust_value,
+        wind_gust_unit,
+        CAST(wind_bearing AS double precision) AS wind_direction_value,
+        wind_bearing_unit as wind_direction_unit,
+        weather_icon,
+
+        -- Columns not common or less common, filled with NULLs for UNION compatibility
+        -- Casting NULL to a type is valid and good for type consistency in UNIONs
+        CAST(null AS double precision) as temperature_mean_value,
+        null as temperature_mean_unit,
+        CAST(null AS double precision) as relative_humidity_mean_value,
+        null as relative_humidity_mean_unit,
+        CAST(null AS double precision) as uv_index_value,
+        null as uv_index_unit
+
+    from {{ ref('stg_ambientweather_forecast') }}
+),
+
+meteoblue_unioned as (
+    select
+        data_source,
+        date,
+        extraction_date,
+        tsp_pcode,
+        township,
+        CAST(latitude AS double precision) AS latitude, -- Added cast
+        CAST(longitude AS double precision) AS longitude, -- Added cast
+        null as weather_summary,
+        CAST(temperature_min AS double precision) AS temperature_min_value,
+        temperature_min_unit,
+        CAST(temperature_max AS double precision) AS temperature_max_value,
+        temperature_max_unit,
+        CAST(precipitation_probability AS double precision) AS precipitation_probability, -- Added cast
+        CAST(null AS double precision) as precipitation_intensity_value, -- Cast NULL for type consistency
+        null as precipitation_intensity_unit,
+        CAST(precipitation AS double precision) AS precipitation_total_value, -- Already present, confirmed
+        precipitation_unit as precipitation_total_unit,
+        CAST(wind_speed_mean AS double precision) AS wind_speed_value,
+        wind_speed_mean_unit as wind_speed_unit,
+        CAST(null AS double precision) as wind_gust_value, -- Cast NULL for type consistency
+        null as wind_gust_unit,
+        CAST(wind_direction AS double precision) AS wind_direction_value,
+        wind_direction_unit as wind_direction_unit,
+        null as weather_icon,
+
+        CAST(temperature_mean AS double precision) AS temperature_mean_value,
+        temperature_mean_unit,
+        CAST(relative_humidity_mean AS double precision) AS relative_humidity_mean_value,
+        relative_humidity_mean_unit,
+        CAST(uv_index AS double precision) AS uv_index_value,
+        null as uv_index_unit
+
+    from {{ ref('stg_meteoblue_forecast') }}
+),
+
+openmeteo_unioned as (
+    select
+        data_source,
+        date,
+        extraction_date,
+        tsp_pcode,
+        township,
+        CAST(latitude AS double precision) AS latitude, -- Added cast
+        CAST(longitude AS double precision) AS longitude, -- Added cast
+        weather_description as weather_summary,
+        CAST(temperature_min AS double precision) AS temperature_min_value,
+        temperature_min_units as temperature_min_unit,
+        CAST(temperature_max AS double precision) AS temperature_max_value,
+        temperature_max_units as temperature_max_unit,
+        CAST(precipitation_probability AS double precision) AS precipitation_probability, -- Added cast
+        CAST(null AS double precision) as precipitation_intensity_value, -- Cast NULL for type consistency
+        null as precipitation_intensity_unit,
+        CAST(precipitation AS double precision) AS precipitation_total_value, -- Already present, confirmed
+        precipitation_units as precipitation_total_unit,
+        CAST(wind_speed AS double precision) AS wind_speed_value,
+        wind_speed_units as wind_speed_unit,
+        CAST(wind_gusts AS double precision) AS wind_gust_value,
+        wind_gusts_units as wind_gust_unit,
+        CAST(wind_direction AS double precision) AS wind_direction_value,
+        wind_direction_units as wind_direction_unit,
+        null as weather_icon,
+
+        CAST(null AS double precision) as temperature_mean_value, -- Cast NULL for type consistency
+        null as temperature_mean_unit,
+        CAST(null AS double precision) as relative_humidity_mean_value, -- Cast NULL for type consistency
+        null as relative_humidity_mean_unit,
+        CAST(uv_index_max AS double precision) AS uv_index_value,
+        CAST(uv_index_max_units AS text) AS uv_index_unit
+
+    from {{ ref('stg_openmeteo_forecast') }}
+),
+
+weatherapi_unioned as (
+    select
+        data_source,
+        date,
+        extraction_date,
+        tsp_pcode,
+        township,
+        CAST(latitude AS double precision) AS latitude, -- Added cast
+        CAST(longitude AS double precision) AS longitude, -- Added cast
+        weather_summary,
+        CAST(temperature_min AS double precision) AS temperature_min_value,
+        temperature_min_units as temperature_min_unit,
+        CAST(temperature_max AS double precision) AS temperature_max_value,
+        temperature_max_units as temperature_max_unit,
+        CAST(null AS double precision) as precipitation_probability, -- Cast NULL for type consistency
+        CAST(null AS double precision) as precipitation_intensity_value, -- Cast NULL for type consistency
+        null as precipitation_intensity_unit,
+        CAST(precipitation AS double precision) AS precipitation_total_value, -- Already present, confirmed
+        precipitation_units as precipitation_total_unit,
+        CAST(wind_speed AS double precision) AS wind_speed_value,
+        wind_speed_units as wind_speed_unit,
+        CAST(null AS double precision) as wind_gust_value, -- Cast NULL for type consistency
+        null as wind_gust_unit,
+        CAST(null AS double precision) as wind_direction_value, -- Cast NULL for type consistency
+        null as wind_direction_unit,
+        weather_icon,
+
+        CAST(temperature_avg AS double precision) AS temperature_mean_value,
+        temperature_avg_units as temperature_mean_unit,
+        CAST(humidity AS double precision) AS relative_humidity_mean_value,
+        '%' as relative_humidity_mean_unit,
+        CAST(uv_index AS double precision) AS uv_index_value,
+        null as uv_index_unit
+
+    from {{ ref('stg_weatherapi_forecast') }}
+),
+
+all_forecasts_unioned as (
+    select * from ambient_weather_unioned
+    union all
+    select * from meteoblue_unioned
+    union all
+    select * from openmeteo_unioned
+    union all
+    select * from weatherapi_unioned
+)
+
+select
+    -- Core Identifiers
+    data_source,
+    date,
+    extraction_date,
+    tsp_pcode,
+    township,
+    latitude,
+    longitude,
+    -- Common Weather Text/Icon
+    weather_summary,
+    weather_icon,
+
+    -- Temperature (Values & Units)
+    temperature_min_value,
+    temperature_min_unit,
+    temperature_max_value,
+    temperature_max_unit,
+    temperature_mean_value,
+    temperature_mean_unit,
+
+    -- Precipitation (Values & Units)
+    precipitation_probability, -- Unit for probability can vary (0-1 or %), not always explicit
+    precipitation_intensity_value,
+    precipitation_intensity_unit,
+    precipitation_total_value,
+    precipitation_total_unit,
+
+    -- Wind (Values & Units)
+    wind_speed_value,
+    wind_speed_unit,
+    wind_gust_value,
+    wind_gust_unit,
+    wind_direction_value,
+    wind_direction_unit,
+
+    -- Other Common Metrics
+    relative_humidity_mean_value,
+    relative_humidity_mean_unit,
+    uv_index_value,
+    uv_index_unit
+
+from all_forecasts_unioned
+order by
+    date,
+    tsp_pcode,
+    extraction_date,
+    data_source
