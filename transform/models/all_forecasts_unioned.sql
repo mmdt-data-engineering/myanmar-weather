@@ -27,7 +27,11 @@ with ambient_weather_unioned as (
         CAST(wind_gust AS double precision) AS wind_gust_value,
         wind_gust_unit,
         CAST(wind_bearing AS double precision) AS wind_direction_value,
-        wind_bearing_unit as wind_direction_unit,
+        CASE 
+            WHEN wind_bearing_unit = '°' THEN 'degree' 
+            WHEN wind_bearing_unit = 'degrees' THEN 'degree' 
+            ELSE wind_bearing_unit 
+        END AS wind_direction_unit, 
         weather_icon,
 
         -- Columns not common or less common, filled with NULLs for UNION compatibility
@@ -69,7 +73,11 @@ meteoblue_unioned as (
         CAST(null AS double precision) as wind_gust_value, -- Cast NULL for type consistency
         null as wind_gust_unit,
         CAST(wind_direction AS double precision) AS wind_direction_value,
-        wind_direction_unit as wind_direction_unit,
+        CASE 
+            WHEN wind_direction_unit = '°' THEN 'degree' 
+            WHEN wind_direction_unit = 'degrees' THEN 'degree' 
+            ELSE wind_direction_unit 
+        END AS wind_direction_unit, 
         null as weather_icon,
 
         CAST(temperature_mean AS double precision) AS temperature_mean_value,
@@ -112,7 +120,11 @@ openmeteo_unioned as (
         CAST(wind_gusts AS double precision) AS wind_gust_value,
         wind_gusts_units as wind_gust_unit,
         CAST(wind_direction AS double precision) AS wind_direction_value,
-        wind_direction_units as wind_direction_unit,
+        CASE 
+            WHEN wind_direction_units = '°' THEN 'degree' 
+            WHEN wind_direction_units = 'degrees' THEN 'degree' 
+            ELSE wind_direction_units 
+        END AS wind_direction_unit, 
         null as weather_icon,
 
         CAST(null AS double precision) as temperature_mean_value, -- Cast NULL for type consistency
@@ -152,7 +164,7 @@ weatherapi_unioned as (
         CAST(null AS double precision) as wind_gust_value, -- Cast NULL for type consistency
         null as wind_gust_unit,
         CAST(null AS double precision) as wind_direction_value, -- Cast NULL for type consistency
-        null as wind_direction_unit,
+        'degree' as wind_direction_unit,
         weather_icon,
 
         CAST(temperature_avg AS double precision) AS temperature_mean_value,
