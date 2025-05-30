@@ -4,16 +4,16 @@ with ambient_weather_unioned as (
     select
         data_source,
         date,
-        extraction_date,
+        CAST(extraction_date AS date) as extraction_date,
         tsp_pcode,
         township,
         CAST(latitude AS double precision) AS latitude, -- Added cast
         CAST(longitude AS double precision) AS longitude, -- Added cast
         weather_summary,
         CAST(temperature_min AS double precision) AS temperature_min_value,
-        temperature_min_unit,
+        'celsius' as temperature_min_unit,
         CAST(temperature_max AS double precision) AS temperature_max_value,
-        temperature_max_unit,
+        'celsius' as temperature_max_unit,
         CAST(precipitation_probability AS double precision) AS precipitation_probability, -- Added cast
         CAST(precipitation_intensity AS double precision) AS precipitation_intensity_value,
         precipitation_intensity_unit,
@@ -30,7 +30,7 @@ with ambient_weather_unioned as (
         -- Columns not common or less common, filled with NULLs for UNION compatibility
         -- Casting NULL to a type is valid and good for type consistency in UNIONs
         CAST(null AS double precision) as temperature_mean_value,
-        null as temperature_mean_unit,
+        'celsius' as temperature_mean_unit,
         CAST(null AS double precision) as relative_humidity_mean_value,
         null as relative_humidity_mean_unit,
         CAST(null AS double precision) as uv_index_value,
@@ -43,16 +43,16 @@ meteoblue_unioned as (
     select
         data_source,
         date,
-        extraction_date,
+        CAST(extraction_date AS date) as extraction_date,
         tsp_pcode,
         township,
         CAST(latitude AS double precision) AS latitude, -- Added cast
         CAST(longitude AS double precision) AS longitude, -- Added cast
         null as weather_summary,
         CAST(temperature_min AS double precision) AS temperature_min_value,
-        temperature_min_unit,
+        'celsius' as temperature_min_unit,
         CAST(temperature_max AS double precision) AS temperature_max_value,
-        temperature_max_unit,
+        'celsius' as temperature_max_unit,
         CAST(precipitation_probability AS double precision) AS precipitation_probability, -- Added cast
         CAST(null AS double precision) as precipitation_intensity_value, -- Cast NULL for type consistency
         null as precipitation_intensity_unit,
@@ -67,7 +67,7 @@ meteoblue_unioned as (
         null as weather_icon,
 
         CAST(temperature_mean AS double precision) AS temperature_mean_value,
-        temperature_mean_unit,
+        'celsius' as temperature_mean_unit,
         CAST(relative_humidity_mean AS double precision) AS relative_humidity_mean_value,
         relative_humidity_mean_unit,
         CAST(uv_index AS double precision) AS uv_index_value,
@@ -80,16 +80,16 @@ openmeteo_unioned as (
     select
         data_source,
         date,
-        extraction_date,
+        CAST(extraction_date AS date) as extraction_date,
         tsp_pcode,
         township,
         CAST(latitude AS double precision) AS latitude, -- Added cast
         CAST(longitude AS double precision) AS longitude, -- Added cast
         weather_description as weather_summary,
         CAST(temperature_min AS double precision) AS temperature_min_value,
-        temperature_min_units as temperature_min_unit,
+        'celsius' as temperature_min_unit,
         CAST(temperature_max AS double precision) AS temperature_max_value,
-        temperature_max_units as temperature_max_unit,
+        'celsius' as temperature_max_unit,
         CAST(precipitation_probability AS double precision) AS precipitation_probability, -- Added cast
         CAST(null AS double precision) as precipitation_intensity_value, -- Cast NULL for type consistency
         null as precipitation_intensity_unit,
@@ -104,7 +104,7 @@ openmeteo_unioned as (
         null as weather_icon,
 
         CAST(null AS double precision) as temperature_mean_value, -- Cast NULL for type consistency
-        null as temperature_mean_unit,
+        'celsius' as temperature_mean_unit,
         CAST(null AS double precision) as relative_humidity_mean_value, -- Cast NULL for type consistency
         null as relative_humidity_mean_unit,
         CAST(uv_index_max AS double precision) AS uv_index_value,
@@ -117,16 +117,16 @@ weatherapi_unioned as (
     select
         data_source,
         date,
-        extraction_date,
+        CAST(extraction_date AS date) as extraction_date,
         tsp_pcode,
         township,
         CAST(latitude AS double precision) AS latitude, -- Added cast
         CAST(longitude AS double precision) AS longitude, -- Added cast
         weather_summary,
         CAST(temperature_min AS double precision) AS temperature_min_value,
-        temperature_min_units as temperature_min_unit,
+        'celsius' as temperature_min_unit,
         CAST(temperature_max AS double precision) AS temperature_max_value,
-        temperature_max_units as temperature_max_unit,
+        'celsius' as temperature_max_unit,
         CAST(null AS double precision) as precipitation_probability, -- Cast NULL for type consistency
         CAST(null AS double precision) as precipitation_intensity_value, -- Cast NULL for type consistency
         null as precipitation_intensity_unit,
@@ -141,7 +141,7 @@ weatherapi_unioned as (
         weather_icon,
 
         CAST(temperature_avg AS double precision) AS temperature_mean_value,
-        temperature_avg_units as temperature_mean_unit,
+        'celsius' as temperature_mean_unit,
         CAST(humidity AS double precision) AS relative_humidity_mean_value,
         '%' as relative_humidity_mean_unit,
         CAST(uv_index AS double precision) AS uv_index_value,
