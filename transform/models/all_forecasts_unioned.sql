@@ -18,7 +18,10 @@ with ambient_weather_unioned as (
         CAST(precipitation_intensity AS double precision) AS precipitation_intensity_value,
         precipitation_intensity_unit,
         CAST(precipitation_accumulation AS double precision) AS precipitation_total_value, -- Already present, confirmed
-        precipitation_accumulation_unit as precipitation_total_unit,
+        CASE 
+            WHEN precipitation_accumulation_unit = 'mm' THEN 'millimeters' 
+            ELSE precipitation_accumulation_unit 
+        END AS precipitation_total_unit, 
         CAST(wind_speed AS double precision) AS wind_speed_value,
         wind_speed_unit,
         CAST(wind_gust AS double precision) AS wind_gust_value,
@@ -55,9 +58,12 @@ meteoblue_unioned as (
         'celsius' as temperature_max_unit,
         CAST(precipitation_probability AS double precision) AS precipitation_probability, -- Added cast
         CAST(null AS double precision) as precipitation_intensity_value, -- Cast NULL for type consistency
-        null as precipitation_intensity_unit,
+        'mm/hr' as precipitation_intensity_unit,
         CAST(precipitation AS double precision) AS precipitation_total_value, -- Already present, confirmed
-        precipitation_unit as precipitation_total_unit,
+        CASE 
+            WHEN precipitation_unit = 'mm' THEN 'millimeters' 
+            ELSE precipitation_unit 
+        END AS precipitation_total_unit, 
         CAST(wind_speed_mean AS double precision) AS wind_speed_value,
         wind_speed_mean_unit as wind_speed_unit,
         CAST(null AS double precision) as wind_gust_value, -- Cast NULL for type consistency
@@ -92,9 +98,12 @@ openmeteo_unioned as (
         'celsius' as temperature_max_unit,
         CAST(precipitation_probability AS double precision) AS precipitation_probability, -- Added cast
         CAST(null AS double precision) as precipitation_intensity_value, -- Cast NULL for type consistency
-        null as precipitation_intensity_unit,
+        'mm/hr' as precipitation_intensity_unit,
         CAST(precipitation AS double precision) AS precipitation_total_value, -- Already present, confirmed
-        precipitation_units as precipitation_total_unit,
+        CASE 
+            WHEN precipitation_units = 'mm' THEN 'millimeters' 
+            ELSE precipitation_units 
+        END AS precipitation_total_unit,
         CAST(wind_speed AS double precision) AS wind_speed_value,
         wind_speed_units as wind_speed_unit,
         CAST(wind_gusts AS double precision) AS wind_gust_value,
@@ -129,9 +138,12 @@ weatherapi_unioned as (
         'celsius' as temperature_max_unit,
         CAST(null AS double precision) as precipitation_probability, -- Cast NULL for type consistency
         CAST(null AS double precision) as precipitation_intensity_value, -- Cast NULL for type consistency
-        null as precipitation_intensity_unit,
-        CAST(precipitation AS double precision) AS precipitation_total_value, -- Already present, confirmed
-        precipitation_units as precipitation_total_unit,
+        'mm/hr' as precipitation_intensity_unit,
+        CAST(precipitation AS double precision) AS precipitation_total_value,
+        CASE 
+            WHEN precipitation_units = 'mm' THEN 'millimeters' 
+            ELSE precipitation_units 
+        END AS precipitation_total_unit,
         CAST(wind_speed AS double precision) AS wind_speed_value,
         wind_speed_units as wind_speed_unit,
         CAST(null AS double precision) as wind_gust_value, -- Cast NULL for type consistency
