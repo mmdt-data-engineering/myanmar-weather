@@ -56,4 +56,4 @@ with meteoblue_forecast as (
 )
 
 select *
-from openmeteo_forecast
+from meteoblue_forecast
