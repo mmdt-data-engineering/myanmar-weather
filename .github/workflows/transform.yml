@@ -31,10 +31,21 @@ jobs:
 
       - name: Debug dbt models
         run: dbt debug --profiles-dir ./transform --project-dir ./transform
-        env:
-          DBT_PROFILES_DIR: ${{ secrets.DBT_PROFILES_DIR }}
 
-      - name: Run dbt models
-        run: dbt run --profiles-dir ./transform --project-dir ./transform
-        env:
-          DBT_PROFILES_DIR: ${{ secrets.DBT_PROFILES_DIR }}
+      - name: Run dbt model - ambient_weather
+        run: dbt run --profiles-dir ./transform --project-dir ./transform --select stg_ambientweather_forecast
+
+      - name: Run dbt model - meteoblue
+        run: dbt run --profiles-dir ./transform --project-dir ./transform --select stg_meteoblue_forecast
+
+      - name: Run dbt model - openmeteo
+        run: dbt run --profiles-dir ./transform --project-dir ./transform --select stg_openmeteo_forecast
+
+      - name: Run dbt model - weatherapi
+        run: dbt run --profiles-dir ./transform --project-dir ./transform --select stg_weatherapi_forecast
+
+      - name: Run dbt model - all forecasts
+        run: dbt run --profiles-dir ./transform --project-dir ./transform --select all_forecasts_unioned
+
+      - name: Run dbt model - all forecasts temperature
+        run: dbt run --profiles-dir ./transform --project-dir ./transform --select all_forecasts_temperature
