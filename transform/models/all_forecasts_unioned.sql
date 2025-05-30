@@ -23,9 +23,15 @@ with ambient_weather_unioned as (
             ELSE precipitation_accumulation_unit 
         END AS precipitation_total_unit, 
         CAST(wind_speed AS double precision) AS wind_speed_value,
-        wind_speed_unit,
+        CASE 
+            WHEN wind_speed_unit = 'km/h' THEN 'kph' 
+            ELSE wind_speed_unit 
+        END AS wind_speed_unit,
         CAST(wind_gust AS double precision) AS wind_gust_value,
-        wind_gust_unit,
+        CASE 
+            WHEN wind_gust_unit = 'km/h' THEN 'kph' 
+            ELSE wind_gust_unit 
+        END AS wind_gust_unit,
         CAST(wind_bearing AS double precision) AS wind_direction_value,
         CASE 
             WHEN wind_bearing_unit = '°' THEN 'degree' 
@@ -68,10 +74,10 @@ meteoblue_unioned as (
             WHEN precipitation_unit = 'mm' THEN 'millimeters' 
             ELSE precipitation_unit 
         END AS precipitation_total_unit, 
-        CAST(wind_speed_mean AS double precision) AS wind_speed_value,
-        wind_speed_mean_unit as wind_speed_unit,
+        CAST((wind_speed_mean * 3.6) AS double precision) AS wind_speed_value,
+        'kph' as wind_speed_unit, -- Assuming kph for consistency
         CAST(null AS double precision) as wind_gust_value, -- Cast NULL for type consistency
-        null as wind_gust_unit,
+        'kph' as wind_gust_unit,
         CAST(wind_direction AS double precision) AS wind_direction_value,
         CASE 
             WHEN wind_direction_unit = '°' THEN 'degree' 
@@ -116,9 +122,15 @@ openmeteo_unioned as (
             ELSE precipitation_units 
         END AS precipitation_total_unit,
         CAST(wind_speed AS double precision) AS wind_speed_value,
-        wind_speed_units as wind_speed_unit,
+        CASE 
+            WHEN wind_speed_units = 'km/h' THEN 'kph' 
+            ELSE wind_speed_units 
+        END AS wind_speed_unit,
         CAST(wind_gusts AS double precision) AS wind_gust_value,
-        wind_gusts_units as wind_gust_unit,
+        CASE 
+            WHEN wind_gusts_units = 'km/h' THEN 'kph' 
+            ELSE wind_gusts_units 
+        END AS wind_gust_unit,
         CAST(wind_direction AS double precision) AS wind_direction_value,
         CASE 
             WHEN wind_direction_units = '°' THEN 'degree' 
@@ -160,9 +172,12 @@ weatherapi_unioned as (
             ELSE precipitation_units 
         END AS precipitation_total_unit,
         CAST(wind_speed AS double precision) AS wind_speed_value,
-        wind_speed_units as wind_speed_unit,
+        CASE 
+            WHEN wind_speed_units = 'km/h' THEN 'kph' 
+            ELSE wind_speed_units 
+        END AS wind_speed_unit,
         CAST(null AS double precision) as wind_gust_value, -- Cast NULL for type consistency
-        null as wind_gust_unit,
+        'kph' as wind_gust_unit,
         CAST(null AS double precision) as wind_direction_value, -- Cast NULL for type consistency
         'degree' as wind_direction_unit,
         weather_icon,
