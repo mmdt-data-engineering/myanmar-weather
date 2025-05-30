@@ -7,27 +7,27 @@ with ambient_weather_unioned as (
         CAST(extraction_date AS date) as extraction_date,
         tsp_pcode,
         township,
-        CAST(latitude AS double precision) AS latitude, -- Added cast
-        CAST(longitude AS double precision) AS longitude, -- Added cast
+        CAST(latitude AS double precision) AS latitude,
+        CAST(longitude AS double precision) AS longitude,
         weather_summary,
-        CAST(temperature_min AS double precision) AS temperature_min_value,
+        ROUND(CAST(temperature_min AS numeric), 3) AS temperature_min_value,
         'celsius' as temperature_min_unit,
-        CAST(temperature_max AS double precision) AS temperature_max_value,
+        ROUND(CAST(temperature_max AS numeric), 3) AS temperature_max_value,
         'celsius' as temperature_max_unit,
-        CAST(precipitation_probability AS double precision) AS precipitation_probability, -- Added cast
-        CAST(precipitation_intensity AS double precision) AS precipitation_intensity_value,
+        CAST(precipitation_probability AS double precision) AS precipitation_probability,
+        ROUND(CAST(precipitation_intensity AS numeric), 3) AS precipitation_intensity_value,
         precipitation_intensity_unit,
-        CAST(precipitation_accumulation AS double precision) AS precipitation_total_value, -- Already present, confirmed
+        ROUND(CAST(precipitation_accumulation AS numeric), 3) AS precipitation_total_value,
         CASE 
             WHEN precipitation_accumulation_unit = 'mm' THEN 'millimeters' 
             ELSE precipitation_accumulation_unit 
         END AS precipitation_total_unit, 
-        CAST(wind_speed AS double precision) AS wind_speed_value,
+        ROUND(CAST(wind_speed AS numeric), 3) AS wind_speed_value,
         CASE 
             WHEN wind_speed_unit = 'km/h' THEN 'kph' 
             ELSE wind_speed_unit 
         END AS wind_speed_unit,
-        CAST(wind_gust AS double precision) AS wind_gust_value,
+        ROUND(CAST(wind_gust AS numeric), 3) AS wind_gust_value,
         CASE 
             WHEN wind_gust_unit = 'km/h' THEN 'kph' 
             ELSE wind_gust_unit 
@@ -74,7 +74,7 @@ meteoblue_unioned as (
             WHEN precipitation_unit = 'mm' THEN 'millimeters' 
             ELSE precipitation_unit 
         END AS precipitation_total_unit, 
-        CAST((wind_speed_mean * 3.6) AS double precision) AS wind_speed_value,
+        ROUND(CAST((wind_speed_mean * 3.6) AS numeric), 3) AS wind_speed_value,
         'kph' as wind_speed_unit, -- Assuming kph for consistency
         CAST(null AS double precision) as wind_gust_value, -- Cast NULL for type consistency
         'kph' as wind_gust_unit,
