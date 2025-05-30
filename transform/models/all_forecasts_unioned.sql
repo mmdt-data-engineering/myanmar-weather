@@ -3,7 +3,7 @@
 with ambient_weather_unioned as (
     select
         data_source,
-        date,
+        CAST(date AS date) as date,
         CAST(extraction_date AS date) as extraction_date,
         tsp_pcode,
         township,
@@ -34,8 +34,8 @@ with ambient_weather_unioned as (
         -- Casting NULL to a type is valid and good for type consistency in UNIONs
         CAST(null AS double precision) as temperature_mean_value,
         'celsius' as temperature_mean_unit,
-        CAST(null AS double precision) as relative_humidity_mean_value,
-        null as relative_humidity_mean_unit,
+        CAST(null AS double precision) as relative_humidity_mean_value,        
+        'percent' as relative_humidity_mean_unit,
         CAST(null AS double precision) as uv_index_value,
         null as uv_index_unit
 
@@ -45,7 +45,7 @@ with ambient_weather_unioned as (
 meteoblue_unioned as (
     select
         data_source,
-        date,
+        CAST(date AS date) as date,
         CAST(extraction_date AS date) as extraction_date,
         tsp_pcode,
         township,
@@ -74,8 +74,11 @@ meteoblue_unioned as (
 
         CAST(temperature_mean AS double precision) AS temperature_mean_value,
         'celsius' as temperature_mean_unit,
-        CAST(relative_humidity_mean AS double precision) AS relative_humidity_mean_value,
-        relative_humidity_mean_unit,
+        CAST(relative_humidity_mean AS double precision) AS relative_humidity_mean_value,        
+        CASE 
+            WHEN relative_humidity_mean_unit = '%' THEN 'percent' 
+            ELSE relative_humidity_mean_unit 
+        END AS relative_humidity_mean_unit, 
         CAST(uv_index AS double precision) AS uv_index_value,
         null as uv_index_unit
 
@@ -85,7 +88,7 @@ meteoblue_unioned as (
 openmeteo_unioned as (
     select
         data_source,
-        date,
+        CAST(date AS date) as date,
         CAST(extraction_date AS date) as extraction_date,
         tsp_pcode,
         township,
@@ -115,7 +118,7 @@ openmeteo_unioned as (
         CAST(null AS double precision) as temperature_mean_value, -- Cast NULL for type consistency
         'celsius' as temperature_mean_unit,
         CAST(null AS double precision) as relative_humidity_mean_value, -- Cast NULL for type consistency
-        null as relative_humidity_mean_unit,
+        'percent' as relative_humidity_mean_unit,
         CAST(uv_index_max AS double precision) AS uv_index_value,
         CAST(uv_index_max_units AS text) AS uv_index_unit
 
@@ -125,7 +128,7 @@ openmeteo_unioned as (
 weatherapi_unioned as (
     select
         data_source,
-        date,
+        CAST(date AS date) as date,
         CAST(extraction_date AS date) as extraction_date,
         tsp_pcode,
         township,
@@ -155,7 +158,7 @@ weatherapi_unioned as (
         CAST(temperature_avg AS double precision) AS temperature_mean_value,
         'celsius' as temperature_mean_unit,
         CAST(humidity AS double precision) AS relative_humidity_mean_value,
-        '%' as relative_humidity_mean_unit,
+        'percent' as relative_humidity_mean_unit,
         CAST(uv_index AS double precision) AS uv_index_value,
         null as uv_index_unit
 
