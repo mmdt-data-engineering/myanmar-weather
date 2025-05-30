@@ -46,7 +46,7 @@ with ambient_weather_unioned as (
         'celsius' as temperature_mean_unit,
         CAST(null AS double precision) as relative_humidity_mean_value,        
         'percent' as relative_humidity_mean_unit,
-        CAST(null AS double precision) as uv_index_value,
+        CAST(null AS double precision) as uv_index_value
 
     from {{ ref('stg_ambientweather_forecast') }}
 ),
@@ -92,7 +92,7 @@ meteoblue_unioned as (
             WHEN relative_humidity_mean_unit = '%' THEN 'percent' 
             ELSE relative_humidity_mean_unit 
         END AS relative_humidity_mean_unit, 
-        CAST(uv_index AS double precision) AS uv_index_value,
+        CAST(uv_index AS double precision) AS uv_index_value
 
     from {{ ref('stg_meteoblue_forecast') }}
 ),
@@ -141,7 +141,7 @@ openmeteo_unioned as (
         'celsius' as temperature_mean_unit,
         CAST(null AS double precision) as relative_humidity_mean_value, -- Cast NULL for type consistency
         'percent' as relative_humidity_mean_unit,
-        CAST(uv_index_max AS double precision) AS uv_index_value,
+        CAST(uv_index_max AS double precision) AS uv_index_value
 
     from {{ ref('stg_openmeteo_forecast') }}
 ),
@@ -183,7 +183,7 @@ weatherapi_unioned as (
         'celsius' as temperature_mean_unit,
         CAST(humidity AS double precision) AS relative_humidity_mean_value,
         'percent' as relative_humidity_mean_unit,
-        CAST(uv_index AS double precision) AS uv_index_value,
+        CAST(uv_index AS double precision) AS uv_index_value
 
     from {{ ref('stg_weatherapi_forecast') }}
 ),
@@ -237,8 +237,7 @@ select
     -- Other Common Metrics
     relative_humidity_mean_value,
     relative_humidity_mean_unit,
-    uv_index_value,
-    uv_index_unit
+    uv_index_value
 
 from all_forecasts_unioned
 order by
