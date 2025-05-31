@@ -22,7 +22,7 @@ async def openmeteo_task():
     print_info("Getting townships from MIMU data")
     mimu = MIMU_Data()
     township_df = mimu.get_townships()
-    township_df = township_df.head(5)
+    township_df = township_df.head(3)
 
     print_info("Extracting data from API")
     openmeteo_api = OpenMeteoAPI()
